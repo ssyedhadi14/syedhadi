@@ -1,0 +1,7 @@
+# Created by: Claude
+# Date: 2026-10-28
+# Purpose: Netlify config for syedcreates.com. Publishes the site/ folder as is.
+# Owner: Syed Hadi
+[build]
+  publish = "site"
+  command = ""
