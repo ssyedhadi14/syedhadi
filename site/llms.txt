@@ -1,0 +1,40 @@
+# Syed Hadi
+
+> Syed Hadi is a product marketing and channel partnerships lead at AccuKnox, a Zero Trust CNAPP and AI security company, based in Bengaluru, India. He sells Claude skills for marketers and runs "in a box" growth projects for B2B SaaS and security startups, built around a 90 day roadmap.
+
+Engagements come in three sizes. Small projects run 30 days (phase one of the roadmap), medium projects run 45 days, and long term work is scoped on a call. Pricing is shared by email on request. Every call ends with a draft 90 day plan.
+
+## Growth in a box
+- [GTM + PMM in a box](https://syedcreates.com/gtm-pmm-in-a-box.html): GTM and PMM as one 90 day program. Positioning, ICP, outbound, partners, launch and a pipeline dashboard, with Syed as fractional growth lead.
+- [GTM in a box](https://syedcreates.com/gtm-in-a-box.html): 90 day go to market program for B2B SaaS and security startups. ICP, outbound, partner program and a pipeline dashboard.
+- [PMM in a box](https://syedcreates.com/pmm-in-a-box.html): 90 day product marketing program. Positioning, messaging, battlecards, sales enablement and a launch.
+- [AEO/SEO Ranking in a box](https://syedcreates.com/aeo-seo-in-a-box.html): 90 day program to rank in Google and get cited by ChatGPT, Gemini and Perplexity. Audit, technical fixes, buyer pages and AI visibility tracking.
+- [Content in a box](https://syedcreates.com/content-in-a-box.html): 90 day B2B content program. Strategy, calendar, long form articles, a gated asset, founder LinkedIn posts and distribution.
+- [Schedule a meeting](https://syedcreates.com/schedule-meeting.html): free call on GTM, product marketing, AEO and SEO or content.
+
+## Claude Skill Pack
+- [Claude Skills for Marketers](https://syedcreates.com/skill-pack.html): 8 tested Claude skills for GTM teams. Prompt Polisher, Humanizer, Caveman Mode, Company Intel Dossier, UX Competitive Teardown, SEO Blog Grader, Content Calendar Studio and Webinar Calendar Link. Works in Claude.ai, the Claude desktop app and Claude Code.
+- [How to install Claude skills](https://syedcreates.com/skill-pack.html#install): upload the zip in Claude settings, or copy the folder to ~/.claude/skills for Claude Code.
+
+## Proof of work
+- [Case studies](https://syedcreates.com/case-studies.html): AI search visibility, 240% traffic growth, $500K to $1M+ ARR, systems, community and partner programs at a security startup.
+- [GTM engine](https://syedcreates.com/gtm-engine.html): how an AI native GTM engine put AccuKnox ahead of Sysdig in AI visibility, grew website sessions 240% in 90 days and ranked for CNAPP vendors.
+- [GTM systems, apps and AI agents](https://syedcreates.com/systems.html): vibe coded apps, Slack agents and self driving dashboards built by the AccuKnox marketing team.
+- [Recognition](https://syedcreates.com/recognition.html): AccuKnox campaigns, 12 live moments in a quarter and analyst recognition from Gartner, Frost and Sullivan, KuppingerCole, Omdia and GigaOm.
+- [Events](https://syedcreates.com/events.html): KubeCon India, BSides Bangalore, the CNCF day at NetApp, GrowthX GTM Deep Dive and Marketing After Hours.
+
+## Writing and resources
+- [The 2026 PMM playbook](https://syedcreates.com/playbook.html): why the old B2B playbook is dead, six initiatives that drive revenue, and the AI tool stack and agent architecture a PMM lead runs.
+- [Articles on AI security and GTM](https://syedcreates.com/writing.html): long form articles on CNAPP, shadow AI, prompt firewalls, AI SOC, CERT-In reporting and non human identity.
+- [Blog](https://syedcreates.com/blog.html): every Medium post. CNAPP, ASPM and AI security buyer guides, GTM lessons, career notes and travel writing.
+- [Posts](https://syedcreates.com/posts.html): LinkedIn posts, articles, events and videos on AI security, CNAPP, GTM and community.
+- [India PMM Salary 2026](https://syedcreates.com/pmm-salary-2026.html): product marketing salaries in India by title, experience and city, a free calculator and a PDF guide.
+- [GTM tool directory](https://syedcreates.com/tools.html): 30 tools behind a B2B security startup's GTM, including Claude, Apollo, Factors.ai, Sales Navigator, Lovable, Brevo and Figma.
+- [Job board](https://syedcreates.com/jobs.html): live product marketing, growth and product manager jobs from company career pages, with filters for role, location and seniority.
+- [About](https://syedcreates.com/about.html): services, GTM journey since 2021 and how Syed builds strategy with AI.
+
+## Contact
+- Email: ssyedhadi14@gmail.com
+- Book a call: https://syedcreates.com/schedule-meeting.html
+- WhatsApp: https://wa.me/918015466708
+- LinkedIn: https://www.linkedin.com/in/syedhadii/

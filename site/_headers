@@ -11,5 +11,11 @@
 /assets/*
   Cache-Control: public, max-age=86400
 
-/photo.jpg
+/img/syed-hadi-2026.jpg
   Cache-Control: public, max-age=604800
+
+/downloads/op-*
+  X-Robots-Tag: noindex, nofollow
+
+/one-pager-sent.html
+  X-Robots-Tag: noindex
