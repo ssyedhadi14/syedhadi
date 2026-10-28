@@ -20,7 +20,7 @@
   var mb=document.getElementById('menuBtn'), nl=document.getElementById('navLinks');
   if(mb&&nl) mb.addEventListener('click',function(){var o=nl.classList.toggle('open');mb.setAttribute('aria-expanded',o);});
   document.querySelectorAll('.dd-btn').forEach(function(b){
-    b.addEventListener('click',function(e){e.stopPropagation();var d=b.parentElement,o=d.classList.toggle('open');b.setAttribute('aria-expanded',o);});
+    b.addEventListener('click',function(e){e.stopPropagation();var d=b.parentElement;document.querySelectorAll('.dd.open').forEach(function(x){if(x!==d){x.classList.remove('open');var xb=x.querySelector('.dd-btn');if(xb)xb.setAttribute('aria-expanded','false');}});var o=d.classList.toggle('open');b.setAttribute('aria-expanded',o);});
   });
   document.addEventListener('click',function(e){document.querySelectorAll('.dd.open').forEach(function(d){if(!d.contains(e.target)){d.classList.remove('open');d.querySelector('.dd-btn').setAttribute('aria-expanded','false');}});});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'){document.querySelectorAll('.dd.open').forEach(function(d){d.classList.remove('open')});if(nl)nl.classList.remove('open');}});
@@ -35,6 +35,12 @@
     });
   });
   // portfolio group active state
-  var pmap={gtm:'portfolio',events:'portfolio',systems:'portfolio',recognition:'portfolio',playbook:'portfolio',tools:'tools'};
+  var pmap={gtm:'portfolio',events:'portfolio',systems:'portfolio',recognition:'portfolio',playbook:'portfolio',tools:'tools',jobs:'tools',skillpack:'tools',salary:'tools',cases:'portfolio',gtmbox:'growth',pmmbox:'growth',seobox:'growth',contentbox:'growth',growthbox:'growth'};
   if(pmap[page]){var g=document.querySelector('.dd-btn[data-group="'+pmap[page]+'"]'); if(g) g.classList.add('active');}
+
+  // scroll progress bar
+  var bar=document.createElement('div'); bar.className='scroll-bar'; document.body.appendChild(bar);
+  var ticking=false;
+  function prog(){var h=document.documentElement; var max=h.scrollHeight-h.clientHeight; bar.style.transform='scaleX('+(max>0?h.scrollTop/max:0)+')'; ticking=false;}
+  window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(prog);}},{passive:true}); prog();
 })();
