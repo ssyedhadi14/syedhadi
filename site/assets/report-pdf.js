@@ -22,7 +22,7 @@
     ['Inter-SemiBold.ttf', 'Inter', 'bold'],
     ['JetBrainsMono-Medium.ttf', 'Mono', 'normal']
   ];
-  var VER = '20261031s', libP = null, fontData = null;
+  var VER = '20261031t', libP = null, fontData = null;
 
   function loadScript(src) {
     return new Promise(function (res, rej) { var s = document.createElement('script'); s.src = src; s.onload = res; s.onerror = function () { rej(new Error('Could not load ' + src)); }; document.head.appendChild(s); });
