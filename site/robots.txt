@@ -20,5 +20,7 @@ User-agent: Google-Extended
 Allow: /
 User-agent: Bingbot
 Allow: /
+User-agent: Applebot-Extended
+Allow: /
 
 Sitemap: https://syedcreates.com/sitemap.xml

@@ -5,36 +5,92 @@
 Engagements come in three sizes. Small projects run 30 days (phase one of the roadmap), medium projects run 45 days, and long term work is scoped on a call. Pricing is shared by email on request. Every call ends with a draft 90 day plan.
 
 ## Growth in a box
-- [GTM + PMM in a box](https://syedcreates.com/gtm-pmm-in-a-box.html): GTM and PMM as one 90 day program. Positioning, ICP, outbound, partners, launch and a pipeline dashboard, with Syed as fractional growth lead.
-- [GTM in a box](https://syedcreates.com/gtm-in-a-box.html): 90 day go to market program for B2B SaaS and security startups. ICP, outbound, partner program and a pipeline dashboard.
-- [PMM in a box](https://syedcreates.com/pmm-in-a-box.html): 90 day product marketing program. Positioning, messaging, battlecards, sales enablement and a launch.
-- [AEO/SEO Ranking in a box](https://syedcreates.com/aeo-seo-in-a-box.html): 90 day program to rank in Google and get cited by ChatGPT, Gemini and Perplexity. Audit, technical fixes, buyer pages and AI visibility tracking.
-- [Content in a box](https://syedcreates.com/content-in-a-box.html): 90 day B2B content program. Strategy, calendar, long form articles, a gated asset, founder LinkedIn posts and distribution.
-- [Schedule a meeting](https://syedcreates.com/schedule-meeting.html): free call on GTM, product marketing, AEO and SEO or content.
+- [GTM + PMM in a box](https://syedcreates.com/gtm-pmm-in-a-box): GTM and PMM as one 90 day program. Positioning, ICP, outbound, partners, launch and a pipeline dashboard, with Syed as fractional growth lead.
+- [GTM in a box](https://syedcreates.com/gtm-in-a-box): 90 day go to market program for B2B SaaS and security startups. ICP, outbound, partner program and a pipeline dashboard.
+- [PMM in a box](https://syedcreates.com/pmm-in-a-box): 90 day product marketing program. Positioning, messaging, battlecards, sales enablement and a launch.
+- [AEO/SEO Ranking in a box](https://syedcreates.com/aeo-seo-in-a-box): 90 day program to rank in Google and get cited by ChatGPT, Gemini and Perplexity. Audit, technical fixes, buyer pages and AI visibility tracking.
+- [Content in a box](https://syedcreates.com/content-in-a-box): 90 day B2B content program. Strategy, calendar, long form articles, a gated asset, founder LinkedIn posts and distribution.
+- [Partner Revenue in a box](https://syedcreates.com/partner-revenue-in-a-box): 90 day partner led growth program. Partner mapping, recruitment, seller enablement, joint campaigns and joint pipeline reviews.
+- [Schedule a meeting](https://syedcreates.com/schedule-meeting): free call on GTM, product marketing, AEO and SEO or content.
+
+## Consulting by location and comparison
+- [Product marketing consultant, India](https://syedcreates.com/product-marketing-consultant-india)
+- [GTM consultant, Bengaluru](https://syedcreates.com/gtm-consultant-bengaluru)
+- [Growth and partner GTM consultant, Dubai and GCC](https://syedcreates.com/growth-marketing-consultant-dubai)
+- [Fractional PMM vs agency vs full time hire](https://syedcreates.com/fractional-pmm-vs-agency-vs-full-time-hire)
+- Free website and GTM audit: request on any service page at #free-audit
 
 ## Claude Skill Pack
-- [Claude Skills for Marketers](https://syedcreates.com/skill-pack.html): 8 tested Claude skills for GTM teams. Prompt Polisher, Humanizer, Caveman Mode, Company Intel Dossier, UX Competitive Teardown, SEO Blog Grader, Content Calendar Studio and Webinar Calendar Link. Works in Claude.ai, the Claude desktop app and Claude Code.
-- [How to install Claude skills](https://syedcreates.com/skill-pack.html#install): upload the zip in Claude settings, or copy the folder to ~/.claude/skills for Claude Code.
+- [Claude Skills for Marketers](https://syedcreates.com/skill-pack): 8 tested Claude skills for GTM teams. Prompt Polisher, Humanizer, Caveman Mode, Company Intel Dossier, UX Competitive Teardown, SEO Blog Grader, Content Calendar Studio and Webinar Calendar Link. Works in Claude.ai, the Claude desktop app and Claude Code.
+- [How to install Claude skills](https://syedcreates.com/skill-pack#install): upload the zip in Claude settings, or copy the folder to ~/.claude/skills for Claude Code.
 
 ## Proof of work
-- [Case studies](https://syedcreates.com/case-studies.html): AI search visibility, 240% traffic growth, $500K to $1M+ ARR, systems, community and partner programs at a security startup.
-- [GTM engine](https://syedcreates.com/gtm-engine.html): how an AI native GTM engine put AccuKnox ahead of Sysdig in AI visibility, grew website sessions 240% in 90 days and ranked for CNAPP vendors.
-- [GTM systems, apps and AI agents](https://syedcreates.com/systems.html): vibe coded apps, Slack agents and self driving dashboards built by the AccuKnox marketing team.
-- [Recognition](https://syedcreates.com/recognition.html): AccuKnox campaigns, 12 live moments in a quarter and analyst recognition from Gartner, Frost and Sullivan, KuppingerCole, Omdia and GigaOm.
-- [Events](https://syedcreates.com/events.html): KubeCon India, BSides Bangalore, the CNCF day at NetApp, GrowthX GTM Deep Dive and Marketing After Hours.
+- [Case studies](https://syedcreates.com/case-studies): AI search visibility, 240% traffic growth, $500K to $1M+ ARR, systems, community and partner programs at a security startup.
+- [GTM engine](https://syedcreates.com/gtm-engine): how an AI native GTM engine put AccuKnox ahead of Sysdig in AI visibility, grew website sessions 240% in 90 days and ranked for CNAPP vendors.
+- [GTM systems, apps and AI agents](https://syedcreates.com/systems): vibe coded apps, Slack agents and self driving dashboards built by the AccuKnox marketing team.
+- [Recognition](https://syedcreates.com/recognition): AccuKnox campaigns, 12 live moments in a quarter and analyst recognition from Gartner, Frost and Sullivan, KuppingerCole, Omdia and GigaOm.
+- [Events](https://syedcreates.com/events): KubeCon India, BSides Bangalore, the CNCF day at NetApp, GrowthX GTM Deep Dive and Marketing After Hours.
+
+## Case studies by service
+- [GTM case study](https://syedcreates.com/gtm-case-study): an inbound GTM engine that grew sessions 240% in 90 days and supports $2M in influenced pipeline a year.
+- [PMM case study](https://syedcreates.com/pmm-case-study): founding product marketing work that helped double ARR from $500K to $1M+.
+- [AEO/SEO case study](https://syedcreates.com/aeo-seo-case-study): 27.72% AI visibility, 12K of 42K tracked AI answers and the #1 Google answer slot for CNAPP vendors.
+- [Content case study](https://syedcreates.com/content-case-study): a 23 type content matrix and 12 live moments in one quarter.
+- [Partner revenue case study](https://syedcreates.com/partner-revenue-case-study): partner programs with distributors, MSSPs and resellers across India, MENA, APAC, Japan, Europe, Africa and the US.
+- [GTM + PMM case study](https://syedcreates.com/gtm-pmm-case-study): positioning, inbound and partners run as one growth system.
+
+## Free calculators and scorecards
+- [Calculators hub](https://syedcreates.com/calculator): every free calculator and GTM scorecard on one page, each with a high fidelity PDF report.
+- [Loan EMI and Prepay Planner](https://syedcreates.com/loan-calculator): EMI, total interest and a year by year schedule for home, car and personal loans; four strategies to close the loan in half the tenure (higher EMI, one lump sum a year, yearly EMI step up, 13 EMIs a year) with interest saved for each; and a prepay versus invest planner that spends the same cash on both paths, counts Section 24(b) and 80C benefits and taxes investment gains at 12.5% LTCG. Free PDF plan.
+- [Salary Growth Calculator India](https://syedcreates.com/salary-calculator): enter in hand salary, monthly needs and wants and the yearly increment to see salary, investable surplus and the PPF plus equity corpus for the next 45 years, in rupees and in today's money, with crorepati milestone ages, a vector PDF report and an emailed copy. Model: salary compounds by the increment, needs and wants grow at their own rates, PPF share equals age, PPF 8% tax free, equity 15% with 10% LTCG on gains, inflation 5%.
+- [SEO and AEO Score Checker](https://syedcreates.com/seo-aeo-score): paste a URL and get an SEO score out of 60 (16 technical and on page checks), an AEO score out of 40 (structured data, entity schema, FAQ schema, llms.txt, AI crawler access, question led headings, direct answers, author and dates), Domain Rating with backlinks and referring domains from OpenSEO, and a prioritised action list.
+- [Qums Calculator (Shia)](https://syedcreates.com/qums): free Khums (Qums) calculator. Adds savings, removes exempt money and shows the 20% Khums with Sahm e Imam and Sahm e Sadat, with notes for followers of Ayatollah Sistani and Ayatollah Khamenei.
+- [Mutual Fund Returns Tracker](https://syedcreates.com/mutual-fund-returns-calculator): 1, 3, 5, 10, 15 and 20 year returns of 50 popular Indian mutual funds across large, mid and small cap, index, flexi cap, ELSS, hybrid, debt, liquid and gold, with a SIP and lumpsum projector for 5, 10, 15 and 20 years.
+- [FIRE Calculator India](https://syedcreates.com/fire-calculator): free financial independence and early retirement calculator for Indian investors in mutual funds and NSE or BSE stocks. FIRE number, SIP needed, earliest retirement age, Lean, Fat and Coast FIRE.
+- [AI Visibility Checker](https://syedcreates.com/ai-visibility-checker): 10 question score for how likely ChatGPT, Gemini, Perplexity and AI Overviews are to cite a brand.
+- [Partner Program Readiness Score](https://syedcreates.com/partner-readiness-score): 10 question score for whether a SaaS partner program is ready to bring pipeline.
+- [GTM Health Check](https://syedcreates.com/gtm-health-check): 10 question go to market health score for B2B SaaS and security startups.
+
+## Insights
+- [Insights](https://syedcreates.com/insights): buyer guides on CNAPP, ASPM, AI-SPM and AI agent security, plus GTM and partner program playbooks.
+- [Fractional PMM in India: When It Works and How to Hire One](https://syedcreates.com/fractional-pmm-india)
+- [How to Build a Partner Program for SaaS That Brings Pipeline, Not Logos](https://syedcreates.com/how-to-build-a-saas-partner-program)
+- [How I’d Evaluate an ASPM Platform If My Real Goal Was Cutting False Positives](https://syedcreates.com/aspm-evaluation-cutting-false-positives)
+- [How I Evaluate an AI SOC Tool for Regulated Environments Without Falling for the Demo](https://syedcreates.com/ai-soc-tool-evaluation-regulated)
+- [Runtime CNAPP vs Agentless CNAPP: Which One Actually Fits Your Team?](https://syedcreates.com/runtime-cnapp-vs-agentless-cnapp)
+- [Is Your Prompt Firewall Stateless? A Guide to Stateful AI Guardrails](https://syedcreates.com/stateful-prompt-firewall)
+- [How I’d Build a CERT-In-Ready Evidence Pipeline for AWS, Azure, GCP, and On-Prem](https://syedcreates.com/cert-in-evidence-pipeline-hybrid-cloud)
+- [I Wouldn’t Buy an AI-SPM Tool Until It Answers These 7 Runtime Security Questions](https://syedcreates.com/ai-spm-7-runtime-security-questions)
+- [The CNAPP Comparison Checklist Enterprise Buyers Actually Need (With Scoring)](https://syedcreates.com/cnapp-comparison-checklist-with-scoring)
+- [How I Explain CNAPP, CSPM, and CWPP to Buyers in 15 Minutes Without Using Vendor Jargon](https://syedcreates.com/cnapp-cspm-cwpp-explained-for-buyers)
+- [How I’d Threat-Model an MCP-Based AI Agent Before It Touches Production Data](https://syedcreates.com/mcp-ai-agent-threat-model)
+- [How I’d Run a 30-Day Shadow AI Discovery Sprint Inside a Mid-Market Enterprise](https://syedcreates.com/30-day-shadow-ai-discovery-sprint)
+- [5 Years of Startup Life: 60 Months, 4 Roles, 1 Journey](https://syedcreates.com/5-years-of-startup-life)
+- [Best GTM consultants for security startups](https://syedcreates.com/best-gtm-consultants-for-security-startups): a scorecard for choosing GTM help for a cybersecurity startup.
+- [Fractional CMO for Dubai SaaS](https://syedcreates.com/fractional-cmo-dubai-saas): fractional marketing leadership for Dubai and GCC SaaS and security companies.
+- [Referral partner program](https://syedcreates.com/referral-partners): referral fees for agencies, fractional CMOs and consultants who send GTM work.
 
 ## Writing and resources
-- [The 2026 PMM playbook](https://syedcreates.com/playbook.html): why the old B2B playbook is dead, six initiatives that drive revenue, and the AI tool stack and agent architecture a PMM lead runs.
-- [Articles on AI security and GTM](https://syedcreates.com/writing.html): long form articles on CNAPP, shadow AI, prompt firewalls, AI SOC, CERT-In reporting and non human identity.
-- [Blog](https://syedcreates.com/blog.html): every Medium post. CNAPP, ASPM and AI security buyer guides, GTM lessons, career notes and travel writing.
-- [Posts](https://syedcreates.com/posts.html): LinkedIn posts, articles, events and videos on AI security, CNAPP, GTM and community.
-- [India PMM Salary 2026](https://syedcreates.com/pmm-salary-2026.html): product marketing salaries in India by title, experience and city, a free calculator and a PDF guide.
-- [GTM tool directory](https://syedcreates.com/tools.html): 30 tools behind a B2B security startup's GTM, including Claude, Apollo, Factors.ai, Sales Navigator, Lovable, Brevo and Figma.
-- [Job board](https://syedcreates.com/jobs.html): live product marketing, growth and product manager jobs from company career pages, with filters for role, location and seniority.
-- [About](https://syedcreates.com/about.html): services, GTM journey since 2021 and how Syed builds strategy with AI.
+- [The 2026 PMM playbook](https://syedcreates.com/playbook): why the old B2B playbook is dead, six initiatives that drive revenue, and the AI tool stack and agent architecture a PMM lead runs.
+- [Articles on AI security and GTM](https://syedcreates.com/writing): long form articles on CNAPP, shadow AI, prompt firewalls, AI SOC, CERT-In reporting and non human identity.
+- [Blog](https://syedcreates.com/blog): every Medium post. CNAPP, ASPM and AI security buyer guides, GTM lessons, career notes and travel writing.
+- [Posts](https://syedcreates.com/posts): LinkedIn posts, articles, events and videos on AI security, CNAPP, GTM and community.
+- [India PMM Salary 2026](https://syedcreates.com/pmm-salary-2026): product marketing salaries in India by title, experience and city, a free calculator and a PDF guide.
+- [GTM tool directory](https://syedcreates.com/tools): 30 tools behind a B2B security startup's GTM, including Claude, Apollo, Factors.ai, Sales Navigator, Lovable, Brevo and Figma.
+- [Job board](https://syedcreates.com/jobs): live product marketing, growth and product manager jobs from company career pages, with filters for role, location and seniority.
+- [About](https://syedcreates.com/about): services, GTM journey since 2021 and how Syed builds strategy with AI.
+
+## Calculator menu
+All calculators sit under the Calculator item in the site navigation: Salary Growth Calculator, FIRE Calculator India, Mutual Fund Returns, PMM Salary Calculator, Qums Calculator, plus the SEO and AEO Score, AI Visibility Checker, GTM Health Check and Partner Readiness Score.
 
 ## Contact
 - Email: ssyedhadi14@gmail.com
-- Book a call: https://syedcreates.com/schedule-meeting.html
+- Book a call: https://syedcreates.com/schedule-meeting
+- Sitemap: https://syedcreates.com/sitemap.xml
 - WhatsApp: https://wa.me/918015466708
 - LinkedIn: https://www.linkedin.com/in/syedhadii/
+
+## Section hubs
+- [Growth in a box](https://syedcreates.com/growth-in-a-box): the six fixed scope engagements (GTM + PMM, GTM, PMM, AEO/SEO, content, partner revenue).
+- [Work](https://syedcreates.com/work): product marketing, channel partnerships, GTM strategy, demand and pipeline, community and events, AI systems for GTM.
+- [Portfolio](https://syedcreates.com/portfolio): case studies, GTM engine, events, AI systems, recognition, playbook, writing, about.

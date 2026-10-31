@@ -1,7 +1,18 @@
 # Created by: Claude
-# Date: 2026-10-28
-# Purpose: Netlify config for syedcreates.com. Publishes the site/ folder as is.
+# Date: 2026-10-31
+# Purpose: Netlify config for syedcreates.com. Publishes site/ as is and ships the two serverless functions
+#          (salary report email, SEO and AEO score). Deploy with: netlify deploy --prod
 # Owner: Syed Hadi
 [build]
   publish = "site"
   command = ""
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+[functions."salary-report"]
+  included_files = []
+
+[functions."seo-aeo-score"]
+  included_files = []

@@ -1,11 +1,11 @@
 (function(){
   var root=document.documentElement, btn=document.getElementById('themeBtn');
-  try{var saved=localStorage.getItem('theme'); if(saved) root.setAttribute('data-theme',saved);}catch(e){}
+  try{var saved=localStorage.getItem('sh_theme'); root.setAttribute('data-theme',saved==='dark'?'dark':'light');}catch(e){root.setAttribute('data-theme','light')}
+  function sync(){if(btn)btn.setAttribute('aria-checked',root.getAttribute('data-theme')==='dark'?'true':'false')}
+  sync();
   if(btn) btn.addEventListener('click',function(){
-    var cur=root.getAttribute('data-theme');
-    var dark=cur? cur==='dark' : matchMedia('(prefers-color-scheme: dark)').matches;
-    var next=dark?'light':'dark'; root.setAttribute('data-theme',next);
-    try{localStorage.setItem('theme',next);}catch(e){}
+    var next=root.getAttribute('data-theme')==='dark'?'light':'dark'; root.setAttribute('data-theme',next); sync();
+    try{localStorage.setItem('sh_theme',next);}catch(e){}
   });
   var els=document.querySelectorAll('.reveal');
   if('IntersectionObserver' in window){
@@ -35,7 +35,7 @@
     });
   });
   // portfolio group active state
-  var pmap={gtm:'portfolio',events:'portfolio',systems:'portfolio',recognition:'portfolio',playbook:'portfolio',tools:'tools',jobs:'tools',skillpack:'tools',salary:'tools',cases:'portfolio',gtmbox:'growth',pmmbox:'growth',seobox:'growth',contentbox:'growth',growthbox:'growth'};
+  var pmap={gtm:'portfolio',events:'portfolio',systems:'portfolio',recognition:'portfolio',playbook:'portfolio',tools:'tools',about:'tools',blog:'tools',posts:'tools',jobs:'tools',skillpack:'tools',salary:'calc',salarycalc:'calc',fire:'calc',mf:'calc',khums:'calc',tool_ai:'calc',tool_gtm:'calc',tool_partner:'calc',cases:'portfolio',gtmbox:'growth',pmmbox:'growth',seobox:'growth',contentbox:'growth',growthbox:'growth',partnerbox:'growth'};
   if(pmap[page]){var g=document.querySelector('.dd-btn[data-group="'+pmap[page]+'"]'); if(g) g.classList.add('active');}
 
   // scroll progress bar
@@ -43,4 +43,51 @@
   var ticking=false;
   function prog(){var h=document.documentElement; var max=h.scrollHeight-h.clientHeight; bar.style.transform='scaleX('+(max>0?h.scrollTop/max:0)+')'; ticking=false;}
   window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(prog);}},{passive:true}); prog();
+})();
+
+/* ===== Lead event tracking =====
+   Set GA4_ID to your Google Analytics 4 measurement ID (G-XXXXXXX) to send events to GA4.
+   Until then every event is still pushed to window.dataLayer, ready for Google Tag Manager. */
+(function(){
+  var GA4_ID = '';
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function(){ dataLayer.push(arguments); };
+  if (GA4_ID) {
+    var s = document.createElement('script'); s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID; document.head.appendChild(s);
+    gtag('js', new Date()); gtag('config', GA4_ID);
+  }
+  window.shTrack = function(name, params){
+    params = params || {}; params.page = location.pathname;
+    try { gtag('event', name, params); } catch (e) {}
+    try { if (window.plausible) plausible(name, { props: params }); } catch (e) {}
+  };
+  var rules = [
+    ['a[href*="schedule-meeting"]', 'schedule_click'], ['a[href*="wa.me"]', 'whatsapp_click'],
+    ['a[href^="mailto:"]', 'email_click'], ['a[href*="buy.polar.sh"]', 'skill_pack_checkout'],
+    ['.jb-apply', 'job_apply_click'], ['a[href*="linkedin.com/in/"]', 'linkedin_click']
+  ];
+  document.addEventListener('click', function(ev){
+    var a = ev.target.closest && ev.target.closest('a');
+    if (!a) return;
+    for (var i = 0; i < rules.length; i++) { if (a.matches(rules[i][0])) { shTrack(rules[i][1], { label: (a.textContent || '').trim().slice(0, 60) }); break; } }
+  }, true);
+  var forms = [['.op-gate', 'one_pager_request'], ['.au-form', 'audit_request'], ['#gateForm', 'salary_guide_request'], ['.nl-form', 'newsletter_signup']];
+  document.addEventListener('submit', function(ev){
+    for (var i = 0; i < forms.length; i++) { if (ev.target.matches(forms[i][0])) { shTrack(forms[i][1]); break; } }
+  }, true);
+  window.addEventListener('message', function(ev){
+    if (ev.origin.indexOf('calendly.com') > -1 && ev.data && ev.data.event === 'calendly.event_scheduled') shTrack('meeting_booked');
+  });
+})();
+
+/* Keep the page chrome clean: remove third party badges injected after our markup. */
+(function(){
+  function sweep(){
+    var f=document.getElementById('nl-badge-frame'); if(f&&f.parentNode) f.parentNode.removeChild(f);
+    var s=document.querySelectorAll('script[src*="/.netlify/scripts/hud"]'); for(var i=0;i<s.length;i++){ if(s[i].parentNode) s[i].parentNode.removeChild(s[i]); }
+  }
+  sweep();
+  if(window.MutationObserver){ new MutationObserver(sweep).observe(document.documentElement,{childList:true,subtree:true}); }
+  document.addEventListener('DOMContentLoaded',sweep); window.addEventListener('load',sweep);
 })();
