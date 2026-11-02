@@ -252,7 +252,7 @@ def write_crawl_files(pages):
         h = open(p, encoding="utf-8").read()
         if re.search(r'name="robots" content="[^"]*noindex', h):
             noindex.add(os.path.basename(p))
-    order = ["index.html", "calculator.html", "loan-calculator.html", "bmi-calculator.html", "car-mileage-calculator.html", "salary-calculator.html", "seo-aeo-score.html", "growth-in-a-box.html", "work.html", "portfolio.html", "gtm-pmm-in-a-box.html", "gtm-in-a-box.html", "pmm-in-a-box.html",
+    order = ["index.html", "calculator.html", "loan-calculator.html", "bmi-calculator.html", "car-mileage-calculator.html", "salary-calculator.html", "seo-aeo-score.html", "company-research.html", "growth-in-a-box.html", "work.html", "portfolio.html", "gtm-pmm-in-a-box.html", "gtm-in-a-box.html", "pmm-in-a-box.html",
              "aeo-seo-in-a-box.html", "content-in-a-box.html", "partner-revenue-in-a-box.html", "skill-pack.html",
              "schedule-meeting.html", "case-studies.html", "tools.html", "fire-calculator.html",
              "mutual-fund-returns-calculator.html", "qums.html", "pmm-salary-2026.html"]

@@ -40,6 +40,7 @@ CALCS = [
 ]
 SCORECARDS = [
     ("tool_seo", "/seo-aeo-score", "SEO and AEO Score"),
+    ("tool_company", "/company-research", "Company Research"),
     ("tool_ai", "/ai-visibility-checker", "AI Visibility Checker"),
     ("tool_gtm", "/gtm-health-check", "GTM Health Check"),
     ("tool_partner", "/partner-readiness-score", "Partner Readiness Score"),

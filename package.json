@@ -1,0 +1,8 @@
+{
+  "name": "syedcreates-site",
+  "private": true,
+  "description": "syedcreates.com static site plus Netlify functions. Only the functions use dependencies.",
+  "dependencies": {
+    "@netlify/blobs": "^10.7.13"
+  }
+}

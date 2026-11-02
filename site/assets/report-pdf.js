@@ -400,6 +400,48 @@
     this.y = y + 70;
   };
 
+  // ---------- card grid (compact one pager sections) ----------
+  // o.items: [{ title, tone: 'accent'|'green'|'amber'|'rose'|'sky', lines: [string | [head, body]] }], o.cols default 2
+  P.cards = function (o) {
+    var d = this.doc, self = this, cols = o.cols || 2, gap = 10, cw = (W - 2 * M - gap * (cols - 1)) / cols, pad = 11, fs = o.fontSize || 8.2, lh = fs * 1.32;
+    var tones = { accent: C.accent, green: C.green, amber: C.amber, rose: C.rose, sky: C.sky };
+    var measured = o.items.map(function (it) {
+      var rows = (it.lines || []).map(function (ln) {
+        var head = typeof ln === 'string' ? '' : ln[0], body = typeof ln === 'string' ? ln : ln[1];
+        self.font('Inter', 'normal', fs);
+        var text = head ? head + ': ' + body : body;
+        return { head: head, lines: self.wrap(text, cw - 2 * pad - 9) };
+      });
+      var h = pad + 12 + rows.reduce(function (s, r) { return s + r.lines.length * lh + 3; }, 0) + pad - 3;
+      return { it: it, rows: rows, h: h };
+    });
+    for (var i = 0; i < measured.length; i += cols) {
+      var row = measured.slice(i, i + cols), rh = Math.max.apply(null, row.map(function (m) { return m.h; }));
+      this.need(rh + gap); var y = this.y;
+      row.forEach(function (m, j) {
+        var x = M + j * (cw + gap), tc = tones[m.it.tone] || C.accent;
+        rgb(d, 'setFillColor', C.faint); rgb(d, 'setDrawColor', C.line); d.setLineWidth(0.6); d.roundedRect(x, y, cw, rh, 8, 8, 'FD');
+        rgb(d, 'setFillColor', tc); d.roundedRect(x, y + 9, 2.6, 13, 1.3, 1.3, 'F');
+        self.font('Mono', 'normal', 7, tc); d.text(String(m.it.title).toUpperCase(), x + pad, y + pad + 6);
+        var ty = y + pad + 20;
+        m.rows.forEach(function (r) {
+          rgb(d, 'setFillColor', tc); d.circle(x + pad + 2, ty - fs * 0.32, 1.5, 'F');
+          r.lines.forEach(function (l, li) {
+            var lx = x + pad + 9;
+            if (li === 0 && r.head && l.indexOf(r.head + ':') === 0) {
+              self.font('Inter', 'bold', fs, C.ink); d.text(r.head + ':', lx, ty); var hw = self.tw(r.head + ': ');
+              self.font('Inter', 'normal', fs, C.ink2); d.text(l.slice(r.head.length + 2), lx + hw, ty);
+            } else { self.font('Inter', 'normal', fs, C.ink2); d.text(l, lx, ty); }
+            ty += lh;
+          });
+          ty += 3;
+        });
+      });
+      this.y = y + rh + gap;
+    }
+    this.y += 2;
+  };
+
   function fillPoly(doc, pts) {
     var segs = []; for (var i = 1; i < pts.length; i++) segs.push([pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]]);
     doc.lines(segs, pts[0][0], pts[0][1], [1, 1], 'F', true);
@@ -428,6 +470,7 @@
         case 'page': if (b.force || e.y > (b.ifBelow || 0.45) * H) e.newPage(); break;
         case 'space': e.y += b.h || 10; break;
         case 'signoff': e.signoff(); break;
+        case 'cards': e.cards(b); break;
       }
     });
     e.footers();

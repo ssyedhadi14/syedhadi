@@ -1,7 +1,7 @@
 # Created by: Claude
 # Date: 2026-10-31
-# Purpose: Netlify config for syedcreates.com. Publishes site/ as is and ships the two serverless functions
-#          (salary report email, SEO and AEO score). Deploy with: netlify deploy --prod
+# Purpose: Netlify config for syedcreates.com. Publishes site/ as is and ships the serverless functions
+#          (salary report email, SEO and AEO score, company research via Firecrawl). Deploy with: netlify deploy --prod
 # Owner: Syed Hadi
 [build]
   publish = "site"

@@ -348,16 +348,58 @@
     };
   }
 
-  var BUILDERS = { fire: fireSpec, mf: mfSpec, pmm: pmmSpec, qums: qumsSpec, loan: loanSpec, car: carSpec, bmi: bmiSpec };
+  // ---------------- company research one pager ----------------
+  // lvl 0..4 trims list lengths so the report always fits one A4 page
+  function companySpec(s, lvl) {
+    var C = window.SHReport.C, d = s.d, L = lvl || 0;
+    var cap = [5, 4, 4, 3, 3][Math.min(L, 4)], capR = [5, 4, 3, 3, 2][Math.min(L, 4)];
+    var clean = function (t) { return String(t == null ? '' : t).replace(/[—–]/g, ', ').replace(/[^\u0000-ɏ‘-‟•…€₹→]/g, '').replace(/\s+/g, ' ').trim(); };
+    var short = function (t, n) { t = clean(t); return L >= 3 && t.length > n ? t.slice(0, n - 1).replace(/\s+\S*$/, '') + '…' : t; };
+    var sub = function (f) { return [f.confidence ? f.confidence.charAt(0) + f.confidence.slice(1).toLowerCase() + ' confidence' : '', f.as_of].filter(Boolean).join(', '); };
+    var must = d.growth_painpoints.filter(function (p) { return p.severity === 'must_fix'; }), nice = d.growth_painpoints.filter(function (p) { return p.severity !== 'must_fix'; });
+    var pains = must.slice(0, cap).map(function (p) { return ['Must fix', short(p.pain, 70)]; }).concat(nice.slice(0, Math.max(0, cap - Math.min(cap, must.length) + (L ? 0 : 1))).map(function (p) { return ['Nice to fix', short(p.pain, 70)]; })).slice(0, cap + (L ? 0 : 1));
+    var blocks = [
+      { type: 'kpis', items: [
+        { label: d.ownership === 'Public' ? 'Market cap' : 'Market cap / valuation', value: clean(d.market_cap.value), sub: sub(d.market_cap), hero: true },
+        { label: 'ARR', value: clean(d.arr.value), sub: sub(d.arr) },
+        { label: 'Total customers', value: clean(d.total_customers.value), sub: sub(d.total_customers), color: C.green },
+        { label: 'Employees', value: clean(d.employee_count.value), sub: sub(d.employee_count), color: C.ink }
+      ] },
+      { type: 'cards', cols: 2, fontSize: L >= 2 ? 7.8 : 8.2, items: [
+        { title: 'Top competitors', tone: 'rose', lines: d.competitors.slice(0, cap).map(function (c) { return [clean(c.name), short(c.overlap, 60)]; }) },
+        { title: 'Unique differentiators', tone: 'accent', lines: d.differentiators.slice(0, cap).map(function (x) { return short(x, 85); }) },
+        { title: 'Why customers choose them', tone: 'green', lines: d.why_customers_choose.slice(0, Math.min(cap, 4)).map(function (w) { return [clean(w.reason), short(w.evidence, L >= 2 ? 60 : 110)]; }) },
+        { title: 'Growth pain points', tone: 'amber', lines: pains }
+      ] },
+      { type: 'h2', title: 'Revenue they are leaving on the table', sub: L >= 2 ? '' : 'Each opportunity with the fix, ranked by impact.' },
+      { type: 'table', head: ['Missed opportunity', 'The fix', 'Impact'], align: ['left', 'left', 'center'], widths: [0.34, 0.54, 0.12], rowHeight: 15, fontSize: L >= 2 ? 7.8 : 8.2, boldFirst: true,
+        rows: d.missed_revenue.slice().sort(function (a, b) { return 'HML'.indexOf(a.impact[0]) - 'HML'.indexOf(b.impact[0]); }).slice(0, capR).map(function (m) { return [short(m.opportunity, 60), short(m.fix, 90), m.impact]; }),
+        note: d.sources.length ? 'Sources: ' + d.sources.slice(0, L >= 2 ? 3 : 5).map(function (x) { try { return new URL(x.url).hostname.replace(/^www\./, ''); } catch (e) { return ''; } }).filter(function (v, i, a) { return v && a.indexOf(v) === i; }).join(', ') + '. Figures marked unverified need a second source before you quote them.' : '' }
+    ];
+    var meta = [['HQ', clean(d.headquarters.value)]];
+    if (d.category) meta.push(['Category', clean(d.category)]);
+    if (d.founded) meta.push(['Founded', clean(d.founded)]);
+    meta.push([d.ticker ? 'Ticker' : 'Ownership', clean(d.ticker || d.ownership || 'Unknown')]);
+    return {
+      kicker: 'SYEDCREATES.COM  /  COMPANY RESEARCH', url: 'syedcreates.com/company-research', docTitle: clean(d.company_name) + ' company research',
+      title: clean(d.company_name) + ': market snapshot',
+      subtitle: clean(d.one_liner) + ' Researched ' + today() + ' from ' + d.domain + ' and public sources.',
+      meta: meta,
+      footer: 'AI assisted research from public sources via Firecrawl. Verify figures before quoting. Built by Syed Hadi, syedcreates.com/company-research',
+      blocks: blocks
+    };
+  }
+
+  var BUILDERS = { fire: fireSpec, mf: mfSpec, pmm: pmmSpec, qums: qumsSpec, loan: loanSpec, car: carSpec, bmi: bmiSpec, company: companySpec };
   function fileName(s) {
     var d = new Date().toISOString().slice(0, 10);
-    return ({ fire: 'fire-plan-retire-at-' + s.ret, mf: 'mf-projection-' + String(s.fund && s.fund.n || 'fund').toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 40), pmm: 'pmm-salary-benchmark-2026', qums: 'qums-summary-' + s.year, loan: String(s.loanKind || 'loan').toLowerCase() + '-loan-plan', bmi: 'bmi-healthy-habits-plan', car: String(s.car || 'car').toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 30) + '-running-cost' }[s.kind] || 'report') + '-' + d + '.pdf';
+    return ({ fire: 'fire-plan-retire-at-' + s.ret, mf: 'mf-projection-' + String(s.fund && s.fund.n || 'fund').toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 40), pmm: 'pmm-salary-benchmark-2026', qums: 'qums-summary-' + s.year, loan: String(s.loanKind || 'loan').toLowerCase() + '-loan-plan', bmi: 'bmi-healthy-habits-plan', company: String(s.d && s.d.domain || 'company').toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 40) + '-company-research', car: String(s.car || 'car').toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 30) + '-running-cost' }[s.kind] || 'report') + '-' + d + '.pdf';
   }
   function download(btn) {
     var s = window.__calc; if (!s || !BUILDERS[s.kind]) return;
     if (s.validate && !s.validate()) return;
     var old = btn.textContent; btn.disabled = true; btn.textContent = 'Building your PDF…';
-    engine().then(function () { var doc = window.SHReport.build(BUILDERS[s.kind](s)); doc.save(fileName(s)); if (window.shTrack) shTrack(s.kind + '_pdf_download'); })
+    engine().then(function () { var lvl = 0, doc = window.SHReport.build(BUILDERS[s.kind](s, 0)); while (s.onePage && doc.getNumberOfPages() > 1 && lvl < 4) { lvl++; doc = window.SHReport.build(BUILDERS[s.kind](s, lvl)); } doc.save(fileName(s)); if (window.shTrack) shTrack(s.kind + '_pdf_download'); })
       .catch(function (e) { if (window.console) console.error(e); btn.textContent = 'PDF failed, reload and retry'; setTimeout(function () { btn.textContent = old; }, 3000); })
       .then(function () { btn.disabled = false; if (btn.textContent.indexOf('Building') === 0) btn.textContent = old; });
   }
