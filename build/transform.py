@@ -156,6 +156,12 @@ def process(path, nav_new):
     # 9a3. footer Links column: Adventure (footer only, by request)
     if "href='/adventure'" not in html:
         html = html.replace("<a href='/privacy'>Privacy</a>", "<a href='/adventure'>Adventure</a><a href='/privacy'>Privacy</a>", 1)
+    # 9a4. footer Links column: Brand (press kit)
+    if "href='/brand'" not in html:
+        html = html.replace("<a href='/adventure'>Adventure</a>", "<a href='/adventure'>Adventure</a><a href='/brand'>Brand</a>", 1)
+    # 9a5. typography refresh (2026-11-02): Plus Jakarta Sans display + Instrument Serif accents, self hosted; Inter and JetBrains Mono stay on Google Fonts
+    html = re.sub(r'<link href="https://fonts\.googleapis\.com/css2\?[^"]*" rel="stylesheet">', '<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">', html)
+    html = html.replace('"Bricolage Grotesque"', '"Plus Jakarta Sans"').replace("'Bricolage Grotesque'", "'Plus Jakarta Sans'")
     # 9b2. favicon cache bust (old deploy left a stale icon in browsers)
     html = re.sub(r'href="(/img/favicon-32\.png|/img/favicon-192\.png|/img/apple-touch-icon\.png|/favicon\.ico)(\?v=\d+)?"', r'href="\1?v=3"', html)
     html = html.replace("Programs covering over $35B in annual TAM", "Partner programs live in India, MENA, APAC, Japan, Europe, Africa and the US")
@@ -285,11 +291,12 @@ def main():
     # css additions (idempotent)
     css_path = os.path.join(ROOT, "assets", "site.css")
     css = open(css_path, encoding="utf-8").read()
-    marker = "2026-10-31 QA pass"
-    if marker in css:
-        css = css[:css.index("\n/* ===== 2026-10-31 QA pass")]
+    cuts = [css.index(m) for m in ("\n/* ===== 2026-11-02 typography", "\n/* ===== 2026-10-31 QA pass") if m in css]
+    if cuts:
+        css = css[:min(cuts)]
     from videos import CSS as VIDEO_CSS
     css = css.rstrip() + "\n" + CSS_ADD + VIDEO_CSS
+    css = css.replace('"Bricolage Grotesque"', '"Plus Jakarta Sans"').replace("'Bricolage Grotesque'", "'Plus Jakarta Sans'")
     open(css_path, "w", encoding="utf-8").write(css)
     # common.js: active group for calculator pages
     js_path = os.path.join(ROOT, "assets", "common.js")

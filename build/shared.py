@@ -4,7 +4,7 @@
 # Owner: Syed Hadi
 
 SITE = "https://syedcreates.com"
-VER = "20261102a"
+VER = "20261102b"
 
 def uns(pid, w=480, h=270, q=80):
     return f"https://images.unsplash.com/photo-{pid}?auto=format&fit=crop&q={q}&w={w}&h={h}"
@@ -63,6 +63,19 @@ def calc_menu():
 
 
 CSS_ADD = r'''
+/* ===== 2026-11-02 typography: Plus Jakarta Sans (display), Instrument Serif (accent), Inter (body), JetBrains Mono (labels) ===== */
+@font-face{font-family:"Plus Jakarta Sans";font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/web/plus-jakarta-sans-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Plus Jakarta Sans";font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/web/plus-jakarta-sans-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Plus Jakarta Sans";font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/web/plus-jakarta-sans-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"Plus Jakarta Sans";font-style:normal;font-weight:800;font-display:swap;src:url(/assets/fonts/web/plus-jakarta-sans-latin-800-normal.woff2) format("woff2")}
+@font-face{font-family:"Instrument Serif";font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/web/instrument-serif-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Instrument Serif";font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/web/instrument-serif-latin-400-italic.woff2) format("woff2")}
+.display{letter-spacing:-.035em;font-weight:800}
+h1.display span,h2.display span,.display em,.serif-accent{font-family:"Instrument Serif",Georgia,"Times New Roman",serif;font-style:italic;font-weight:400;letter-spacing:-.01em}
+h1.display span{font-size:1.06em;line-height:1}
+.sp-hero h1 span{font-style:italic}
+.sec-head h2{letter-spacing:-.035em}
+.page-hero p,.sec-head p{font-weight:400}
 /* ===== 2026-10-31 QA pass: accessibility, Calculator menu, finance section, case study photos ===== */
 .skip{position:absolute;left:12px;top:-60px;z-index:1000;padding:10px 14px;border-radius:10px;background:var(--accent);color:#fff;font-weight:600;transition:top .2s}
 .skip:focus{top:12px;outline:2px solid #fff}
