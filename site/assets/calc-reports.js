@@ -1,12 +1,12 @@
 /* Created by: Claude
    Date: 2026-10-31
-   Purpose: PDF report specs for the FIRE, mutual fund, PMM salary, Qums and loan calculators.
+   Purpose: PDF report specs for the FIRE, mutual fund, PMM salary, Qums, loan and car mileage calculators.
             Each page sets window.__calc = {kind:..., ...} from its own calc() and gives the download button id="pdfBtn".
             Rendering is done by /assets/report-pdf.js (SHReport).
    Owner: Syed Hadi */
 (function () {
   'use strict';
-  var VER = '20261031t', loading = null;
+  var VER = '20261102a', loading = null;
   function engine() {
     if (loading) return loading;
     loading = (window.SHReport ? Promise.resolve() : new Promise(function (res, rej) {
@@ -259,10 +259,52 @@
     };
   }
 
-  var BUILDERS = { fire: fireSpec, mf: mfSpec, pmm: pmmSpec, qums: qumsSpec, loan: loanSpec };
+  // ---------------- Car mileage ----------------
+  function carSpec(s) {
+    var F = window.SHReport.fmtINR, C = window.SHReport.C;
+    var n1 = function (x) { return x.toLocaleString('en-IN', { maximumFractionDigits: 1, minimumFractionDigits: 1 }); };
+    var n2 = function (x) { return x.toLocaleString('en-IN', { maximumFractionDigits: 2, minimumFractionDigits: 2 }); };
+    var blocks = [
+      { type: 'kpis', items: [
+        { label: 'Fuel cost per month', value: F(s.fuelM), sub: n1(s.litres) + ' litres at ₹' + n2(s.price) + ' a litre, ' + F(s.fuelY) + ' a year', hero: true },
+        { label: 'Running cost per month', value: F(s.totalM), sub: 'fuel plus service, wear' + (s.ins ? ' and insurance' : '') + ' reserve', color: C.accent },
+        { label: 'Running cost per year', value: F(s.totalY), sub: F(s.fuelY) + ' fuel + ' + F(s.fixedY) + ' fixed' },
+        { label: 'Cost per km', value: '₹' + n2(s.perKm), sub: 'fuel alone ₹' + n2(s.fuelPerKm) + ' per km', color: C.green }
+      ] },
+      { type: 'callout', title: s.car + ' at ' + Math.round(s.km).toLocaleString('en-IN') + ' km a month', lines: [
+        'You burn ' + n1(s.litres) + ' litres a month at ' + n1(s.kmpl) + ' km per litre. ' + (s.range ? 'A full ' + Math.round(s.tank) + ' litre tank goes about ' + Math.round(s.range).toLocaleString('en-IN') + ' km, so expect ' + n1(s.refuels) + ' fill ups a month.' : ''),
+        'The same driving costs ' + F(s.lo.m) + ' a month in ' + s.lo.name + ' and ' + F(s.hi.m) + ' in ' + s.hi.name + '. State fuel tax is the whole difference.'
+      ], tone: 'green' },
+      { type: 'h2', title: 'Monthly fuel cost by city', sub: 'Same car, same kilometres, different pump price. Your price is ₹' + n2(s.price) + '.' },
+      { type: 'bars', cats: s.cities.map(function (c) { return c.name + ' ₹' + n2(c.price); }), height: 120, labels: true,
+        series: [{ name: 'Fuel per month', color: C.accent, values: s.cities.map(function (c) { return c.m; }) }] },
+      { type: 'h2', title: 'Where the money goes in a year', sub: 'Fuel dominates. Service and wear are small but fixed.' },
+      { type: 'split', title: 'Yearly running cost: ' + F(s.totalY), parts: [{ name: 'Fuel', value: s.fuelY, color: C.accent }, { name: 'Service', value: s.service, color: C.green }, { name: 'Wear and tear', value: s.wear, color: C.amber || C.rose }].concat(s.ins ? [{ name: 'Insurance', value: s.ins, color: C.rose }] : []) },
+      { type: 'table', head: ['Item', 'Per month', 'Per year'], align: ['left', 'right', 'right'], rowHeight: 16, fontSize: 8.6,
+        rows: [['Petrol (' + n1(s.litres) + ' L/month)', F(s.fuelM), F(s.fuelY)], ['Scheduled service', F(s.service / 12), F(s.service)], ['Wear and tear reserve', F(s.wear / 12), F(s.wear)]]
+          .concat(s.ins ? [['Insurance', F(s.ins / 12), F(s.ins)]] : []).concat([['Total running cost', F(s.totalM), F(s.totalY)]]) },
+      { type: 'h2', title: 'Two levers that cut the bill', sub: 'Small habits, measurable rupees.' },
+      { type: 'bullets', items: [
+        ['Gain 2 km per litre: save ' + F(s.saveKmpl) + ' a month.', 'Correct tyre pressure, early upshifts and a steady highway speed usually deliver this without changing the car.'],
+        ['Drive 10% less: save ' + F(s.saveLess) + ' a month.', 'Combine errands and skip peak hour where you can. One avoided trip a week adds up.'],
+        ['Track real mileage, not the brochure.', 'Fill the tank, reset the trip, drive, refill. Kilometres divided by litres is the only number that matters.']
+      ] },
+      { type: 'signoff' }
+    ];
+    return {
+      kicker: 'SYEDCREATES.COM  /  CAR RUNNING COST', url: 'syedcreates.com/car-mileage-calculator', docTitle: s.car + ' running cost',
+      title: 'Your ' + s.car + ' costs ' + F(s.totalM) + ' a month to run. Here is the breakdown.',
+      subtitle: Math.round(s.km).toLocaleString('en-IN') + ' km a month at ' + n1(s.kmpl) + ' km/L and ₹' + n2(s.price) + ' a litre means ' + n1(s.litres) + ' litres and ' + F(s.fuelM) + ' of petrol a month. With service and wear that is ' + F(s.totalY) + ' a year, about ₹' + n2(s.perKm) + ' per km. Prepared ' + today() + '.',
+      meta: [['Car', s.car], ['Driving', Math.round(s.km).toLocaleString('en-IN') + ' km / mo'], ['Mileage', n1(s.kmpl) + ' km/L'], ['Petrol', '₹' + n2(s.price) + ' / L'], ['Tank', s.tank ? Math.round(s.tank) + ' L' : '-']],
+      footer: 'Planning tool. Fuel prices and service costs are indicative and change by city and dealer. Built by Syed Hadi, syedcreates.com/car-mileage-calculator',
+      blocks: blocks
+    };
+  }
+
+  var BUILDERS = { fire: fireSpec, mf: mfSpec, pmm: pmmSpec, qums: qumsSpec, loan: loanSpec, car: carSpec };
   function fileName(s) {
     var d = new Date().toISOString().slice(0, 10);
-    return ({ fire: 'fire-plan-retire-at-' + s.ret, mf: 'mf-projection-' + String(s.fund && s.fund.n || 'fund').toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 40), pmm: 'pmm-salary-benchmark-2026', qums: 'qums-summary-' + s.year, loan: String(s.loanKind || 'loan').toLowerCase() + '-loan-plan' }[s.kind] || 'report') + '-' + d + '.pdf';
+    return ({ fire: 'fire-plan-retire-at-' + s.ret, mf: 'mf-projection-' + String(s.fund && s.fund.n || 'fund').toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 40), pmm: 'pmm-salary-benchmark-2026', qums: 'qums-summary-' + s.year, loan: String(s.loanKind || 'loan').toLowerCase() + '-loan-plan', car: String(s.car || 'car').toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 30) + '-running-cost' }[s.kind] || 'report') + '-' + d + '.pdf';
   }
   function download(btn) {
     var s = window.__calc; if (!s || !BUILDERS[s.kind]) return;
