@@ -247,7 +247,7 @@ def write_crawl_files(pages):
         h = open(p, encoding="utf-8").read()
         if re.search(r'name="robots" content="[^"]*noindex', h):
             noindex.add(os.path.basename(p))
-    order = ["index.html", "calculator.html", "loan-calculator.html", "salary-calculator.html", "seo-aeo-score.html", "growth-in-a-box.html", "work.html", "portfolio.html", "gtm-pmm-in-a-box.html", "gtm-in-a-box.html", "pmm-in-a-box.html",
+    order = ["index.html", "calculator.html", "loan-calculator.html", "bmi-calculator.html", "car-mileage-calculator.html", "salary-calculator.html", "seo-aeo-score.html", "growth-in-a-box.html", "work.html", "portfolio.html", "gtm-pmm-in-a-box.html", "gtm-in-a-box.html", "pmm-in-a-box.html",
              "aeo-seo-in-a-box.html", "content-in-a-box.html", "partner-revenue-in-a-box.html", "skill-pack.html",
              "schedule-meeting.html", "case-studies.html", "tools.html", "fire-calculator.html",
              "mutual-fund-returns-calculator.html", "qums.html", "pmm-salary-2026.html"]
@@ -326,7 +326,7 @@ def main():
     # common.js: active group for calculator pages
     js_path = os.path.join(ROOT, "assets", "common.js")
     js = open(js_path, encoding="utf-8").read()
-    js = js.replace("salary:'tools',", "salary:'calc',salarycalc:'calc',fire:'calc',mf:'calc',khums:'calc',tool_ai:'calc',tool_gtm:'calc',tool_partner:'calc',")
+    js = js.replace("salary:'tools',", "salary:'calc',salarycalc:'calc',bmicalc:'calc',carcalc:'calc',loancalc:'calc',brand:'portfolio',fire:'calc',mf:'calc',khums:'calc',tool_ai:'calc',tool_gtm:'calc',tool_partner:'calc',")
     open(js_path, "w", encoding="utf-8").write(js)
     write_crawl_files(pages)
     print("processed", len(pages), "pages")

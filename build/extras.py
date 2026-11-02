@@ -59,6 +59,7 @@ b = open(p, encoding="utf-8").read()
 b = re.sub(r'<section class="bf-sec bf-tools">.*?</section>\s*', '', b, flags=re.S)
 TOOLS = [
     ("/seo-aeo-score", "Free tool", "SEO and AEO Score", "Paste a URL and get an SEO score, an AEO score for AI answer engines, Domain Rating and a prioritised fix list."),
+    ("/bmi-calculator", "Calculator", "BMI and Healthy Habits", "BMI on Indian cut offs, healthy weight for your height, optional BP, sugar and SGPT checks, a start and stop doing plan and a 7 day habits tracker."),
     ("/car-mileage-calculator", "Calculator", "Car Mileage and Running Cost", "Litres per month, fuel cost in your city versus others, cost per km, tank range and a yearly number with service. Pre filled for a Fronx."),
     ("/loan-calculator", "Calculator", "Loan EMI and Prepay Planner", "Home, car or personal loan EMI, three ways to close it in half the time, and prepay versus invest with tax breaks."),
     ("/pmm-salary-2026", "Guide", "India PMM Salary 2026", "Benchmarks by title, experience and city from 3,300 public salaries, a calculator and the full PDF guide."),

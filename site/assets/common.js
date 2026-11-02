@@ -35,7 +35,7 @@
     });
   });
   // portfolio group active state
-  var pmap={gtm:'portfolio',events:'portfolio',systems:'portfolio',recognition:'portfolio',playbook:'portfolio',tools:'tools',about:'tools',blog:'tools',posts:'tools',jobs:'tools',skillpack:'tools',salary:'calc',salarycalc:'calc',fire:'calc',mf:'calc',khums:'calc',tool_ai:'calc',tool_gtm:'calc',tool_partner:'calc',cases:'portfolio',gtmbox:'growth',pmmbox:'growth',seobox:'growth',contentbox:'growth',growthbox:'growth',partnerbox:'growth'};
+  var pmap={gtm:'portfolio',events:'portfolio',systems:'portfolio',recognition:'portfolio',playbook:'portfolio',tools:'tools',about:'tools',blog:'tools',posts:'tools',jobs:'tools',skillpack:'tools',salary:'calc',salarycalc:'calc',bmicalc:'calc',carcalc:'calc',loancalc:'calc',brand:'portfolio',fire:'calc',mf:'calc',khums:'calc',tool_ai:'calc',tool_gtm:'calc',tool_partner:'calc',cases:'portfolio',gtmbox:'growth',pmmbox:'growth',seobox:'growth',contentbox:'growth',growthbox:'growth',partnerbox:'growth'};
   if(pmap[page]){var g=document.querySelector('.dd-btn[data-group="'+pmap[page]+'"]'); if(g) g.classList.add('active');}
 
   // scroll progress bar

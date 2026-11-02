@@ -22,7 +22,7 @@
     ['Inter-SemiBold.ttf', 'Inter', 'bold'],
     ['JetBrainsMono-Medium.ttf', 'Mono', 'normal']
   ];
-  var VER = '20261102c', libP = null, fontData = null;
+  var VER = '20261102d', libP = null, fontData = null;
 
   function loadScript(src) {
     return new Promise(function (res, rej) { var s = document.createElement('script'); s.src = src; s.onload = res; s.onerror = function () { rej(new Error('Could not load ' + src)); }; document.head.appendChild(s); });
@@ -338,12 +338,13 @@
       sum = w.reduce(function (a, b) { return a + b; }, 0);
     }
     var scale = avail / sum; w = w.map(function (x) { return x * scale; });
+    if (o.widths && o.widths.length === nc) { var ws = o.widths.reduce(function (a, b) { return a + b; }, 0); w = o.widths.map(function (f) { return avail * f / ws; }); }
     // wrap cells
     var wrapped = rows.map(function (r) { self.font('Inter', 'normal', fs); return r.map(function (c, i) { return self.wrap(String(c), w[i] - 2 * pad); }); });
     function header() {
       self.need(rh + 6); rgb(d, 'setFillColor', C.ink); d.roundedRect(M, self.y, avail, rh + 3, 4, 4, 'F');
       self.font('Inter', 'bold', fs, C.white); var x = M;
-      head.forEach(function (hd, i) { d.text(self.wrap(hd, w[i] - 2 * pad)[0], align[i] === 'right' ? x + w[i] - pad : x + pad, self.y + rh - 2.5, { align: align[i] === 'right' ? 'right' : 'left' }); x += w[i]; });
+      head.forEach(function (hd, i) { var ax = align[i] === 'right' ? x + w[i] - pad : align[i] === 'center' ? x + w[i] / 2 : x + pad; d.text(self.wrap(hd, w[i] - 2 * pad)[0], ax, self.y + rh - 2.5, { align: align[i] === 'right' || align[i] === 'center' ? align[i] : 'left' }); x += w[i]; });
       self.y += rh + 3;
     }
     header();
@@ -354,7 +355,19 @@
       if (hl) { rgb(d, 'setFillColor', C.soft); d.rect(M, self.y, avail, h, 'F'); rgb(d, 'setFillColor', C.accent); d.rect(M, self.y, 3, h, 'F'); }
       else if (ri % 2) { rgb(d, 'setFillColor', C.faint); d.rect(M, self.y, avail, h, 'F'); }
       self.font('Inter', hl ? 'bold' : 'normal', fs, hl ? C.accent : C.ink);
-      var x = M; cells.forEach(function (c, i) { var ty = self.y + rh - 4.2; c.forEach(function (line) { d.text(line, align[i] === 'right' ? x + w[i] - pad : x + pad, ty, { align: align[i] === 'right' ? 'right' : 'left' }); ty += lh; }); x += w[i]; });
+      var x = M; cells.forEach(function (c, i) {
+        if (o.boxes && i > 0) {
+          // printable tick box: empty square, or a filled accent box with a tick for done
+          var bs = 9, bx = x + w[i] / 2 - bs / 2, by = self.y + h / 2 - bs / 2, done = String(rows[ri][i]).trim() !== '';
+          if (done) { rgb(d, 'setFillColor', C.accent); d.roundedRect(bx, by, bs, bs, 2, 2, 'F'); rgb(d, 'setDrawColor', C.white); d.setLineWidth(1.3); d.line(bx + 2, by + 4.8, bx + 3.9, by + 6.8); d.line(bx + 3.9, by + 6.8, bx + 7.2, by + 2.6); }
+          else { rgb(d, 'setDrawColor', C.ink3); d.setLineWidth(0.7); d.roundedRect(bx, by, bs, bs, 2, 2, 'S'); }
+          x += w[i]; return;
+        }
+        var ty = self.y + rh - 4.2;
+        self.font('Inter', (o.boldFirst && i === 0) || hl ? 'bold' : 'normal', fs, hl ? C.accent : C.ink);
+        c.forEach(function (line) { var ax = align[i] === 'right' ? x + w[i] - pad : align[i] === 'center' ? x + w[i] / 2 : x + pad; d.text(line, ax, ty, { align: align[i] === 'right' || align[i] === 'center' ? align[i] : 'left' }); ty += lh; });
+        x += w[i];
+      });
       self.y += h;
     });
     rgb(d, 'setDrawColor', C.line); d.setLineWidth(0.5); d.line(M, this.y, W - M, this.y);
@@ -382,7 +395,7 @@
     rgb(d, 'setFillColor', C.faint); d.roundedRect(M, y, W - 2 * M, 56, 10, 10, 'F');
     rgb(d, 'setFillColor', C.accent); d.circle(M + 30, y + 28, 15, 'F'); this.font('Display', 'extrabold', 12, C.white); d.text('SH', M + 30, y + 32.5, { align: 'center' });
     this.font('Inter', 'bold', 9.6, C.ink); d.text('Built by Syed Hadi', M + 56, y + 22);
-    this.font('Inter', 'normal', 8.4, C.ink2); d.text('Product Marketing and Partnerships Lead at AccuKnox. More free calculators and the GTM playbook at syedcreates.com', M + 56, y + 36);
+    this.font('Inter', 'normal', 8.4, C.ink2); var sl = this.wrap('Product Marketing and Partnerships Lead at AccuKnox. More free calculators and the GTM playbook at syedcreates.com', W - 2 * M - 56 - 16); d.text(sl.slice(0, 2), M + 56, y + 35);
     this.font('Mono', 'normal', 7, C.accent); d.text((this.spec.url || 'syedcreates.com').toUpperCase(), W - M - 14, y + 22, { align: 'right' });
     this.y = y + 70;
   };

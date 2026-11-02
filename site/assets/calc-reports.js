@@ -1,12 +1,12 @@
 /* Created by: Claude
    Date: 2026-10-31
-   Purpose: PDF report specs for the FIRE, mutual fund, PMM salary, Qums, loan and car mileage calculators.
+   Purpose: PDF report specs for the FIRE, mutual fund, PMM salary, Qums, loan, car mileage and BMI calculators.
             Each page sets window.__calc = {kind:..., ...} from its own calc() and gives the download button id="pdfBtn".
             Rendering is done by /assets/report-pdf.js (SHReport).
    Owner: Syed Hadi */
 (function () {
   'use strict';
-  var VER = '20261102c', loading = null;
+  var VER = '20261102d', loading = null;
   function engine() {
     if (loading) return loading;
     loading = (window.SHReport ? Promise.resolve() : new Promise(function (res, rej) {
@@ -301,10 +301,57 @@
     };
   }
 
-  var BUILDERS = { fire: fireSpec, mf: mfSpec, pmm: pmmSpec, qums: qumsSpec, loan: loanSpec, car: carSpec };
+  // ---------------- BMI and healthy habits ----------------
+  function bmiSpec(s) {
+    var C = window.SHReport.C, r1 = function (x) { return (Math.round(x * 10) / 10).toFixed(1); };
+    var tone = s.band.tone === 'green' && !s.waistFlag ? 'green' : s.band.k === 'under' || s.band.k === 'over' ? 'amber' : 'rose';
+    var col = { green: C.green, amber: C.amber, rose: C.rose };
+    var verdict = s.band.k === 'normal' && !s.waistFlag
+      ? ['Your BMI of ' + r1(s.bmi) + ' is in the healthy range for Indian adults (18.5 to 22.9).', 'Keep the habits below going, keep your waist under ' + (s.sex === 'f' ? '80' : '90') + ' cm, and check your markers once a year.']
+      : s.band.k === 'under'
+        ? ['Your BMI of ' + r1(s.bmi) + ' is below 18.5.', 'Focus on enough food, protein at every meal and strength training. See a doctor if the weight loss was not planned.']
+        : ['Your BMI of ' + r1(s.bmi) + ' is in the ' + s.band.name.toLowerCase() + ' band for Indian adults' + (s.stage2 ? ', and your waist shows excess belly fat.' : '.'), 'A 5 to 7% loss, ' + s.lose5 + ' to ' + s.lose7 + ' kg over six months, is the goal that moves blood pressure, sugar and liver numbers the most. The healthy range for your height is ' + s.wLo + ' to ' + s.wHi + ' kg.'];
+    var blocks = [
+      { type: 'kpis', items: [
+        { label: 'Your BMI', value: r1(s.bmi), sub: s.band.name + ' (Asian Indian bands). WHO: ' + s.who, hero: true },
+        { label: 'Healthy weight for you', value: s.wLo + ' to ' + s.wHi + ' kg', sub: 'BMI 18.5 to 22.9 at ' + s.ht + ' cm', color: C.green },
+        { label: 'Waist to height', value: s.whtr ? s.whtr.toFixed(2) : 'Not entered', sub: s.whtr ? (s.waistFlag ? 'above 0.5: excess belly fat' : '0.5 or less: healthy') : 'measure at the navel', color: s.waistFlag ? C.rose : C.accent },
+        { label: 'First goal', value: s.bmi >= 23 ? s.lose5 + ' to ' + s.lose7 + ' kg' : s.bmi < 18.5 ? '+' + s.toTarget + ' kg' : 'Maintain', sub: s.bmi >= 23 ? 'loss over six months, 5 to 7%' : s.bmi < 18.5 ? 'gain to reach BMI 18.5' : 'stay inside your range', color: col[tone] }
+      ] },
+      { type: 'callout', title: 'The verdict', lines: verdict, tone: tone },
+      { type: 'h2', title: 'What you should start doing', sub: 'Personalised from your numbers and habits. Start with the first two this week.' },
+      { type: 'table', head: ['Start doing', 'Why it matters for you'], align: ['left', 'left'], widths: [0.32, 0.68], boldFirst: true, rowHeight: 16, fontSize: 8.4, rows: s.start },
+      { type: 'h2', title: 'What you should stop doing', sub: 'Small removals often beat big additions.' },
+      { type: 'table', head: ['Stop doing', 'Why it matters for you'], align: ['left', 'left'], widths: [0.32, 0.68], boldFirst: true, rowHeight: 16, fontSize: 8.4, rows: s.stop }
+    ];
+    if (s.marks.length) blocks.push({ type: 'h2', title: 'Your health markers', sub: 'Scored against common adult reference ranges. Your lab and doctor have the final word.' },
+      { type: 'table', head: ['Marker', 'Your value', 'Reference', 'Status'], align: ['left', 'left', 'left', 'left'], rowHeight: 16, fontSize: 8.4, widths: [0.2, 0.18, 0.34, 0.28], boldFirst: true, rows: s.marks.map(function (m) { return [m.name, m.val, m.ref, m.st]; }) });
+    blocks.push({ type: 'page', ifBelow: 0.4 },
+      { type: 'h2', title: 'Your 7 day habits tracker', sub: 'Week of ' + s.tracker.week + '. ' + (s.tracker.pct ? s.tracker.pct + '% of habits ticked on the site so far. ' : '') + 'Print this page and tick a box each day you hit the habit.' },
+      { type: 'table', head: ['Habit', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'], align: ['left', 'center', 'center', 'center', 'center', 'center', 'center', 'center'], widths: [0.37, 0.09, 0.09, 0.09, 0.09, 0.09, 0.09, 0.09], boxes: true, rowHeight: 22, fontSize: 8.4, rows: s.tracker.rows },
+      { type: 'h2', title: 'How these numbers were worked out', sub: 'Every input is on the page.' },
+      { type: 'kv', rows: [['Height and weight', s.ht + ' cm, ' + s.wt + ' kg'], ['Age and sex', s.age + ', ' + (s.sex === 'f' ? 'female' : 'male')], ['Waist', s.waist ? s.waist + ' cm' : 'Not entered'], ['Cardio and strength', s.exMin + ' min a week, ' + s.str + ' strength days'], ['Steps and sitting', s.steps.toLocaleString('en-IN') + ' steps, ' + s.sit + ' h sitting'], ['Sleep and sugary drinks', s.sleep + ' h a night, ' + s.sugary + ' a week']], cols: 2 },
+      { type: 'bullets', items: [
+        ['BMI is weight in kg divided by height in metres squared.', 'Asian Indian bands (Misra et al. 2009, revised 2025): healthy 18.5 to 22.9, overweight 23 to 24.9, obesity 25 and above.'],
+        ['Belly fat is a waist of 90 cm (men) or 80 cm (women), or a ratio above 0.5.', 'BMI above 23 with excess belly fat is the more serious stage in the 2025 Indian definition.'],
+        ['Readings use ACC/AHA, ADA and ACG reference ranges.', 'Activity targets follow WHO: 150 to 300 minutes a week plus two strength days.']
+      ] },
+      { type: 'callout', title: 'Not medical advice', lines: ['For education and habit building, not a diagnosis. Discuss any flagged reading with a doctor. Blood pressure of 180 / 120 or more needs care the same day.'], tone: 'amber' },
+      { type: 'signoff' });
+    return {
+      kicker: 'SYEDCREATES.COM  /  BMI AND HEALTHY HABITS', url: 'syedcreates.com/bmi-calculator', docTitle: 'BMI and healthy habits plan',
+      title: 'Your BMI is ' + r1(s.bmi) + '. Here is what to start and stop doing.',
+      subtitle: s.ht + ' cm and ' + s.wt + ' kg puts you in the ' + s.band.name.toLowerCase() + ' band for Indian adults. The healthy weight for your height is ' + s.wLo + ' to ' + s.wHi + ' kg. Prepared ' + today() + '.',
+      meta: [['BMI', r1(s.bmi)], ['Band', s.band.name], ['Height', s.ht + ' cm'], ['Weight', s.wt + ' kg'], ['Waist', s.waist ? s.waist + ' cm' : '-']],
+      footer: 'Education only, not medical advice. Discuss flagged readings with a doctor. Built by Syed Hadi, syedcreates.com/bmi-calculator',
+      blocks: blocks
+    };
+  }
+
+  var BUILDERS = { fire: fireSpec, mf: mfSpec, pmm: pmmSpec, qums: qumsSpec, loan: loanSpec, car: carSpec, bmi: bmiSpec };
   function fileName(s) {
     var d = new Date().toISOString().slice(0, 10);
-    return ({ fire: 'fire-plan-retire-at-' + s.ret, mf: 'mf-projection-' + String(s.fund && s.fund.n || 'fund').toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 40), pmm: 'pmm-salary-benchmark-2026', qums: 'qums-summary-' + s.year, loan: String(s.loanKind || 'loan').toLowerCase() + '-loan-plan', car: String(s.car || 'car').toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 30) + '-running-cost' }[s.kind] || 'report') + '-' + d + '.pdf';
+    return ({ fire: 'fire-plan-retire-at-' + s.ret, mf: 'mf-projection-' + String(s.fund && s.fund.n || 'fund').toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 40), pmm: 'pmm-salary-benchmark-2026', qums: 'qums-summary-' + s.year, loan: String(s.loanKind || 'loan').toLowerCase() + '-loan-plan', bmi: 'bmi-healthy-habits-plan', car: String(s.car || 'car').toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 30) + '-running-cost' }[s.kind] || 'report') + '-' + d + '.pdf';
   }
   function download(btn) {
     var s = window.__calc; if (!s || !BUILDERS[s.kind]) return;

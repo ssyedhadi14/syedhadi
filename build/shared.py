@@ -4,7 +4,7 @@
 # Owner: Syed Hadi
 
 SITE = "https://syedcreates.com"
-VER = "20261102c"
+VER = "20261102d"
 
 def uns(pid, w=480, h=270, q=80):
     return f"https://images.unsplash.com/photo-{pid}?auto=format&fit=crop&q={q}&w={w}&h={h}"
@@ -22,6 +22,9 @@ CALCS = [
     ("car", "/car-mileage-calculator", "Car Mileage and Running Cost",
      "Litres per month, fuel cost by city, cost per km and tank range. Pre filled for a Fronx.",
      "1449965408869-eaa3f722e40d", "Car driving on an open road at golden hour", "NEW"),
+    ("bmi", "/bmi-calculator", "BMI and Healthy Habits",
+     "BMI on Indian cut offs, what to start and stop doing, and a 7 day habits tracker.",
+     "1476480862126-209bfaa8edc8", "Running shoes on outdoor stairs", "NEW"),
     ("fire", "/fire-calculator", "FIRE Calculator India",
      "Your FIRE number, the SIP you need and your earliest retirement age.",
      "1476514525535-07fb3b4ae5f1", "Wooden boat on a calm mountain lake", ""),
@@ -73,6 +76,7 @@ CSS_ADD = r'''
 .display{letter-spacing:-.035em;font-weight:800}
 h1.display span,h2.display span,.display em,.serif-accent{font-family:"Instrument Serif",Georgia,"Times New Roman",serif;font-style:italic;font-weight:400;letter-spacing:-.01em}
 h1.display span{font-size:1.06em;line-height:1}
+h2.display span{color:var(--accent)}
 .sp-hero h1 span{font-style:italic}
 .sec-head h2{letter-spacing:-.035em}
 .page-hero p,.sec-head p{font-weight:400}
@@ -84,14 +88,15 @@ h1.display span{font-size:1.06em;line-height:1}
 .mw-card .h4{font-family:"Bricolage Grotesque";font-size:19px;font-weight:700;line-height:1.2;margin-bottom:8px}
 .fcol .h4{font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;font-weight:500}
 .win h3{font-size:16px;margin:14px 0 6px}
-.dd-menu.mm-calc{width:min(1180px,calc(100vw - 48px));padding:14px}
-.calc-grid{grid-template-columns:repeat(7,1fr)}
+.dd-menu.mm-calc{width:min(1100px,calc(100vw - 48px));padding:14px}
+.calc-grid{grid-template-columns:repeat(4,1fr)}
+.dd-menu.mm .calc-grid .gb-card small{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .dd-menu.mm .calc-grid .gb-card .gb-img{aspect-ratio:16/9}
 .calc-sub{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:12px;padding:10px 12px;border-radius:10px;background:var(--accent-soft)}
 .calc-sub span{font:600 12px "JetBrains Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-right:6px}
 .calc-sub a{font-weight:600;font-size:13.5px;color:var(--ink);padding:6px 10px;border-radius:8px;background:var(--card);border:1px solid var(--line)}
 .calc-sub a:hover{border-color:var(--accent);color:var(--accent)}
-@media (max-width:1300px){.calc-grid{grid-template-columns:repeat(4,1fr)}}
+
 /* case study covers with photos */
 .cs-cover.photo .cs-cv-m,.cs-cover.photo .cs-cv-l{position:relative;z-index:1;text-shadow:0 2px 14px rgba(0,0,0,.45)}
 .cs-feat .cs-cover.photo img{transition:transform .6s var(--ease)}
