@@ -32,7 +32,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css?v=20261102d">
+<link rel="stylesheet" href="/assets/site.css?v=20261102e">
 <style>
 .bm-hero{background:linear-gradient(160deg,#ecfdf5 0%,#eef2ff 55%,#fff7ed 100%)}
 [data-theme=dark] .bm-hero{background:linear-gradient(160deg,#0f2a1c 0%,#15173a 55%,#2a1a10 100%)}
@@ -133,7 +133,7 @@
 <div class="wrap">
 <div>
 <div class="crumbs"><a href="/">Home</a> / <a href="/calculator">Calculators</a> / BMI calculator</div>
-<h1 class="display" style="font-size:clamp(34px,4.6vw,60px)">Know your BMI. Then build the <span>habits</span> that move it.</h1>
+<h1 class="display" style="font-size:clamp(34px,4.6vw,60px)">Know your BMI. Then build the <span class="tg3">habits</span> that move it.</h1>
 <p>BMI scored on the Indian cut offs, the healthy weight for your height and your waist to height ratio. Add any recent BP, sugar or SGPT reading and get a plain table of what to start doing and what to stop, plus a 7 day habits tracker you can tick daily and print.</p>
 </div>
 <div class="bm-art"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=880&h=605" alt="Bowl of fresh vegetables, chickpeas and avocado" width="880" height="605" fetchpriority="high" decoding="async"></div>
@@ -195,7 +195,7 @@
 
 <section class="bx-sec bm-sec" id="insights">
   <div class="wrap">
-    <div class="sec-head reveal" style="text-align:left;margin-left:0"><span class="eyebrow">Your plan</span><h2 class="display">What to Start, What to <span>Stop</span></h2>
+    <div class="sec-head reveal" style="text-align:left;margin-left:0"><span class="eyebrow">Your plan</span><h2 class="display">What to Start, What to <span class="t4">Stop</span></h2>
     <p>Built from your BMI, waist, habits and any readings you added. Each row says why it matters for you, not for an average person. Change an input above and the table updates.</p></div>
     <div class="tbl-wrap reveal" id="ins"></div>
     <div class="sec-head reveal" style="text-align:left;margin:34px 0 14px"><h3 style="font-family:'Plus Jakarta Sans';font-size:24px;letter-spacing:-.02em;margin:0">Your report readings</h3></div>
@@ -205,7 +205,7 @@
 
 <section class="bx-sec" id="tracker">
   <div class="wrap">
-    <div class="sec-head reveal" style="text-align:left;margin-left:0"><span class="eyebrow">Healthy habits tracker</span><h2 class="display">Seven Days, Eight <span>Habits</span></h2>
+    <div class="sec-head reveal" style="text-align:left;margin-left:0"><span class="eyebrow">Healthy habits tracker</span><h2 class="display">Seven Days, Eight <span class="t5">Habits</span></h2>
     <p>Picked from your plan. Tick a box each day you hit the habit. Ticks are saved on this device only and reset every Monday, so each week starts clean.</p></div>
     <div class="trk-top reveal"><b id="trkScore">0%</b><div class="trk-bar"><i id="trkBar"></i></div><button type="button" class="btn btn-ghost" id="trkReset">Clear this week</button></div>
     <p class="fr-hint" id="trkNote" style="margin-bottom:12px"></p>
@@ -220,7 +220,7 @@
 
 <section class="bx-sec" style="padding-top:0">
   <div class="wrap cs-two">
-    <div class="reveal"><span class="eyebrow">How it works</span><h2 class="display">The Rules Behind the <span>Numbers</span></h2></div>
+    <div class="reveal"><span class="eyebrow">How it works</span><h2 class="display">The Rules Behind the <span class="t6">Numbers</span></h2></div>
     <div class="cs-prose reveal">
       <p><b>BMI.</b> Weight in kg divided by height in metres squared. Scored on the Asian Indian bands: healthy 18.5 to 22.9, overweight 23 to 24.9, obesity 25 and above. The WHO global category is shown alongside.</p>
       <p><b>Belly fat.</b> A waist of 90 cm or more for men, 80 cm or more for women, or a waist to height ratio above 0.5. The 2025 revised Indian definition of obesity treats BMI above 23 with excess belly fat as the more serious stage.</p>
@@ -233,20 +233,20 @@
 
 <section class="bx-sec">
   <div class="wrap bx-faqwrap">
-    <div class="sec-head reveal" style="text-align:left;margin-left:0"><span class="eyebrow">FAQ</span><h2 class="display">Common Questions</h2></div>
+    <div class="sec-head reveal" style="text-align:left;margin-left:0"><span class="eyebrow">FAQ</span><h2 class="display">Common <span class="t1">Questions</span></h2></div>
     <div class="sp-faq-list reveal"><details class="sp-faq-item"><summary>What is a healthy BMI for Indians?</summary><p>For Asian Indian adults the healthy range is 18.5 to 22.9. A BMI of 23 to 24.9 counts as overweight and 25 or above as obesity. These cut offs are lower than the WHO global ones (25 and 30) because Indians develop diabetes and heart disease at lower body weight, which is why Indian doctors use them.</p></details><details class="sp-faq-item"><summary>How do I calculate BMI?</summary><p>BMI is your weight in kilograms divided by your height in metres squared. At 170 cm and 72 kg that is 72 ÷ (1.7 × 1.7) = 24.9. The calculator does this for you and shows the weight range that is healthy for your height.</p></details><details class="sp-faq-item"><summary>Why does waist size matter as much as BMI?</summary><p>Fat around the belly drives insulin resistance, fatty liver and heart risk, and Indians carry more of it at the same BMI. The 2025 revised Indian definition of obesity uses BMI above 23 together with a waist of 90 cm or more for men, 80 cm or more for women, or a waist to height ratio above 0.5.</p></details><details class="sp-faq-item"><summary>What blood pressure, sugar and SGPT readings are normal?</summary><p>Blood pressure under 120 / 80 is normal and 130 / 80 or more is high. Fasting glucose under 100 mg/dL and HbA1c under 5.7% are normal, with 100 to 125 and 5.7 to 6.4% in the prediabetes range. For SGPT (ALT), gastroenterology guidance puts the healthy upper limit near 33 U/L for men and 25 U/L for women, though many labs print 40. Your doctor reads these with your full history.</p></details><details class="sp-faq-item"><summary>How much weight should I aim to lose first?</summary><p>Five to seven percent of your current weight over six months. For a 78 kg adult that is about 4 to 5.5 kg. Losses of this size measurably lower blood pressure, blood sugar and liver fat, even before you reach the healthy BMI range.</p></details><details class="sp-faq-item"><summary>Is my data saved or shared?</summary><p>No. Everything runs in your browser. Health readings never go into the share link. Habit ticks are saved only on this device and reset every Monday. The PDF is built on your device.</p></details></div>
     <p class="fr-disc">References: Misra A et al., Revised definition of obesity in Asian Indians living in India, Diabetes and Metabolic Syndrome, 2025; WHO guidelines on physical activity, 2020; ACC/AHA blood pressure guideline, 2017; ADA Standards of Care; ACG clinical guideline on abnormal liver chemistries, 2017. This calculator is for education only and is not a substitute for medical advice.</p>
   </div>
 </section>
-<script src="/assets/bmi-calculator.js?v=20261102d"></script>
-<script src="/assets/calc-reports.js?v=20261102d" defer></script>
+<script src="/assets/bmi-calculator.js?v=20261102e"></script>
+<script src="/assets/calc-reports.js?v=20261102e" defer></script>
 </main>
 <section class="skill-band" aria-labelledby="sk-band-t">
   <div class="sk-sky" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
   <div class="wrap sk-in reveal">
     <div>
       <span class="sk-eb"><svg class="sb-ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z" opacity=".75"/></svg>New &middot; Claude Skill Pack</span>
-      <h2 id="sk-band-t">Hand Claude your GTM busywork.</h2>
+      <h2 id="sk-band-t">Hand Claude your GTM <span class="t1">busywork.</span></h2>
       <p>8 tested skills for prompts, account research, SEO grading and content planning, packaged so you can install them in minutes and run them every day.</p>
       <ul class="sk-pts"><li>Company dossiers with sources</li><li>SEO grades with ranked fixes</li><li>Prompts that ship finished</li></ul>
     </div>
@@ -264,7 +264,7 @@
 <section class="cta" style="padding-top:20px">
   <div class="wrap">
     <div class="cta-box reveal">
-      <h2 class="display">Ready to Grow<br>Something Together?</h2>
+      <h2 class="display">Ready to Grow<br>Something <span class="t2">Together?</span></h2>
       <p>The best innovations start with a conversation. Tell me what you are building and where the pipeline stalls.</p>
       <div class="btns">
         <a class='btn btn-primary' href='/schedule-meeting'>Schedule meeting</a>
@@ -292,7 +292,7 @@
   <div class="wrap nl2-in">
     <div class="nl2-copy">
       <span class="nl-eyebrow"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 3h14v18l-7-4-7 4z"/></svg>Pipeline Notes, the newsletter on Substack</span>
-      <h2 id="nl-title" class="display">GTM notes from the field, before they become a case study.</h2>
+      <h2 id="nl-title" class="display">GTM notes from the field, before they become a <span class="t2">case study.</span></h2>
       <p>Every other week: one play that moved pipeline at a security startup, the numbers behind it, and the template to run it yourself. Written for founders, product marketers and partner leads who own a revenue number.</p>
       <ul class="nl2-points">
         <li><span class="nl2-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18M7 14l4-4 4 4 5-6"/></svg></span><b>One play, with numbers</b><small>What we ran, what it cost, what it returned</small></li>
@@ -348,6 +348,6 @@
   </div>
   <div class="made-strip"><span>Made with love <span class="ms-heart" aria-hidden="true">❤️</span> from Bangalore, India <span aria-hidden="true">🇮🇳</span></span></div>
 </footer>
-<script src="/assets/common.js?v=20261102d"></script>
+<script src="/assets/common.js?v=20261102e"></script>
 </body>
 </html>

@@ -107,6 +107,8 @@ def inject(path, html_sec):
     assert h.count("<footer") == 1, path
     h = h.replace("<footer", html_sec + "<footer", 1)
     h = h.replace("</body>", JS.strip() + "\n</body>", 1)
+    from serif import accent
+    h = accent(h)
     open(path, "w", encoding="utf-8").write(h)
 
 

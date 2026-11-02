@@ -1,0 +1,5 @@
+const {chromium}=require('playwright');const fs=require('fs'),path=require('path');const ROOT='/home/claude/work/site';
+(async()=>{const b=await chromium.launch();const p=await b.newPage({viewport:{width:1366,height:900}});
+await p.route('**/*',r=>{const u=new URL(r.request().url());if(u.host!=='local')return r.fulfill({status:204,body:''});let f=path.join(ROOT,u.pathname==='/'?'index.html':u.pathname);if(!fs.existsSync(f)||fs.statSync(f).isDirectory())f+='.html';if(!fs.existsSync(f))return r.fulfill({status:404,body:''});r.fulfill({body:fs.readFileSync(f),contentType:f.endsWith('.css')?'text/css':f.endsWith('.js')?'application/javascript':f.endsWith('.woff2')?'font/woff2':f.endsWith('.png')?'image/png':f.endsWith('.jpg')?'image/jpeg':'text/html'})});
+await p.goto('http://local/bmi-calculator');await p.waitForTimeout(500);await p.addStyleTag({content:'img[src^="https"]{background:#c9c4e8}'});
+await p.hover('.dd-btn[data-group="calc"]');await p.waitForTimeout(500);await p.screenshot({path:'/home/claude/qa/nav-calc.png',clip:{x:0,y:0,width:1366,height:640}});await b.close()})();

@@ -1,0 +1,6 @@
+const {chromium}=require('playwright');const fs=require('fs'),path=require('path');const ROOT='/home/claude/syedhadi/site';
+(async()=>{const b=await chromium.launch();const p=await b.newPage({viewport:{width:390,height:844}});
+await p.route('**/*',r=>{const u=new URL(r.request().url());if(u.host!=='local')return r.fulfill({status:204,body:''});let f=path.join(ROOT,u.pathname==='/'?'index.html':u.pathname);if(!fs.existsSync(f)||fs.statSync(f).isDirectory())f+='.html';if(!fs.existsSync(f))return r.fulfill({status:404,body:''});r.fulfill({body:fs.readFileSync(f),contentType:f.endsWith('.css')?'text/css':f.endsWith('.js')?'application/javascript':f.endsWith('.woff2')?'font/woff2':'text/html'})});
+for(const s of process.argv.slice(2)){await p.goto('http://local/'+s);await p.waitForTimeout(500);
+const r=await p.evaluate(()=>{const m={};[...document.querySelectorAll('p,li,a,span,small,b,em,i,div,td,th,label')].filter(e=>e.children.length===0&&e.textContent.trim().length>3&&parseFloat(getComputedStyle(e).fontSize)<11&&e.offsetParent).forEach(e=>{const k=e.tagName.toLowerCase()+'.'+String(e.className||e.parentElement.className).split(' ')[0]+' '+getComputedStyle(e).fontSize;m[k]=(m[k]||0)+1});return m});
+console.log(s,JSON.stringify(r));}await b.close()})();
