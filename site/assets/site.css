@@ -2382,4 +2382,54 @@ h1 .tg1,h1 .tg2,h1 .tg3,h1 .tg4,h1 .tg5,h1 .tg6,h1.display span.tg1,h1.display s
 .boxed.t1,.boxed.t2,.boxed.t3,.boxed.t4,.boxed.t5,.boxed.t6{border-color:currentColor}
 /* inline serif in body copy */
 .serif-accent{font-family:"Instrument Serif",Georgia,serif;font-style:italic;font-weight:400;font-size:1.18em;line-height:1}
-.hero .serif-accent,.hero-sub .serif-accent{color:#d9534f} [data-theme=dark] .hero .serif-accent{color:#fb9a8f}
+.hero .serif-accent,.hero-sub .serif-accent{color:#b9382f} [data-theme=dark] .hero .serif-accent{color:#fb9a8f}
+
+/* ===== 2026-11-02 contrast pass: no dark on dark, no light on light ===== */
+/* serif accent words on dark bands use light pastel tints (3:1+ on the lightest gradient stop) */
+:is(.cta-box,.au-box,.bx-final,.bx-proof,.hp-new,.newsletter.nl2,.sal-gate,.sal-out,.sp-bundle,.skill-band,.sa-score.total,.cs-cover) :is(.t1,.t2,.t3,.t4,.t5,.t6){-webkit-text-fill-color:currentColor;background:none}
+:is(.cta-box,.au-box,.bx-final,.bx-proof,.hp-new,.newsletter.nl2,.sal-gate,.sal-out,.sp-bundle,.skill-band,.sa-score.total,.cs-cover) .t1{color:#e2dbff!important}
+:is(.cta-box,.au-box,.bx-final,.bx-proof,.hp-new,.newsletter.nl2,.sal-gate,.sal-out,.sp-bundle,.skill-band,.sa-score.total,.cs-cover) .t2{color:#b5f5ea!important}
+:is(.cta-box,.au-box,.bx-final,.bx-proof,.hp-new,.newsletter.nl2,.sal-gate,.sal-out,.sp-bundle,.skill-band,.sa-score.total,.cs-cover) .t3{color:#ffd6cf!important}
+:is(.cta-box,.au-box,.bx-final,.bx-proof,.hp-new,.newsletter.nl2,.sal-gate,.sal-out,.sp-bundle,.skill-band,.sa-score.total,.cs-cover) .t4{color:#ffe27a!important}
+:is(.cta-box,.au-box,.bx-final,.bx-proof,.hp-new,.newsletter.nl2,.sal-gate,.sal-out,.sp-bundle,.skill-band,.sa-score.total,.cs-cover) .t5{color:#cbe7ff!important}
+:is(.cta-box,.au-box,.bx-final,.bx-proof,.hp-new,.newsletter.nl2,.sal-gate,.sal-out,.sp-bundle,.skill-band,.sa-score.total,.cs-cover) .t6{color:#ffd1ee!important}
+:is(.cta-box,.au-box,.bx-final,.bx-proof,.hp-new,.newsletter.nl2,.sal-gate,.sal-out,.sp-bundle,.skill-band,.cs-cover) :is(.tg1,.tg2,.tg3,.tg4,.tg5,.tg6){background-image:linear-gradient(100deg,#e2dbff,#ffd1ee)!important}
+.boxed:is(.t1,.t2,.t3,.t4,.t5,.t6){border-color:currentColor}
+:is(.au-box,.sal-gate,.bx-final) :is(p,small,label){color:#f1eeff}
+.foot-promo small{color:#ece8ff}
+/* secondary grey text: 4.5:1 on white and the soft panels */
+:root{--ink-3:#67637e}
+[data-theme=dark]{--ink-3:#9692ae}
+/* gains, losses and status chips readable on white */
+.mf-t td.pos,.mf-y .g{color:#047857}
+.mf-t td.neg{color:#dc2626}
+.b.f,.lip-kind.k-event{color:#15803d}
+[data-theme=dark] .mf-t td.pos,[data-theme=dark] .mf-y .g{color:#34d399}
+[data-theme=dark] .mf-t td.neg{color:#f87171}
+[data-theme=dark] .b.f,[data-theme=dark] .lip-kind.k-event{color:#4ade80}
+[data-theme=dark] .lip-kind.k-post{color:#fbbf24}
+/* nav pill: the shine passes through a deep violet, never a pale lilac */
+.nav-links .dd-btn.gx-btn{background-image:linear-gradient(110deg,#5b3df5 0%,#7c3aed 40%,#9333ea 50%,#7c3aed 60%,#5b3df5 100%)}
+.nav-links .dd-btn.gx-btn:hover,.dd.mega.open>.dd-btn.gx-btn,.dd.mega:hover>.dd-btn.gx-btn{background-image:linear-gradient(110deg,#4a2fe0 0%,#6d28d9 40%,#9333ea 50%,#6d28d9 60%,#4a2fe0 100%)}
+/* buttons inside article prose keep white text */
+.cs-prose a.btn-primary,.pt-body a.btn-primary{color:#fff;text-decoration:none}
+.cs-prose a.btn-ghost,.pt-body a.btn-ghost{text-decoration:none}
+/* skill pack steps sit on a light card */
+.sp-steps li{color:var(--ink)}
+/* video placeholder text never sits on a white iframe while loading */
+.vid-frame:not(.ready) iframe{background:transparent}
+/* dark mode: filled accent controls carry white text, so the fill uses a deeper violet (5:1) */
+[data-theme=dark] :is(.btn-primary,.skip,.bx-when,.fr-step>span,.cnt,.op-gate button,.fin-cta,.stn,.kh-ptag,.sp-buyall,button.on){--accent:#6e55f0}
+.nl2-form small{color:var(--ink-3)}
+[data-theme=dark] .nl2-form small{color:#5f5b75}
+.fin-cta{background-image:linear-gradient(90deg,#5b3df5,#7c3aed,#5b3df5)}
+.tool .tn span.b.f,.xd-meta .xd-now{color:#15803d}
+[data-theme=dark] .tool .tn span.b.f,[data-theme=dark] .xd-meta .xd-now{color:#4ade80}
+.mono[data-color="#0ea5a4"],.mono[style*="#0ea5a4"]{background:#0f766e!important}
+.mfall{color:#fff}
+.sal-ed{color:#9a4a09}
+tr.on td.neg,.mf-t tr.on td.neg{color:#c81e1e}
+[data-theme=dark] .lip-kind.k-reshare{color:#60a5fa}
+[data-theme=dark] .lip-kind.k-video{color:#fb7185}
+.page-hero .lede .serif-accent,.lede .serif-accent{color:#b9382f}
+[data-theme=dark] .lede .serif-accent{color:#fb9a8f}
