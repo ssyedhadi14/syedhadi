@@ -2129,6 +2129,7 @@ h1.display span{font-size:1.06em;line-height:1}
 /* ===== 2026-10-31 QA pass: accessibility, Calculator menu, finance section, case study photos ===== */
 .skip{position:absolute;left:12px;top:-60px;z-index:1000;padding:10px 14px;border-radius:10px;background:var(--accent);color:#fff;font-weight:600;transition:top .2s}
 .skip:focus{top:12px;outline:2px solid #fff}
+.fr-money small{font-size:12.5px}
 .mw-h .h4{font-family:"Plus Jakarta Sans";font-size:22px;font-weight:700;letter-spacing:-.01em;margin:0}
 .mw-card .h4{font-family:"Plus Jakarta Sans";font-size:19px;font-weight:700;line-height:1.2;margin-bottom:8px}
 .fcol .h4{font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;font-weight:500}

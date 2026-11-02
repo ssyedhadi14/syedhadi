@@ -231,7 +231,7 @@ body {{ font-family: Inter; font-size: 16px; line-height: 1.6; color: #0d0b1a; }
     <p class="fr-disc">Assets on this page may be used to identify Syed Hadi in editorial, event and partner contexts. They may not be used to imply endorsement of a product or service. Questions: <a href="/schedule-meeting">book a slot</a> or reply to any Pipeline Notes email.</p>
   </div>
 </section>
-<script>document.addEventListener('click',function(e){{var b=e.target.closest('.cp');if(!b)return;var t=document.getElementById(b.dataset.cp).textContent;navigator.clipboard.writeText(t).then(function(){{var o=b.textContent;b.textContent='Copied';setTimeout(function(){{b.textContent=o}},1600)}})}});</script>
+<script>document.addEventListener('click',function(e){{var b=e.target.closest('.cp');if(!b)return;var t=document.getElementById(b.dataset.cp).textContent,o=b.textContent,done=function(){{b.textContent='Copied';setTimeout(function(){{b.textContent=o}},1600)}};if(navigator.clipboard&&navigator.clipboard.writeText){{navigator.clipboard.writeText(t).then(done,function(){{fallback()}})}}else fallback();function fallback(){{var a=document.createElement('textarea');a.value=t;a.style.position='fixed';a.style.opacity='0';document.body.appendChild(a);a.select();try{{document.execCommand('copy');done()}}catch(e){{}}a.remove()}}}});</script>
 </main>
 {nl}
 {foot}

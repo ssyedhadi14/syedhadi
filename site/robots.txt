@@ -1,7 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /404.html
-Disallow: /skill-pack-thanks.html
 
 # AI answer engines and assistants are welcome
 User-agent: GPTBot

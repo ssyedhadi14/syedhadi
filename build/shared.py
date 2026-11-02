@@ -4,7 +4,7 @@
 # Owner: Syed Hadi
 
 SITE = "https://syedcreates.com"
-VER = "20261102b"
+VER = "20261102c"
 
 def uns(pid, w=480, h=270, q=80):
     return f"https://images.unsplash.com/photo-{pid}?auto=format&fit=crop&q={q}&w={w}&h={h}"
@@ -79,6 +79,7 @@ h1.display span{font-size:1.06em;line-height:1}
 /* ===== 2026-10-31 QA pass: accessibility, Calculator menu, finance section, case study photos ===== */
 .skip{position:absolute;left:12px;top:-60px;z-index:1000;padding:10px 14px;border-radius:10px;background:var(--accent);color:#fff;font-weight:600;transition:top .2s}
 .skip:focus{top:12px;outline:2px solid #fff}
+.fr-money small{font-size:12.5px}
 .mw-h .h4{font-family:"Bricolage Grotesque";font-size:22px;font-weight:700;letter-spacing:-.01em;margin:0}
 .mw-card .h4{font-family:"Bricolage Grotesque";font-size:19px;font-weight:700;line-height:1.2;margin-bottom:8px}
 .fcol .h4{font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;font-weight:500}
@@ -304,8 +305,15 @@ REDIRECTS_HEAD = '''# syedcreates.com redirects. Netlify processes these top to 
 /qums-calculator   /qums                                                                                               301
 /khums             /qums                                                                                               301
 /khums-calculator  /qums                                                                                               301
-/calculators       /tools#calculators                                                                                  301
-/calculator        /tools#calculators                                                                                  301
+/calculators       /calculator                                                                                         301
+/medium-feed       https://medium.com/feed/@ssyedhadi                                                                  200
+/car               /car-mileage-calculator                                                                             301
+/mileage           /car-mileage-calculator                                                                             301
+/loan              /loan-calculator                                                                                    301
+/emi               /loan-calculator                                                                                    301
+/press             /brand                                                                                              301
+/media-kit         /brand                                                                                              301
+/brand-kit         /brand                                                                                              301
 /salary            /salary-calculator                                                                                  301
 /fire              /fire-calculator                                                                                    301
 /mf                /mutual-fund-returns-calculator                                                                     301

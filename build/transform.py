@@ -21,6 +21,9 @@ TODAY = date.today().isoformat()
 
 # Shorter titles (<= 60 chars) for pages that overflowed. Keyword first, brand last.
 TITLES = {
+    "calculator.html": "Free India Calculators: Salary, EMI, FIRE, Car, Mutual Funds",
+    "car-mileage-calculator.html": "Car Mileage Calculator India: Fuel Cost Per Month and Per Km",
+    "portfolio.html": "Portfolio: Case Studies, GTM Engine, Events and Writing",
     "30-day-shadow-ai-discovery-sprint.html": "30 Day Shadow AI Discovery Sprint Plan | Syed Hadi",
     "aeo-seo-case-study.html": "AEO and SEO Case Study: 27.72% AI Visibility | Syed Hadi",
     "ai-soc-tool-evaluation-regulated.html": "How to Evaluate an AI SOC Tool in Regulated Firms",
@@ -37,6 +40,14 @@ TITLES = {
     "stateful-prompt-firewall.html": "Stateful Prompt Firewall: A Guide to AI Guardrails",
 }
 DESCS = {
+    "calculator.html": "Free calculators built for India: salary growth, loan EMI, car running cost, FIRE, mutual funds, PMM salary and Qums, plus GTM scorecards. PDF reports.",
+    "brand.html": "Syed Hadi brand kit: logo files in SVG and PNG, fonts, colour palette, approved headshot, bio and a PDF kit for event organisers and press.",
+    "adventure.html": "Freefall over Dubai, a drive from Bengaluru to Ooty, a 100 km walk from Najaf to Karbala and essays from Iran, Mecca and Medina. Syed Hadi off duty.",
+    "portfolio.html": "Everything Syed Hadi has shipped: case studies, the GTM engine, events and talks, AI systems, recognition, the B2B playbook and long form writing.",
+    "work.html": "What Syed Hadi does and the outcomes behind it: product marketing, channel partnerships, GTM strategy, pipeline, events and AI systems for GTM.",
+    "growth-in-a-box.html": "Six fixed scope growth engagements for B2B SaaS and security: GTM, PMM, AEO/SEO, content and partner revenue, each with a 30 to 90 day plan.",
+    "car-mileage-calculator.html": "Monthly km, mileage and petrol price in, litres per month, fuel cost by city, cost per km, tank range and yearly running cost out. Free PDF.",
+    "loan-calculator.html": "EMI, total interest and a plan to close your home, car or personal loan in half the time. Prepay versus invest with 24(b) and 80C counted. Free PDF.",
     "404.html": "That page moved or never existed. Jump to the GTM services, case studies, free calculators or the blog on syedcreates.com.",
 }
 
@@ -142,6 +153,13 @@ def process(path, nav_new):
         # close the right tag
         html = re.sub(r'(<button class="btn btn-ghost" type="button" id="qzAgain">[^<]*)</a>', r"\1</button>", html)
     html = html.replace('<h2 class="display" id="qzBand"></h2>', '<h2 class="display" id="qzBand"><span class="sr">Your result</span></h2>')
+    # 7b. every page needs common.js (menu, dropdowns, theme, reveals, badge hider)
+    if "assets/common.js" not in html and "</body>" in html:
+        html = html.replace("</body>", f'<script src="/assets/common.js?v={VER}"></script>\n</body>', 1)
+    # 7c. one cache-busting version for every local script and stylesheet
+    html = re.sub(r'((?:/|\b)assets/[a-z0-9-]+\.(?:js|css))\?v=[0-9a-z]+', lambda m: f"{m.group(1)}?v={VER}", html)
+    # 7d. homepage MBA card points at its own credentials section
+    html = html.replace('href="/about#credentials"', 'href="/#credentials"')
     # 8. asset version bump
     html = re.sub(r"/assets/site\.css\?v=[0-9a-z]+", f"/assets/site.css?v={VER}", html)
     html = re.sub(r"assets/common\.js\?v=[0-9a-z]+", f"assets/common.js?v={VER}", html)
@@ -255,8 +273,6 @@ def write_crawl_files(pages):
     # robots
     open(os.path.join(ROOT, "robots.txt"), "w").write("""User-agent: *
 Allow: /
-Disallow: /404.html
-Disallow: /skill-pack-thanks.html
 
 # AI answer engines and assistants are welcome
 User-agent: GPTBot
@@ -298,6 +314,15 @@ def main():
     css = css.rstrip() + "\n" + CSS_ADD + VIDEO_CSS
     css = css.replace('"Bricolage Grotesque"', '"Plus Jakarta Sans"').replace("'Bricolage Grotesque'", "'Plus Jakarta Sans'")
     open(css_path, "w", encoding="utf-8").write(css)
+    # asset scripts that load other assets carry the same version
+    for jn in ("calc-reports.js", "report-pdf.js", "salary-calculator.js"):
+        jp = os.path.join(ROOT, "assets", jn)
+        if os.path.exists(jp):
+            j = open(jp, encoding="utf-8").read()
+            j2 = re.sub(r"var VER = '[0-9a-z]+'", f"var VER = '{VER}'", j)
+            j2 = re.sub(r"report-pdf\.js\?v=[0-9a-z]+", f"report-pdf.js?v={VER}", j2)
+            if j2 != j:
+                open(jp, "w", encoding="utf-8").write(j2)
     # common.js: active group for calculator pages
     js_path = os.path.join(ROOT, "assets", "common.js")
     js = open(js_path, encoding="utf-8").read()

@@ -1,7 +1,7 @@
 /* Created by: Claude
    Date: 2026-10-31
    Purpose: Shared high fidelity A4 PDF report engine for every syedcreates.com calculator.
-            Vector output via jsPDF with the site's own fonts embedded (Bricolage Grotesque, Inter, JetBrains Mono).
+            Vector output via jsPDF with the site's own fonts embedded (Plus Jakarta Sans, Inter, JetBrains Mono).
             Every block measures its text before drawing, so nothing overlaps at any input length.
    Owner: Syed Hadi
    Usage: SHReport.ready().then(function(){ var doc = SHReport.build(spec); doc.save('x.pdf'); })  */
@@ -15,14 +15,14 @@
     rose: [244, 63, 94], roseSoft: [255, 228, 234], sky: [14, 165, 233], lav: [205, 196, 255]
   };
   var FONTS = [
-    ['Bricolage-ExtraBold.ttf', 'Bricolage', 'extrabold'],
-    ['Bricolage-Bold.ttf', 'Bricolage', 'bold'],
+    ['PlusJakarta-ExtraBold.ttf', 'Display', 'extrabold'],
+    ['PlusJakarta-Bold.ttf', 'Display', 'bold'],
     ['Inter-Regular.ttf', 'Inter', 'normal'],
     ['Inter-Medium.ttf', 'Inter', 'medium'],
     ['Inter-SemiBold.ttf', 'Inter', 'bold'],
     ['JetBrainsMono-Medium.ttf', 'Mono', 'normal']
   ];
-  var VER = '20261102a', libP = null, fontData = null;
+  var VER = '20261102c', libP = null, fontData = null;
 
   function loadScript(src) {
     return new Promise(function (res, rej) { var s = document.createElement('script'); s.src = src; s.onload = res; s.onerror = function () { rej(new Error('Could not load ' + src)); }; document.head.appendChild(s); });
@@ -94,7 +94,7 @@
   P.cover = function () {
     var d = this.doc, s = this.spec;
     // band height depends on the wrapped title
-    this.font('Bricolage', 'extrabold', 27);
+    this.font('Display', 'extrabold', 27);
     var titleLines = this.wrap(s.title, W - 2 * M - 10).slice(0, 3);
     this.font('Inter', 'normal', 10.5);
     var subLines = s.subtitle ? this.wrap(s.subtitle, W - 2 * M - 30).slice(0, 3) : [];
@@ -113,7 +113,7 @@
     rgb(d, 'setFillColor', C.accent2); d.rect(M, 34, 26, 3, 'F');
     this.font('Mono', 'normal', 8, C.lav); d.text(this.kicker, M + 34, 37);
     var y = 66;
-    this.font('Bricolage', 'extrabold', 27, C.white);
+    this.font('Display', 'extrabold', 27, C.white);
     titleLines.forEach(function (l) { d.text(l, M, y); y += 31; });
     if (subLines.length) { y += 2; this.font('Inter', 'normal', 10.5, C.lav); subLines.forEach(function (l) { d.text(l, M, y); y += 15; }); }
     if (chips.length) {
@@ -150,8 +150,8 @@
       self.font('Mono', 'normal', 6.8, hero ? C.lav : C.ink3);
       var ly = y + 18; labArr[i].forEach(function (l) { d.text(l, x + pad, ly); ly += 9; });
       var vy = y + labH + 26;
-      var size = self.fitSize(it.value, 'Bricolage', 'bold', 21, tw - 2 * pad, 11);
-      self.font('Bricolage', 'bold', size, hero ? C.white : (it.color || C.accent)); d.text(String(it.value), x + pad, vy);
+      var size = self.fitSize(it.value, 'Display', 'bold', 21, tw - 2 * pad, 11);
+      self.font('Display', 'bold', size, hero ? C.white : (it.color || C.accent)); d.text(String(it.value), x + pad, vy);
       self.font('Inter', 'normal', 8.2, hero ? C.lav : C.ink2);
       var sy = vy + 15; subLinesArr[i].forEach(function (l) { d.text(l, x + pad, sy); sy += 11; });
     });
@@ -161,7 +161,7 @@
   // ---------- headings and text ----------
   P.h2 = function (title, sub, after) {
     this.need(48 + (after || 60));
-    var d = this.doc; this.font('Bricolage', 'bold', 15, C.ink); d.text(title, M, this.y + 12);
+    var d = this.doc; this.font('Display', 'bold', 15, C.ink); d.text(title, M, this.y + 12);
     rgb(d, 'setFillColor', C.accent); d.rect(M, this.y + 19, 22, 2.2, 'F');
     this.y += 30;
     if (sub) { this.font('Inter', 'normal', 8.8, C.ink2); var ls = this.wrap(sub, W - 2 * M); d.text(ls, M, this.y + 2); this.y += ls.length * 12 + 4; }
@@ -368,7 +368,7 @@
     items.forEach(function (it, i) {
       self.font('Inter', 'normal', 8.8); var ls = self.wrap(it[1], W - 2 * M - 40);
       var h = Math.max(30, 16 + ls.length * 12); self.need(h + 4); var y = self.y;
-      rgb(d, 'setFillColor', C.accent); d.circle(M + 11, y + 11, 11, 'F'); self.font('Bricolage', 'bold', 10, C.white); d.text(String(i + 1), M + 11, y + 14.5, { align: 'center' });
+      rgb(d, 'setFillColor', C.accent); d.circle(M + 11, y + 11, 11, 'F'); self.font('Display', 'bold', 10, C.white); d.text(String(i + 1), M + 11, y + 14.5, { align: 'center' });
       self.font('Inter', 'bold', 9.5, C.ink); d.text(it[0], M + 32, y + 10);
       self.font('Inter', 'normal', 8.8, C.ink2); var ty = y + 23; ls.forEach(function (l) { d.text(l, M + 32, ty); ty += 12; });
       self.y = y + h + 4;
@@ -380,7 +380,7 @@
   P.signoff = function () {
     var d = this.doc; this.need(70); var y = this.y + 6;
     rgb(d, 'setFillColor', C.faint); d.roundedRect(M, y, W - 2 * M, 56, 10, 10, 'F');
-    rgb(d, 'setFillColor', C.accent); d.circle(M + 30, y + 28, 15, 'F'); this.font('Bricolage', 'extrabold', 12, C.white); d.text('SH', M + 30, y + 32.5, { align: 'center' });
+    rgb(d, 'setFillColor', C.accent); d.circle(M + 30, y + 28, 15, 'F'); this.font('Display', 'extrabold', 12, C.white); d.text('SH', M + 30, y + 32.5, { align: 'center' });
     this.font('Inter', 'bold', 9.6, C.ink); d.text('Built by Syed Hadi', M + 56, y + 22);
     this.font('Inter', 'normal', 8.4, C.ink2); d.text('Product Marketing and Partnerships Lead at AccuKnox. More free calculators and the GTM playbook at syedcreates.com', M + 56, y + 36);
     this.font('Mono', 'normal', 7, C.accent); d.text((this.spec.url || 'syedcreates.com').toUpperCase(), W - M - 14, y + 22, { align: 'right' });

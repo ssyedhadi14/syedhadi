@@ -10,8 +10,15 @@
 /qums-calculator   /qums                                                                                               301
 /khums             /qums                                                                                               301
 /khums-calculator  /qums                                                                                               301
-/calculators       /tools#calculators                                                                                  301
-/calculator        /tools#calculators                                                                                  301
+/calculators       /calculator                                                                                         301
+/medium-feed       https://medium.com/feed/@ssyedhadi                                                                  200
+/car               /car-mileage-calculator                                                                             301
+/mileage           /car-mileage-calculator                                                                             301
+/loan              /loan-calculator                                                                                    301
+/emi               /loan-calculator                                                                                    301
+/press             /brand                                                                                              301
+/media-kit         /brand                                                                                              301
+/brand-kit         /brand                                                                                              301
 /salary            /salary-calculator                                                                                  301
 /fire              /fire-calculator                                                                                    301
 /mf                /mutual-fund-returns-calculator                                                                     301

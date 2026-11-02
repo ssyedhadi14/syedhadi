@@ -92,7 +92,11 @@
       if (p.has('price')) document.querySelectorAll('.cm-city button').forEach(function (b) { b.classList.remove('on'); });
     } catch (e) { }
     document.querySelectorAll('#cmForm input').forEach(function (i) { i.addEventListener('input', function () { if (i.id === 'price') document.querySelectorAll('.cm-city button').forEach(function (b) { b.classList.remove('on'); }); render(); }); });
-    $('share').addEventListener('click', function () { navigator.clipboard.writeText(location.href).then(function () { var b = $('share'), o = b.textContent; b.textContent = 'Link copied'; setTimeout(function () { b.textContent = o; }, 1800); }); });
+    $('share').addEventListener('click', function () {
+      var b = $('share'), o = b.textContent, url = location.href;
+      var done = function (msg) { b.textContent = msg; setTimeout(function () { b.textContent = o; }, 1800); };
+      (navigator.clipboard ? navigator.clipboard.writeText(url) : Promise.reject()).then(function () { done('Link copied'); }, function () { window.prompt('Copy this link', url); });
+    });
     render();
   });
 })();

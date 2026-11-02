@@ -211,7 +211,7 @@
   function loadPdfLib() {
     if (pdfLibLoading) return pdfLibLoading;
     pdfLibLoading = (window.SHReport ? Promise.resolve() : new Promise(function (res, rej) {
-      var s = document.createElement('script'); s.src = '/assets/report-pdf.js?v=20261031s';
+      var s = document.createElement('script'); s.src = '/assets/report-pdf.js?v=20261102c';
       s.onload = function () { res(); }; s.onerror = function () { rej(new Error('pdf engine')); }; document.head.appendChild(s);
     })).then(function () { return window.SHReport.ready(); });
     pdfLibLoading.catch(function () { pdfLibLoading = null; });

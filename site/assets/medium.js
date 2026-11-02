@@ -18,12 +18,13 @@
   function imgUrl(i){if(!i)return '';return /^https?:/.test(i)?i:'https://miro.medium.com/v2/resize:fill:800:450/'+i}
   function imgFromHtml(h){var m=String(h||'').match(/<img[^>]+src="(https:\/\/(?:cdn-images-\d\.medium\.com|miro\.medium\.com)[^"]+)"/);if(!m)return '';var id=m[1].split('/').pop();return /stat\?event/.test(m[1])?'':id}
 
+  function clean(t){return String(t).replace(/\s*[\u2014\u2013]\s*/g,': ').replace(/: :/g,':')}
   function card(p){
     var cover=p.i?'<img src="'+esc(imgUrl(p.i))+'" alt="" loading="lazy" decoding="async" onerror="this.parentNode.classList.add(\'noimg\');this.remove()">':'';
     return '<a class="mpost reveal in" href="'+esc(p.u)+'" target="_blank" rel="noopener" data-cat="'+esc(p.c)+'">'+
       '<span class="mcover'+(p.i?'':' noimg')+'"><span class="mfall">'+esc(p.c)+'</span>'+cover+'</span>'+
       '<span class="mbody"><span class="mmeta"><span>'+esc(p.c)+'</span><span>'+fmt(p.d)+'</span></span>'+
-      '<h3>'+esc(p.t)+'</h3><span class="read">Read on Medium &rarr;</span></span></a>';
+      '<h3>'+esc(clean(p.t))+'</h3><span class="read">Read on Medium &rarr;</span></span></a>';
   }
 
   function render(){
