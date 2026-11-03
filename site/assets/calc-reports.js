@@ -32,7 +32,7 @@
     return {
       kicker: 'SYEDCREATES.COM  /  FIRE PLAN', url: 'syedcreates.com/fire-calculator', docTitle: 'FIRE plan, retire at ' + s.ret,
       title: 'Your FIRE number is ' + F(s.tgt) + '. Here is how you get there.',
-      subtitle: 'Financial independence at ' + s.ret + ', funded until ' + s.life + ', starting from age ' + s.age + ' with ' + F(s.mf + s.stk) + ' invested and a ' + F(s.sip) + ' monthly SIP. Prepared ' + today() + '.',
+      subtitle: 'Financial independence at ' + s.ret + ', funded until ' + s.life + ', starting from age ' + s.age + ' with ' + F(s.invTotal != null ? s.invTotal : s.mf + s.stk) + ' saved across all buckets and a ' + F(s.sip) + ' monthly SIP. Prepared ' + today() + '.',
       meta: [['Age', String(s.age)], ['Retire at', String(s.ret)], ['Spend today', F(expM) + ' / mo'], ['SIP', F(s.sip) + ' / mo'], ['Step up', P(s.step)]],
       footer: FOOT,
       blocks: [
@@ -55,11 +55,11 @@
           { label: 'Lean FIRE', value: F(s.lean), sub: '70% of your spend' },
           { label: 'Regular FIRE', value: F(s.tgt), sub: 'your spend as entered' },
           { label: 'Fat FIRE', value: F(s.fat), sub: '150% of your spend' },
-          { label: 'Coast FIRE', value: F(s.coast), sub: (s.mf + s.stk) >= s.coast ? 'needed invested today. You are there.' : 'needed invested today, no further SIP' }
+          { label: 'Coast FIRE', value: F(s.coast), sub: (s.invTotal != null ? s.invTotal : s.mf + s.stk) >= s.coast ? 'needed invested today. You are there.' : 'needed invested today, no further SIP' }
         ] },
         { type: 'h2', title: 'What this plan assumes', sub: 'Every figure here is an input on the page.' },
         { type: 'kv', cols: 2, rows: [
-          ['Monthly spend today', F(expM)], ['Retirement spend factor', P(s.rf) + ' of today’s spend'], ['Already invested', F(s.mf) + ' MF + ' + F(s.stk) + ' stocks'], ['Monthly SIP', F(s.sip) + ', step up ' + P(s.step)],
+          ['Monthly spend today', F(expM)], ['Retirement spend factor', P(s.rf) + ' of today’s spend'], ['Already saved', s.buckets ? s.buckets.filter(function (b) { return b[1] > 0; }).map(function (b) { return b[0] + ' ' + F(b[1]); }).join(', ') : F(s.mf) + ' MF + ' + F(s.stk) + ' stocks'], ['Monthly SIP', F(s.sip) + ', step up ' + P(s.step)],
           ['Equity share', P(s.eqp)], ['Equity return', P(s.eqr)], ['Debt return', P(s.dbr)], ['Blended pre retirement return', P(s.pre)],
           ['Inflation', P(s.inf)], ['Post retirement return', P(s.post)], ['Safety buffer', P(s.buf) + ' on the corpus'], ['Life expectancy', 'Age ' + s.life]
         ] },

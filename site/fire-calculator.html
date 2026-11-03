@@ -31,7 +31,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css?v=20261103k">
+<link rel="stylesheet" href="/assets/site.css?v=20261103l">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"FIRE Calculator India","url":"https://syedcreates.com/fire-calculator","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"creator":{"@type":"Person","name":"Syed Hadi"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is FIRE?","acceptedAnswer":{"@type":"Answer","text":"FIRE stands for Financial Independence, Retire Early. You build an investment corpus large enough that its returns pay for your living costs, so working becomes a choice instead of a need."}},{"@type":"Question","name":"What is a FIRE number in India?","acceptedAnswer":{"@type":"Answer","text":"Your FIRE number is the corpus you need on the day you stop working. This calculator takes your expenses today, grows them with inflation to your retirement year, and works out the corpus that keeps paying those rising expenses until your chosen life expectancy."}},{"@type":"Question","name":"Does the 4% rule work in India?","acceptedAnswer":{"@type":"Answer","text":"The 4% rule comes from US market data with lower inflation. Indian inflation has usually been higher, so many Indian planners use a safer withdrawal rate of 3 to 3.5%, which means a corpus of roughly 28 to 33 times your yearly expenses. This calculator shows the rule of thumb next to the year by year number."}},{"@type":"Question","name":"How are mutual fund and stock withdrawals taxed in India?","acceptedAnswer":{"@type":"Answer","text":"For equity mutual funds and listed shares on NSE or BSE held for more than 12 months, long term capital gains above Rs 1.25 lakh a year are taxed at 12.5%. Gains on units held for 12 months or less are taxed at 20%. Debt fund units bought after 1 April 2023 are taxed at your income slab rate. Tax rules change, so confirm with a tax adviser before you withdraw."}},{"@type":"Question","name":"What return should I assume?","acceptedAnswer":{"@type":"Answer","text":"Use a number you are comfortable with, not the best year you remember. Returns on equity funds and stocks swing a lot from year to year. The defaults here are assumptions for planning, not promises. Try a lower return to see how much safety margin your plan has."}},{"@type":"Question","name":"What is a SIP step up?","acceptedAnswer":{"@type":"Answer","text":"A step up raises your monthly SIP by a fixed percentage every year, usually in line with salary hikes. Even a 10% yearly step up can bring your FIRE date forward by several years."}},{"@type":"Question","name":"What is Coast FIRE?","acceptedAnswer":{"@type":"Answer","text":"Coast FIRE is the amount you need invested today so that, without adding another rupee, it grows into your full FIRE number by your target retirement age. Once you cross it, you only need to earn enough to cover current expenses."}},{"@type":"Question","name":"Is this financial advice?","acceptedAnswer":{"@type":"Answer","text":"No. This is an educational calculator. Syed Hadi is not a SEBI registered investment adviser. Talk to a SEBI registered adviser before you make investment decisions."}},{"@type":"Question","name":"How much money do I need to retire early in India?","acceptedAnswer":{"@type":"Answer","text":"Roughly 28 to 33 times your yearly expenses at the time you retire, which matches a 3 to 3.5% withdrawal rate. The calculator works out the exact figure for your age and inflation."}},{"@type":"Question","name":"What is Lean FIRE and Fat FIRE?","acceptedAnswer":{"@type":"Answer","text":"Lean FIRE covers a frugal lifestyle with a smaller corpus. Fat FIRE funds a more comfortable lifestyle and needs a much larger corpus. Enter the expenses you actually expect to see each."}},{"@type":"Question","name":"Can I retire at 45 in India?","acceptedAnswer":{"@type":"Answer","text":"Yes, if your corpus at 45 can support your expenses for 40 or more years. Start early, step up your SIP every year and keep expenses steady to bring the date closer."}},{"@type":"Question","name":"Does the FIRE calculator include inflation?","acceptedAnswer":{"@type":"Answer","text":"Yes. Expenses are grown by your inflation rate every year to the retirement date, and the corpus needed is based on that future amount."}}]}]}</script>
 </head>
 <body data-page="fire">
@@ -102,29 +102,42 @@
       <div class="fr-step"><span>2</span><b>Your monthly expenses</b></div>
       <label class="fr-money">Household spend per month today (&#8377;)<input type="text" id="exp" value="60,000" inputmode="numeric"><small id="expW"></small></label>
       <p class="fr-hint">Rent or EMI, groceries, bills, school fees, travel, everything. Leave out money you invest.</p>
-      <div class="fr-step"><span>3</span><b>What you have invested already</b></div>
-      <div class="fr-grid">
+      <div class="fr-step"><span>3</span><b>What you have saved already</b></div>
+      <p class="fr-hint">Add every bucket you have. Leave the rest at 0. Skip the home you live in, it does not pay for retirement.</p>
+      <div class="fr-grid fr-assets">
+        <label class="fr-money">EPF balance (&#8377;)<input type="text" id="epf" value="3,00,000" inputmode="numeric"><small id="epfW"></small></label>
+        <label class="fr-money">PPF balance (&#8377;)<input type="text" id="ppf" value="0" inputmode="numeric"><small id="ppfW"></small></label>
+        <label class="fr-money">NPS balance (&#8377;)<input type="text" id="nps" value="0" inputmode="numeric"><small id="npsW"></small></label>
         <label class="fr-money">Mutual funds (&#8377;)<input type="text" id="mf" value="10,00,000" inputmode="numeric"><small id="mfW"></small></label>
         <label class="fr-money">Stocks on NSE or BSE (&#8377;)<input type="text" id="stk" value="5,00,000" inputmode="numeric"><small id="stkW"></small></label>
+        <label class="fr-money">FDs, RDs and debt funds (&#8377;)<input type="text" id="fd" value="1,00,000" inputmode="numeric"><small id="fdW"></small></label>
+        <label class="fr-money">Gold, SGBs and gold ETFs (&#8377;)<input type="text" id="gold" value="0" inputmode="numeric"><small id="goldW"></small></label>
+        <label class="fr-money">Real estate you could sell or rent out (&#8377;)<input type="text" id="re" value="0" inputmode="numeric"><small id="reW"></small></label>
+        <label class="fr-money">Savings account and emergency fund (&#8377;)<input type="text" id="cash" value="1,00,000" inputmode="numeric"><small id="cashW"></small></label>
       </div>
-      <div class="fr-step"><span>4</span><b>What you invest every month</b></div>
+      <div class="fr-step"><span>4</span><b>What you put in every month</b></div>
       <div class="fr-grid">
+        <label class="fr-money">EPF contribution, you plus employer (&#8377;/month)<input type="text" id="epfm" value="7,200" inputmode="numeric"><small id="epfmW"></small></label>
+        <label class="fr-money">NPS contribution (&#8377;/month)<input type="text" id="npsm" value="0" inputmode="numeric"><small id="npsmW"></small></label>
+        <label class="fr-money">PPF deposit (&#8377;/year, max 1.5 L)<input type="text" id="ppfy" value="0" inputmode="numeric"><small id="ppfyW"></small></label>
         <label class="fr-money">Monthly SIP and stock buying (&#8377;)<input type="text" id="sip" value="40,000" inputmode="numeric"><small id="sipW"></small></label>
-        <label>Yearly step up (%)<input type="number" id="step" min="0" max="30" step="1" value="10" inputmode="numeric"></label>
+        <label>Yearly step up on SIP, EPF and NPS (%)<input type="number" id="step" min="0" max="30" step="1" value="10" inputmode="numeric"></label>
       </div>
+      <p class="fr-hint">Your EPF contribution is 12% of basic pay from you plus the part your employer puts in EPF. Check your payslip or the EPFO passbook.</p>
       <details class="fr-adv">
         <summary>Change assumptions (optional)</summary>
         <div class="fr-grid">
-          <label>Equity share of portfolio (%)<input type="number" id="eqp" min="0" max="100" step="5" value="80"></label>
+          <label>Equity share of MF, stocks and SIP (%)<input type="number" id="eqp" min="0" max="100" step="5" value="80"></label>
           <label>Equity return per year (%)<input type="number" id="eqr" min="0" max="20" step="0.5" value="12"></label>
           <label>Debt return per year (%)<input type="number" id="dbr" min="0" max="12" step="0.5" value="7"></label>
+          <label>EPF interest (%)<input type="number" id="epfr" min="0" max="12" step="0.05" value="8.25"></label><label>PPF interest (%)<input type="number" id="ppfr" min="0" max="12" step="0.1" value="7.1"></label><label>NPS return (%)<input type="number" id="npsr" min="0" max="15" step="0.5" value="10"></label><label>FD and debt return (%)<input type="number" id="fdr" min="0" max="12" step="0.5" value="6.5"></label><label>Gold return (%)<input type="number" id="goldr" min="0" max="15" step="0.5" value="8"></label><label>Real estate return (%)<input type="number" id="rer" min="0" max="15" step="0.5" value="6"></label><label>Savings account interest (%)<input type="number" id="cashr" min="0" max="8" step="0.5" value="3"></label>
           <label>Inflation per year (%)<input type="number" id="inf" min="0" max="15" step="0.5" value="6"></label>
           <label>Return after retirement (%)<input type="number" id="post" min="0" max="15" step="0.5" value="9"></label>
           <label>Plan money until age<input type="number" id="life" min="60" max="100" value="85"></label>
           <label>Spending in retirement vs today (%)<input type="number" id="rf" min="50" max="200" step="5" value="100"></label>
           <label>Tax and safety buffer (%)<input type="number" id="buf" min="0" max="30" step="1" value="10"></label>
         </div>
-        <p class="fr-hint">Returns are planning assumptions, not promises. Equity can fall 30% or more in a bad year. Try lower numbers to stress test your plan.</p>
+        <p class="fr-hint">EPF 8.25% is the FY 2025 26 rate and PPF 7.1% is the October to December 2026 rate. Both can change. Returns are planning assumptions, not promises. Equity can fall 30% or more in a bad year. Try lower numbers to stress test your plan.</p>
       </details>
     </form>
 
@@ -140,6 +153,7 @@
       </div>
       <div class="fr-chart"><svg id="chart" viewBox="0 0 640 260" role="img" aria-label="Corpus growth chart"></svg>
         <div class="fr-legend"><i class="a"></i>Your corpus <i class="b"></i>FIRE number needed</div></div>
+      <div class="fr-mix" id="mix"></div>
       <div class="fr-flavors" id="flv"></div>
       <div class="fr-acts"><button type="button" class="btn btn-primary sc-pdfbtn" id="pdfBtn">Download my FIRE plan (PDF)</button><button type="button" class="btn btn-ghost" id="share">Copy link to my plan</button><button type="button" class="btn btn-ghost" id="tblBtn">Show year by year table</button></div>
       <div class="fr-tbl" id="tbl" hidden></div>
@@ -154,7 +168,7 @@
       <p><b>1. Your expenses grow.</b> We take your monthly spend and grow it with inflation every year until you retire.</p>
       <p><b>2. Your money must last.</b> We work out the corpus that pays those rising expenses every year from retirement until the age you choose, while the rest stays invested and keeps earning.</p>
       <p><b>3. We add a buffer.</b> A safety buffer covers capital gains tax on withdrawals and bad market years.</p>
-      <p><b>4. We grow what you have.</b> Your mutual funds, NSE and BSE stocks and monthly SIP grow at a blend of equity and debt returns, with your SIP rising every year by the step up.</p>
+      <p><b>4. We grow every bucket on its own.</b> EPF, PPF, NPS, mutual funds, stocks, FDs, gold, real estate and savings each grow at their own rate. Your SIP, EPF and NPS rise every year by the step up, and PPF stays capped at 1.5 lakh a year.</p>
       <p><b>5. We compare.</b> If your projected corpus beats your FIRE number, you are on track. If not, we show the SIP that closes the gap and the age you can retire on your current plan.</p>
     </div>
   </div>
@@ -203,9 +217,10 @@ function num(v){return parseFloat(String(v).replace(/[^0-9.]/g,''))||0}
 function inr(n){n=Math.round(n);return n.toLocaleString('en-IN')}
 function short(n){var a=Math.abs(n),s=n<0?'-':'';if(a>=1e7)return s+'\u20b9'+(a/1e7).toFixed(a>=1e9?0:2)+' Cr';if(a>=1e5)return s+'\u20b9'+(a/1e5).toFixed(1)+' L';return s+'\u20b9'+inr(a)}
 function words(id){var el=$(id),w=$(id+'W');var v=num(el.value);w.textContent=v?short(v):'';}
-['exp','mf','stk','sip'].forEach(function(id){var el=$(id);el.addEventListener('blur',function(){var v=num(el.value);el.value=v?inr(v):'0'});});
-var F=['age','ret','exp','mf','stk','sip','step','eqp','eqr','dbr','inf','post','life','rf','buf'];
-try{var q=new URLSearchParams(location.search);F.forEach(function(k){if(q.has(k)){var v=q.get(k);$(k).value=['exp','mf','stk','sip'].indexOf(k)>-1?inr(num(v)):v}})}catch(e){}
+var M=['exp','epf','ppf','nps','mf','stk','fd','gold','re','cash','epfm','npsm','ppfy','sip'];
+M.forEach(function(id){var el=$(id);el.addEventListener('blur',function(){var v=num(el.value);el.value=v?inr(v):'0'});});
+var F=M.concat(['age','ret','step','eqp','eqr','dbr','inf','post','life','rf','buf','epfr','ppfr','npsr','fdr','goldr','rer','cashr']);
+try{var q=new URLSearchParams(location.search);F.forEach(function(k){if(q.has(k)){var v=q.get(k);$(k).value=M.indexOf(k)>-1?inr(num(v)):v}})}catch(e){}
 function need(expAnnual,yearsToRet,retYears,inf,post,buf){
   var er=expAnnual*Math.pow(1+inf,yearsToRet),g=(1+inf)/(1+post),pv=0;
   for(var k=0;k<retYears;k++)pv+=Math.pow(g,k);
@@ -216,23 +231,45 @@ function calc(){
   var age=Math.round(num($('age').value)),ret=Math.round(num($('ret').value)),life=Math.round(num($('life').value));
   if(ret<=age)ret=age+1;if(life<=ret)life=ret+1;
   var exp=num($('exp').value)*12*num($('rf').value)/100,mf=num($('mf').value),stk=num($('stk').value),sip=num($('sip').value);
+  var P=function(i){return num($(i).value)/100};
+  var B=[
+   {k:'EPF',v:num($('epf').value),m:num($('epfm').value),y:0,r:P('epfr'),st:1},
+   {k:'PPF',v:num($('ppf').value),m:0,y:Math.min(150000,num($('ppfy').value)),r:P('ppfr'),st:0},
+   {k:'NPS',v:num($('nps').value),m:num($('npsm').value),y:0,r:P('npsr'),st:1},
+   {k:'FDs and debt',v:num($('fd').value),m:0,y:0,r:P('fdr'),st:0},
+   {k:'Gold',v:num($('gold').value),m:0,y:0,r:P('goldr'),st:0},
+   {k:'Real estate',v:num($('re').value),m:0,y:0,r:P('rer'),st:0},
+   {k:'Savings',v:num($('cash').value),m:0,y:0,r:P('cashr'),st:0}];
   var step=num($('step').value)/100,eqp=num($('eqp').value)/100,eqr=num($('eqr').value)/100,dbr=num($('dbr').value)/100;
   var inf=num($('inf').value)/100,post=num($('post').value)/100,buf=num($('buf').value)/100;
-  ['exp','mf','stk','sip'].forEach(words);
+  M.forEach(words);
   var pre=eqp*eqr+(1-eqp)*dbr,mr=Math.pow(1+pre,1/12)-1;
-  var rows=[],bal=mf+stk,s=sip,invested=mf+stk,fireAge=null;
+  var other0=B.reduce(function(a,b){return a+b.v},0);
+  function sim(withSip){
+    var eq=mf+stk,s=withSip?sip:0,bk=B.map(function(b){return{v:b.v,m:b.m,y:b.y,mr:Math.pow(1+b.r,1/12)-1,st:b.st}}),inv=mf+stk+other0,out=[],atRet=null;
+    for(var y=0;y<=Math.max(75,ret)-age;y++){
+      var tot=eq+bk.reduce(function(a,b){return a+b.v},0);out.push({age:age+y,bal:tot,inv:inv});
+      if(age+y===ret)atRet={tot:tot,bk:bk.map(function(b){return b.v}),eq:eq};
+      for(var m=0;m<12;m++){eq=eq*(1+mr)+s;inv+=s;bk.forEach(function(b){b.v=b.v*(1+b.mr)+b.m;inv+=b.m;if(m===11&&b.y){b.v+=b.y;inv+=b.y}})}
+      s=s*(1+step);bk.forEach(function(b){if(b.st)b.m=b.m*(1+step)});
+    }
+    return {rows:out,atRet:atRet};
+  }
+  var runFull=sim(true),runNoSip=sim(false);
+  var rows=[],bal=mf+stk+other0,s=sip,invested=mf+stk+other0,fireAge=null;
   var unit=0,us=1;// growth of Rs 1 monthly SIP with step up, for solving needed SIP
   var tgtRet=need(exp,ret-age,life-ret,inf,post,buf);
   for(var y=0;y<=75-age;y++){
-    var a=age+y,t=need(exp,y,Math.max(1,life-a),inf,post,buf).corpus;
+    var a=age+y,t=need(exp,y,Math.max(1,life-a),inf,post,buf).corpus,rf2=runFull.rows[y]||runFull.rows[runFull.rows.length-1];
+    bal=rf2.bal;invested=rf2.inv;
     rows.push({age:a,bal:bal,need:t,inv:invested});
     if(fireAge===null&&bal>=t&&y>0)fireAge=a;
-    if(a===ret){var balRet=bal,unitRet=unit}
-    for(var m=0;m<12;m++){bal=bal*(1+mr)+s;invested+=s;unit=unit*(1+mr)+us}
-    s=s*(1+step);us=us*(1+step);
+    if(a===ret){var unitRet=unit}
+    for(var m=0;m<12;m++){unit=unit*(1+mr)+us}
+    us=us*(1+step);
   }
-  var fvExisting=(mf+stk)*Math.pow(1+pre,ret-age);
-  var needSip=Math.max(0,(tgtRet.corpus-fvExisting)/unitRet);
+  var balRet=runFull.atRet.tot;
+  var needSip=Math.max(0,(tgtRet.corpus-runNoSip.atRet.tot)/unitRet);
   var gap=balRet-tgtRet.corpus,pct=Math.min(999,balRet/tgtRet.corpus*100);
   $('fireN').textContent=short(tgtRet.corpus);
   $('fireS').textContent='needed at age '+ret+' to fund life until '+life;
@@ -247,12 +284,14 @@ function calc(){
   // flavours
   var lean=need(exp*0.7,ret-age,life-ret,inf,post,buf).corpus,fat=need(exp*1.5,ret-age,life-ret,inf,post,buf).corpus;
   var coast=tgtRet.corpus/Math.pow(1+pre,ret-age),rule=tgtRet.er*100/3.5;
-  $('flv').innerHTML='<div><b>'+short(lean)+'</b><span>Lean FIRE<br>70% of your spend</span></div><div><b>'+short(fat)+'</b><span>Fat FIRE<br>150% of your spend</span></div><div><b>'+short(coast)+'</b><span>Coast FIRE<br>needed invested today'+((mf+stk)>=coast?', you are there':'')+'</span></div><div><b>'+short(rule)+'</b><span>Rule of thumb<br>3.5% withdrawal</span></div>';
+  $('flv').innerHTML='<div><b>'+short(lean)+'</b><span>Lean FIRE<br>70% of your spend</span></div><div><b>'+short(fat)+'</b><span>Fat FIRE<br>150% of your spend</span></div><div><b>'+short(coast)+'</b><span>Coast FIRE<br>needed invested today'+((mf+stk+other0)>=coast?', you are there':'')+'</span></div><div><b>'+short(rule)+'</b><span>Rule of thumb<br>3.5% withdrawal</span></div>';
   // drawdown after retirement for chart
   var pts=rows.filter(function(r){return r.age<=ret});var b2=balRet,e2=tgtRet.er;
   for(var a2=ret+1;a2<=life;a2++){b2=(b2-e2)*(1+post);e2*=1+inf;pts.push({age:a2,bal:Math.max(0,b2),need:null})}
   draw(pts,ret,life,age);
-  window.__calc={kind:'fire',age:age,ret:ret,life:life,expMonthly:num($('exp').value),rf:num($('rf').value)/100,mf:mf,stk:stk,sip:sip,step:step,eqp:eqp,eqr:eqr,dbr:dbr,inf:inf,post:post,buf:buf,pre:pre,rows:rows,pts:pts,balRet:balRet,tgt:tgtRet.corpus,er:tgtRet.er,needSip:needSip,gap:gap,pct:pct,fireAge:fireAge,lean:lean,fat:fat,coast:coast,rule:rule};
+  var mixRows=[['Mutual funds and stocks',mf+stk,runFull.atRet.eq]].concat(B.map(function(b,i){return[b.k,b.v,runFull.atRet.bk[i]]})).filter(function(r){return r[1]>0||r[2]>0});
+  $('mix').innerHTML='<h4>Your money by bucket</h4><table><thead><tr><th>Bucket</th><th>Today</th><th>At '+ret+'</th><th>Share at '+ret+'</th></tr></thead><tbody>'+mixRows.map(function(r){return '<tr><td>'+r[0]+'</td><td>'+short(r[1])+'</td><td>'+short(r[2])+'</td><td>'+Math.round(r[2]/Math.max(1,balRet)*100)+'%</td></tr>'}).join('')+'</tbody></table><p class="fr-hint">EPF and PPF lock in your money for years. NPS pays 60% as a lump sum at 60 and the rest as a pension. Plan your early retirement years from MFs, stocks, FDs and savings.</p>';
+  window.__calc={kind:'fire',invTotal:mf+stk+other0,buckets:mixRows,age:age,ret:ret,life:life,expMonthly:num($('exp').value),rf:num($('rf').value)/100,mf:mf,stk:stk,sip:sip,step:step,eqp:eqp,eqr:eqr,dbr:dbr,inf:inf,post:post,buf:buf,pre:pre,rows:rows,pts:pts,balRet:balRet,tgt:tgtRet.corpus,er:tgtRet.er,needSip:needSip,gap:gap,pct:pct,fireAge:fireAge,lean:lean,fat:fat,coast:coast,rule:rule};
   // table
   var h='<table><thead><tr><th>Age</th><th>Corpus</th><th>FIRE number at that age</th><th>Total you invested</th></tr></thead><tbody>';
   rows.filter(function(r){return r.age<=Math.max(ret,fireAge||ret)}).forEach(function(r){h+='<tr'+(r.age===ret?' class="hl"':'')+'><td>'+r.age+'</td><td>'+short(r.bal)+'</td><td>'+short(r.need)+'</td><td>'+short(r.inv)+'</td></tr>'});
@@ -396,7 +435,7 @@ calc();
   <div class="made-strip"><span>Made with love <span class="ms-heart" aria-hidden="true">❤️</span> from Bangalore, India <span aria-hidden="true">🇮🇳</span></span></div>
 </footer>
 <script src="assets/common.js?v=20261103b"></script>
-<script src="/assets/calc-reports.js?v=20261103b" defer></script>
+<script src="/assets/calc-reports.js?v=20261103c" defer></script>
 <script src="/assets/quotes.js?v=20261103b" defer></script>
 <script>
 (function(){

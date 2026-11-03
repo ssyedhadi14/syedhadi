@@ -19,8 +19,7 @@ from student_careers_data import GROUPS, ROLES, QUESTIONS, FAQ  # noqa: E402
 SLUG = "software-careers-for-students"
 URL = f"https://syedcreates.com/{SLUG}"
 TITLE = "Software Jobs for Students: Find Your Top 3 Roles"
-DESC = ("Free career quiz for college students. Explore 28 software industry roles, from engineering and AI "
-        "to sales and design, and get your top 3 matches with first steps.")
+DESC = 'Free career quiz for college students. Explore 28 software roles, from engineering and AI to sales and design, and get your top 3 matches.'
 E = html.escape
 
 

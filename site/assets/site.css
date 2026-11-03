@@ -2667,3 +2667,13 @@ html.srch-lock,html.srch-lock body{overflow:hidden}
 .sc-faq-q p{color:var(--ink-2);margin:10px 0 0;line-height:1.6}
 @media (max-width:960px){.sc-grid{grid-template-columns:repeat(2,1fr)}.sc-lanes{grid-template-columns:1fr}}
 @media (max-width:640px){.sc-grid{grid-template-columns:1fr}.sc-pick-b{grid-template-columns:1fr}}
+/* 2026-11-03 FIRE calculator asset buckets */
+.fr-assets{grid-template-columns:repeat(2,1fr)}
+.fr-mix{margin:18px 0;border:1px solid var(--line);border-radius:14px;padding:14px 16px;background:var(--card)}
+.fr-mix h4{margin:0 0 8px;font-size:15px}
+.fr-mix table{width:100%;border-collapse:collapse;font-size:13.5px}
+.fr-mix th,.fr-mix td{text-align:left;padding:6px 4px;border-bottom:1px solid var(--line)}
+.fr-mix th{font:500 11px "JetBrains Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+.fr-mix td:not(:first-child),.fr-mix th:not(:first-child){text-align:right}
+
+@media (max-width:560px){.fr-assets{grid-template-columns:1fr}}
