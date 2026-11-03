@@ -66,7 +66,7 @@ COVERS = {
     "fractional-pmm-vs-agency-vs-full-time-hire": ("Fractional PMM vs agency vs", "hire", "Comparison", "scales"),
     "best-gtm-consultants-for-security-startups": ("Choosing a GTM consultant for", "security", "Scorecard", "scales"),
     # Free tools and calculators
-    "calculator": ("Plan the money, score the", "marketing", "Free calculators", "calculator"),
+    "calculator": ("Your future self is counting on", "you", "Free calculators", "calculator"),
     "salary-calculator": ("Where your salary goes in 45", "years", "Salary calculator", "chart"),
     "loan-calculator": ("Know your EMI, close the loan", "sooner", "Loan calculator", "coins"),
     "fire-calculator": ("When can you retire", "early?", "FIRE calculator", "chart"),
