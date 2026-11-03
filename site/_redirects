@@ -30,6 +30,8 @@
 /newsletter        https://syedhadi.substack.com/                                                                      302
 /whatsapp          https://wa.me/918015466708                                                                          302
 
+/photo.jpg         /img/syed-hadi-2026.jpg                                                                             301
+
 # One URL per page: send the .html version to the clean URL (canonical)
 /30-day-shadow-ai-discovery-sprint.html           /30-day-shadow-ai-discovery-sprint             301!
 /5-years-of-startup-life.html                     /5-years-of-startup-life                       301!

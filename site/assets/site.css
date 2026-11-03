@@ -2502,3 +2502,7 @@ tr.on td.neg,.mf-t tr.on td.neg{color:#c81e1e}
 .sg-rel a:hover{border-color:var(--accent);color:var(--accent)}
 @media (max-width:860px){.sg-grid{grid-template-columns:1fr}}
 .qb-apply span{font-size:11px}
+/* 2026-11-03 SEO pass: footer holds a Guides column, so the grid gains a track */
+.fgrid{grid-template-columns:1.3fr repeat(5,1fr) .9fr;gap:24px}
+@media (max-width:1240px){.fgrid{grid-template-columns:repeat(3,1fr)}.fgrid .fbrand{grid-column:1/-1}.fgrid .fphoto{display:none}}
+@media (max-width:800px){.fgrid{grid-template-columns:1fr 1fr}}
