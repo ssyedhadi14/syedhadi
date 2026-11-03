@@ -1,0 +1,15 @@
+# Created by: Claude
+# Date: 2026-11-03
+# Purpose: Cloudflare Pages config for syedcreates.com. Static site in site/, functions in functions/.
+# Owner: Syed Hadi
+# Secrets (FIRECRAWL_API_KEY, BREVO_API_KEY, OPENSEO_API_KEY, REPORT_*) are set in the Pages dashboard, never here.
+name = "syedcreates"
+pages_build_output_dir = "site"
+compatibility_date = "2026-11-01"
+compatibility_flags = ["nodejs_compat"]
+
+# KV for the company research cache and quotas. Replace the id after creating the namespace:
+#   Workers & Pages > KV > Create namespace "syedcreates-cr", then paste its id below.
+# [[kv_namespaces]]
+# binding = "CR_KV"
+# id = "PASTE_NAMESPACE_ID"

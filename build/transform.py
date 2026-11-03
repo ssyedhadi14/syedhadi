@@ -274,11 +274,10 @@ def write_crawl_files(pages):
     lines.append("</urlset>")
     open(os.path.join(ROOT, "sitemap.xml"), "w").write("\n".join(lines) + "\n")
     # redirects
-    red = REDIRECTS_HEAD
-    for n in sorted(names):
-        if n in ("index.html", "404.html"):
-            continue
-        red += f"/{n:<48} /{n[:-5]:<45} 301!\n"
+    # Cloudflare Pages (2026-11-03): it strips .html and serves clean URLs natively, redirect rules always win over
+    # files so the Netlify force suffix "!" is dropped, and external 200 proxies live in functions/ instead.
+    red = "\n".join(l.replace(" 301!", " 301 ").rstrip() for l in REDIRECTS_HEAD.splitlines()
+                    if not l.startswith("/index.html") and " 200" not in l) + "\n"
     open(os.path.join(ROOT, "_redirects"), "w").write(red)
     open(os.path.join(ROOT, "_headers"), "w").write(HEADERS)
     # robots

@@ -245,7 +245,7 @@ page = f'''<!doctype html>
     out.classList.add('on');res.hidden=true;st.hidden=false;st.className='sa-status';stT.textContent='Fetching the page, robots.txt, sitemap and llms.txt...';
     var b=$('saBtn');b.disabled=true;b.textContent='Scoring...';
     var tm=setTimeout(function(){{stT.textContent='Still working. Slow sites take up to 20 seconds...'}},6000);
-    fetch('/.netlify/functions/seo-aeo-score',{{method:'POST',headers:{{'Content-Type':'application/json'}},body:JSON.stringify({{url:url}})}})
+    fetch('/api/seo-aeo-score',{{method:'POST',headers:{{'Content-Type':'application/json'}},body:JSON.stringify({{url:url}})}})
       .then(function(r){{return r.json().catch(function(){{return{{ok:false,error:'The scoring service is not available right now (status '+r.status+').'}}}})}})
       .then(function(d){{clearTimeout(tm);if(!d.ok)throw new Error(d.error||'Could not score that URL.');st.hidden=true;show(d);try{{history.replaceState(null,'','?url='+encodeURIComponent(url));}}catch(e){{}}out.scrollIntoView({{behavior:'smooth',block:'start'}});}})
       .catch(function(err){{clearTimeout(tm);st.className='sa-status err';st.querySelector('.spin').style.display='none';stT.textContent=err.message;}})

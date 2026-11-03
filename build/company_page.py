@@ -142,7 +142,7 @@ JS = r'''
 (function(){
   var $=function(i){return document.getElementById(i)};
   var form=$('crForm'),out=$('crOut'),prog=$('crProg'),err=$('crErr'),res=$('crRes'),btn=$('crBtn');
-  var FN='/.netlify/functions/company-research';
+  var FN='/api/company-research';
   var STEPS=['Reading the homepage and about pages','Checking filings, funding and headcount','Mapping competitors and reviews','Finding growth pain points','Sizing the missed revenue','Writing the one pager'];
   var timer=null,t0=0,pollT=null;
   function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}

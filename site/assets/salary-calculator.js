@@ -339,7 +339,7 @@
     loadPdfLib().then(function () {
       var doc = buildPdf(name);
       var b64 = doc.output('datauristring').split(',')[1];
-      return fetch('/.netlify/functions/salary-report', {
+      return fetch('/api/salary-report', {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: email, name: name, pdf: b64, filename: pdfName(), summary: { age: I.age, target: I.tgt, corpus: short(R.corpus), real: short(R.real), investNow: short(state.rows[0].surplus / 12), link: location.origin + location.pathname + '#' + encode(I) } })
       }).then(function (r) { return r.json().catch(function () { return { ok: false, status: r.status }; }).then(function (j) { j.status = r.status; return j; }); })
