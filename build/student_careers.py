@@ -202,15 +202,15 @@ def main():
     head = re.sub(r'(<meta (?:property="og|name="twitter):title" content=")[^"]*', r"\g<1>" + E(TITLE), head)
     head = head.replace("https://syedcreates.com/gtm-health-check", URL)
     head = head.replace("/img/covers/og/gtm-health-check.jpg", f"/img/covers/og/{SLUG}.jpg")
-    head = re.sub(r'(<meta property="og:image:alt" content=")[^"]*', r"\g<1>Your degree is the start. Find the software role that fits you", head)
+    head = re.sub(r'(<meta property="og:image:alt" content=")[^"]*', r"\g<1>28 roles. Your top 3", head)
     head = re.sub(r'<script type="application/ld\+json">.*?</script>\s*', "", head, flags=re.S)
     head = head.replace("</title>", "</title>", 1) + jsonld() + "\n"
     hero = (f'<header class="page-hero ph-cv">\n  <div class="wrap"><div class="ph-copy">\n'
             f"    <div class=\"crumbs\"><a href='/'>Home</a> / <a href='/calculator'>Free tools</a> / Software careers for students</div>\n"
-            f'    <h1 class="display">Your degree is the start. Find the software role that <span class="tg1">fits you.</span></h1>\n'
+            f'    <h1 class="display">Find work you'll actually <span class="tg1">love.</span></h1>\n'
             f'    <p>28 real jobs inside software companies, explained in plain words, plus a 2 minute quiz that shows your top 3 matches and what to learn first.</p>\n'
             f'    <div class="bx-ctas" style="justify-content:flex-start;margin-top:18px"><a class="btn btn-primary lg" href="#quiz">Take the 2 minute quiz &rarr;</a><a class="btn btn-ghost lg" href="#roles">Browse all 28 roles</a></div>\n'
-            f'  </div>\n    <figure class="hero-cv"><img src="/img/covers/{SLUG}.jpg" alt="Find the software role that fits you" width="1200" height="750" fetchpriority="high" decoding="async"></figure>\n  </div>\n</header>')
+            f'  </div>\n    <figure class="hero-cv"><img src="/img/covers/{SLUG}.jpg" alt="28 roles. Your top 3" width="1200" height="750" fetchpriority="high" decoding="async"></figure>\n  </div>\n</header>')
     rest = re.sub(r'<header class="page-hero.*?</header>', lambda _m: hero, rest, count=1, flags=re.S)
     rest = re.sub(r"<main id=\"main\">.*?</main>", lambda _m: main_html(), rest, count=1, flags=re.S)
     page = head + "</head>" + rest

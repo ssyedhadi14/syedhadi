@@ -129,7 +129,7 @@ def process(path):
             return m.group(1) + json.dumps(j, ensure_ascii=False, separators=(",", ":")) + m.group(3)
         h = re.sub(r'(<script type="application/ld\+json">)(.*?)(</script>)', ld, h, flags=re.S)
 
-        if 'class="pt-meta"' in h and 'class="pt-cover"' not in h:
+        if 'class="pt-meta"' in h and 'class="pt-cover"' not in h and 'class="hero-cv"' not in h:
             h = re.sub(r'(<div class="pt-meta">.*?</div>)',
                        lambda m: m.group(1) + f'\n    <figure class="pt-cover"><img src="{card_src(slug)}" alt="{alt_of(slug)}" '
                                               f'width="1200" height="750" fetchpriority="high" decoding="async"></figure>',
