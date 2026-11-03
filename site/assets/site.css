@@ -2543,3 +2543,7 @@ html.srch-lock,html.srch-lock body{overflow:hidden}
 @media (max-width:640px){.srch-ov{padding:0}.srch-dlg{width:100%;max-height:100%;height:100%;border-radius:0;border:0}.srch-ft{display:none}.srch-in{font-size:16px}}
 @media (prefers-reduced-motion:reduce){.srch-ov,.srch-dlg{transition:none}}
 :target{scroll-margin-top:96px}
+/* 2026-11-03 SEO pass: footer holds a Guides column, so the grid gains a track */
+.fgrid{grid-template-columns:1.3fr repeat(5,1fr) .9fr;gap:24px}
+@media (max-width:1240px){.fgrid{grid-template-columns:repeat(3,1fr)}.fgrid .fbrand{grid-column:1/-1}.fgrid .fphoto{display:none}}
+@media (max-width:800px){.fgrid{grid-template-columns:1fr 1fr}}

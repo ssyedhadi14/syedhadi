@@ -100,3 +100,6 @@ All calculators sit under the Calculator item in the site navigation: Salary Gro
 - [Growth in a box](https://syedcreates.com/growth-in-a-box): the six fixed scope engagements (GTM + PMM, GTM, PMM, AEO/SEO, content, partner revenue).
 - [Work](https://syedcreates.com/work): product marketing, channel partnerships, GTM strategy, demand and pipeline, community and events, AI systems for GTM.
 - [Portfolio](https://syedcreates.com/portfolio): case studies, GTM engine, events, AI systems, recognition, playbook, writing, about.
+
+## Full text
+- [llms-full.txt](https://syedcreates.com/llms-full.txt): every public page of the site as plain text, for AI assistants.
