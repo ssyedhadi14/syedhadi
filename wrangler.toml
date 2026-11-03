@@ -8,8 +8,7 @@ pages_build_output_dir = "site"
 compatibility_date = "2026-11-01"
 compatibility_flags = ["nodejs_compat"]
 
-# KV for the company research cache and quotas. Replace the id after creating the namespace:
-#   Workers & Pages > KV > Create namespace "syedcreates-cr", then paste its id below.
-# [[kv_namespaces]]
-# binding = "CR_KV"
-# id = "PASTE_NAMESPACE_ID"
+# KV for the company research cache and quotas (namespace "syedcreates-cr")
+[[kv_namespaces]]
+binding = "CR_KV"
+id = "deba0bdde3a34bc0975a8688eb20230f"
