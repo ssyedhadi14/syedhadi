@@ -19,7 +19,7 @@ sys.path.insert(0, HERE)
 from config import COVERS  # noqa: E402
 
 CSS_VER_OLD = re.compile(r"site\.css\?v=[0-9a-z]+")
-CSS_VER = "site.css?v=20261103m"
+CSS_VER = "site.css?v=20261103n"
 SKIP = {"404", "index", "skill-pack", "adventure"}  # custom heroes stay as designed
 
 CSS = """

@@ -2682,3 +2682,7 @@ html.srch-lock,html.srch-lock body{overflow:hidden}
 .rec figcaption .rec-li:hover,.rec figcaption .rec-li:focus-visible{opacity:1;transform:translateY(-1px)}
 .rec-li svg,.tr-li svg{display:block;border-radius:3px}
 .tr-li{margin:0 2px 0 6px}
+/* 2026-11-03 trust strip logos monochrome */
+.tr-v2 .tr-logos img,:root[data-theme="dark"] .tr-v2 .tr-logos img{filter:grayscale(1);opacity:.8;transition:filter .2s,opacity .2s}
+.tr-v2 .tr-logos img:hover{filter:grayscale(1);opacity:1}
+.tr-v2 .tr-logos span{text-transform:none;letter-spacing:.02em;font-size:13px}
