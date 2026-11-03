@@ -45,23 +45,30 @@ TINTS = 6
 Q = '<svg viewBox="0 0 48 48" aria-hidden="true"><path fill="currentColor" d="M20 12c-7 2-12 8-12 16v8h12V24h-6c0-5 3-8 8-9zm20 0c-7 2-12 8-12 16v8h12V24h-6c0-5 3-8 8-9z"/></svg>'
 
 
+def initials(name):
+    parts = [w for w in re.split(r"\s+", name) if w and w[0].isalpha()]
+    return (parts[0][0] + (parts[-1][0] if len(parts) > 1 else "")).upper()
+
+
+ARROW_L = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>'
+ARROW_R = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>'
+
+
 def block(seed):
     i = zlib.crc32(seed.encode()) % len(QUOTES)
     q, who, src, tip = QUOTES[i]
     e = _h.escape
     return (f'<section class="qband" aria-label="Growth thinking: a quote on business growth">'
-            f'<div class="wrap"><div class="qb-card qt{i % TINTS + 1}" data-i="{i}">'
-            f'<div class="qb-mark">{Q}</div>'
-            f'<div class="qb-main"><span class="qb-eb">Growth thinking <span class="qb-n">{i + 1:02d} / {len(QUOTES):02d}</span></span>'
-            f'<figure class="qb-fig"><blockquote class="qb-q">{e(q)}</blockquote>'
-            f'<figcaption><b class="qb-who">{e(who)}</b><span class="qb-src">{e(src)}</span></figcaption></figure></div>'
-            f'<div class="qb-side"><p class="qb-apply"><span>Apply it</span><em class="qb-tip">{e(tip)}</em></p>'
-            f'<div class="qb-ctl"><button type="button" class="qb-btn" data-d="-1" aria-label="Previous quote">'
-            f'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>'
+            f'<div class="wrap"><figure class="qb-card qt{i % TINTS + 1}" data-i="{i}">'
+            f'<span class="qb-av" aria-hidden="true">{initials(who)}</span>'
+            f'<div class="qb-main"><span class="qb-eb">Growth thinking <span class="qb-n">{i + 1:02d}/{len(QUOTES):02d}</span></span>'
+            f'<blockquote class="qb-q">&ldquo;{e(q)}&rdquo;</blockquote>'
+            f'<figcaption class="qb-cap"><b class="qb-who">{e(who)}</b><span class="qb-src">{e(src)}</span></figcaption>'
+            f'<p class="qb-apply"><span>Apply it</span> <em class="qb-tip">{e(tip)}</em></p></div>'
+            f'<div class="qb-ctl"><button type="button" class="qb-btn" data-d="-1" aria-label="Previous quote">{ARROW_L}</button>'
             f'<span class="qb-bar" aria-hidden="true"><i></i></span>'
-            f'<button type="button" class="qb-btn" data-d="1" aria-label="Next quote">'
-            f'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button></div></div>'
-            f'</div></div></section>')
+            f'<button type="button" class="qb-btn" data-d="1" aria-label="Next quote">{ARROW_R}</button></div>'
+            f'</figure></div></section>')
 
 
 def inject(html, name, ver):
@@ -77,6 +84,7 @@ def inject(html, name, ver):
 JS = r'''/* Created by: Claude | Date: 2026-11-03 | Purpose: rotate the Growth thinking quote band | Owner: Syed Hadi */
 (function () {
   var Q = __QUOTES__, T = __TINTS__, MS = 8000;
+  function ini(n) { var p = n.split(/\s+/).filter(function (w) { return /^[A-Za-z]/.test(w); }); return ((p[0] || ' ')[0] + (p.length > 1 ? p[p.length - 1][0] : '')).toUpperCase(); }
   function init(card) {
     var i = +card.getAttribute('data-i') || 0, timer = null, paused = false, $ = function (s) { return card.querySelector(s); };
     var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -84,8 +92,8 @@ JS = r'''/* Created by: Claude | Date: 2026-11-03 | Purpose: rotate the Growth t
       i = (n + Q.length) % Q.length; var q = Q[i];
       card.classList.add('qb-out');
       setTimeout(function () {
-        $('.qb-q').textContent = q[0]; $('.qb-who').textContent = q[1]; $('.qb-src').textContent = q[2]; $('.qb-tip').textContent = q[3];
-        $('.qb-n').textContent = ('0' + (i + 1)).slice(-2) + ' / ' + ('0' + Q.length).slice(-2);
+        $('.qb-q').textContent = '\u201C' + q[0] + '\u201D'; $('.qb-av').textContent = ini(q[1]); $('.qb-who').textContent = q[1]; $('.qb-src').textContent = q[2]; $('.qb-tip').textContent = q[3];
+        $('.qb-n').textContent = ('0' + (i + 1)).slice(-2) + '/' + ('0' + Q.length).slice(-2);
         card.className = card.className.replace(/\bqt\d\b/, 'qt' + (i % T + 1));
         card.classList.remove('qb-out'); restartBar();
       }, reduce ? 0 : 260);
@@ -114,35 +122,34 @@ def js():
 
 
 CSS = r'''
-/* ===== 2026-11-03 Growth thinking quote band (above the footer, sitewide) ===== */
-.qband{padding:8px 0 56px}
-.qb-card{--qc:#5b3df5;--qs:#efebff;position:relative;display:grid;grid-template-columns:auto 1fr minmax(240px,300px);gap:26px;align-items:center;padding:28px 30px;border-radius:24px;border:1px solid var(--line);background:linear-gradient(120deg,var(--qs) 0%,var(--card) 62%);overflow:hidden;box-shadow:0 18px 50px rgba(28,16,80,.08);transition:background .6s}
-.qb-card::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,var(--qs),transparent 70%);opacity:.9;pointer-events:none}
+/* ===== 2026-11-03 Growth thinking quote band (compact, above the footer, sitewide) ===== */
+.qband{padding:6px 0 44px}
+.qb-card{--qc:#5b3df5;--qs:#efebff;position:relative;margin:0;display:grid;grid-template-columns:auto 1fr auto;gap:18px 22px;align-items:center;padding:20px 24px;border-radius:20px;border:1px solid var(--line);background:linear-gradient(110deg,var(--qs) 0%,var(--card) 70%);box-shadow:0 12px 34px rgba(28,16,80,.07);transition:background .5s}
 .qt1{--qc:#5b3df5;--qs:#efebff}.qt2{--qc:#0f766e;--qs:#ddf6f1}.qt3{--qc:#b9382f;--qs:#fde8e4}.qt4{--qc:#92400e;--qs:#fdf0d5}.qt5{--qc:#1d4ed8;--qs:#e3eefc}.qt6{--qc:#9d2a78;--qs:#fbe4f2}
 [data-theme=dark] .qt1{--qc:#a592ff;--qs:#211a45}[data-theme=dark] .qt2{--qc:#5eead4;--qs:#0f2d2a}[data-theme=dark] .qt3{--qc:#fb9a8f;--qs:#33181a}[data-theme=dark] .qt4{--qc:#f6c46b;--qs:#30230f}[data-theme=dark] .qt5{--qc:#8cc4ff;--qs:#132440}[data-theme=dark] .qt6{--qc:#f39bd6;--qs:#311530}
 [data-theme=dark] .qb-card{box-shadow:none}
-.qb-mark{width:64px;height:64px;border-radius:18px;display:grid;place-items:center;color:var(--qc);background:var(--card);border:1px solid var(--line);box-shadow:0 8px 22px rgba(28,16,80,.08);align-self:start}
-.qb-mark svg{width:30px;height:30px}
-.qb-main,.qb-side{position:relative;z-index:1;transition:opacity .26s,transform .26s}
-.qb-out .qb-main,.qb-out .qb-side .qb-apply{opacity:0;transform:translateY(6px)}
-.qb-eb{display:flex;gap:10px;align-items:center;font:600 11px "JetBrains Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--qc)}
-.qb-n{color:var(--ink-3);letter-spacing:.08em}
-.qb-fig{margin:10px 0 0}
-.qb-q{margin:0;font-family:"Instrument Serif",Georgia,serif;font-style:italic;font-weight:400;font-size:clamp(24px,2.6vw,34px);line-height:1.18;letter-spacing:-.005em;color:var(--ink);min-height:2.36em}
-.qb-fig figcaption{margin-top:12px;display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline}
-.qb-who{font:700 15px "Plus Jakarta Sans",Inter,sans-serif;color:var(--ink)}
-.qb-src{font-size:13px;color:var(--ink-3)}
-.qb-apply{margin:0;padding:14px 16px;border-radius:16px;background:var(--card);border:1px solid var(--line);font-size:14.5px;line-height:1.45;color:var(--ink-2)}
-.qb-apply span{display:block;font:700 10.5px "JetBrains Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--qc);margin-bottom:5px}
+.qb-av{position:relative;width:54px;height:54px;border-radius:50%;display:grid;place-items:center;font:800 18px "Plus Jakarta Sans",Inter,sans-serif;letter-spacing:.02em;color:#fff;background:var(--qc);box-shadow:0 0 0 4px var(--card),0 0 0 5px var(--line);align-self:start}
+[data-theme=dark] .qb-av{color:#0b0a12}
+.qb-av::after{content:"\201C";position:absolute;right:-6px;bottom:-10px;width:22px;height:22px;border-radius:50%;background:var(--card);border:1px solid var(--line);color:var(--qc);font:400 22px/30px "Instrument Serif",Georgia,serif;text-align:center}
+.qb-main{min-width:0;transition:opacity .26s,transform .26s}
+.qb-out .qb-main{opacity:0;transform:translateY(5px)}
+.qb-eb{display:flex;gap:8px;align-items:center;font:600 11px "JetBrains Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--qc)}
+.qb-n{color:var(--ink-3);letter-spacing:.06em}
+.qb-q{margin:4px 0 0;font-family:"Instrument Serif",Georgia,serif;font-style:italic;font-weight:400;font-size:clamp(20px,2.1vw,26px);line-height:1.22;color:var(--ink)}
+.qb-cap{margin-top:6px;display:flex;flex-wrap:wrap;gap:2px 8px;align-items:baseline;font-size:13px}
+.qb-who{font:700 14px "Plus Jakarta Sans",Inter,sans-serif;color:var(--ink)}
+.qb-src{color:var(--ink-3)}
+.qb-src::before{content:"\00B7";margin-right:8px;color:var(--ink-3)}
+.qb-apply{margin:8px 0 0;font-size:14px;line-height:1.45;color:var(--ink-2)}
+.qb-apply span{font:700 11px "JetBrains Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--qc);margin-right:6px}
 .qb-apply em{font-style:normal}
-.qb-ctl{display:flex;align-items:center;gap:10px;margin-top:12px}
-.qb-btn{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--ink);display:grid;place-items:center;cursor:pointer;flex:none;transition:border-color .2s,color .2s}
+.qb-ctl{display:flex;align-items:center;gap:8px;align-self:center}
+.qb-btn{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--ink);display:grid;place-items:center;cursor:pointer;flex:none;transition:border-color .2s,color .2s}
 .qb-btn:hover,.qb-btn:focus-visible{border-color:var(--qc);color:var(--qc)}
 .qb-btn svg{width:16px;height:16px}
-.qb-bar{flex:1;height:4px;border-radius:99px;background:var(--line);overflow:hidden}
+.qb-bar{width:64px;height:4px;border-radius:99px;background:var(--line);overflow:hidden}
 .qb-bar i{display:block;height:100%;width:100%;transform-origin:left;transform:scaleX(0);background:var(--qc);animation:qbBar 8000ms linear forwards}
 @keyframes qbBar{to{transform:scaleX(1)}}
-@media (prefers-reduced-motion:reduce){.qb-bar i{animation:none;transform:none;opacity:.35}.qb-main,.qb-side,.qb-card{transition:none}}
-@media (max-width:900px){.qb-card{grid-template-columns:auto 1fr}.qb-side{grid-column:1/-1}}
-@media (max-width:560px){.qband{padding:4px 0 40px}.qb-card{grid-template-columns:1fr;padding:22px 20px;gap:14px}.qb-mark{width:48px;height:48px;border-radius:14px}.qb-mark svg{width:22px;height:22px}}
+@media (prefers-reduced-motion:reduce){.qb-main{transition:none}}
+@media (max-width:760px){.qb-cap{flex-direction:column;gap:0}.qb-src::before{display:none}.qb-card{grid-template-columns:auto 1fr;padding:18px}.qb-ctl{grid-column:1/-1;justify-content:flex-end}.qb-bar{flex:1}.qb-av{width:44px;height:44px;font-size:15px}}
 '''
