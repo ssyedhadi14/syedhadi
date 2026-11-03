@@ -10,6 +10,7 @@ import re
 SKIP = {"Syed Hadi"}  # the name in the homepage hero stays in the display sans
 
 PICK = {
+    "Career Reflection in a timeline view": "timeline view",
     "I&rsquo;m Featured on": "Featured",
     "Where Has Syed Shipped?": "Shipped?",
     "Six Things I Hand Over": "Things",

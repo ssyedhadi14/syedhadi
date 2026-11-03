@@ -15,6 +15,7 @@ from PIL import Image
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from serif import accent as serif_accent, CSS as SERIF_CSS  # noqa: E402
 import quotes  # noqa: E402
+import seo_calc  # noqa: E402
 from shared import SITE, VER, CSS_ADD, REDIRECTS_HEAD, HEADERS, calc_menu, newsletter_section  # noqa: E402
 from menus import work_menu, tools_menu  # noqa: E402
 
@@ -196,6 +197,8 @@ def process(path, nav_new):
             tag = tag.replace('target="_blank"', 'target="_blank" rel="noopener"')
         return tag
     html = re.sub(r"<a\b[^>]*>", rel_fix, html)
+    # 13. calculator and scorecard guides for SEO and AEO (before the serif accent step)
+    html = seo_calc.apply(html, name, SITE)
     # 11. serif accent word in every display heading, rotating soft tints
     html = serif_accent(html)
     if name == "index.html" and "serif-accent" not in html:
@@ -319,7 +322,7 @@ def main():
     if cuts:
         css = css[:min(cuts)]
     from videos import CSS as VIDEO_CSS
-    css = css.rstrip() + "\n" + CSS_ADD + VIDEO_CSS + SERIF_CSS + quotes.CSS
+    css = css.rstrip() + "\n" + CSS_ADD + VIDEO_CSS + SERIF_CSS + quotes.CSS + seo_calc.CSS
     css = css.replace('"Bricolage Grotesque"', '"Plus Jakarta Sans"').replace("'Bricolage Grotesque'", "'Plus Jakarta Sans'")
     open(css_path, "w", encoding="utf-8").write(css)
     # asset scripts that load other assets carry the same version

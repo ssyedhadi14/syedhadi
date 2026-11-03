@@ -202,7 +202,7 @@ async function start(req, context) {
   if (cached && !fresh && Date.now() - Date.parse(cached.researched_at) < CACHE_DAYS * 864e5) return json(200, { ok: true, status: 'completed', cached: true, data: cached });
 
   if (process.env.COMPANY_RESEARCH_MOCK === '1') return json(200, { ok: true, status: 'completed', mock: true, data: tidy({ ...MOCK }, t.host) });
-  if (!process.env.FIRECRAWL_API_KEY) return json(503, { ok: false, error: 'Company research is not connected yet. The site owner needs to add a Firecrawl API key.' });
+  if (!process.env.FIRECRAWL_API_KEY) return json(503, { ok: false, error: 'Live research is switching on shortly. Book a call and I will run this company for you in the meantime.' });
 
   const ip = (context && context.ip) || req.headers.get('x-nf-client-connection-ip') || 'anon';
   if (rateLimited(ip)) return json(429, { ok: false, error: 'You have run 3 new reports this hour. Cached companies still load instantly, new ones open up again within the hour.' });
