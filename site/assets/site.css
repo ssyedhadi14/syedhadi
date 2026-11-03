@@ -2581,3 +2581,29 @@ html.srch-lock,html.srch-lock body{overflow:hidden}
 .bs-empty{padding:40px;text-align:center;color:var(--ink-2);border:1px dashed var(--line);border-radius:16px}
 .bf-card[hidden],.mpost[hidden],.bs-hide{display:none!important}
 @media (max-width:700px){.bs-bar{top:64px}}
+
+/* 2026-11-03 trust strip v2: three testimonials, arrows, logos in original colour */
+.tr-v2{grid-template-columns:1.15fr 1fr;gap:26px;padding:20px 22px}
+.tr-car{min-width:0}
+.tr-v2 .tr-quote{min-height:96px;animation:rise .45s var(--ease) both}
+.tr-v2 .tr-quote[hidden]{display:none}
+.tr-v2 .tr-quote img{width:44px;height:44px}
+.tr-v2 .tr-quote blockquote{font-size:15px}
+.tr-v2 figcaption{display:flex;flex-wrap:wrap;align-items:center;gap:4px}
+.tr-li{display:inline-flex;margin:0 2px 0 4px;border-radius:4px;transition:transform .2s}
+.tr-li:hover{transform:translateY(-1px)}
+.tr-ctl{display:flex;align-items:center;gap:10px;margin:12px 0 0 56px}
+.tr-btn{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--ink);display:grid;place-items:center;cursor:pointer;transition:border-color .2s,color .2s}
+.tr-btn:hover{border-color:var(--accent);color:var(--accent)}
+.tr-n{font:600 12.5px "JetBrains Mono",monospace;color:var(--ink-3);min-width:34px;text-align:center}
+.tr-n b{color:var(--ink)}
+.tr-all{margin-left:auto;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tr-v2 .tr-logos div{gap:10px}
+.tr-v2 .tr-logos img,:root[data-theme="dark"] .tr-v2 .tr-logos img{filter:none;opacity:1;height:38px;width:auto;padding:7px 10px;background:#fff;border-radius:10px;border:1px solid #e7e4f3;box-sizing:border-box}
+.tr-sec{padding:8px 0 48px}
+.tr-sec .tr-strip{margin-top:0}
+@media (max-width:960px){.tr-v2{grid-template-columns:1fr}.tr-ctl{margin-left:0}}
+/* 2026-11-03 Humans of Marketing branded cover */
+.hom-photo.hom-cv{min-height:0;aspect-ratio:16/10;align-self:center;background:#ece7ff}
+.hom-photo.hom-cv img{object-position:center}
+.bx-hero.ph-cv .wrap:not(.bx-hero-in){display:block}

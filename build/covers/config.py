@@ -80,4 +80,6 @@ COVERS = {
     "company-research": ("Research any company from its", "homepage", "Company research", "search"),
     "gtm-health-check": ("How healthy is your go to", "market?", "GTM health check", "heart"),
     "partner-readiness-score": ("Is your partner program", "ready?", "Partner readiness", "puzzle"),
+    # Features
+    "hom-feature": ("Making B2B marketing more", "human", "Humans of Marketing", "hom"),
 }

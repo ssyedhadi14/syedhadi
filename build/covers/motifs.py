@@ -187,3 +187,17 @@ M["briefcase"] = _wrap(
     + sparkle(345, 70, 22, C) + sparkle(60, 330, 16, Y))
 
 M["handshake"] = M["puzzle"]
+
+# Humans of Marketing feature: their lockup (cropped from the feature artwork) on a tilted card
+M["hom"] = (
+    '<div style="position:absolute;inset:0;display:grid;place-items:center">'
+    '<div style="position:relative;width:360px;padding:26px 22px 22px;background:#dfe7fb;border:5px solid #141228;'
+    'border-radius:22px;box-shadow:10px 10px 0 #141228;transform:rotate(-4deg)">'
+    '<img src="/img/covers/src/hom-logo.png" alt="" style="display:block;width:100%;height:auto;border-radius:8px">'
+    '<span style="position:absolute;left:-18px;top:-22px;font:800 20px PJS;background:#ffd84d;border:4px solid #141228;'
+    'border-radius:10px;padding:4px 12px;transform:rotate(-6deg)">FEATURED</span>'
+    '<span style="position:absolute;right:-14px;bottom:-20px;font:800 18px PJS;color:#fff;background:#7c5cff;'
+    'border:4px solid #141228;border-radius:999px;padding:5px 14px">Oct 2026</span></div>'
+    '<svg viewBox="0 0 400 400" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none">'
+    + sparkle(345, 60, 26) + sparkle(50, 330, 20, C) + sparkle(360, 330, 16, V) + '</svg></div>'
+)

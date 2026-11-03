@@ -30,6 +30,7 @@ CSS = """
 .hero-cv{margin:0;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:#ece7ff;box-shadow:0 26px 60px rgba(30,16,90,.16);transform:rotate(1.2deg);animation:rise .7s var(--ease) both}
 .hero-cv img{display:block;width:100%;height:auto;aspect-ratio:16/10}
 .bx-hero.ph-cv .bx-hero-in{max-width:1200px;text-align:left}
+.bx-hero.ph-cv .wrap:not(.bx-hero-in){display:block}
 .bx-hero.ph-cv .crumbs{justify-content:flex-start}
 .bx-hero.ph-cv .bx-ctas{justify-content:flex-start}
 .bx-hero.ph-cv .bx-lede{margin-left:0}
