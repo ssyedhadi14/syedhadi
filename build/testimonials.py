@@ -11,7 +11,7 @@ import re
 
 SITE_DIR = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "site"))
 CSS_VER_OLD = re.compile(r"site\.css\?v=[0-9a-z]+")
-CSS_VER = "site.css?v=20261103h"
+CSS_VER = "site.css?v=20261103j"
 
 LI = ('<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect width="24" height="24" rx="4" fill="#0A66C2"/>'
       '<path fill="#fff" d="M7.1 9.5H4.6V19h2.5V9.5zM5.9 5.2a1.45 1.45 0 1 0 0 2.9 1.45 1.45 0 0 0 0-2.9zM19.4 13.6c0-2.6-1.4-4.3-3.7-4.3-1.3 0-2.2.7-2.6 1.4V9.5h-2.4V19h2.5v-4.8c0-1.3.4-2.4 1.8-2.4s1.8 1.2 1.8 2.5V19h2.6v-5.4z"/></svg>')
@@ -21,10 +21,10 @@ QUOTES = [
      "li": "https://www.linkedin.com/in/natrajiitb/",
      "q": "Syed is a top flight professional. Combining immense native intellect, great inter-personal skills, "
           "a positive “can do” attitude and immense commitment, Syed delivers incredible results."},
-    {"name": "Ron Victor", "role": "Entrepreneur, managed Syed at AccuKnox", "img": "ron-victor", "li": "",
+    {"name": "Ron Victor", "role": "Entrepreneur, managed Syed at AccuKnox", "img": "ron-victor", "li": "https://www.linkedin.com/in/ronvictor",
      "q": "Syed has a very pleasant demeanor and is extremely diligent. He is a delight to work with and someone "
           "you want on your team."},
-    {"name": "Vineel Kurumella", "role": "Director of GTM and Strategic Partnerships, AccuKnox", "img": "vineel-kurumella", "li": "",
+    {"name": "Vineel Kurumella", "role": "Director of GTM and Strategic Partnerships, AccuKnox", "img": "vineel-kurumella", "li": "https://www.linkedin.com/in/vineelkurumella/",
      "q": "If you are looking for someone who gets straight to the point and actually gets things done, Syed is your man."},
 ]
 

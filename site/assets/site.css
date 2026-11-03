@@ -2607,3 +2607,19 @@ html.srch-lock,html.srch-lock body{overflow:hidden}
 .hom-photo.hom-cv{min-height:0;aspect-ratio:16/10;align-self:center;background:#ece7ff}
 .hom-photo.hom-cv img{object-position:center}
 .bx-hero.ph-cv .wrap:not(.bx-hero-in){display:block}
+/* 2026-11-03 Growth menu CTA */
+.dd-menu.mm .gb-foot.gb-foot2{display:flex;background:var(--accent-soft);border-radius:12px;color:var(--ink);font-weight:500;align-items:center;justify-content:space-between;gap:18px;padding:14px 16px 14px 22px;text-align:left}
+.dd-menu.mm .gb-foot2 b{display:block;font-size:15px;color:var(--ink)}
+.dd-menu.mm .gb-foot2 small{display:block;font-size:13px;color:var(--ink-2);font-weight:500;margin-top:2px}
+.dd-menu.mm .gb-cta{position:relative;flex:none;display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 22px;border-radius:12px;color:#fff;font-weight:700;font-size:15px;text-decoration:none;
+ background:linear-gradient(100deg,#5b3df5,#8b4fe0 55%,#b43ea0);box-shadow:0 10px 26px rgba(91,61,245,.38),inset 0 1px 0 rgba(255,255,255,.25);overflow:hidden;transition:transform .2s,box-shadow .2s}
+.dd-menu.mm .gb-cta:before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.35) 50%,transparent 70%);transform:translateX(-120%);animation:gbShine 3.2s ease-in-out infinite}
+.dd-menu.mm .gb-cta i{font-style:normal;transition:transform .2s}
+.dd-menu.mm .gb-cta:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(91,61,245,.5)}
+.dd-menu.mm .gb-cta:hover i{transform:translateX(3px)}
+@keyframes gbShine{0%,55%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
+@media (prefers-reduced-motion:reduce){.dd-menu.mm .gb-cta:before{animation:none}}
+@media (max-width:700px){.dd-menu.mm .gb-foot.gb-foot2{flex-direction:column;align-items:stretch}.dd-menu.mm .gb-cta{justify-content:center}}
+/* 2026-11-03 LinkedIn badge on recommendation cards */
+.rec figcaption .rec-li{margin-left:auto;align-self:flex-end;display:inline-flex;opacity:.55;filter:saturate(.6);transition:opacity .2s,filter .2s,transform .2s}
+.rec figcaption .rec-li:hover,.rec figcaption .rec-li:focus-visible{opacity:1;filter:none;transform:translateY(-1px)}
