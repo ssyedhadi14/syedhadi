@@ -2623,3 +2623,47 @@ html.srch-lock,html.srch-lock body{overflow:hidden}
 /* 2026-11-03 LinkedIn badge on recommendation cards */
 .rec figcaption .rec-li{margin-left:auto;align-self:flex-end;display:inline-flex;opacity:.55;filter:saturate(.6);transition:opacity .2s,filter .2s,transform .2s}
 .rec figcaption .rec-li:hover,.rec figcaption .rec-li:focus-visible{opacity:1;filter:none;transform:translateY(-1px)}
+
+/* 2026-11-03 software careers for students */
+.sc-lanes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.sc-lane{border:1px solid var(--line);border-radius:18px;padding:22px;background:var(--card)}
+.sc-lane b{font:600 13px "JetBrains Mono",monospace;color:var(--accent)}
+.sc-lane h3{margin:8px 0 6px;font-size:20px}
+.sc-lane p{color:var(--ink-2);font-size:14.5px;line-height:1.55;margin:0 0 12px}
+.sc-lane a{font-weight:600;font-size:14px;color:var(--accent);text-decoration:none}
+.sc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.sc-role{border:1px solid var(--line);border-radius:16px;padding:18px;background:var(--card);display:flex;flex-direction:column;gap:6px;scroll-margin-top:100px}
+.sc-role[hidden]{display:none}
+.sc-role small{font:500 11px "JetBrains Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.sc-role h3{font-size:17px;margin:0}
+.sc-role p{margin:0;font-size:14px;line-height:1.55;color:var(--ink-2)}
+.sc-role .sc-enjoy b{color:var(--ink)}
+.sc-role details{margin-top:6px;border-top:1px solid var(--line);padding-top:8px}
+.sc-role summary{cursor:pointer;font-weight:600;font-size:13.5px;color:var(--accent)}
+.sc-role ul{margin:8px 0;padding-left:18px;font-size:14px;color:var(--ink-2);display:grid;gap:4px}
+.sc-role details p{margin-top:6px}
+.qz-q .qz-opts span{padding:9px 16px}
+.sc-err{color:#d4485e;font-weight:600;margin:0}
+.sc-out{display:grid;gap:14px;margin-top:6px}
+.sc-out h2{margin:4px 0 0}
+.sc-pick{border:1px solid var(--line);border-radius:16px;padding:18px 20px;background:var(--bg)}
+.sc-pick.first{border-color:var(--accent);box-shadow:0 16px 40px rgba(91,61,245,.16);background:linear-gradient(135deg,var(--accent-soft),var(--card) 65%)}
+.sc-pick-h{display:flex;align-items:center;gap:14px}
+.sc-rank{flex:none;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:#fff;font:800 18px "Plus Jakarta Sans",sans-serif}
+.sc-pick-h small{font:500 11px "JetBrains Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.sc-pick-h h3{margin:2px 0 0;font-size:20px}
+.sc-pct{margin-left:auto;font:800 26px "Plus Jakarta Sans",sans-serif;color:var(--accent)}
+.sc-pick>p{color:var(--ink-2);margin:10px 0}
+.sc-pick-b{display:grid;grid-template-columns:1fr 1.3fr;gap:18px;font-size:14px;color:var(--ink-2)}
+.sc-pick-b b{color:var(--ink);font-size:13.5px}
+.sc-pick-b ul{margin:6px 0 0;padding-left:18px;display:grid;gap:4px}
+.sc-pick-b p{margin:4px 0 10px}
+.sc-more{font-weight:600;font-size:14px;color:var(--accent);text-decoration:none}
+.sc-next{border:1px dashed var(--line);border-radius:16px;padding:18px 20px}
+.sc-next p{color:var(--ink-2);margin:6px 0 12px}
+.sc-faq{display:grid;gap:10px}
+.sc-faq-q{border:1px solid var(--line);border-radius:14px;padding:14px 18px;background:var(--card)}
+.sc-faq-q summary{cursor:pointer;font-weight:600}
+.sc-faq-q p{color:var(--ink-2);margin:10px 0 0;line-height:1.6}
+@media (max-width:960px){.sc-grid{grid-template-columns:repeat(2,1fr)}.sc-lanes{grid-template-columns:1fr}}
+@media (max-width:640px){.sc-grid{grid-template-columns:1fr}.sc-pick-b{grid-template-columns:1fr}}

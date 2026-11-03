@@ -22,7 +22,7 @@ from config import COVERS  # noqa: E402
 
 SITE = "https://syedcreates.com"
 CSS_VER_OLD = re.compile(r"site\.css\?v=[0-9a-z]+")
-CSS_VER = "site.css?v=20261103e"
+CSS_VER = "site.css?v=20261103k"
 CSS = """
 /* 2026-11-03 branded covers on cards and articles */
 .ins-card .cv-thumb,.bf-card .cv-thumb,.lp-box .cv-thumb,.cv-thumb{display:block;flex:none;aspect-ratio:16/10;overflow:hidden;border-radius:12px;border:1px solid var(--line);background:#ece7ff;margin-bottom:6px}

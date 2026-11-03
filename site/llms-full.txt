@@ -2921,6 +2921,7 @@ Open → Calculator FIRE Calculator India Your FIRE number, the SIP you need and
 Open → Calculator Mutual Fund Returns Real 1 to 20 year returns of 50 Indian funds, with a SIP and lumpsum projector.
 Open → Calculator PMM Salary Calculator India product marketing pay by title, experience and city, with a free PDF guide.
 Open → Calculator Qums Calculator Shia Qums (Khums) in three steps, with Sahm e Imam and Sahm e Sadat worked out.
+Open → New Software Career Quiz for Students 28 software roles in plain words and a 2 minute quiz that picks your top 3.
 Open →
 
 GTM scorecards
@@ -9269,6 +9270,406 @@ How do I get the files after paying? Checkout runs on Polar. Right after payment
 How do I install a skill? In Claude, upload the zip from the Skills section of your settings. In Claude Code, drop the folder into ~/.claude/skills. The setup guide in each download walks through both.
 Can I edit the skills? Yes. They are yours to adapt for your own work, your team or your clients. Please do not resell or republish them.
 Refunds? If a skill does not work as described, email me within 14 days and I will fix it or refund you.
+
+“Syed is a top flight professional. Combining immense native intellect, great inter-personal skills, a positive “can do” attitude and immense commitment, Syed delivers incredible results.” Nat Natraj · Cofounder and Chief Client Advocate, AccuKnox
+
+“Syed has a very pleasant demeanor and is extremely diligent. He is a delight to work with and someone you want on your team.” Ron Victor · Entrepreneur, managed Syed at AccuKnox
+
+“If you are looking for someone who gets straight to the point and actually gets things done, Syed is your man.” Vineel Kurumella · Director of GTM and Strategic Partnerships, AccuKnox
+
+1 /3 All recommendations →
+
+Built with and featured at
+
+---
+
+## Software Jobs for Students: Find Your Top 3 Roles
+
+URL: https://syedcreates.com/software-careers-for-students
+Summary: Free career quiz for college students. Explore 28 software industry roles, from engineering and AI to sales and design, and get your top 3 matches with first steps.
+
+Start here
+
+### Every software company needs three kinds of people
+
+Coding is one way in, not the only one. Software companies pay people to build the product, to sell and grow it, and to run the business around it. Find your lane first, then your role.
+
+01
+
+#### Build it
+Engineering, data, AI and security. You write code, train models or protect systems.
+See build roles →
+
+02
+
+#### Sell and grow it
+Marketing, sales, solutions and customer success. You turn a product into revenue.
+See growth roles →
+
+03
+
+#### Shape and run it
+Product, design, writing and operations. You decide what gets built and keep teams moving.
+See product roles →
+
+The role directory
+
+### All 28 software roles , in plain words
+
+What each role does, who enjoys it, the three skills to learn first, the job titles to search for and one project you can finish in 30 days.
+
+Build the product
+
+#### Backend Engineer
+Builds the servers, APIs and databases that every app runs on.
+You will enjoy it if you like logic puzzles and making things work behind the scenes.
+Skills, first job titles and a starter project
+- One language well (Java, Python, Go or Node.js)
+- SQL and one database
+- REST APIs and Git
+First job titles: Software Engineer, Backend Developer, SDE 1
+30 day starter project: Build a URL shortener API with sign in, rate limits and a database, then deploy it.
+
+Build the product
+
+#### Frontend Engineer
+Builds the screens people click, tap and scroll in the browser.
+You will enjoy it if you care how things look and feel, and you like seeing your work instantly.
+Skills, first job titles and a starter project
+- HTML, CSS and JavaScript
+- React or Vue
+- Accessibility and responsive layouts
+First job titles: Frontend Developer, UI Engineer, SDE 1
+30 day starter project: Rebuild your college website as a fast, mobile friendly React app.
+
+Build the product
+
+#### Full Stack Developer
+Builds both the screens and the server, end to end.
+You will enjoy it if you want to ship a whole product on your own.
+Skills, first job titles and a starter project
+- JavaScript or TypeScript
+- React plus Node.js or Django
+- A database and basic cloud hosting
+First job titles: Full Stack Developer, Software Engineer, SDE 1
+30 day starter project: Ship a small SaaS: a class notes sharing app with login, uploads and search.
+
+Build the product
+
+#### Mobile App Developer
+Builds the Android and iOS apps on people's phones.
+You will enjoy it if you love apps and want your work in a million pockets.
+Skills, first job titles and a starter project
+- Kotlin or Swift, or Flutter for both
+- Mobile UI patterns
+- Publishing to the Play Store
+First job titles: Android Developer, iOS Developer, Flutter Developer
+30 day starter project: Publish an expense splitter app for your hostel or friends on the Play Store.
+
+Build the product
+
+#### DevOps and Cloud Engineer
+Automates how code gets built, tested and shipped to the cloud.
+You will enjoy it if you like systems, automation and making things run without manual work.
+Skills, first job titles and a starter project
+- Linux and shell scripting
+- Docker and Kubernetes basics
+- One cloud (AWS, Azure or GCP)
+First job titles: DevOps Engineer, Cloud Engineer, Platform Engineer
+30 day starter project: Containerise a sample app and deploy it with a CI pipeline that runs tests on every push.
+
+Build the product
+
+#### Site Reliability Engineer
+Keeps big systems fast and online, and fixes them when they break.
+You will enjoy it if you stay calm under pressure and enjoy chasing down why something failed.
+Skills, first job titles and a starter project
+- Linux and networking
+- Monitoring with Prometheus and Grafana
+- Scripting in Python or Go
+First job titles: SRE, Production Engineer, Infrastructure Engineer
+30 day starter project: Set up monitoring and alerts for a self hosted app, then break it on purpose and write the incident report.
+
+Build the product
+
+#### QA and Test Automation Engineer
+Finds bugs before customers do, and automates the tests.
+You will enjoy it if you notice every small mistake and enjoy breaking things.
+Skills, first job titles and a starter project
+- Testing basics and writing test cases
+- Selenium or Playwright
+- One scripting language
+First job titles: QA Engineer, SDET, Automation Tester
+30 day starter project: Write an automated test suite for a public demo shop site and publish the report on GitHub.
+
+Build the product
+
+#### Embedded and IoT Engineer
+Writes the software inside devices, from smart watches to cars.
+You will enjoy it if you like electronics and seeing code move real hardware.
+Skills, first job titles and a starter project
+- C and C++
+- Microcontrollers like Arduino or ESP32
+- Basic circuits and sensors
+First job titles: Embedded Software Engineer, Firmware Engineer, IoT Developer
+30 day starter project: Build a room temperature monitor with an ESP32 that sends readings to a phone dashboard.
+
+Data and AI
+
+#### Data Analyst
+Turns company data into dashboards and answers that guide decisions.
+You will enjoy it if you like finding the story inside numbers and explaining it to others.
+Skills, first job titles and a starter project
+- Excel and SQL
+- Power BI or Tableau
+- Basic statistics
+First job titles: Data Analyst, Business Intelligence Analyst, MIS Analyst
+30 day starter project: Analyse a public dataset (cricket, movies or city transport) and publish a dashboard with five insights.
+
+Data and AI
+
+#### Data Scientist
+Uses statistics and models to predict what happens next.
+You will enjoy it if you enjoy maths and want to answer hard questions with data.
+Skills, first job titles and a starter project
+- Python with pandas
+- Statistics and probability
+- Scikit learn basics
+First job titles: Data Scientist, Junior Data Scientist, Analytics Associate
+30 day starter project: Predict house prices or exam results from a public dataset and explain which factors matter most.
+
+Data and AI
+
+#### Data Engineer
+Builds the pipelines that move and clean data so analysts can use it.
+You will enjoy it if you like plumbing work that makes everyone else faster.
+Skills, first job titles and a starter project
+- SQL and Python
+- ETL tools like Airflow
+- Cloud warehouses like BigQuery or Snowflake
+First job titles: Data Engineer, ETL Developer, Analytics Engineer
+30 day starter project: Build a daily pipeline that pulls weather data from an API, cleans it and loads it into a database.
+
+Data and AI
+
+#### Machine Learning Engineer
+Trains models and puts them into real products at scale.
+You will enjoy it if you like both coding and maths, and want to ship AI that real users touch.
+Skills, first job titles and a starter project
+- Python and PyTorch
+- Linear algebra and statistics
+- Deploying models behind an API
+First job titles: ML Engineer, AI Engineer, Applied Scientist
+30 day starter project: Train an image classifier for plant diseases and serve it behind a simple web app.
+
+Data and AI
+
+#### AI Engineer (LLM apps)
+Builds apps on top of large language models, like chatbots and AI agents.
+You will enjoy it if you are excited by ChatGPT and Claude and want to build with them, not just use them.
+Skills, first job titles and a starter project
+- Python or TypeScript
+- LLM APIs, prompts and retrieval (RAG)
+- Evaluating AI output
+First job titles: AI Engineer, LLM Developer, GenAI Engineer
+30 day starter project: Build a study buddy that answers questions from your own class notes using retrieval.
+
+Security
+
+#### Security Analyst (SOC)
+Watches for attacks in real time and responds when something looks wrong.
+You will enjoy it if you like detective work and staying one step ahead of attackers.
+Skills, first job titles and a starter project
+- Networking and Linux basics
+- SIEM tools and log analysis
+- A starter cert like CompTIA Security+
+First job titles: SOC Analyst, Security Analyst, Incident Responder
+30 day starter project: Set up a home lab with a free SIEM, simulate a brute force attack and write up the detection.
+
+Security
+
+#### Cloud Security Engineer
+Locks down cloud accounts, containers and Kubernetes so data stays safe.
+You will enjoy it if you like both cloud systems and security, and want a skill that is in high demand.
+Skills, first job titles and a starter project
+- One cloud platform
+- IAM, networking and encryption
+- Kubernetes and container security
+First job titles: Cloud Security Engineer, DevSecOps Engineer, Security Engineer
+30 day starter project: Scan a free tier cloud account for misconfigurations, fix them and document the before and after.
+
+Security
+
+#### Penetration Tester (Ethical Hacker)
+Hacks systems with permission to find holes before criminals do.
+You will enjoy it if you love puzzles, CTF challenges and figuring out how things break.
+Skills, first job titles and a starter project
+- Networking, Linux and web basics
+- Burp Suite and Kali Linux
+- Practice on TryHackMe or Hack The Box
+First job titles: Penetration Tester, Security Consultant, VAPT Analyst
+30 day starter project: Finish 20 beginner rooms on a hacking practice platform and publish clean writeups.
+
+Product and design
+
+#### Product Manager
+Decides what the team builds next and why, using customer problems and data.
+You will enjoy it if you like leading without being the boss, and you think about users and business together.
+Skills, first job titles and a starter project
+- User research and writing specs
+- Basic SQL and analytics
+- Prioritisation frameworks
+First job titles: Associate Product Manager, Product Analyst, Product Owner
+30 day starter project: Pick an app you use daily, interview five users and write a one page spec for the feature they need most.
+
+Product and design
+
+#### UX and UI Designer
+Designs how an app looks, flows and feels to use.
+You will enjoy it if you notice bad design everywhere and want to fix it.
+Skills, first job titles and a starter project
+- Figma
+- User research and wireframes
+- Visual design and typography basics
+First job titles: UI Designer, UX Designer, Product Designer
+30 day starter project: Redesign three screens of an app you find frustrating and show the before and after in a case study.
+
+Product and design
+
+#### Technical Writer
+Writes the guides and docs that help developers and users succeed.
+You will enjoy it if you enjoy explaining tricky things in simple words.
+Skills, first job titles and a starter project
+- Clear writing and editing
+- Markdown and docs tools
+- Enough code to read an API
+First job titles: Technical Writer, Documentation Specialist, Content Developer
+30 day starter project: Write a getting started guide for an open source project and get it merged.
+
+Sell and grow
+
+#### Product Marketing Manager
+Explains why a product matters, to whom, and arms sales to win deals.
+You will enjoy it if you love both technology and storytelling, and want a seat between product and sales.
+Skills, first job titles and a starter project
+- Positioning and messaging
+- Competitor research
+- Writing launch content
+First job titles: Product Marketing Associate, Marketing Executive, PMM Intern
+30 day starter project: Write a launch plan for a real app: one line pitch, target user, three messages and a comparison with a competitor.
+
+Sell and grow
+
+#### Growth and Performance Marketer
+Runs ads, SEO and campaigns that bring in users, and measures every rupee.
+You will enjoy it if you like experiments, numbers and seeing results within days.
+Skills, first job titles and a starter project
+- Google and Meta ads
+- SEO and analytics
+- A/B testing
+First job titles: Growth Associate, Performance Marketer, SEO Executive
+30 day starter project: Grow a small Instagram page or blog to 1,000 followers and document what worked.
+
+Sell and grow
+
+#### Sales Development Representative
+Finds and books meetings with companies that could buy the software.
+You will enjoy it if you enjoy talking to people, handle rejection well and want fast earning potential.
+Skills, first job titles and a starter project
+- Cold email and calling
+- LinkedIn prospecting
+- A CRM like HubSpot or Salesforce
+First job titles: SDR, BDR, Inside Sales Associate
+30 day starter project: Pick a software product, find 30 companies that need it and write a three email outreach sequence.
+
+Sell and grow
+
+#### Solutions Engineer (Presales)
+The technical expert in the sales team who runs demos and proofs of concept.
+You will enjoy it if you like tech and people equally, and enjoy solving a customer's problem live.
+Skills, first job titles and a starter project
+- Strong product and cloud basics
+- Demo and presentation skills
+- Scripting for quick integrations
+First job titles: Solutions Engineer, Presales Engineer, Sales Engineer
+30 day starter project: Record a ten minute demo of an open source tool solving one real business problem.
+
+Sell and grow
+
+#### Customer Success Manager
+Makes sure customers get value from the software so they stay and grow.
+You will enjoy it if you like helping people and building long relationships.
+Skills, first job titles and a starter project
+- Onboarding and training customers
+- Product knowledge
+- Reading usage data
+First job titles: Customer Success Associate, Account Manager, Onboarding Specialist
+30 day starter project: Write a 30 day onboarding plan for a new customer of any SaaS tool you know.
+
+Sell and grow
+
+#### Developer Advocate
+Teaches developers to use a product through talks, videos, code samples and community.
+You will enjoy it if you code, love sharing what you learn and enjoy being on stage or on camera.
+Skills, first job titles and a starter project
+- Coding in one popular stack
+- Writing tutorials and making videos
+- Community building
+First job titles: Developer Advocate, Developer Relations, Community Engineer
+30 day starter project: Publish three tutorials and one short video on a tool you love, then share them in a dev community.
+
+Run the business
+
+#### Business Analyst
+Translates what the business needs into clear requirements for tech teams.
+You will enjoy it if you like structure, asking good questions and connecting people.
+Skills, first job titles and a starter project
+- Requirements and process mapping
+- Excel and SQL
+- Jira and documentation
+First job titles: Business Analyst, Associate Consultant, Functional Analyst
+30 day starter project: Map the admission process at your college, find three bottlenecks and propose a software fix.
+
+Run the business
+
+#### Project Manager and Scrum Master
+Keeps software projects on time and the team unblocked.
+You will enjoy it if you like planning, organising people and getting things over the line.
+Skills, first job titles and a starter project
+- Agile and Scrum
+- Jira and roadmaps
+- Clear status updates
+First job titles: Project Coordinator, Associate Project Manager, Scrum Master
+30 day starter project: Run your next college fest or club project in two week sprints on a free Jira board and share the retro.
+
+Run the business
+
+#### IT Support and Systems Admin
+Keeps laptops, accounts and office systems running for everyone.
+You will enjoy it if you like fixing things for people and learning how systems connect.
+Skills, first job titles and a starter project
+- Windows, macOS and Linux basics
+- Networking and Active Directory
+- A starter cert like CompTIA A+
+First job titles: IT Support Engineer, Desktop Support, System Administrator
+30 day starter project: Set up a home server with shared files, backups and user accounts, then write the runbook.
+
+The 2 minute quiz
+
+### Find your top 3 roles
+
+Ten quick questions about what you enjoy. No sign up, nothing leaves your browser.
+
+Questions students ask
+
+### Before you pick
+
+Which software job is best for freshers in India? There is no single best job. Backend, full stack and data analyst roles have the most fresher openings. Security, cloud and AI roles are growing fastest. Sales development and customer success roles hire graduates from any stream. Pick the role whose daily work you would enjoy, then build one portfolio project for it.
+Can I get a software job without a computer science degree? Yes. Product, design, data analyst, sales, marketing, customer success, technical writing and IT support roles all hire graduates from commerce, arts and other engineering branches. Even engineering roles care more about a public portfolio and a coding test than about the degree name.
+Do I need to know coding for every software job? No. About half the roles in a software company, like product marketing, sales, customer success, design and project management, need little or no coding. Knowing the basics still helps you talk to engineers and grow faster.
+Which software roles pay the most early in a career? Engineering roles in AI, cloud, security and backend usually start higher, and sales roles can match them through commission. Pay grows fastest in any role when you pick a niche and show proof of work, so choose the role you will stick with long enough to get good.
+How do I get my first software job while still in college? Pick one role, learn the three starter skills for it, build one real project, put it on GitHub, Behance or LinkedIn, and apply for internships. Write about what you built. Recruiters notice students who can show work, not just certificates.
+How accurate is this career quiz? It is a starting point, not a verdict. It matches your answers to the daily work each role involves. Read the role cards, try the 30 day starter project for your top match, and you will know within a month if it fits.
 
 “Syed is a top flight professional. Combining immense native intellect, great inter-personal skills, a positive “can do” attitude and immense commitment, Syed delivers incredible results.” Nat Natraj · Cofounder and Chief Client Advocate, AccuKnox
 

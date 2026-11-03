@@ -101,5 +101,8 @@ All calculators sit under the Calculator item in the site navigation: Salary Gro
 - [Work](https://syedcreates.com/work): product marketing, channel partnerships, GTM strategy, demand and pipeline, community and events, AI systems for GTM.
 - [Portfolio](https://syedcreates.com/portfolio): case studies, GTM engine, events, AI systems, recognition, playbook, writing, about.
 
+## For students
+- [Software careers for students](https://syedcreates.com/software-careers-for-students): 28 software industry roles explained for college students (engineering, data and AI, security, product, design, sales, marketing, operations) with skills, first job titles, a 30 day starter project each, and a 10 question quiz that returns the top 3 matching roles.
+
 ## Full text
 - [llms-full.txt](https://syedcreates.com/llms-full.txt): every public page of the site as plain text, for AI assistants.

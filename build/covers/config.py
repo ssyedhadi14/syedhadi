@@ -82,4 +82,5 @@ COVERS = {
     "partner-readiness-score": ("Is your partner program", "ready?", "Partner readiness", "puzzle"),
     # Features
     "hom-feature": ("Making B2B marketing more", "human", "Humans of Marketing", "hom"),
+    "software-careers-for-students": ("Find the software role that fits", "you", "Career quiz for students", "rocket"),
 }
