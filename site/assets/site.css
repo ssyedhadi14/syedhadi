@@ -2686,3 +2686,41 @@ html.srch-lock,html.srch-lock body{overflow:hidden}
 .tr-v2 .tr-logos img,:root[data-theme="dark"] .tr-v2 .tr-logos img{filter:grayscale(1);opacity:.8;transition:filter .2s,opacity .2s}
 .tr-v2 .tr-logos img:hover{filter:grayscale(1);opacity:1}
 .tr-v2 .tr-logos span{text-transform:none;letter-spacing:.02em;font-size:13px}
+
+/* 2026-11-03 quote band v2: bigger, brighter, categories, quote of the day */
+.qband{display:none}
+.qb2{padding:12px 0 56px}
+.qb2-card{--g1:#5b3df5;--g2:#1fb6ff;position:relative;margin:0;overflow:hidden;border-radius:28px;padding:clamp(26px,4vw,52px);color:#fff;
+ background:radial-gradient(900px 420px at 85% -10%,rgba(255,255,255,.28),transparent 60%),linear-gradient(125deg,var(--g1),var(--g2));
+ box-shadow:0 30px 80px -30px var(--g1);isolation:isolate;transition:background .6s,box-shadow .6s}
+.qb2-card[data-cat=tech]{--g1:#4f2cf5;--g2:#13a8ff}
+.qb2-card[data-cat=business]{--g1:#ff5f1f;--g2:#c2185b}
+.qb2-card[data-cat=finance]{--g1:#047857;--g2:#1d4ed8}
+.qb2-card[data-cat=motivation]{--g1:#f72585;--g2:#7209b7}
+.qb2-bg{position:absolute;inset:0;z-index:-1;background-size:cover;background-position:center;opacity:0;transition:opacity .6s}
+.qb2-card.has-img .qb2-bg{opacity:1}
+.qb2-card.has-img::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg,rgba(8,6,20,.86) 0%,rgba(8,6,20,.55) 55%,rgba(8,6,20,.2) 100%)}
+.qb2-mark{position:absolute;right:clamp(10px,4vw,48px);top:-40px;font:400 clamp(180px,22vw,300px)/1 "Instrument Serif",Georgia,serif;color:rgba(255,255,255,.14);pointer-events:none}
+.qb2-top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;margin-bottom:clamp(18px,2.6vw,30px)}
+.qb2-eb{display:inline-flex;align-items:center;gap:10px;font:600 12px "JetBrains Mono",monospace;letter-spacing:.16em;text-transform:uppercase;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);padding:7px 14px;border-radius:999px;backdrop-filter:blur(6px)}
+.qb2-eb i{width:8px;height:8px;border-radius:50%;background:#ffd84d;box-shadow:0 0 0 4px rgba(255,216,77,.3);animation:qb2Pulse 2s infinite}
+@keyframes qb2Pulse{50%{box-shadow:0 0 0 8px rgba(255,216,77,0)}}
+.qb2-chips{display:flex;flex-wrap:wrap;gap:8px}
+.qb2-chip{height:34px;padding:0 14px;border-radius:999px;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.08);color:#fff;font:600 13px "Plus Jakarta Sans",Inter,sans-serif;cursor:pointer;transition:background .2s}
+.qb2-chip:hover{background:rgba(255,255,255,.2)}
+.qb2-chip.on{background:#fff;color:#141228;border-color:#fff}
+.qb2-q{margin:0;max-width:980px;font:400 clamp(28px,3.8vw,52px)/1.12 "Instrument Serif",Georgia,serif;font-style:italic;letter-spacing:-.01em;text-shadow:0 2px 18px rgba(0,0,0,.18);transition:opacity .24s,transform .24s}
+.qb2-foot{display:flex;align-items:center;gap:14px;margin-top:clamp(20px,2.8vw,34px);flex-wrap:wrap}
+.qb2-av{flex:none;width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:#fff;color:#141228;font:800 18px "Plus Jakarta Sans",sans-serif;box-shadow:0 0 0 4px rgba(255,255,255,.25)}
+.qb2-who-w{display:flex;flex-direction:column;min-width:0;transition:opacity .24s}
+.qb2-who{font:800 19px "Plus Jakarta Sans",sans-serif}
+.qb2-role{font-size:14px;opacity:.85}
+.qb2-ctl{margin-left:auto;display:flex;align-items:center;gap:10px}
+.qb2-btn{width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.45);background:rgba(255,255,255,.12);color:#fff;display:grid;place-items:center;cursor:pointer;transition:background .2s,transform .2s}
+.qb2-btn:hover,.qb2-btn:focus-visible{background:#fff;color:#141228;transform:translateY(-1px)}
+.qb2-n{font:600 13px "JetBrains Mono",monospace;min-width:54px;text-align:center}
+.qb2-bar{position:absolute;left:0;right:0;bottom:0;height:4px;background:rgba(255,255,255,.18)}
+.qb2-bar i{display:block;height:100%;width:100%;transform-origin:left;transform:scaleX(0);background:#ffd84d;animation:qbBar 9000ms linear forwards}
+.qb2-out .qb2-q,.qb2-out .qb2-who-w{opacity:0;transform:translateY(6px)}
+@media (max-width:700px){.qb2-ctl{margin-left:0;width:100%;justify-content:space-between}.qb2-top{flex-direction:column;align-items:flex-start}}
+@media (prefers-reduced-motion:reduce){.qb2-eb i{animation:none}.qb2-bar{display:none}}
