@@ -2724,3 +2724,16 @@ html.srch-lock,html.srch-lock body{overflow:hidden}
 .qb2-out .qb2-q,.qb2-out .qb2-who-w{opacity:0;transform:translateY(6px)}
 @media (max-width:700px){.qb2-ctl{margin-left:0;width:100%;justify-content:space-between}.qb2-top{flex-direction:column;align-items:flex-start}}
 @media (prefers-reduced-motion:reduce){.qb2-eb i{animation:none}.qb2-bar{display:none}}
+/* 2026-11-03 navbar name: subtle AI shimmer with minute stars */
+.brand-t{position:relative;display:inline-block;background:linear-gradient(100deg,var(--ink) 0%,var(--ink) 40%,#7c5cff 48%,#c084fc 52%,var(--ink) 60%,var(--ink) 100%);background-size:250% 100%;background-position:100% 0;-webkit-background-clip:text;background-clip:text;color:transparent;animation:btShine 6s ease-in-out infinite}
+@keyframes btShine{0%,55%{background-position:100% 0}85%,100%{background-position:0 0}}
+.bt-stars{position:absolute;inset:-7px -10px;pointer-events:none}
+.bt-stars i{position:absolute;width:6px;height:6px;background:#a78bfa;clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%);opacity:0;animation:btTw 3.6s ease-in-out infinite}
+.bt-stars i:nth-child(1){left:-2px;top:2px;animation-delay:0s}
+.bt-stars i:nth-child(2){left:38%;top:-3px;width:4px;height:4px;background:#fbbf24;animation-delay:.7s}
+.bt-stars i:nth-child(3){right:-4px;top:5px;animation-delay:1.4s}
+.bt-stars i:nth-child(4){left:62%;bottom:-3px;width:4px;height:4px;animation-delay:2.1s}
+.bt-stars i:nth-child(5){left:14%;bottom:0;width:3px;height:3px;background:#f0abfc;animation-delay:2.8s}
+@keyframes btTw{0%,100%{opacity:0;transform:scale(.4) rotate(0)}45%{opacity:1;transform:scale(1) rotate(45deg)}70%{opacity:0;transform:scale(.6) rotate(90deg)}}
+:root[data-theme="dark"] .brand-t{background-image:linear-gradient(100deg,#fff 0%,#fff 40%,#a78bfa 48%,#f0abfc 52%,#fff 60%,#fff 100%)}
+@media (prefers-reduced-motion:reduce){.brand-t{animation:none;color:var(--ink);background:none}.bt-stars{display:none}}
