@@ -2677,3 +2677,8 @@ html.srch-lock,html.srch-lock body{overflow:hidden}
 .fr-mix td:not(:first-child),.fr-mix th:not(:first-child){text-align:right}
 
 @media (max-width:560px){.fr-assets{grid-template-columns:1fr}}
+/* 2026-11-03 official LinkedIn mark, crisp */
+.rec figcaption .rec-li{opacity:.92;filter:none}
+.rec figcaption .rec-li:hover,.rec figcaption .rec-li:focus-visible{opacity:1;transform:translateY(-1px)}
+.rec-li svg,.tr-li svg{display:block;border-radius:3px}
+.tr-li{margin:0 2px 0 6px}

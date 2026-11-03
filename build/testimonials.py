@@ -11,10 +11,9 @@ import re
 
 SITE_DIR = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "site"))
 CSS_VER_OLD = re.compile(r"site\.css\?v=[0-9a-z]+")
-CSS_VER = "site.css?v=20261103l"
+CSS_VER = "site.css?v=20261103m"
 
-LI = ('<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect width="24" height="24" rx="4" fill="#0A66C2"/>'
-      '<path fill="#fff" d="M7.1 9.5H4.6V19h2.5V9.5zM5.9 5.2a1.45 1.45 0 1 0 0 2.9 1.45 1.45 0 0 0 0-2.9zM19.4 13.6c0-2.6-1.4-4.3-3.7-4.3-1.3 0-2.2.7-2.6 1.4V9.5h-2.4V19h2.5v-4.8c0-1.3.4-2.4 1.8-2.4s1.8 1.2 1.8 2.5V19h2.6v-5.4z"/></svg>')
+LI = ('<svg viewBox="0 0 24 24" width="18" height="18" role="img" aria-hidden="true" focusable="false" shape-rendering="geometricPrecision"><rect x="2" y="2" width="20" height="20" rx="2" fill="#fff"/><path fill="#0A66C2" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 4.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>')
 
 QUOTES = [
     {"name": "Nat Natraj", "role": "Cofounder and Chief Client Advocate, AccuKnox", "img": "nat-natraj",
