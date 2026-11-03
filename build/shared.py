@@ -4,7 +4,7 @@
 # Owner: Syed Hadi
 
 SITE = "https://syedcreates.com"
-VER = "20261103a"
+VER = "20261103b"
 
 def uns(pid, w=480, h=270, q=80):
     return f"https://images.unsplash.com/photo-{pid}?auto=format&fit=crop&q={q}&w={w}&h={h}"

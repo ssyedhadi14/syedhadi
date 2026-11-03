@@ -31,7 +31,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css?v=20261103a">
+<link rel="stylesheet" href="/assets/site.css?v=20261103b">
 </head>
 <body data-page="tools">
 <a class="skip" href="#main">Skip to content</a>
@@ -68,6 +68,8 @@
       </div>
 </div>
     <div class="nav-right">
+      <button class="srch-btn" id="srchBtn" type="button" aria-label="Search the site" aria-haspopup="dialog" aria-keyshortcuts="Control+K Meta+K /"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="srch-t">Search</span><kbd class="srch-k">Ctrl K</kbd></button>
+      
       <button class="theme-btn" id="themeBtn" type="button" role="switch" aria-checked="false" aria-label="Dark mode" title="Switch light or dark mode"><span class="tt-ic tt-sun"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></span><span class="tt-ic tt-moon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></span><span class="tt-knob" aria-hidden="true"></span></button>
       <a class='btn btn-primary' href='/schedule-meeting'><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><span>Schedule meeting</span></a>
       <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
@@ -144,7 +146,7 @@
 </div>
 <div class="wrap">
 <section class="tcat" data-c="c1" id="cat-1">
-  <div class="tcat-head"><h2><span class="num">01</span>AI and Agents <span class="cnt">5</span></h2><p>The AI layer that does the busywork, so the team spends time on judgment.</p></div>
+  <div class="tcat-head"><h2 id="s-01-ai-and-agents-5"><span class="num">01</span>AI and Agents <span class="cnt">5</span></h2><p>The AI layer that does the busywork, so the team spends time on judgment.</p></div>
   <div class="tgrid">
     <details class="tool" data-s="claude pro the thinking partner behind research, drafts and every automation we run. account research, pr drafts, battlecards and the scheduled workflows that run inside slack. the marketing team&#x27;s core ai workflow. long context work, writing and agent workflows ai and agents" data-f="pick">
       <summary><span class="mono logo"><img src="/img/logos/claude.svg" alt="Claude Pro logo" width="24" height="24" loading="lazy"></span><span><span class="tn">Claude Pro<span class="b">PICK</span></span><span class="td">The thinking partner behind research, drafts and every automation we run.</span></span></summary>
@@ -169,7 +171,7 @@
   </div>
 </section>
 <section class="tcat" data-c="c2" id="cat-2">
-  <div class="tcat-head"><h2><span class="num">02</span>Sales and Outbound <span class="cnt">3</span></h2><p>Finding the right accounts, the right people and the moment they are ready.</p></div>
+  <div class="tcat-head"><h2 id="s-02-sales-and-outbound-3"><span class="num">02</span>Sales and Outbound <span class="cnt">3</span></h2><p>Finding the right accounts, the right people and the moment they are ready.</p></div>
   <div class="tgrid">
     <details class="tool" data-s="apollo contact data plus sequencing for outbound campaigns. prospect lists and outbound campaigns for the lead generation team across india and international territories. building and running outbound sequences sales and outbound" data-f="pick">
       <summary><span class="mono logo" data-fallback="AP" data-color="#16a34a"><img src="https://www.google.com/s2/favicons?domain=www.apollo.io&amp;sz=64" alt="Apollo logo" width="24" height="24" loading="lazy" onerror="var s=this.parentNode;s.classList.remove('logo');s.style.background=s.dataset.color;s.textContent=s.dataset.fallback;"></span><span><span class="tn">Apollo<span class="b">PICK</span></span><span class="td">Contact data plus sequencing for outbound campaigns.</span></span></summary>
@@ -186,7 +188,7 @@
   </div>
 </section>
 <section class="tcat" data-c="c3" id="cat-3">
-  <div class="tcat-head"><h2><span class="num">03</span>Email and Messaging <span class="cnt">2</span></h2><p>Owned channels that reach people directly, without an algorithm in between.</p></div>
+  <div class="tcat-head"><h2 id="s-03-email-and-messaging-2"><span class="num">03</span>Email and Messaging <span class="cnt">2</span></h2><p>Owned channels that reach people directly, without an algorithm in between.</p></div>
   <div class="tgrid">
     <details class="tool" data-s="brevo email campaigns, lists and automations in one place. newsletters, product launch emails, g2 review campaigns and funnel lists from tofu to prod customers. email marketing at startup scale email and messaging" data-f="free">
       <summary><span class="mono logo"><img src="/img/logos/brevo.svg" alt="Brevo logo" width="24" height="24" loading="lazy"></span><span><span class="tn">Brevo<span class="b f">FREE TIER</span></span><span class="td">Email campaigns, lists and automations in one place.</span></span></summary>
@@ -199,7 +201,7 @@
   </div>
 </section>
 <section class="tcat" data-c="c4" id="cat-4">
-  <div class="tcat-head"><h2><span class="num">04</span>SEO and AI Visibility <span class="cnt">3</span></h2><p>Ranking in Google is half the job now. The other half is getting cited by AI.</p></div>
+  <div class="tcat-head"><h2 id="s-04-seo-and-ai-visibility-3"><span class="num">04</span>SEO and AI Visibility <span class="cnt">3</span></h2><p>Ranking in Google is half the job now. The other half is getting cited by AI.</p></div>
   <div class="tgrid">
     <details class="tool" data-s="llmlabs tracks how often ai answers mention and cite your brand. geo analytics. it produced the leaderboard that put accuknox third in ai visibility, ahead of sysdig and prisma cloud. generative engine optimization and ai share of voice seo and ai visibility" data-f="pick">
       <summary><span class="mono" style="background:#0ea5a4">LL</span><span><span class="tn">LLMLabs<span class="b">PICK</span></span><span class="td">Tracks how often AI answers mention and cite your brand.</span></span></summary>
@@ -216,7 +218,7 @@
   </div>
 </section>
 <section class="tcat" data-c="c5" id="cat-5">
-  <div class="tcat-head"><h2><span class="num">05</span>Paid Media and PR <span class="cnt">3</span></h2><p>Spend that buys reach, and the wires that carry the news.</p></div>
+  <div class="tcat-head"><h2 id="s-05-paid-media-and-pr-3"><span class="num">05</span>Paid Media and PR <span class="cnt">3</span></h2><p>Spend that buys reach, and the wires that carry the news.</p></div>
   <div class="tgrid">
     <details class="tool" data-s="linkedin ads paid reach to the exact titles and companies we sell to. leads and awareness campaigns across ai governance, llm security and runtime protection, all in accuknox blue. b2b targeting by role, company and industry paid media and pr" data-f="">
       <summary><span class="mono logo"><img src="/img/logos/linkedin.svg" alt="LinkedIn Ads logo" width="24" height="24" loading="lazy"></span><span><span class="tn">LinkedIn Ads</span><span class="td">Paid reach to the exact titles and companies we sell to.</span></span></summary>
@@ -233,7 +235,7 @@
   </div>
 </section>
 <section class="tcat" data-c="c6" id="cat-6">
-  <div class="tcat-head"><h2><span class="num">06</span>Design and Creative <span class="cnt">5</span></h2><p>How a small team ships assets that look like a big team made them.</p></div>
+  <div class="tcat-head"><h2 id="s-06-design-and-creative-5"><span class="num">06</span>Design and Creative <span class="cnt">5</span></h2><p>How a small team ships assets that look like a big team made them.</p></div>
   <div class="tgrid">
     <details class="tool" data-s="figma where every design starts, from ux to ads. ux and marketing design, ad creatives, event posters and deck layouts shared across the team. collaborative design and handoff design and creative" data-f="free pick">
       <summary><span class="mono logo"><img src="/img/logos/figma.svg" alt="Figma logo" width="24" height="24" loading="lazy"></span><span><span class="tn">Figma<span class="b">PICK</span><span class="b f">FREE TIER</span></span><span class="td">Where every design starts, from UX to ads.</span></span></summary>
@@ -258,7 +260,7 @@
   </div>
 </section>
 <section class="tcat" data-c="c7" id="cat-7">
-  <div class="tcat-head"><h2><span class="num">07</span>Content and Video <span class="cnt">4</span></h2><p>Formats that travel: recordings, live sessions, long form and every language.</p></div>
+  <div class="tcat-head"><h2 id="s-07-content-and-video-4"><span class="num">07</span>Content and Video <span class="cnt">4</span></h2><p>Formats that travel: recordings, live sessions, long form and every language.</p></div>
   <div class="tgrid">
     <details class="tool" data-s="loom record your screen and face, share a link. async walkthroughs, demo recordings and feedback that would otherwise take a meeting. replacing meetings with short videos content and video" data-f="free">
       <summary><span class="mono logo"><img src="/img/logos/loom.svg" alt="Loom logo" width="24" height="24" loading="lazy"></span><span><span class="tn">Loom<span class="b f">FREE TIER</span></span><span class="td">Record your screen and face, share a link.</span></span></summary>
@@ -279,7 +281,7 @@
   </div>
 </section>
 <section class="tcat" data-c="c8" id="cat-8">
-  <div class="tcat-head"><h2><span class="num">08</span>Website and Hosting <span class="cnt">4</span></h2><p>The plumbing under accuknox.com. Boring when it works, which is the goal.</p></div>
+  <div class="tcat-head"><h2 id="s-08-website-and-hosting-4"><span class="num">08</span>Website and Hosting <span class="cnt">4</span></h2><p>The plumbing under accuknox.com. Boring when it works, which is the goal.</p></div>
   <div class="tgrid">
     <details class="tool" data-s="cloudways managed cloud hosting for wordpress. hosts the main accuknox website. wordpress hosting without managing servers website and hosting" data-f="">
       <summary><span class="mono logo"><img src="/img/logos/cloudways.svg" alt="Cloudways logo" width="24" height="24" loading="lazy"></span><span><span class="tn">Cloudways</span><span class="td">Managed cloud hosting for WordPress.</span></span></summary>
@@ -300,7 +302,7 @@
   </div>
 </section>
 <section class="tcat" data-c="c9" id="cat-9">
-  <div class="tcat-head"><h2><span class="num">09</span>Learning and Enablement <span class="cnt">1</span></h2><p>Training that turns partners and customers into people who can sell and run the product.</p></div>
+  <div class="tcat-head"><h2 id="s-09-learning-and-enablement-1"><span class="num">09</span>Learning and Enablement <span class="cnt">1</span></h2><p>Training that turns partners and customers into people who can sell and run the product.</p></div>
   <div class="tgrid">
     <details class="tool" data-s="arythmatic the learning management system behind accuknox training. runs the partner and customer training portal, with self paced courses and self sign up. structured product training at scale learning and enablement" data-f="">
       <summary><span class="mono" style="background:#e11d74">AR</span><span><span class="tn">Arythmatic</span><span class="td">The learning management system behind AccuKnox training.</span></span></summary>
@@ -457,7 +459,8 @@
   </div>
   <div class="made-strip"><span>Made with love <span class="ms-heart" aria-hidden="true">❤️</span> from Bangalore, India <span aria-hidden="true">🇮🇳</span></span></div>
 </footer>
-<script src="assets/common.js?v=20261103a"></script>
-<script src="/assets/quotes.js?v=20261103a" defer></script>
+<script src="assets/common.js?v=20261103b"></script>
+<script src="/assets/quotes.js?v=20261103b" defer></script>
+<script src="/assets/search.js?v=20261103b" defer></script>
 </body>
 </html>

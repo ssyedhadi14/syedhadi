@@ -31,7 +31,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css?v=20261103a">
+<link rel="stylesheet" href="/assets/site.css?v=20261103b">
 </head>
 <body data-page="home">
 <a class="skip" href="#main">Skip to content</a>
@@ -68,6 +68,8 @@
       </div>
 </div>
     <div class="nav-right">
+      <button class="srch-btn" id="srchBtn" type="button" aria-label="Search the site" aria-haspopup="dialog" aria-keyshortcuts="Control+K Meta+K /"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="srch-t">Search</span><kbd class="srch-k">Ctrl K</kbd></button>
+      
       <button class="theme-btn" id="themeBtn" type="button" role="switch" aria-checked="false" aria-label="Dark mode" title="Switch light or dark mode"><span class="tt-ic tt-sun"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></span><span class="tt-ic tt-moon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></span><span class="tt-knob" aria-hidden="true"></span></button>
       <a class='btn btn-primary' href='/schedule-meeting'><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><span>Schedule meeting</span></a>
       <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
@@ -129,7 +131,7 @@
     <div class="about-grid">
       <div class="reveal">
         <span class="eyebrow">About me</span>
-        <h2 class="display">More than just<br><span class="t3 boxed">Marketing.</span></h2>
+        <h2 class="display" id="s-more-than-just-marketing">More than just<br><span class="t3 boxed">Marketing.</span></h2>
         <p>I wake up excited to solve growth problems. I lead the motions that drive <a href="/playbook">acquisition, onboarding, engagement, retention and monetisation</a>, and I build <a href="/gtm-engine">lead pipeline that compounds into ARR</a>. Except for writing production code, I have had my hands in everything across <a href="/pmm-case-study">marketing</a>, <a href="/systems">product</a>, sales and <a href="/partner-revenue-case-study">partnerships</a>.</p>
         <div class="stats">
           <div class="stat"><b>25</b><span>People across PMM, SE and CA</span></div>
@@ -154,7 +156,7 @@
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow">Experience</span>
-      <h2 class="display">Where Has Syed <span class="t4">Shipped?</span></h2>
+      <h2 class="display" id="s-where-has-syed-shipped">Where Has Syed <span class="t4">Shipped?</span></h2>
       <p>Seven years across SaaS, <a href="/events">open source and community</a>, six of them building AccuKnox. Pick a role to open it, or read the <a href="/about">full story on the about page</a>.</p>
     </div>
     <div class="exp-panel reveal">
@@ -168,7 +170,7 @@
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow">What I do</span>
-      <h2 class="display">Six <span class="t5">Things</span> I Hand Over</h2>
+      <h2 class="display" id="s-six-things-i-hand-over">Six <span class="t5">Things</span> I Hand Over</h2>
       <p>Every capability below carries a line from work that already shipped. Each one is also a <a href="/gtm-pmm-in-a-box">90 day box</a> you can hire.</p>
     </div>
     <div class="svc-grid">
@@ -187,7 +189,7 @@
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow">Recommendations</span>
-      <h2 class="display">What People <span class="t6">Say</span> After Working With Syed</h2>
+      <h2 class="display" id="s-what-people-say-after-working-with-syed">What People <span class="t6">Say</span> After Working With Syed</h2>
       <p>13 recommendations on LinkedIn from founders, managers, peers and the people he led.</p>
     </div>
     <div class="rec-carousel reveal" id="recCarousel" aria-roledescription="carousel" aria-label="LinkedIn recommendations">
@@ -240,7 +242,7 @@
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow">Community</span>
-      <h2 class="display">Rooms I Have <span class="t2">Filled</span></h2>
+      <h2 class="display" id="s-rooms-i-have-filled">Rooms I Have <span class="t2">Filled</span></h2>
       <p>Less theory, more hands on. Meetups, labs and simulations with practitioners and founders.</p>
     </div>
     <div class="ev-grid ev-9">
@@ -262,7 +264,7 @@
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow">Credentials</span>
-      <h2 class="display">Education and <span class="t3">Certifications</span></h2>
+      <h2 class="display" id="s-education-and-certifications">Education and <span class="t3">Certifications</span></h2>
       <p>The short version. The full detail lives in the <a href='/about#resume' style='color:var(--accent);font-weight:600'>resume</a> on the about page.</p>
     </div>
     <div class="cred-grid">
@@ -309,7 +311,7 @@
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow">Career path</span>
-      <h2 class="display">Career Reflection in a <span class="t4">timeline view</span></h2>
+      <h2 class="display" id="s-career-reflection-in-a-timeline-view">Career Reflection in a <span class="t4">timeline view</span></h2>
       <p>Seven years, from a first QA job in Chennai to leading growth at AccuKnox. Select a year to open the rest of it.</p>
     </div>
     <ol class="timeline" id="timeline">
@@ -383,7 +385,7 @@
 <!-- journey -->
 <section class="jr-sec" aria-label="Moments From the Journey">
   <div class="wrap">
-    <div class="jr-head reveal"><div><span class="eyebrow">Behind the work</span><h2 class="display">Moments From the <span class="t5">Journey</span></h2><p>A few highlights from my LinkedIn featured photos. See every moment on the about page.</p></div>
+    <div class="jr-head reveal"><div><span class="eyebrow">Behind the work</span><h2 class="display" id="s-moments-from-the-journey">Moments From the <span class="t5">Journey</span></h2><p>A few highlights from my LinkedIn featured photos. See every moment on the about page.</p></div>
       <div class="jr-nav"><button type="button" class="rec-nav jr-prev" aria-label="Previous photos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 18l-6-6 6-6"/></svg></button><button type="button" class="rec-nav jr-next" aria-label="Next photos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 6l6 6-6 6"/></svg></button></div></div>
     <div class="jr-track" tabindex="0"><figure class="jr-card"><div class="jr-img"><img src="img/journey/whitefield-nat-2025.jpg" alt="With Nat in Whitefield, Bengaluru, Jan 2025" loading="lazy" decoding="async" width="952" height="1269"><span class="jr-date">Jan 2025</span></div><figcaption><b>With Nat in Whitefield, Bengaluru</b><p>Happy customers, partner engagements and product growth discussions.</p><small>Product Marketing Manager &middot; AccuKnox</small></figcaption></figure><figure class="jr-card"><div class="jr-img"><img src="img/journey/kubearmor-nimhans-2024.jpg" alt="KubeArmor developers at NIMHANS, Sep 2024" loading="lazy" decoding="async" width="1100" height="825"><span class="jr-date">Sep 2024</span></div><figcaption><b>KubeArmor developers at NIMHANS</b><p>Engineers turned booth marketers. Helped push KubeArmor past 1.4K GitHub stars.</p><small>Product Marketing Manager &middot; AccuKnox</small></figcaption></figure><figure class="jr-card"><div class="jr-img"><img src="img/journey/gisec-dubai-2024.jpg" alt="GISEC, Dubai, Apr 2024" loading="lazy" decoding="async" width="1100" height="798"><span class="jr-date">Apr 2024</span></div><figcaption><b>GISEC, Dubai</b><p>750+ security companies, and a dedicated AccuKnox booth with our partner.</p><small>Product Marketing Manager &middot; AccuKnox</small></figcaption></figure><figure class="jr-card"><div class="jr-img"><img src="img/journey/google-office-host-2024.jpg" alt="Hosting at Google, Bengaluru, Apr 2024" loading="lazy" decoding="async" width="1100" height="853"><span class="jr-date">Apr 2024</span></div><figcaption><b>Hosting at Google, Bengaluru</b><p>Delivered the welcome note and ran the sessions.</p><small>Product Marketing Manager &middot; AccuKnox</small></figcaption></figure><figure class="jr-card"><div class="jr-img"><img src="img/journey/employee-of-month-2023.jpg" alt="Employee of the month, Jun 2023" loading="lazy" decoding="async" width="344" height="459"><span class="jr-date">Jun 2023</span></div><figcaption><b>Employee of the month</b><p>Alongside the Q1 2023 spot award.</p><small>Project Manager &middot; AccuKnox</small></figcaption></figure></div>
   </div>
@@ -408,7 +410,7 @@ setInterval(function(){if(!hold&&document.visibilityState==='visible'){var r=t.g
 <section class="cta">
   <div class="wrap">
     <div class="cta-box reveal">
-      <h2 class="display">Ready to Grow<br>Something <span class="t6">Together?</span></h2>
+      <h2 class="display" id="s-ready-to-grow-something-together">Ready to Grow<br>Something <span class="t6">Together?</span></h2>
       <p>The best innovations start with a conversation. Tell me what you are building and where the pipeline stalls. Not ready to talk? Run the <a href="/gtm-health-check">2 minute GTM health check</a> or the <a href="/ai-visibility-checker">AI visibility checker</a> first.</p>
       <div class="btns">
         <a class='btn btn-primary' href='/schedule-meeting'>Schedule meeting</a>
@@ -423,7 +425,7 @@ setInterval(function(){if(!hold&&document.visibilityState==='visible'){var r=t.g
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow">Featured</span>
-      <h2 class="display"><span class="t1">Humans of Marketing,</span> and a Word on AI</h2>
+      <h2 class="display" id="s-humans-of-marketing-and-a-word-on-ai"><span class="t1">Humans of Marketing,</span> and a Word on AI</h2>
       <p>A community feature on the human side of B2B marketing, then forty one seconds on securing AI at runtime.</p>
     </div>
     <div class="hom-feat reveal">
@@ -437,7 +439,7 @@ setInterval(function(){if(!hold&&document.visibilityState==='visible'){var r=t.g
     </div>
     <div class="sec-head reveal" style="margin-top:56px">
       <span class="eyebrow">Watch</span>
-      <h2 class="display" style="font-size:clamp(26px,3.4vw,40px)">Everybody Uses AI. Who <span class="t2">Secures It?</span></h2>
+      <h2 class="display" style="font-size:clamp(26px,3.4vw,40px)" id="s-everybody-uses-ai-who-secures-it">Everybody Uses AI. Who <span class="t2">Secures It?</span></h2>
       <p>Forty one seconds on why AI security has to enforce at runtime, not just report.</p>
     </div>
     <div class="vid-frame reveal" id="homeVideo" data-src="" data-embed="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7407329403338280960?collapsed=1">
@@ -452,7 +454,7 @@ setInterval(function(){if(!hold&&document.visibilityState==='visible'){var r=t.g
   <div class="wrap au-box reveal">
     <div class="au-copy">
       <span class="eyebrow">Free audit</span>
-      <h2 class="display">Get a free GTM <span class="t3">audit</span> of your website.</h2>
+      <h2 class="display" id="s-get-a-free-gtm-audit-of-your-website">Get a free GTM <span class="t3">audit</span> of your website.</h2>
       <p>Share your site and the one thing that is not working. I record a short Loom walkthrough with the three changes I would make first. No call needed. Want the full program instead? That is <a href="/aeo-seo-in-a-box">AEO/SEO Ranking in a box</a>.</p>
       <ul class="au-pts"><li>Positioning and messaging check</li><li>Conversion and CTA review</li><li>SEO and AI search quick wins</li></ul>
     </div>
@@ -484,7 +486,7 @@ syedcreates.com">
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow">Schedule a meeting</span>
-      <h2 class="display">Pick a 30 Minute <span class="t4">Slot</span></h2>
+      <h2 class="display" id="s-pick-a-30-minute-slot">Pick a 30 Minute <span class="t4">Slot</span></h2>
       <p>No pitch decks. Tell me what you are building and where the pipeline stalls. Prefer email? The <a href="/schedule-meeting">schedule page</a> has every way to reach me.</p>
     </div>
     <div class="cal-wrap reveal">
@@ -500,7 +502,7 @@ syedcreates.com">
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow">On the record</span>
-      <h2 class="display">Wins Worth <span class="t5">Counting</span></h2>
+      <h2 class="display" id="s-wins-worth-counting">Wins Worth <span class="t5">Counting</span></h2>
       <p>Moments from the LinkedIn featured section, with the number behind each one. More on the <a href="/recognition">recognition page</a>.</p>
     </div>
     <div class="wins-grid">
@@ -737,7 +739,8 @@ syedcreates.com">
 
 })();
 </script>
-<script src="assets/common.js?v=20261103a"></script>
-<script src="/assets/quotes.js?v=20261103a" defer></script>
+<script src="assets/common.js?v=20261103b"></script>
+<script src="/assets/quotes.js?v=20261103b" defer></script>
+<script src="/assets/search.js?v=20261103b" defer></script>
 </body>
 </html>

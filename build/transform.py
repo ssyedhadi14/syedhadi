@@ -321,7 +321,8 @@ def main():
     if cuts:
         css = css[:min(cuts)]
     from videos import CSS as VIDEO_CSS
-    css = css.rstrip() + "\n" + CSS_ADD + VIDEO_CSS + SERIF_CSS + quotes.CSS + seo_calc.CSS
+    from search import CSS as SEARCH_CSS
+    css = css.rstrip() + "\n" + CSS_ADD + VIDEO_CSS + SERIF_CSS + quotes.CSS + seo_calc.CSS + SEARCH_CSS
     css = css.replace('"Bricolage Grotesque"', '"Plus Jakarta Sans"').replace("'Bricolage Grotesque'", "'Plus Jakarta Sans'")
     open(css_path, "w", encoding="utf-8").write(css)
     # asset scripts that load other assets carry the same version

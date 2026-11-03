@@ -31,7 +31,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css?v=20261103a">
+<link rel="stylesheet" href="/assets/site.css?v=20261103b">
 </head>
 <body data-page="cases">
 <a class="skip" href="#main">Skip to content</a>
@@ -68,6 +68,8 @@
       </div>
 </div>
     <div class="nav-right">
+      <button class="srch-btn" id="srchBtn" type="button" aria-label="Search the site" aria-haspopup="dialog" aria-keyshortcuts="Control+K Meta+K /"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="srch-t">Search</span><kbd class="srch-k">Ctrl K</kbd></button>
+      
       <button class="theme-btn" id="themeBtn" type="button" role="switch" aria-checked="false" aria-label="Dark mode" title="Switch light or dark mode"><span class="tt-ic tt-sun"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></span><span class="tt-ic tt-moon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></span><span class="tt-knob" aria-hidden="true"></span></button>
       <a class='btn btn-primary' href='/schedule-meeting'><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><span>Schedule meeting</span></a>
       <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
@@ -88,7 +90,7 @@
 
 <section style="padding-top:48px">
   <div class="wrap">
-    <div class="sec-head reveal" style="text-align:left;margin-left:0"><span class="eyebrow">Featured</span><h2 class="display">Featured Case <span class="t2">Studies</span></h2>
+    <div class="sec-head reveal" style="text-align:left;margin-left:0"><span class="eyebrow">Featured</span><h2 class="display" id="s-featured-case-studies">Featured Case <span class="t2">Studies</span></h2>
       <p>Three stories where the numbers moved. Each one shows the problem, what we shipped and what changed.</p></div>
     <div class="cs-feat-list"><article class="cs-feat reveal" id="ai-search">
   <div class="cs-cover photo"><img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=1200&h=750" alt="Friendly white humanoid robot looking at the camera, standing in for AI search assistants" width="1200" height="750" loading="lazy" decoding="async"><span class="cs-cv-m">27.72%</span><span class="cs-cv-l">AI visibility</span></div>
@@ -125,7 +127,7 @@
 </section>
 <section style="padding-top:20px">
   <div class="wrap">
-    <div class="sec-head reveal" style="text-align:left;margin-left:0"><span class="eyebrow">By service</span><h2 class="display">Case Study for <span class="t3">Each</span> Box</h2>
+    <div class="sec-head reveal" style="text-align:left;margin-left:0"><span class="eyebrow">By service</span><h2 class="display" id="s-case-study-for-each-box">Case Study for <span class="t3">Each</span> Box</h2>
       <p>Pick the service you are looking at and read the story behind it.</p></div>
     <div class="lp-boxes">
       <a class="lp-box has-img reveal" href="/gtm-case-study"><span class="lp-img"><img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&q=80&w=640&h=320" alt="Web analytics dashboard with traffic and conversion numbers" width="640" height="320" loading="lazy" decoding="async"></span><span class="lp-txt"><b>GTM in a box</b><span>+240% sessions in 90 days and $2M influenced pipeline a year.</span></span></a>
@@ -139,7 +141,7 @@
 </section>
 <section style="padding-top:20px">
   <div class="wrap">
-    <div class="sec-head reveal" style="text-align:left;margin-left:0"><span class="eyebrow">More work</span><h2 class="display">More Case <span class="t4">Studies</span></h2></div>
+    <div class="sec-head reveal" style="text-align:left;margin-left:0"><span class="eyebrow">More work</span><h2 class="display" id="s-more-case-studies">More Case <span class="t4">Studies</span></h2></div>
     <div class="cs-grid-more"><a class='cs-card reveal' href='/systems' id='systems'><div class="cs-cover photo"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200&h=750" alt="Monitor showing an analytics dashboard with charts and counters" width="1200" height="750" loading="lazy" decoding="async"><span class="cs-cv-m">Days to minutes</span><span class="cs-cv-l">Time to produce a quote</span></div><div class="cs-cb"><span class="cs-tag">Systems</span><h3>Quotes in minutes, not days</h3><p>Marketing built the apps sales and finance now run on, including a price quote generator and Slack agents.</p><ul class="cs-mets sm"><li><b>Days to minutes</b><span>Time to produce a quote</span></li><li><b>5</b><span>Org wide apps shipped</span></li></ul><span class="cs-link">View project <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div></a><a class='cs-card reveal' href='/events' id='kubecon'><div class="cs-cover photo"><img src="img/kubecon-india.jpg" alt="Team AccuKnox at the KubeArmor booth at KubeCon India" loading="lazy" width="1200" height="750"><span class="cs-cv-m">500+</span><span class="cs-cv-l">CTF sign ups</span></div><div class="cs-cb"><span class="cs-tag">Community</span><h3>A KubeCon India CTF that drew 500+ sign ups</h3><p>A booth plus a KubeArmor capture the flag in Mumbai that turned visitors into contributors.</p><ul class="cs-mets sm"><li><b>500+</b><span>CTF sign ups</span></li><li><b>300+</b><span>New GitHub stars</span></li></ul><span class="cs-link">View project <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div></a><a class='cs-card reveal' href='/recognition' id='bsides'><div class="cs-cover photo"><img src="img/bsides-2026.jpg" alt="Startup Award moment on the AccuKnox booth at Security BSides Bangalore 2026" loading="lazy" width="1200" height="750"><span class="cs-cv-m">2025 + 2026</span><span class="cs-cv-l">Back to back wins</span></div><div class="cs-cb"><span class="cs-tag">Brand</span><h3>#1 Startup at BSides Bangalore, twice</h3><p>Back to back #1 Startup Awards at Security BSides Bangalore, shared with channel partners on the booth.</p><ul class="cs-mets sm"><li><b>2025 + 2026</b><span>Back to back wins</span></li><li><b>2</b><span>Partners on the booth</span></li></ul><span class="cs-link">View project <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div></a><a class='cs-card reveal' href='/recognition' id='live-moments'><div class="cs-cover photo"><img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200&h=750" alt="Audience at a conference talk seen from the back of the room" width="1200" height="750" loading="lazy" decoding="async"><span class="cs-cv-m">8</span><span class="cs-cv-l">Webinars</span></div><div class="cs-cb"><span class="cs-tag">Campaigns</span><h3>12 live moments in a single quarter</h3><p>A quarter of webinars, offline events and an analyst session, run by a lean team without dropping cadence.</p><ul class="cs-mets sm"><li><b>8</b><span>Webinars</span></li><li><b>3</b><span>Offline events</span></li></ul><span class="cs-link">View project <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div></a><a class='cs-card reveal' href='/recognition' id='analysts'><div class="cs-cover photo"><img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?auto=format&fit=crop&q=80&w=1200&h=750" alt="Close up of a screen with performance metrics and scores" width="1200" height="750" loading="lazy" decoding="async"><span class="cs-cv-m">3</span><span class="cs-cv-l">Gartner research mentions</span></div><div class="cs-cb"><span class="cs-tag">Analyst relations</span><h3>Getting noticed by Gartner and Frost &amp; Sullivan</h3><p>Analyst briefings that turned into research mentions, awards and a vendor profile.</p><ul class="cs-mets sm"><li><b>3</b><span>Gartner research mentions</span></li><li><b>2</b><span>Frost &amp; Sullivan awards in 2026</span></li></ul><span class="cs-link">View project <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div></a><a class='cs-card reveal' href='/#experience' id='partners'><div class="cs-cover photo"><img src="img/delhi-ncr.jpg" alt="Syed Hadi with channel partners in Delhi NCR" loading="lazy" width="1200" height="750"><span class="cs-cv-m">$35B</span><span class="cs-cv-l">Annual TAM covered</span></div><div class="cs-cb"><span class="cs-tag">Partnerships</span><h3>Partner programs across $35B of TAM</h3><p>Partner programs in AI security and cloud security with distributors, MSSPs and resellers across regions.</p><ul class="cs-mets sm"><li><b>$35B</b><span>Annual TAM covered</span></li><li><b>Joint</b><span>Partner sourced pipeline</span></li></ul><span class="cs-link">View project <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div></a></div>
     <div class="cs-after reveal"><p>Want the deck version with the numbers behind each story?</p><div class="btns"><a class='btn btn-primary' href='/schedule-meeting'>Book a GTM call</a><a class='btn btn-ghost' href='/about'>More about me</a></div></div>
   </div>
@@ -259,7 +261,8 @@
   </div>
   <div class="made-strip"><span>Made with love <span class="ms-heart" aria-hidden="true">❤️</span> from Bangalore, India <span aria-hidden="true">🇮🇳</span></span></div>
 </footer>
-<script src="assets/common.js?v=20261103a"></script>
-<script src="/assets/quotes.js?v=20261103a" defer></script>
+<script src="assets/common.js?v=20261103b"></script>
+<script src="/assets/quotes.js?v=20261103b" defer></script>
+<script src="/assets/search.js?v=20261103b" defer></script>
 </body>
 </html>
