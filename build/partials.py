@@ -52,6 +52,7 @@ def nav():
 
 
 def strip():
+    return ''  # 2026-11-03: Explore the work strip removed sitewide
     pages = "".join(
         f'<a href="{href}">{label}</a>' for key, href, label in PAGES if key != "home"
     )
