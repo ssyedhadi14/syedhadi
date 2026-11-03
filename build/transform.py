@@ -14,6 +14,7 @@ from PIL import Image
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from serif import accent as serif_accent, CSS as SERIF_CSS  # noqa: E402
+import quotes  # noqa: E402
 from shared import SITE, VER, CSS_ADD, REDIRECTS_HEAD, HEADERS, calc_menu, newsletter_section  # noqa: E402
 from menus import work_menu, tools_menu  # noqa: E402
 
@@ -199,6 +200,8 @@ def process(path, nav_new):
     html = serif_accent(html)
     if name == "index.html" and "serif-accent" not in html:
         html = html.replace('<p class="lede">I turn security products into pipeline.', '<p class="lede">I turn security products into <span class="serif-accent">pipeline</span>.', 1)
+    # 12. Growth thinking quote band above the footer, sitewide
+    html = quotes.inject(html, name, VER)
     if html != orig:
         open(path, "w", encoding="utf-8").write(html)
     return html
@@ -316,7 +319,7 @@ def main():
     if cuts:
         css = css[:min(cuts)]
     from videos import CSS as VIDEO_CSS
-    css = css.rstrip() + "\n" + CSS_ADD + VIDEO_CSS + SERIF_CSS
+    css = css.rstrip() + "\n" + CSS_ADD + VIDEO_CSS + SERIF_CSS + quotes.CSS
     css = css.replace('"Bricolage Grotesque"', '"Plus Jakarta Sans"').replace("'Bricolage Grotesque'", "'Plus Jakarta Sans'")
     open(css_path, "w", encoding="utf-8").write(css)
     # asset scripts that load other assets carry the same version
@@ -333,6 +336,7 @@ def main():
     js = open(js_path, encoding="utf-8").read()
     js = js.replace("salary:'tools',", "salary:'calc',salarycalc:'calc',bmicalc:'calc',carcalc:'calc',loancalc:'calc',brand:'portfolio',fire:'calc',mf:'calc',khums:'calc',tool_ai:'calc',tool_gtm:'calc',tool_partner:'calc',")
     open(js_path, "w", encoding="utf-8").write(js)
+    open(os.path.join(ROOT, "assets", "quotes.js"), "w", encoding="utf-8").write(quotes.js())
     write_crawl_files(pages)
     print("processed", len(pages), "pages")
 

@@ -47,17 +47,29 @@ SCORECARDS = [
 ]
 
 
+TEXT_CALCS = ("car",)  # shown as plain text links under the cards, by request
+FEATURE = ("tool_company", "/company-research", "Company Research",
+           "Paste a homepage. Get market cap, ARR, customers, competitors, pain points and missed revenue on one page.",
+           "1542744173-8e7e53415bb0", "Team reviewing a go to market plan in a meeting room")
+
+
 def calc_menu():
-    cards = ""
+    k, h, t, d, pid, alt = FEATURE
+    cards = (f'<a class="gb-card gb-feature" data-p="{k}" href="{h}"><span class="gb-img"><span class="badge-f">NEW &middot; AI</span>'
+             f'<img src="{uns(pid)}" alt="{alt}" width="480" height="270" loading="lazy" decoding="async"></span>'
+             f'<span class="gb-body"><b>{t}</b><small>{d}</small><span class="gb-go">Research a company &rarr;</span></span></a>')
     for key, href, title, desc, pid, alt, badge in CALCS:
+        if key in TEXT_CALCS:
+            continue
         b = f'<span class="badge-f">{badge}</span>' if badge else ""
         cards += (f'<a class="gb-card" data-p="{key}" href="{href}"><span class="gb-img">{b}'
                   f'<img src="{uns(pid)}" alt="{alt}" width="480" height="270" loading="lazy" decoding="async"></span>'
                   f'<span class="gb-body"><b>{title}</b><small>{desc}</small></span></a>')
-    sub = '<div class="calc-sub"><span>GTM scorecards</span>' + "".join(
-        f'<a data-p="{k}" href="{h}">{t}</a>' for k, h, t in SCORECARDS) + '</div>'
-    simple = '<div class="mm-simple">' + "".join(f"<a href='{h}'>{t}</a>" for _, h, t, *_ in CALCS) + "".join(
-        f"<a href='{h}'>{t}</a>" for _, h, t in SCORECARDS) + '</div>'
+    more = "".join(f'<a data-p="{key}" href="{href}">{title}</a>' for key, href, title, *_ in CALCS if key in TEXT_CALCS)
+    sub = ('<div class="calc-sub"><span>More calculators</span>' + more + '<span class="calc-sep" aria-hidden="true"></span><span>GTM scorecards</span>' + "".join(
+        f'<a data-p="{k2}" href="{h2}">{t2}</a>' for k2, h2, t2 in SCORECARDS if k2 != k) + '</div>')
+    simple = '<div class="mm-simple">' + f"<a href='{h}'>{t}</a>" + "".join(f"<a href='{hh}'>{tt}</a>" for _, hh, tt, *_ in CALCS) + "".join(
+        f"<a href='{hh}'>{tt}</a>" for kk, hh, tt in SCORECARDS if kk != k) + '</div>'
     return f'''<div class="dd mega" data-group="calc">
         <button class="dd-btn" data-group="calc" aria-haspopup="true" aria-expanded="false">Calculator {CHEV}</button>
         <div class="dd-menu mm mm-calc"><div class="gb-grid calc-grid">{cards}</div>{sub}</div>
@@ -215,7 +227,7 @@ h2.display span{color:var(--accent)}
 .mw-quote p{margin:0;font-family:"Bricolage Grotesque";font-weight:600;font-size:15.5px;line-height:1.35;letter-spacing:-.01em;color:var(--ink)}
 .mw-quote cite{display:block;font-style:normal;font:600 11px "JetBrains Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin-top:8px}
 .dd-menu.mm a.mw-card2{padding:18px;text-decoration:none;color:#fff}
-.mw-card .art.art-img{height:120px;padding:0;overflow:hidden;background:#0d0b1a}
+.mw-card .art.art-img{height:150px;padding:0;overflow:hidden;background:#0d0b1a}
 .mw-card .art.art-img img{width:100%;height:100%;object-fit:cover;display:block;opacity:.95}
 .mw-card2 .go{margin-top:auto}
 /* Tools menu, photo cards */
@@ -297,6 +309,18 @@ h2.display span{color:var(--accent)}
 .lip-cover.k-post{background:linear-gradient(135deg,#1e1050,#7c5cff)}
 .lip-cover svg{width:44px;height:44px;opacity:.9}
 .lip-cover b{position:absolute;left:14px;bottom:12px;font:700 11px "JetBrains Mono",monospace;letter-spacing:.14em;text-transform:uppercase;opacity:.85}
+
+/* calculator menu: Company Research feature card */
+.dd-menu.mm .calc-grid .gb-img{position:relative;display:block;overflow:hidden}
+.dd-menu.mm .calc-grid .gb-img .badge-f{position:absolute;top:10px;left:10px;z-index:1}
+.dd-menu.mm .calc-grid .gb-card.gb-feature{position:relative;border:0;background:linear-gradient(150deg,#140d3a,#2c1c8a 60%,#5b3df5);box-shadow:0 14px 34px rgba(76,48,224,.35),inset 0 0 0 1px rgba(255,255,255,.12)}
+.dd-menu.mm .calc-grid .gb-card.gb-feature .gb-img img{opacity:.78}
+.dd-menu.mm .calc-grid .gb-card.gb-feature .gb-body b{color:#fff;font-size:16px}
+.dd-menu.mm .calc-grid .gb-card.gb-feature .gb-body small{color:#e2dbff}
+.gb-feature .badge-f{background:#ffd43b;color:#1b1145}
+.gb-feature .gb-go{margin-top:auto;padding-top:6px;font-weight:700;font-size:13px;color:#ffd43b}
+.dd-menu.mm .calc-grid .gb-card.gb-feature:hover{transform:translateY(-2px)}
+.calc-sub .calc-sep{width:1px;height:18px;background:var(--line);margin:0 4px}
 '''
 
 REDIRECTS_HEAD = '''# syedcreates.com redirects. Netlify processes these top to bottom.

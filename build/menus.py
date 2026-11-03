@@ -25,7 +25,7 @@ WORK = [
     ("pipe", "Demand and Pipeline", "Spend tied to one number", "/gtm-engine",
      "/img/li/marketing-after-hours-inbound-engine.jpg", "Speaking about the inbound engine at Marketing After Hours",
      "Every rupee reported against pipeline.", ["$2M pipeline on $25K a quarter", "Outbound, events, content as one loop", "Weekly pipeline view"],
-     "What gets measured gets managed.", "Peter Drucker",
+     "The aim of marketing is to make selling superfluous.", "Peter Drucker",
      "/img/li/engineering-team-meet.jpg", "An inbound engine that compounds", "Built with the engineering team, not around it.", "See how it runs"),
     ("comm", "Community and Events", "Rooms full of practitioners", "/events",
      "/img/li/cncf-netapp-bengaluru-2026.jpg", "Hosting the CNCF community day at NetApp Bengaluru",
@@ -33,11 +33,26 @@ WORK = [
      "Alone we can do so little, together we can do so much.", "Helen Keller",
      "/img/li/kcd-kochi-2024.jpg", "Rooms I have filled", "From the first KCD in Kerala to KubeCon India.", "See every event"),
     ("ai", "AI Systems for GTM", "Busywork, automated", "/systems",
-     "/img/agentz-launch.jpg", "AgentZ launch on stage",
+     "/img/li/kubecon-india-mumbai-2026.jpg", "Demoing the AccuKnox platform with the team at KubeCon India, Mumbai 2026",
      "Agents that run the GTM machine while the team sells.", ["Claude skills for marketers", "Scheduled research agents", "Scorecards that update themselves"],
      "The best way to predict the future is to invent it.", "Alan Kay",
-     "/img/li/kubecon-india-mumbai-2026.jpg", "The systems behind the pipeline", "Eight Claude skills, packaged, plus the agents I run daily.", "See the systems"),
+     "/img/li/bsides-2026-startup-award.jpg", "The systems behind the pipeline", "Eight Claude skills, packaged, plus the agents I run daily.", "See the systems"),
 ]
+# object-position per image so wide crops keep faces in frame
+FOCAL = {
+    "/img/li/four-years-accuknox.jpg": "50% 28%", "/img/li/future-of-gtm-2026-event.jpg": "50% 38%",
+    "/img/li/india-devsec-show-2025.jpg": "50% 30%", "/img/li/delhi-ncr-expansion-2026.jpg": "50% 72%",
+    "/img/li/gtm-deep-dive-growthx-2026.jpg": "50% 45%", "/img/li/gtm-meetup-growthx-poster.jpg": "50% 22%",
+    "/img/li/marketing-after-hours-inbound-engine.jpg": "50% 40%", "/img/li/engineering-team-meet.jpg": "50% 32%",
+    "/img/li/cncf-netapp-bengaluru-2026.jpg": "50% 55%", "/img/li/kcd-kochi-2024.jpg": "50% 45%",
+    "/img/li/kubecon-india-mumbai-2026.jpg": "50% 34%", "/img/li/bsides-2026-startup-award.jpg": "50% 30%",
+}
+
+
+def fp(img):
+    return ' style="object-position:%s"' % FOCAL[img] if img in FOCAL else ""
+
+
 ICONS = {
     "pmm": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg>',
     "partner": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg>',
@@ -57,13 +72,13 @@ def work_menu():
                  "<span class=\"mw-t\"><b>%s</b><small>%s</small></span>%s</a>" % (on, k, href, ICONS[k], title, sub, CHEV_R))
         ch = "".join("<span>%s</span>" % c for c in chips)
         panels += ('<div class="mw-panel%s" data-k="%s"><div class="mw-mid mw-mid2">'
-                   '<a class="mw-photo" href="%s"><img src="%s" alt="%s" width="640" height="360" loading="lazy" decoding="async">'
+                   '<a class="mw-photo" href="%s"><img src="%s" alt="%s" width="640" height="360" loading="lazy" decoding="async"%s>'
                    '<span class="mw-ph-t"><span class="mw-ic big">%s</span><span><b>%s</b><em>%s</em></span></span></a>'
                    '<div class="mw-chips">%s</div>'
                    '<blockquote class="mw-quote"><p>%s</p><cite>%s</cite></blockquote></div>'
-                   '<a class="mw-card mw-card2" href="%s"><span class="k">WHAT TO EXPECT</span><span class="art art-img"><img src="%s" alt="" width="480" height="300" loading="lazy" decoding="async"></span>'
+                   '<a class="mw-card mw-card2" href="%s"><span class="k">WHAT TO EXPECT</span><span class="art art-img"><img src="%s" alt="" width="480" height="300" loading="lazy" decoding="async"%s></span>'
                    '<h4>%s</h4><p>%s</p><span class="go">%s <span>&rarr;</span></span></a></div>'
-                   % (on, k, href, img, alt, ICONS[k], title, line, ch, quote, who, href, img2, h4, p2, cta))
+                   % (on, k, href, img, alt, fp(img), ICONS[k], title, line, ch, quote, who, href, img2, fp(img2), h4, p2, cta))
     simple = '<div class="mm-simple">' + "".join("<a href='%s'>%s</a>" % (w[3], w[1]) for w in WORK) + "</div>"
     return ('<div class="dd mega" data-group="work">\n        <button class="dd-btn" aria-haspopup="true" aria-expanded="false" data-group="work">Work %s</button>\n'
             '        <div class="dd-menu mm mm-work"><div class="mw-left">%s</div><div class="mw-right">%s</div></div>\n        %s\n      </div>' % (CHEV, left, panels, simple))
