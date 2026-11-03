@@ -2547,3 +2547,11 @@ html.srch-lock,html.srch-lock body{overflow:hidden}
 .fgrid{grid-template-columns:1.3fr repeat(5,1fr) .9fr;gap:24px}
 @media (max-width:1240px){.fgrid{grid-template-columns:repeat(3,1fr)}.fgrid .fbrand{grid-column:1/-1}.fgrid .fphoto{display:none}}
 @media (max-width:800px){.fgrid{grid-template-columns:1fr 1fr}}
+
+/* 2026-11-03 branded covers on cards and articles */
+.ins-card .cv-thumb,.bf-card .cv-thumb,.lp-box .cv-thumb,.cv-thumb{display:block;flex:none;aspect-ratio:16/10;overflow:hidden;border-radius:12px;border:1px solid var(--line);background:#ece7ff;margin-bottom:6px}
+.cv-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s var(--ease)}
+.ins-card:hover .cv-thumb img,.bf-card:hover .cv-thumb img,.lp-box:hover .cv-thumb img{transform:scale(1.03)}
+.bf-card:first-child .cv-thumb{display:none}
+.pt-cover{margin:6px 0 28px;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#ece7ff}
+.pt-cover img{display:block;width:100%;height:auto}

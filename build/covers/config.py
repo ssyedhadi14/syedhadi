@@ -1,0 +1,83 @@
+# Created by: Claude
+# Date: 2026-11-03
+# Purpose: Cover copy for every public page of syedcreates.com.
+#          slug: (title, serif accent at the end of the title, tag ribbon, motif)
+# Owner: Syed Hadi
+
+COVERS = {
+    # Home and about
+    "index": ("Make a technical product easy to", "buy", "Syed Hadi, PMM and partnerships", "idcard"),
+    "about": ("About Syed Hadi, PMM and", "partnerships", "About me", "idcard"),
+    "adventure": ("Thirteen thousand feet and long", "roads", "Off duty", "mountain"),
+    "brand": ("One name, one voice,", "everywhere", "Brand kit", "sparkles"),
+    "privacy": ("Privacy and", "support", "Policy", "shield"),
+    "schedule-meeting": ("Get your 90 day GTM", "plan", "Free call", "calendar"),
+    "referral-partners": ("Send GTM work my way, earn a", "fee", "Referral partners", "puzzle"),
+    # Growth in a box
+    "growth-in-a-box": ("Pick the box. Get the", "engine", "Growth in a box", "rocket"),
+    "gtm-pmm-in-a-box": ("Your story and your pipeline,", "together", "GTM + PMM in a box", "rocket"),
+    "gtm-in-a-box": ("Pipeline that does not need the", "founder", "GTM in a box", "funnel"),
+    "pmm-in-a-box": ("A product story buyers", "repeat", "PMM in a box", "megaphone"),
+    "aeo-seo-in-a-box": ("Rank on Google. Get cited by", "AI", "AEO/SEO in a box", "search"),
+    "content-in-a-box": ("Content that sales actually", "sends", "Content in a box", "doc"),
+    "partner-revenue-in-a-box": ("Partners who bring pipeline, not", "logos", "Partner revenue in a box", "puzzle"),
+    # Case studies and proof
+    "case-studies": ("The proof behind the", "pipeline", "Case studies", "trophy"),
+    "gtm-case-study": ("+240% sessions in 90", "days", "GTM case study", "chart"),
+    "pmm-case-study": ("Founding PMM, $500K to $1M+", "ARR", "PMM case study", "trophy"),
+    "aeo-seo-case-study": ("27.72% AI visibility for a CNAPP", "vendor", "AEO/SEO case study", "search"),
+    "content-case-study": ("12 live moments in one", "quarter", "Content case study", "megaphone"),
+    "partner-revenue-case-study": ("Partner programs across six", "regions", "Partner case study", "puzzle"),
+    "gtm-pmm-case-study": ("Positioning and pipeline, built", "together", "GTM + PMM case study", "trophy"),
+    "gtm-engine": ("Building an AI native GTM", "engine", "GTM engine", "gears"),
+    "systems": ("Systems the whole company runs", "on", "Apps and AI agents", "gears"),
+    "recognition": ("Campaigns and analyst", "recognition", "Recognition", "trophy"),
+    "events": ("Rooms I have", "filled", "Events and talks", "camera"),
+    "portfolio": ("The proof, in one", "place", "Portfolio", "trophy"),
+    "work": ("Six ways to make a product easier to", "buy", "Work", "rocket"),
+    "playbook": ("The B2B marketing playbook for", "2026", "Playbook", "doc"),
+    # Writing hubs
+    "insights": ("Insights on security, GTM and", "growth", "Insights", "doc"),
+    "blog": ("Guides, tools and", "essays", "The blog", "doc"),
+    "writing": ("Notes and", "essays", "Writing", "doc"),
+    "posts": ("Notes from", "LinkedIn", "Posts", "camera"),
+    "tools": ("The GTM tools I actually", "use", "Tool directory", "gears"),
+    "jobs": ("Growth, PMM and product", "jobs", "Jobs board", "briefcase"),
+    "skill-pack": ("Claude skills for", "marketers", "Claude Skill Pack", "sparkles"),
+    # Security articles
+    "30-day-shadow-ai-discovery-sprint": ("A 30 day shadow AI discovery", "sprint", "AI security", "search"),
+    "ai-soc-tool-evaluation-regulated": ("Evaluate an AI SOC tool without the", "demo", "AI security", "shield"),
+    "ai-spm-7-runtime-security-questions": ("7 runtime questions for any AI SPM", "tool", "AI security", "shield"),
+    "aspm-evaluation-cutting-false-positives": ("Pick an ASPM that cuts false", "positives", "Application security", "code"),
+    "cert-in-evidence-pipeline-hybrid-cloud": ("A CERT-In ready evidence", "pipeline", "Compliance", "clipboard"),
+    "cnapp-comparison-checklist-with-scoring": ("The CNAPP comparison", "checklist", "Cloud security", "clipboard"),
+    "cnapp-cspm-cwpp-explained-for-buyers": ("CNAPP, CSPM and CWPP in 15", "minutes", "Cloud security", "cloud"),
+    "mcp-ai-agent-threat-model": ("Threat model an MCP agent before", "production", "AI security", "shield"),
+    "runtime-cnapp-vs-agentless-cnapp": ("Runtime vs agentless", "CNAPP", "Cloud security", "cloud"),
+    "stateful-prompt-firewall": ("Is your prompt firewall", "stateless?", "AI security", "shield"),
+    # GTM articles and guides
+    "5-years-of-startup-life": ("60 months, 4 roles, 1", "journey", "Career", "rocket"),
+    "fractional-pmm-india": ("Fractional PMM in India, and how to", "hire", "GTM guide", "briefcase"),
+    "how-to-build-a-saas-partner-program": ("A SaaS partner program that brings", "pipeline", "Partnerships", "puzzle"),
+    "product-marketing-consultant-india": ("Product marketing consultant in", "India", "India", "pin"),
+    "gtm-consultant-bengaluru": ("GTM consultant in", "Bengaluru", "Bengaluru", "pin"),
+    "growth-marketing-consultant-dubai": ("Growth and partner GTM for", "Dubai", "Dubai and GCC", "pin"),
+    "fractional-cmo-dubai-saas": ("Fractional CMO for Dubai", "SaaS", "Dubai", "pin"),
+    "fractional-pmm-vs-agency-vs-full-time-hire": ("Fractional PMM vs agency vs", "hire", "Comparison", "scales"),
+    "best-gtm-consultants-for-security-startups": ("Choosing a GTM consultant for", "security", "Scorecard", "scales"),
+    # Free tools and calculators
+    "calculator": ("Plan the money, score the", "marketing", "Free calculators", "calculator"),
+    "salary-calculator": ("Where your salary goes in 45", "years", "Salary calculator", "chart"),
+    "loan-calculator": ("Know your EMI, close the loan", "sooner", "Loan calculator", "coins"),
+    "fire-calculator": ("When can you retire", "early?", "FIRE calculator", "chart"),
+    "mutual-fund-returns-calculator": ("Top 50 mutual funds and their", "returns", "Mutual fund tracker", "chart"),
+    "car-mileage-calculator": ("What your car really costs per", "month", "Car mileage calculator", "car"),
+    "bmi-calculator": ("Know your BMI, then build the", "habits", "BMI calculator", "heart"),
+    "qums": ("Qums calculator, made", "simple", "Qums calculator", "coins"),
+    "pmm-salary-2026": ("India PMM salary", "2026", "Salary guide", "chart"),
+    "seo-aeo-score": ("Does your site rank, and does AI cite", "it?", "SEO and AEO score", "search"),
+    "ai-visibility-checker": ("Will AI answers cite your", "brand?", "AI visibility", "search"),
+    "company-research": ("Research any company from its", "homepage", "Company research", "search"),
+    "gtm-health-check": ("How healthy is your go to", "market?", "GTM health check", "heart"),
+    "partner-readiness-score": ("Is your partner program", "ready?", "Partner readiness", "puzzle"),
+}
