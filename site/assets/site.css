@@ -2752,3 +2752,10 @@ html.srch-lock,html.srch-lock body{overflow:hidden}
 .pt-body .pn-fig img{display:block;width:100%;height:auto}
 .pt-body .pn-fig figcaption{font-size:13.5px;color:var(--ink-2);padding:10px 16px;background:var(--bg,#fff)}
 .pt-body blockquote{border-left:3px solid var(--accent);padding:4px 0 4px 18px;margin:22px 0;color:var(--ink-2)}
+
+/* 2026-11-04 Footer tagline */
+.ft-tag{margin-top:12px;line-height:1.35}
+.ft-tag b{display:block;font-family:"Plus Jakarta Sans",Inter,sans-serif;font-size:17px;font-weight:800;letter-spacing:-.01em;background:linear-gradient(100deg,#5b3df5,#8b4fe0 55%,#b43ea0);-webkit-background-clip:text;background-clip:text;color:transparent}
+:root[data-theme="dark"] .ft-tag b{background-image:linear-gradient(100deg,#a78bfa,#c084fc 55%,#f0abfc)}
+.ft-tag span{display:block;font-size:14.5px;font-weight:600;color:var(--ink);margin-top:3px}
+.ft-tag small{display:block;font-size:12.5px;color:var(--ink-2);margin-top:6px;letter-spacing:.02em}
