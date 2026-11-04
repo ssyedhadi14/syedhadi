@@ -2759,3 +2759,20 @@ html.srch-lock,html.srch-lock body{overflow:hidden}
 :root[data-theme="dark"] .ft-tag b{background-image:linear-gradient(100deg,#a78bfa,#c084fc 55%,#f0abfc)}
 .ft-tag span{display:block;font-size:14.5px;font-weight:600;color:var(--ink);margin-top:3px}
 .ft-tag small{display:block;font-size:12.5px;color:var(--ink-2);margin-top:6px;letter-spacing:.02em}
+
+/* 2026-11-04 Mobile safety net: inline grid overrides beat the media queries, and 1fr grid items refused to shrink below their content */
+.sg-grid{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr)}
+.sg-grid>*,.bx-chans>*,.lp-boxes>*,.bf-grid>*,.hub-more>*,.metrics>*{min-width:0}
+.sal-tw{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+img,video,iframe{max-width:100%}
+@media (max-width:860px){.sg-grid{grid-template-columns:minmax(0,1fr)}
+  .bx-chans[style],.hub-more[style]{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media (max-width:620px){.bx-chans[style],.hub-more[style],.metrics[style]{grid-template-columns:minmax(0,1fr)!important}
+  .sal-t{min-width:560px}
+  .ln-tabs{display:flex;width:100%}}
+.sal-tables>*,.wrap>*{min-width:0}
+@media (max-width:400px){.hero-cta{flex-wrap:wrap}.hero-cta .btn{flex:1 1 auto;justify-content:center}}
+/* Mobile: hero badges clear of the face, newsletter issue card no longer hidden under the form */
+@media (max-width:640px){.portrait .chip.c2,.chip.c2{top:auto;bottom:0;right:3%}.portrait .chip.c3,.chip.c3{bottom:0;left:3%}.portrait .chip.c1,.chip.c1{top:0;left:3%}}
+@media (max-width:860px){.nl2-stack{height:auto;margin:0 0 16px}.nl2-issue.i2,.nl2-issue.i3{display:none}
+  .nl2-issue.i1{position:relative;left:auto;right:auto;top:auto;height:auto;margin:0 10px;box-shadow:0 14px 34px rgba(0,0,0,.3)}}

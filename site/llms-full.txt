@@ -15,7 +15,7 @@ Growth, GTM and Partnerships
 
 ## Syed Hadi
 
-Idea to launch to revenue . I bring the product , the people and the pipeline together, and I helped ride a 0 to $10M hypergrowth journey at AccuKnox. Off the clock, I travel, live at the gym and learn everything under the sun.
+Idea to launch to revenue . I bring the product , the people and the pipeline together, and I helped ride a hypergrowth journey at AccuKnox. Apart from work, I travel, live at the gym and learn everything under the sun.
 
 Schedule meeting
 
@@ -621,6 +621,392 @@ Keep going
 ### Related
 
 GTM Engine The operating system behind every box: ICP, outbound, partners, content and reporting as one loop. B2B Playbook The free playbook with the frameworks each box is built on. Book a free 30 minute call Bring your pipeline problem. Leave with the box that fits, or a reason none of them do.
+
+“Syed is a top flight professional. Combining immense native intellect, great inter-personal skills, a positive “can do” attitude and immense commitment, Syed delivers incredible results.” Nat Natraj · Cofounder and Chief Client Advocate, AccuKnox
+
+“Syed has a very pleasant demeanor and is extremely diligent. He is a delight to work with and someone you want on your team.” Ron Victor · Entrepreneur, managed Syed at AccuKnox
+
+“If you are looking for someone who gets straight to the point and actually gets things done, Syed is your man.” Vineel Kurumella · Director of GTM and Strategic Partnerships, AccuKnox
+
+1 /3 All recommendations →
+
+Featured and Trusted by
+
+---
+
+## 0 to $10M, 10 GTM Lessons From 2026
+
+URL: https://syedcreates.com/0-to-10m-10-lessons
+Summary: Ten year end GTM lessons from a 0 to $10M hypergrowth run at a cloud security startup, each tied to real work, numbers and outside research.
+
+Syed Hadi Dec 29, 2026 · GTM · Pipeline Notes
+
+This is the last Pipeline Notes of 2026, so it gets to be a little reflective. I was part of the team on a 0 to $10M hypergrowth journey at AccuKnox, and most of what I learned did not come from strategy decks. It came from shipping, measuring and fixing things on a small budget.
+
+Here are ten lessons. Each one ties back to work you can check on the site, and a few are backed by outside research.
+
+### The scoreboard behind the lessons
+
+Before the lessons, the numbers they come from. All of these are team results.
+
+- $2M in influenced pipeline a year on a $100K a year marketing budget
+
+- Website sessions up 240.6% to 311K in 90 days
+
+- 27.72% AI visibility, with mentions in 12K of 42K tracked AI answers
+
+- Partner programs across $35B of annual TAM, 40+ partner organisations and 7 regions
+
+- Back to back number one Startup awards at Security BSides Bangalore in 2025 and 2026
+
+- 3 Gartner research mentions and 2 Frost and Sullivan awards in 2026
+
+Ten GTM lessons from 2026 grouped into measure, story, reach and operate
+
+### 1. Track before you create
+
+The GTM case study starts with a boring step. GA4 events on every conversion that matters, account intelligence from Factors.ai and a clear ICP for sales. Only then did the landing pages and pillar content ship. Tracking came first, content second and scale third. If you cannot trace a deal to a channel, you are not running a channel. You are running a hobby.
+
+### 2. Pick one number and report into it
+
+Our number was influenced pipeline. Every motion tied back to it. Keep what compounds and cut what does not. That focus is how $100K a year supported $2M in influenced pipeline. One number also ends a lot of arguments. Nobody debates vanity metrics when the scoreboard is shared with sales.
+
+### 3. Positioning works when sales repeats it
+
+The PMM case study begins with a platform where every rep told a different story. The fix was personas, positioning against the main competitors and messaging the founders signed off, then decks, battlecards and training. The real test is simple. Can a rep explain it on a call without you in the room?
+
+Positioning also does not stay fixed. April Dunford's advice in How to Manage A Big Positioning Change is to "Assume your positioning will change over time." She suggests scheduled reviews a few times a year, led by the CEO at smaller companies. I would put those reviews on the calendar now.
+
+### 4. Write for the answer box
+
+The AEO and SEO case study has the clearest lesson of my year. Answer engines cite pages that answer buyer questions directly. Comparisons, checklists and clear definitions earn citations far more often than product pages.
+
+Outside data points the same way. Pew Research Center found that Google users clicked a result link on 8% of visits when an AI summary appeared, against 15% when it did not. Only about 1% of those visits included a click on a link inside the summary. If buyers stop clicking, the summary is the new shelf. You want to be on it.
+
+### 5. One calendar drives every channel
+
+Content used to ship when someone had time. The content case study fixed that with a 23 type content matrix and one calendar for content, webinars and events. The result was 12 live moments in a single quarter, with 8 webinars, 3 offline events and an analyst session. Each webinar became posts, articles and sales assets. One idea, many formats, zero orphaned recordings.
+
+### 6. Small rooms do heavy lifting
+
+Some of the best returns came from rooms, not ads. A KubeArmor capture the flag at KubeCon India drew 500+ sign ups and 300+ new GitHub stars. An earlier booth push added 1.4K+ stars. Meetups, labs and community days put the product in front of practitioners, as the events page shows.
+
+Kyle Poyar's 2025 State of B2B GTM report backs this up. Among the teams that ran them, intimate events had the highest chance of real impact of any channel in the survey of 195 GTM leaders.
+
+### 7. Partners need named accounts, not logos
+
+Signing partners was easy. Getting them to bring pipeline was not. The partner revenue case study changed that with screening before outreach, named target accounts for each partner, weekly joint pipeline calls and monthly business reviews. The line that sums it up is right there on the page. Logo count is not a metric.
+
+### 8. Share the stage with your partners
+
+Both number one Startup awards at BSides Bangalore were shared with two channel partners on the booth. Joint presence at events is part of how we enable partners, so buyers meet the partner in person, right next to you. A partner who stands on your booth has a stake in what happens after the show.
+
+### 9. Analysts reward steady briefings
+
+The recognition page lists 3 Gartner research mentions, 2 Frost and Sullivan awards in 2026 and an Omdia vendor profile. None of that came from a single pitch. It came from analyst briefings that turned into research mentions, awards and a vendor profile over time. Treat analysts like a long sales cycle with a very well read buyer.
+
+### 10. Marketing should ship systems too
+
+The surprise of the year was how much value sat outside campaigns. Marketing built a price quote generator that cut quotes from days to minutes, and five org wide apps now run across sales, finance and engineering. You can see more on the systems page . The best growth work sometimes removes a manual step for a colleague.
+
+And if all ten lessons had to fit in one line, it would be the one from the home page about 5x marketing growth. "Nothing fancy. We execute."
+
+### What Pipeline Notes will cover in 2027
+
+The format stays the same. One play that moved pipeline, the numbers behind it and a template you can copy. Expect more on these themes:
+
+- Inbound engines and the tracking that makes them honest
+
+- Partner programs that bring pipeline, from screening to monthly reviews
+
+- AI search and how security buyers build shortlists
+
+- Positioning and enablement for technical products
+
+- Claude skills and small systems that cut GTM busywork
+
+### What to do this week
+
+- Write down the one number your team reports into, and share it with sales
+
+- Ask three reps to pitch your product in two minutes and note where the stories differ
+
+- Turn your best webinar of the year into five posts and one sales asset
+
+- Pick your top partner and agree on ten named target accounts for Q1
+
+- Book a positioning review for the first month of the new year
+
+Thank you for reading this year. If you want one GTM play in your inbox every Tuesday in 2027, subscribe to Pipeline Notes at https://syedhadi.substack.com.
+
+Get the next Pipeline Notes issue One GTM play you can run this week, with the numbers behind it. Free, every Tuesday.
+Subscribe on Substack Schedule meeting
+
+Keep reading
+
+### Related Insights
+
+GTM Fractional PMM in India: When It Works and How to Hire One Application security How I’d Evaluate an ASPM Platform If My Real Goal Was Cutting False Positives AI security How I Evaluate an AI SOC Tool for Regulated Environments Without Falling for the Demo
+
+“Syed is a top flight professional. Combining immense native intellect, great inter-personal skills, a positive “can do” attitude and immense commitment, Syed delivers incredible results.” Nat Natraj · Cofounder and Chief Client Advocate, AccuKnox
+
+“Syed has a very pleasant demeanor and is extremely diligent. He is a delight to work with and someone you want on your team.” Ron Victor · Entrepreneur, managed Syed at AccuKnox
+
+“If you are looking for someone who gets straight to the point and actually gets things done, Syed is your man.” Vineel Kurumella · Director of GTM and Strategic Partnerships, AccuKnox
+
+1 /3 All recommendations →
+
+Featured and Trusted by
+
+---
+
+## 23 B2B Content Types and the 5 I Would Keep
+
+URL: https://syedcreates.com/23-content-types-5-that-sold
+Summary: We ran a 23 type content matrix and 12 live moments in one quarter. Here are the 5 formats I would keep with a small team, and why each earns its place.
+
+Syed Hadi Dec 15, 2026 · GTM · Pipeline Notes
+
+We built a content matrix with 23 types in it. It worked, and it was a lot. If you handed me a small team and one quarter tomorrow, I would keep five of those formats and say no to the rest without guilt.
+
+### What the 23 actually were
+
+At AccuKnox the matrix had two halves, and the split matters more than the count. You can see the full list on the GTM engine page.
+
+Thirteen formats drive traffic. Lists, FAQs, steps, interviews, checklists, definitions, pillar pages, infographics, press releases, ultimate guides, trending content, beginner's guides, and tips and best practices.
+
+Ten formats drive AI visibility and conversions. How to guides, landing pages, product pages, best of posts, comparisons, case studies, alternatives, templates, free tools and reviews.
+
+Before the matrix, content was ad hoc. Blog posts shipped when someone had time, webinars had no follow up, and sales rarely used anything marketing produced. So we mapped every type to the buyer journey and picked topics from real sales questions.
+
+### What one quarter looked like
+
+The content case study has the numbers.
+
+- 12 live moments in a single quarter, made of 8 webinars, 3 offline events and an analyst session
+
+- Website sessions up 240% in 90 days
+
+- The matrix fed the AI visibility work that reached 27.72% share of AI answers, covered in the AEO and SEO case study
+
+The lesson we wrote down was simple. Content compounds when one calendar drives every channel. Each webinar became posts, articles and sales assets.
+
+One honest caveat. We did not track closed revenue per format, so I am not going to pretend five formats "closed" deals on their own. What follows is my call, based on what the case study says worked. Pillar articles, buyer guides and free tools shipped on a weekly cadence, and every topic came from a real sales question.
+
+### The five I would keep
+
+The 23 type content matrix narrowed to five formats that sell, fed by one calendar
+
+- Pillar pages. One deep page per core problem. It earns the search traffic and becomes the source every other format borrows from. If you only write one long piece a month, write this one.
+
+- How to guides. Persona and industry guides answer the exact question a buyer types at 11 PM. They sit in the conversion half of the matrix for a reason.
+
+- Comparisons. Buyers compare you anyway. A fair "you vs them" page lets you frame the criteria, and it is the page a rep can send the moment a competitor enters the deal.
+
+- Free tools. A calculator or scorecard does the selling while you sleep, and it gives the buyer a reason to come back. I still run my own, like the GTM health check .
+
+- Case studies. Sales sends proof, not opinions. One case study with real numbers outlives twenty trend posts.
+
+What did I cut? Press releases, infographics and trending content. They can earn attention, but a small team should spend its hours on assets a rep will forward to a buyer.
+
+### Lenny Rachitsky and the two post rule
+
+When Lenny Rachitsky walked Substack writers through how his newsletter grew in its early days, one detail stood out. He said two posts drove about half of his total growth, and his regular weekly posts drove the other half. One of the big ones was an eight part series on building a marketplace business.
+
+He also ran a weekly column answering three reader questions, and he used guest posts on newsletters his audience already read. His verdict on that last tactic was blunt: "Guest posts are effective."
+
+Two lessons carry straight over to B2B. A few deep pieces do most of the work, so protect the time to make them. And the best topics come from real questions, which is exactly why we pulled ours from sales calls.
+
+### Emily Kramer treats content as a portfolio
+
+Emily Kramer's MKT1 content strategy starts with guiding principles, and two of them map well onto a 23 type matrix. The first is to be willing to miss. She treats content as a portfolio where a few bets drive the outsized returns. The second is to avoid random acts of marketing by testing one big new thing at a time.
+
+Her headline rule is "Add value, every time." She also builds layered content with no dead ends, reusing her frameworks across formats so each idea gets more than one life. That is the same move as turning one webinar into posts, articles and sales assets.
+
+### Gong made data the format
+
+Gong built one of the best known content motions in B2B SaaS. Ross Simmonds broke down Gong's LinkedIn strategy in 2021 and found a few habits worth stealing.
+
+- Data driven posts with practical sales advice, such as mentioning price later in calls
+
+- Blog posts that end with a "follow us on LinkedIn" prompt instead of a demo ask
+
+- Employees who share and amplify each other's posts
+
+- A company page posting about 10 to 15 times a week
+
+At the time of that analysis Gong had 73,154 LinkedIn followers against 20,491 for its rival Chorus. The format was not novel. The proprietary data and the people distributing it were.
+
+### One calendar, five formats
+
+Picking five formats is only half the system. The other half is reuse. In Content in a box each piece gets repurposed into five formats, and distribution runs through partners, community and the newsletter.
+
+Here is the loop I would run with a small team.
+
+- One webinar or live session a month, built on a real sales question.
+
+- One pillar page or how to guide from the webinar content.
+
+- One comparison or case study that a rep can send the same week.
+
+- Founder and employee LinkedIn posts cut from all three.
+
+- A monthly review of which assets sales actually sent, judged by pipeline influence.
+
+Each piece feeds the next. Nothing is used once and forgotten.
+
+### What to do this week
+
+- List every content type you published in the last 90 days.
+
+- Ask two reps which three assets they sent to buyers last month.
+
+- Keep the formats on both lists and pause one format nobody sends.
+
+- Pick one sales question and turn it into a webinar plus a pillar page.
+
+- Put a monthly "what did sales send" review on the calendar.
+
+If this was useful, subscribe to Pipeline Notes at https://syedhadi.substack.com for one play, its numbers and a template every other week.
+
+Get the next Pipeline Notes issue One GTM play you can run this week, with the numbers behind it. Free, every Tuesday.
+Subscribe on Substack Schedule meeting
+
+Keep reading
+
+### Related Insights
+
+GTM Fractional PMM in India: When It Works and How to Hire One Application security How I’d Evaluate an ASPM Platform If My Real Goal Was Cutting False Positives AI security How I Evaluate an AI SOC Tool for Regulated Environments Without Falling for the Demo
+
+“Syed is a top flight professional. Combining immense native intellect, great inter-personal skills, a positive “can do” attitude and immense commitment, Syed delivers incredible results.” Nat Natraj · Cofounder and Chief Client Advocate, AccuKnox
+
+“Syed has a very pleasant demeanor and is extremely diligent. He is a delight to work with and someone you want on your team.” Ron Victor · Entrepreneur, managed Syed at AccuKnox
+
+“If you are looking for someone who gets straight to the point and actually gets things done, Syed is your man.” Vineel Kurumella · Director of GTM and Strategic Partnerships, AccuKnox
+
+1 /3 All recommendations →
+
+Featured and Trusted by
+
+---
+
+## How to Build $2M of Pipeline on a $100K Marketing Budget
+
+URL: https://syedcreates.com/2m-pipeline-100k-budget
+Summary: The pipeline math behind $2M of influenced pipeline a year on a $100K budget, plus what Kyle Poyar's 2026 data and Atlassian teach about lean B2B demand.
+
+Syed Hadi Dec 8, 2026 · GTM · Pipeline Notes
+
+Most marketing teams do not have a budget problem. They have a receipts problem. At AccuKnox our team ran on $100K a year, and the engine we built now supports $2M in influenced pipeline a year, because every dollar had to show up in a pipeline review before it was allowed to stay.
+
+### The number on the napkin
+
+Here is the whole story in three lines.
+
+- $100K a year is $25K a quarter.
+
+- $2M of influenced pipeline a year against that spend is a 20 to 1 ratio.
+
+- Seven marketers shared that budget, and nobody was going to approve more headcount.
+
+When we started, pipeline depended on events and outbound. The website described the product but did not create demand, and nobody could say which channel produced which deal. That last part is the real killer. If you cannot trace a deal to a channel, every budget meeting turns into a debate about feelings.
+
+One honest note before the math. Influenced pipeline means marketing touched the deal. It does not mean marketing created it alone. Say influenced when you mean influenced, and report sourced separately. Sales trusts the marketer who never rounds up.
+
+### Pipeline math in five lines
+
+Before you pick a channel, run this. It fits on a sticky note and it changes the budget conversation from "what did we post" to "what did we buy".
+
+- Write down the revenue target the board actually signed.
+
+- Divide it by your real win rate from the last two quarters. The answer is the pipeline you need.
+
+- Agree marketing's share of that pipeline with the sales lead, in writing, before the quarter starts.
+
+- Pull cost per opportunity for every channel you run, using trailing numbers, not hopes.
+
+- Turn your share into a count of opportunities, then multiply by cost per opportunity. That is your budget, and it comes with a receipt.
+
+Here is a worked example with made up numbers so you can see the shape. A $600K target at a 20% win rate needs $3M of pipeline. If marketing owns 35%, that is $1.05M. At a $30K average deal, you need 35 opportunities. If your blended cost per opportunity is $700, the quarter costs about $24,500. Now you are not asking for money. You are quoting a price.
+
+Pipeline math flow from revenue target to win rate, pipeline needed, marketing share, cost per opportunity and budget
+
+If you are not sure your inputs are trustworthy, take the two minute GTM health check first. Question three asks whether you know which channel sourced each deal last quarter. If the answer is no, fix that before you touch the budget.
+
+### How we spent the $100K
+
+We ran three phases with one owner. The same shape now runs inside GTM in a box , and the full numbers are in the GTM case study .
+
+Phase one was the foundation. We put GA4 events on every conversion that mattered, added account based intelligence from Factors.ai, and gave sales a clear ICP with target account lists. Nothing glamorous. All of it measurable.
+
+Phase two was shipping on a weekly cadence.
+
+- Landing pages for each use case and each buyer
+
+- Pillar content and free tools
+
+- Outbound and partner plays pointed at the same accounts as the content
+
+That third bullet is where a small budget starts to act like a big one. When outbound, partners and content all hit one account list, each channel warms the others up. You pay for three touches and the buyer feels ten.
+
+Phase three was running the engine. We held weekly pipeline reviews with sales, doubled down on the channels that converted, and built systems that removed manual work. One example is a quote generator that cut quotes from days to minutes. Marketing ended up shipping five org wide apps that now run across sales, finance and engineering.
+
+The results followed the order of the work. Website sessions grew 240.6% to 311K in 90 days, and engaged sessions grew 253.1% in the same period. Tracking came first, content second, scale third. Flip that order and you get a pretty dashboard with no pipeline under it. You can see the stack behind it on the GTM engine page.
+
+### What Kyle Poyar's 2026 data says
+
+Kyle Poyar's What's working in B2B GTM in 2026 surveyed 300 software GTM leaders in September 2026, most of them at companies between $1M and $10M ARR. The ranking reads like a lean budget's shopping list.
+
+- Network and introductions came first, with 62% calling it a core channel.
+
+- Intimate events ranked second on effectiveness.
+
+- SEO and founder or employee LinkedIn posting sit at roughly half of respondents each as core channels.
+
+- AI search jumped into the proven group, with 39% calling it core, up 11 points from 2025.
+
+Then the warning, in his words: "Cold outreach is officially oversaturated." AI SDRs, the report adds, are not meeting early expectations.
+
+Notice what tops the list. Introductions, small rooms, search and founder posts all cost more time than money. That is good news if your budget looks like ours did. You cannot outspend a bigger competitor on paid channels, but you can show up more often, and more usefully, in the rooms and search results where buyers already are.
+
+### Atlassian proved it at scale
+
+If you think lean demand only works at seed stage, look at Atlassian. When it filed to go public in 2015, its IPO filing said it did not use traditional quota carrying sales staff, as Business Insider reported . In the first half of 2015 it spent $67.9M on sales and marketing, about 21% of its $319.5M revenue. The same article notes that young SaaS companies often spend 80% to 120% of revenue on sales and marketing in their first three years.
+
+Atlassian leaned on word of mouth and a viral model to win customers, and called that approach essential to its future growth. The lesson is not "fire your sales team". The lesson is that a low cost of demand is a design choice you make early and protect on purpose.
+
+### Three rules for a lean pipeline budget
+
+- Track before you spend. A channel you cannot trace to a deal gets zero new dollars until you can.
+
+- Point every motion at one account list. Content, outbound, partners and events should all chase the same names.
+
+- Review pipeline weekly and move money monthly. Revisit ICP and positioning every quarter or after a big product change.
+
+If you want help picking which of these to fix first, every engagement in Growth in a box starts with exactly this math.
+
+### What to do this week
+
+- Take the GTM health check and note your lowest scoring answer.
+
+- Write down your real win rate and cost per opportunity for each channel.
+
+- Run the five line math and get the sales lead to sign off on marketing's share.
+
+- Pause one channel you cannot trace to a single deal.
+
+- Put a 30 minute weekly pipeline review with sales on the calendar.
+
+If this was useful, subscribe to Pipeline Notes at https://syedhadi.substack.com for one play, its numbers and a template every other week.
+
+Get the next Pipeline Notes issue One GTM play you can run this week, with the numbers behind it. Free, every Tuesday.
+Subscribe on Substack Schedule meeting
+
+Keep reading
+
+### Related Insights
+
+GTM Fractional PMM in India: When It Works and How to Hire One Application security How I’d Evaluate an ASPM Platform If My Real Goal Was Cutting False Positives AI security How I Evaluate an AI SOC Tool for Regulated Environments Without Falling for the Demo
 
 “Syed is a top flight professional. Combining immense native intellect, great inter-personal skills, a positive “can do” attitude and immense commitment, Syed delivers incredible results.” Nat Natraj · Cofounder and Chief Client Advocate, AccuKnox
 
@@ -1457,6 +1843,144 @@ Schedule meeting Email me directly
 Get the one pager by email · Chat on WhatsApp · or write to ssyedhadi14@gmail.com
 
 Other boxes GTM in a box PMM in a box Content in a box GTM + PMM in a box Partner Revenue in a box Claude skills for marketers
+
+---
+
+## How AI Search Put a CNAPP Vendor in the Answer
+
+URL: https://syedcreates.com/ai-search-cnapp-240-percent
+Summary: How AccuKnox reached 27.72% AI visibility and the top Google answer for CNAPP vendors, plus the engine that grew sessions 240% in 90 days.
+
+Syed Hadi Nov 17, 2026 · GTM · Pipeline Notes
+
+Your next buyer will not read ten blue links. They will ask ChatGPT or Gemini which CNAPP vendors to shortlist, get three to five names, and move on. This issue shows how we got AccuKnox into that answer, ahead of much larger names, and what the same engine did to traffic.
+
+Last week I mapped the six GTM plays behind our 0 to $10M run. This is play four, taken apart.
+
+### The shortlist now forms before the click
+
+Kevin Indig ran a user study of Google AI Mode with Clickstream Solutions and wrote it up on Search Engine Journal . The numbers should worry anyone who lives on organic traffic:
+
+- 77.6% of sessions had zero external visits
+
+- About 88% of first interactions were with the AI text, not the links
+
+- On a "Ramp vs Brex" comparison task, 83% of exits went to review sites
+
+His summary is that users "discover products and form opinions about them in AI Mode." His advice follows from that. Stop chasing the click and start earning the citation.
+
+For a security vendor this is worse, because CNAPP shortlists are comparison questions by nature. If the answer engine does not name you, sales never hears about the deal.
+
+### Where we started
+
+AccuKnox competed with much larger, better funded vendors that already owned the classic SEO results. We could not outspend them. We had to show up in both Google and AI answers anyway.
+
+So we ran it in three phases with one owner, the same shape I now use in AEO/SEO Ranking in a box .
+
+Three phases of the AI search play, from audit to citations, with the results each one produced
+
+### Phase one, audit and baseline
+
+You cannot improve a share of answers you have never measured. We started with:
+
+- A technical SEO audit and fixes across the site
+
+- A baseline share of AI answers, tracked on LLMLab
+
+- A competitor gap list of the buyer questions where rivals showed up and we did not
+
+The gap list became the content plan. No brainstorming required.
+
+### Phase two, build pages AI wants to quote
+
+This is where most of the four to six months of SEO, SEM and backlink work went. We built a 23 type content matrix. Thirteen formats drive traffic, such as definitions, FAQs and ultimate guides. Ten drive AI visibility and conversions, such as comparisons, alternatives, checklists, templates and free tools.
+
+The pattern on our key pages was simple:
+
+- A 40 to 80 word answer right under the H1
+
+- A few H2s phrased as the real questions buyers ask
+
+- An llms.txt file that points crawlers to the best pages
+
+The lesson from the AEO and SEO case study is blunt. AI answer engines cite pages that answer buyer questions directly. Comparisons, checklists and clear definitions earned citations far more often than product pages did.
+
+### Phase three, measure and compound
+
+We tracked share of AI answers every week. When a competitor gained citations on a question, we refreshed that page. Wins went straight back into sales and partner messaging, so the same proof showed up in decks and on calls.
+
+Content refresh ran as its own engine, one of eleven we built to feed inbound. Others included vs and alternatives pages, same day point of view posts when a zero day hit, and concise top and middle of funnel answers built to win AI Overviews. The GTM engine page lists all eleven.
+
+### What changed
+
+Here is what the work produced. AI visibility comes from LLMLab, tracked from November 2025 to August 2026. Traffic comes from Google Analytics 4, May to August 2026 against the previous period.
+
+- 27.72% AI visibility across the security category, mentioned in 12K of 42K tracked answers
+
+- Third in AI visibility behind Wiz and Palo Alto Networks, and ahead of Sysdig and Prisma Cloud
+
+- The #1 Google answer slot for CNAPP vendors, above Sysdig, Lacework and Fortinet, which our CEO called out in a note to the whole company
+
+- 2x AccuKnox citations in the AI Overview for stateful prompt firewall
+
+- Website sessions up 240.6% to 311K in 90 days, with engaged sessions up 253.1%
+
+One honest note on that last line. The 240% came from the whole inbound engine, with landing pages, free tools and tracking running alongside AI search. AI visibility was one gear in that machine, not the only one. Anyone who tells you a single tactic tripled traffic is selling something.
+
+### What the AEO leaders found
+
+Two outside sources line up closely with what we saw.
+
+Ethan Smith of Graphite went deep on this on Lenny's Podcast in September 2025. The episode notes claim ChatGPT traffic converts six times better than Google search. They name landing pages, YouTube videos and Reddit comments as the tactics that work, and they flag help center content as a way into the long tail. They also say AI generated content does not work, which matches my experience. Engines reward pages with real answers, not rewrites of rewrites.
+
+Graphite's Webflow case study shows the same pattern in a different category. Between January and July 2025, Webflow's share of voice in LLM answers rose from 33% to 64%. The share of sign ups coming from LLMs doubled from 4% to 8%, and LLM traffic converted to sign up at 24%, against 4% for non brand SEO. Two tactics stand out. Webflow added answer ready copy above the fold on about 1,500 template pages, and rewrote blog headers as questions, which lifted AI visits 58% against a control group.
+
+Question headers, a direct answer up top, comparison pages. Different teams, different categories, one pattern.
+
+### Where small teams go wrong
+
+From running this with a lean team, these are the traps I see most:
+
+- Tracking rankings but never tracking share of AI answers
+
+- Writing product pages when buyers ask comparison questions
+
+- Skipping Organization and Person schema with sameAs links, the cheapest entity fix there is
+
+- Ignoring authority. A Domain Rating under 30 means fewer citations, whatever your markup says
+
+### What to do this week
+
+- Write down the five shortlist questions your buyer asks, then ask them in a fresh ChatGPT and Gemini chat. Note who gets named.
+
+- Score your readiness with the AI visibility checker . It takes two minutes.
+
+- Run your home page and your best comparison page through the SEO and AEO score and fix every high priority item.
+
+- Rewrite the top of one money page so a 40 to 80 word answer sits under the H1.
+
+- Turn three H2s on your best blog post into the questions buyers type.
+
+If you want the templates behind this play as they ship, subscribe to Pipeline Notes at https://syedhadi.substack.com.
+
+Get the next Pipeline Notes issue One GTM play you can run this week, with the numbers behind it. Free, every Tuesday.
+Subscribe on Substack Schedule meeting
+
+Keep reading
+
+### Related Insights
+
+GTM Fractional PMM in India: When It Works and How to Hire One Application security How I’d Evaluate an ASPM Platform If My Real Goal Was Cutting False Positives AI security How I Evaluate an AI SOC Tool for Regulated Environments Without Falling for the Demo
+
+“Syed is a top flight professional. Combining immense native intellect, great inter-personal skills, a positive “can do” attitude and immense commitment, Syed delivers incredible results.” Nat Natraj · Cofounder and Chief Client Advocate, AccuKnox
+
+“Syed has a very pleasant demeanor and is extremely diligent. He is a delight to work with and someone you want on your team.” Ron Victor · Entrepreneur, managed Syed at AccuKnox
+
+“If you are looking for someone who gets straight to the point and actually gets things done, Syed is your man.” Vineel Kurumella · Director of GTM and Strategic Partnerships, AccuKnox
+
+1 /3 All recommendations →
+
+Featured and Trusted by
 
 ---
 
@@ -2634,6 +3158,13 @@ URL: https://syedcreates.com/blog
 Summary: Every Medium post by Syed Hadi: CNAPP, ASPM and AI security buyer guides, GTM lessons, career notes and travel writing, updated as new posts go live.
 
 Nothing matches that yet. Try a broader word, or ask me on a free call .
+
+Newsletter
+
+### Pipeline Notes
+Weekly GTM plays with the numbers behind them. Also on Substack .
+
+GTM · Dec 29, 2026 0 to $10M, 10 GTM Lessons From 2026 Ten year end GTM lessons from a 0 to $10M hypergrowth run at a cloud security startup, each tied to real work, numbers and outside research. Read → GTM · Dec 22, 2026 5 GTM Leaders Who Changed How I Work in 2026 Five ideas from April Dunford, Kyle Poyar, Emily Kramer, Ethan Smith and Elena Verna, and how I would apply each one at a security startup. Read → Money Notes · Dec 17, 2026 Your Salary in 2046 and What to Do About It Now Where your salary lands in 2046 with 9% raises, job switches and 5% inflation. A worked Indian example, in rupees and today's money, plus what to do now. Read → GTM · Dec 15, 2026 23 B2B Content Types and the 5 I Would Keep We ran a 23 type content matrix and 12 live moments in one quarter. Here are the 5 formats I would keep with a small team, and why each earns its place. Read → GTM · Dec 8, 2026 How to Build $2M of Pipeline on a $100K Marketing Budget The pipeline math behind $2M of influenced pipeline a year on a $100K budget, plus what Kyle Poyar's 2026 data and Atlassian teach about lean B2B demand. Read → GTM · Dec 1, 2026 Partner Programs That Actually Ship Pipeline Why most SaaS partner programs stall at the logo wall, what Jay McBain and Crossbeam data show, and the cadence that turns partners into pipeline. Read → GTM · Nov 24, 2026 The One Line Positioning Test Most Homepages Fail A one line test for your homepage hero, built on April Dunford's positioning framework and MKT1 messaging advice, with a real repositioning example. Read → Money Notes · Nov 19, 2026 FIRE Math for Indian Salaried Employees, EPF to NPS The FIRE math Indian salaried employees skip. How EPF, PPF and NPS change your FIRE number, why 25x needs an inflation check, and a worked example. Read → GTM · Nov 17, 2026 How AI Search Put a CNAPP Vendor in the Answer How AccuKnox reached 27.72% AI visibility and the top Google answer for CNAPP vendors, plus the engine that grew sessions 240% in 90 days. Read → GTM · Nov 10, 2026 The 6 GTM Plays Behind a 0 to $10M Security Startup Six GTM plays behind the AccuKnox 0 to $10M run, from positioning and community to AI search and partners, each tied to real numbers you can check. Read →
 
 Featured
 
@@ -4692,6 +5223,136 @@ Related tools Mutual fund and SIP returns Salary growth Loan prepayment
 
 ---
 
+## FIRE Math for Indian Salaried Employees, EPF to NPS
+
+URL: https://syedcreates.com/fire-math-epf-ppf-nps
+Summary: The FIRE math Indian salaried employees skip. How EPF, PPF and NPS change your FIRE number, why 25x needs an inflation check, and a worked example.
+
+Syed Hadi Nov 19, 2026 · Money Notes · Pipeline Notes
+
+Most FIRE plans in India start and end with one number, the mutual fund SIP. That plan is incomplete. Your payslip, your PPF passbook and your NPS statement are already building a retirement corpus every month, and if you leave them out, you either work years longer than you need to or you panic and take risks you do not need.
+
+So let us do the full math, the way I built it into the FIRE calculator .
+
+### The four buckets most people forget
+
+When people say "my FIRE corpus", they usually mean equity funds and maybe a few stocks. Four buckets quietly sit outside that picture.
+
+- EPF. Every month, 12% of your basic pay goes in from you, plus your employer's share. The EPF rate for 2025 26 is 8.25% , ratified by the government in June 2026. ThePrint reports this is the third year in a row at that level, for a base of over seven crore contributing members.
+
+- PPF. The PPF rate for October to December 2026 is 7.1% , unchanged, as announced by the Department of Economic Affairs in the Ministry of Finance. The tenure is 15 years and deposits are capped at ₹1.5 lakh a year. The rate is reset every quarter, so treat it as today's number, not a promise.
+
+- NPS. Under the PFRDA changes announced on 19 December 2025 , non government subscribers can now take up to 80% as a lump sum at normal exit, and only 20% must buy an annuity, down from 40%. Corpora up to ₹8 lakh can come out fully as a lump sum. For the All Citizen Model, normal exit is now at 15 years or age 60, whichever comes first.
+
+- Gold, FDs and cash. Sovereign gold bonds, gold ETFs, your FD ladder and the emergency fund. They grow slowly, but they count, and they are the money you will touch first in a bad market year.
+
+Four buckets that feed your FIRE corpus, compared with your FIRE number
+
+The calculator grows each bucket at its own rate. Defaults are EPF at 8.25%, PPF at 7.1%, NPS at 10%, FDs at 6.5%, gold at 8% and savings at 3%. Every one of them is editable, and you should edit them.
+
+### The 25x rule and why India needs a buffer
+
+The 25x rule says you are financially independent when your corpus is 25 times your yearly expenses. It is the 4% rule turned around: if you withdraw 4% in year one and raise it with inflation, the money should last.
+
+That rule came from US data. Even there, the number has moved. Morningstar's research puts a safe starting withdrawal rate at 3.9% for a 30 year retirement, with a 90% chance the money lasts, on portfolios with 30% to 50% in equities. It also warns that poor returns or high inflation in the first five years raise the risk of running out.
+
+Now look at an Indian FIRE plan. Retire at 45, plan to 85, and you need the money to last 40 years, not 30. Indian inflation also runs higher. That is why the calculator FAQ suggests many Indian planners use 3 to 3.5%, which means a corpus of roughly 28 to 33 times your yearly spend.
+
+### Why inflation is the number that decides everything
+
+Your FIRE number is not 25 times what you spend today. It is 25 times what you will spend the year you stop working.
+
+The RBI gives you a reference point. In its August 2026 policy statement it projected CPI inflation for 2026 27 at 5.0%. In October it raised that projection to 5.2% and lifted the repo rate to 5.50%. Your personal inflation is often higher than CPI, because school fees, rent and healthcare rise faster than the average basket. That is why the calculator defaults to 6%.
+
+A 1 point change in inflation over 15 years shifts your target by crores. Run the plan at 6% and at 7% and see the gap for yourself.
+
+### A worked example with illustrative numbers
+
+These numbers are illustrative, chosen to show the math. They are not a recommendation and they are not my own portfolio.
+
+Meet a 30 year old salaried employee who wants to retire at 45.
+
+- Spends ₹60,000 a month today, so ₹7.2 lakh a year
+
+- Inflation assumed at 6% a year
+
+- In 15 years, that spend grows to about ₹17.3 lakh a year
+
+The FIRE number at 25x is about ₹4.3 crore. At a 3.5% withdrawal rate, closer to Indian reality for a 40 year retirement, it is about ₹4.9 crore.
+
+Now add the buckets most people skip, using the same illustrative inputs.
+
+- EPF. ₹3 lakh balance today, ₹7,200 a month from employee plus employer, a 10% yearly step up with salary, at 8.25%. After 15 years, roughly ₹56 lakh.
+
+- PPF. ₹1.5 lakh a year, the maximum, at 7.1%. After 15 years, roughly ₹39 lakh.
+
+- NPS. ₹5,000 a month with a 10% step up, at an assumed 10%. After 15 years, roughly ₹36 lakh.
+
+Together that is about ₹1.3 crore, close to a third of the ₹4.3 crore target. Ignore it and you overshoot your SIP target by a lot. Count it and the SIP you need drops sharply.
+
+There is a catch with NPS. Money that unlocks at 60, or after 15 years, cannot fund the years before that. If you retire at 45, plan your early years on equity funds, FDs and PPF, and let EPF and NPS cover the later decades.
+
+### How the calculator handles it
+
+The FIRE calculator works in five plain steps.
+
+- Grows your monthly spend with inflation to your retirement year
+
+- Works out the corpus that pays those rising expenses until the age you choose
+
+- Adds a tax and safety buffer, 10% by default
+
+- Grows every bucket at its own rate, with SIP, EPF and NPS stepping up each year and PPF capped at ₹1.5 lakh
+
+- Compares your projected corpus with the FIRE number, and if you fall short, shows the SIP that closes the gap
+
+It also shows Lean, Regular, Fat and Coast FIRE side by side, and you can download the plan as a PDF. If you want to sanity check your equity return assumption, look at real 5 to 20 year numbers in the mutual fund returns tracker before you type 15% into anything.
+
+### Three common mistakes in Indian FIRE plans
+
+- Using today's spend. The FIRE number depends on future spend, and inflation compounds just like returns do.
+
+- Treating NPS like a liquid fund. It is retirement money with rules. Model when you can actually use it.
+
+- Assuming the best year forever. Equity can fall 30% or more in a bad year. Run a lower return and check your margin.
+
+This post is education, not financial advice. I am not a SEBI registered investment adviser, so speak to one before you act on any projection.
+
+### What to do this week
+
+- Download your EPF passbook and your latest NPS statement and note both balances
+
+- Check your PPF balance and whether you deposited this year
+
+- Enter all of it in the FIRE calculator , with inflation at 6% and then at 7%
+
+- Note the SIP gap, then see how much a 10% yearly step up closes it
+
+- Put a reminder to rerun the plan next November with real numbers
+
+If this was useful, subscribe to Pipeline Notes at https://syedhadi.substack.com for the next Money Note.
+
+Get the next Pipeline Notes issue One GTM play you can run this week, with the numbers behind it. Free, every Tuesday.
+Subscribe on Substack Schedule meeting
+
+Keep reading
+
+### Related Insights
+
+GTM Fractional PMM in India: When It Works and How to Hire One Application security How I’d Evaluate an ASPM Platform If My Real Goal Was Cutting False Positives AI security How I Evaluate an AI SOC Tool for Regulated Environments Without Falling for the Demo
+
+“Syed is a top flight professional. Combining immense native intellect, great inter-personal skills, a positive “can do” attitude and immense commitment, Syed delivers incredible results.” Nat Natraj · Cofounder and Chief Client Advocate, AccuKnox
+
+“Syed has a very pleasant demeanor and is extremely diligent. He is a delight to work with and someone you want on your team.” Ron Victor · Entrepreneur, managed Syed at AccuKnox
+
+“If you are looking for someone who gets straight to the point and actually gets things done, Syed is your man.” Vineel Kurumella · Director of GTM and Strategic Partnerships, AccuKnox
+
+1 /3 All recommendations →
+
+Featured and Trusted by
+
+---
+
 ## Fractional CMO for Dubai SaaS Companies | Syed Hadi
 
 URL: https://syedcreates.com/fractional-cmo-dubai-saas
@@ -5609,6 +6270,248 @@ Schedule meeting Email me directly
 Get the one pager by email · Chat on WhatsApp · or write to ssyedhadi14@gmail.com
 
 Other boxes PMM in a box AEO/SEO Ranking in a box Content in a box GTM + PMM in a box Partner Revenue in a box Claude skills for marketers
+
+---
+
+## 5 GTM Leaders Who Changed How I Work in 2026
+
+URL: https://syedcreates.com/gtm-lessons-from-leaders-2026
+Summary: Five ideas from April Dunford, Kyle Poyar, Emily Kramer, Ethan Smith and Elena Verna, and how I would apply each one at a security startup.
+
+Syed Hadi Dec 22, 2026 · GTM · Pipeline Notes
+
+Most GTM advice ages like milk. These five ideas did not. Each one comes from something a GTM or growth leader published in 2025 or 2026, and each one maps cleanly onto the messy job of selling security software with a lean team.
+
+### How I picked these
+
+I set myself three rules. The idea had to come from a piece I could open and read, not a screenshot of a screenshot. It had to change a real decision. And it had to survive contact with a security startup, where buyers are sceptical, deals run through partners and budgets are small.
+
+For context, the team I work with ran on a $100K a year marketing budget and still supported $2M in influenced pipeline. You can read the receipts on the case studies page . So every idea below gets filtered through one question. Would this help a small team punch above its weight?
+
+Five ideas from five GTM leaders mapped to how a security startup would apply them
+
+### April Dunford says AI is not a position
+
+The idea. In a January 2026 LaunchPod interview with LogRocket , April Dunford warns against AI washing. Her point is that "We have AI" no longer counts as a strategy. You have to name the specific value your technology unlocks that competitors cannot match.
+
+What it means in practice. Every vendor slide now says AI. Buyers have learned to skim past it. The word stopped carrying meaning the day everyone started using it.
+
+How I would apply it at a security startup:
+
+- Write the differentiator in one sentence without the letters A and I.
+
+- Anchor it on something a buyer can verify. In AI security, my anchor would be the line from my short video on securing AI, that it has to enforce at runtime instead of only reporting.
+
+- Test it on live deals. The lesson from the PMM case study still holds. Product marketing pays off when sales repeats the story without help.
+
+### Kyle Poyar wants fewer channels done better
+
+The idea. Kyle Poyar and Maja Voje surveyed 195 software GTM leaders for the 2025 State of B2B GTM report . The average company runs about five core channels and tests five and a half more. The primary motion showed no link to growth rate. 53% reported no or limited impact from AI. Among teams that tried them, intimate events had the highest chance of real impact. His summary for next year is blunt: "2026 needs to be the year of ruthless scaling."
+
+What it means in practice. Ten channels at half strength lose to three channels at full strength. The motion you pick matters less than how hard you run it.
+
+How I would apply it. Our own GTM case study followed a simple order. Tracking came first, content second and scale third. I would audit every channel against influenced pipeline, keep the top three and move the rest of the budget into them. I would also keep investing in small rooms. This year I hosted a GrowthX GTM Deep Dive and a CNCF community day, both on the events page .
+
+### Emily Kramer puts accounts over leads
+
+The idea. In The Shift to Account Driven GTM from February 2025, Emily Kramer writes, "There's no excuse to wait for all of your prospects to come inbound anymore." Mapping your whole addressable market into the CRM and enriching it is now cheap enough for small teams. Inbound becomes one intent signal among many, not the main source of contacts.
+
+What it means in practice. The unit of work is the account, not the form fill. Marketing, sales, RevOps and customer success all look at the same list.
+
+How I would apply it. Security deals often run through distributors and resellers, so the account list has to include partners too. Our partner revenue case study is built on this. Each partner gets named target accounts, and we run weekly joint pipeline calls and monthly business reviews. I would push it one step further:
+
+- One tiered account list shared by marketing, sales and every active partner
+
+- Account intelligence feeding the tiers, the way we used Factors.ai for the website
+
+- Inbound treated as a signal that moves an account up a tier, not as the finish line
+
+### Ethan Smith wants you cited in the answer
+
+The idea. On Lenny's Podcast in September 2025 , Lenny Rachitsky and Graphite CEO Ethan Smith walked through answer engine optimization. The episode notes say referral traffic from ChatGPT converts far better than Google search traffic. They also say early startups can show up in AI answers much faster than SEO allows, through landing pages, YouTube videos and authentic Reddit comments. Smith also argues that AI generated content does not work well for this.
+
+What it means in practice. Buyers ask ChatGPT and Gemini for a shortlist before they ever talk to sales. If you are missing from the answer, you are missing from the deal.
+
+How I would apply it. This is the one idea where I already have numbers. The AEO and SEO case study shows AccuKnox reaching 27.72% AI visibility, mentioned in 12K of 42K tracked answers, and taking the number one Google answer slot for CNAPP vendors. That took four to six months of SEO, SEM and backlink work plus a 23 type content matrix. My next step would follow the episode. Write the answers humans actually give, in the places answer engines read, and skip the AI slop.
+
+### Elena Verna gives the product away
+
+The idea. On Lenny's Podcast in December 2025 , Elena Verna explained how Lovable rebuilt its growth playbook. Giving the product away for free became its strongest growth lever. The team holds itself to a "minimum lovable product" standard instead of a minimum viable one, and treats activation as a product job, not a growth job.
+
+What it means in practice. Free value is a distribution channel. The product has to earn love on the first use, because that first use is your ad.
+
+How I would apply it. Security buyers will not swipe a card on day one, but they will try things. Our PMM work already used free trials and self paced training to shorten evaluation. The KubeArmor capture the flag at KubeCon India drew 500+ sign ups and 300+ new GitHub stars. I would treat the open source project, free tools and trials as one funnel, and hand activation to the product team with a clear owner and a weekly number.
+
+### The pattern across all five
+
+Put the five next to each other and one theme shows up. Specific beats generic. A specific claim beats "we have AI". A short channel list beats a long one. A named account beats an anonymous lead. A cited answer beats a buried ranking. A free first use beats a paid ad. None of it needs a bigger budget. It needs sharper choices.
+
+### What to do this week
+
+- Rewrite your homepage headline without the word AI and show it to one salesperson
+
+- List every channel you run and cut any that cannot point to pipeline
+
+- Build a top 50 account list and share it with your best partner
+
+- Ask ChatGPT and Gemini ten buyer questions, then check who gets cited with the AI visibility checker
+
+- Ship one free thing a buyer can use without talking to you
+
+If this was useful, subscribe to Pipeline Notes at https://syedhadi.substack.com for one GTM play every Tuesday.
+
+Get the next Pipeline Notes issue One GTM play you can run this week, with the numbers behind it. Free, every Tuesday.
+Subscribe on Substack Schedule meeting
+
+Keep reading
+
+### Related Insights
+
+GTM Fractional PMM in India: When It Works and How to Hire One Application security How I’d Evaluate an ASPM Platform If My Real Goal Was Cutting False Positives AI security How I Evaluate an AI SOC Tool for Regulated Environments Without Falling for the Demo
+
+“Syed is a top flight professional. Combining immense native intellect, great inter-personal skills, a positive “can do” attitude and immense commitment, Syed delivers incredible results.” Nat Natraj · Cofounder and Chief Client Advocate, AccuKnox
+
+“Syed has a very pleasant demeanor and is extremely diligent. He is a delight to work with and someone you want on your team.” Ron Victor · Entrepreneur, managed Syed at AccuKnox
+
+“If you are looking for someone who gets straight to the point and actually gets things done, Syed is your man.” Vineel Kurumella · Director of GTM and Strategic Partnerships, AccuKnox
+
+1 /3 All recommendations →
+
+Featured and Trusted by
+
+---
+
+## The 6 GTM Plays Behind a 0 to $10M Security Startup
+
+URL: https://syedcreates.com/gtm-plays-behind-0-to-10m
+Summary: Six GTM plays behind the AccuKnox 0 to $10M run, from positioning and community to AI search and partners, each tied to real numbers you can check.
+
+Syed Hadi Nov 10, 2026 · GTM · Pipeline Notes
+
+People ask me what the one thing was. There was no one thing. I was part of the team on the AccuKnox 0 to $10M hypergrowth journey, and what got us there was six ordinary plays, run every week, each one reporting into pipeline.
+
+Welcome to the first issue of Pipeline Notes. Each issue takes one play apart, with the numbers and a template you can copy. This issue is the map.
+
+### Why plays beat hacks
+
+Maja Voje, writing on Kyle Poyar's Growth Unhinged, frames early GTM as a hunt for at least one repeatable, scalable motion. In her stage model , first customers usually come from the founders' own networks. Pilots, case studies and references then carry you from that early customer profile up to the real ICP.
+
+That matches what I saw. A hack gives you a spike. A play gives you a motion you can run again next quarter with a different person at the wheel. Our job was to stack plays until several of them were repeatable at once.
+
+Here is the map, with the proof for each one.
+
+Six GTM plays behind the 0 to $10M run, each with its proof number
+
+### Play one is positioning before pipeline
+
+When I became the founding product marketer in March 2024, we had a technical CNAPP platform, no positioning, no sales enablement and a crowded field of well funded rivals. Nobody needed another feature list. They needed one story the whole company could repeat.
+
+So we started there:
+
+- Positioning, personas and messaging for each product line
+
+- Battlecards and enablement for sales and partners
+
+- GTM for new product lines, which drove a sharp rise in inbound leads
+
+The lesson I wrote down in the GTM and PMM case study still holds. Positioning makes every pipeline motion cheaper. Build the story first, then point demand and partners at it.
+
+### Play two is community where practitioners already gather
+
+Lenny Rachitsky studied how about 20 B2B companies found their first customers. His research on the first ten customers found three channels: your personal network, the places customers already gather, and press. Most companies used the network plus at least one other, and press rarely got anyone started.
+
+Security has its own version of this story. Unusual Ventures' write up on Snyk shows a team that launched a free CLI tool in October 2015 and went straight at the Node.js community. Their logic was simple: "developers like depth, while security needs breadth." They had 1,000 users within four or five months. Then the catch. Developers did not hold the budget, so a paid tier barely sold until Snyk added an enterprise motion aimed at security leaders. The first enterprise customer arrived in March 2017.
+
+Our gathering place was KubeArmor, the CNCF runtime security project at the core of AccuKnox. I have run its community since January 2022, and the events page has the receipts:
+
+- A booth push that added 1.4K+ GitHub stars
+
+- A KubeCon India capture the flag with 500+ sign ups and 300+ new stars
+
+- Back to back #1 Startup Awards at Security BSides Bangalore in 2025 and 2026
+
+The Snyk lesson applies here too. Community earns trust with the people who run the clusters. You still need a second motion that reaches the person who signs.
+
+### Play three is an inbound engine that reports into pipeline
+
+Before this play, pipeline depended on events and outbound. The website described the product but did not create demand, and nobody could trace which channel produced which deal.
+
+We fixed it in a strict order:
+
+- Tracking first. GA4 events on every conversion that matters, account intelligence from Factors.ai, and clear target account lists for sales.
+
+- Content second. Landing pages for each use case and buyer, pillar content and free tools, shipped on a weekly cadence.
+
+- Scale third. Weekly pipeline reviews with sales, and more budget for the channels that convert.
+
+The GTM case study has the numbers. Website sessions grew 240.6% to 311K in 90 days, engaged sessions grew 253.1%, and the engine supports $2M in influenced pipeline a year on a $100K a year marketing budget.
+
+### Play four is AI search before the field caught on
+
+Security buyers now ask ChatGPT, Gemini and Google AI Overviews which CNAPP vendors to shortlist. If you are missing from that answer, you are missing from the deal before sales hears about it.
+
+We spent four to six months on SEO, SEM and backlinks, built a 23 type content matrix for AI visibility, and tracked share of AI answers on LLMLab. AccuKnox reached 27.72% AI visibility, mentioned in 12K of 42K tracked answers, and took the #1 Google answer slot for CNAPP vendors. That put us third in the security category behind Wiz and Palo Alto Networks, and ahead of Sysdig and Prisma Cloud.
+
+The full AEO and SEO case study is live, and the next issue of Pipeline Notes breaks this play down step by step.
+
+### Play five is partners who bring pipeline, not logos
+
+A partner program can look busy and produce nothing. Ours runs with distributors, MSSPs and resellers across India, MENA, APAC, Japan, Europe, Africa and the US, covering $35B of annual TAM.
+
+The part that makes it work is boring on purpose:
+
+- Joint pipeline reviews with each partner
+
+- Monthly business reviews with a shared view of every deal
+
+- The same battlecards and enablement our own sellers use
+
+A partner without a joint pipeline review is a logo on a slide. The partner revenue case study goes deeper.
+
+### Play six is enablement and systems that remove friction
+
+The last play is the least glamorous and the one people skip. We drove adoption through self paced training, free trials and event evangelism, and we turned recurring objections into battlecards.
+
+Then marketing started building tools for everyone else. Five org wide apps shipped by marketing now run across sales, finance and engineering. One of them, a price quote generator, cut the time to produce a quote from days to minutes. Every hour a seller does not spend on admin is an hour back on a call. See the systems page for the rest.
+
+### What the six plays share
+
+Look across all six and the pattern is plain. Story came first, demand came second, partners came third. Every motion reported into one number, influenced pipeline. And we kept running them after the first win, which is where most teams stop.
+
+My answer on the secret behind our 5x marketing growth is short. "Nothing fancy. We execute." If you want to see every result in one place, the case studies page has them all.
+
+### What to do this week
+
+- Write your positioning in one sentence and read it to three sellers. If they cannot repeat it, fix that before you buy traffic.
+
+- Add a GA4 event to every conversion that matters, so the next quarter of content can be judged on pipeline, not pageviews.
+
+- Ask ChatGPT and Gemini the shortlist question your buyer asks. Then run the AI visibility checker to see why you are in or out.
+
+- Pick one place your practitioners already gather and show up there every month.
+
+- Book a joint pipeline review with your best partner and bring a shared deal list.
+
+Next issue, I take play four apart line by line. Subscribe to Pipeline Notes at https://syedhadi.substack.com so it lands in your inbox.
+
+Get the next Pipeline Notes issue One GTM play you can run this week, with the numbers behind it. Free, every Tuesday.
+Subscribe on Substack Schedule meeting
+
+Keep reading
+
+### Related Insights
+
+GTM Fractional PMM in India: When It Works and How to Hire One Application security How I’d Evaluate an ASPM Platform If My Real Goal Was Cutting False Positives AI security How I Evaluate an AI SOC Tool for Regulated Environments Without Falling for the Demo
+
+“Syed is a top flight professional. Combining immense native intellect, great inter-personal skills, a positive “can do” attitude and immense commitment, Syed delivers incredible results.” Nat Natraj · Cofounder and Chief Client Advocate, AccuKnox
+
+“Syed has a very pleasant demeanor and is extremely diligent. He is a delight to work with and someone you want on your team.” Ron Victor · Entrepreneur, managed Syed at AccuKnox
+
+“If you are looking for someone who gets straight to the point and actually gets things done, Syed is your man.” Vineel Kurumella · Director of GTM and Strategic Partnerships, AccuKnox
+
+1 /3 All recommendations →
+
+Featured and Trusted by
 
 ---
 
@@ -6655,6 +7558,250 @@ A lump sum invested early gains more time in the market. A SIP spreads the purch
 CAGR measures one investment from start to end. XIRR measures a series of investments made on different dates, such as a SIP, and is the right return figure for SIPs.
 
 Related tools FIRE calculator Salary growth Prepay or invest
+
+---
+
+## The One Line Positioning Test Most Homepages Fail
+
+URL: https://syedcreates.com/one-line-positioning-test
+Summary: A one line test for your homepage hero, built on April Dunford's positioning framework and MKT1 messaging advice, with a real repositioning example.
+
+Syed Hadi Nov 24, 2026 · GTM · Pipeline Notes
+
+Read your homepage headline out loud to a buyer who has never heard of you. If they cannot tell you who it is for, what it replaces and why it wins, your positioning is not on the page yet. Most homepages fail this in under five seconds, and the fix starts long before anyone opens a design file.
+
+### Why one line carries so much weight
+
+When I became the first product marketer at AccuKnox, a Zero Trust CNAPP and AI security startup, we had a strong technical platform and no written positioning. Every rep told a different story. New product lines had no launch plan, and the field was crowded with well funded rivals.
+
+The homepage was a symptom, not the disease. We fixed it in the order I still use today: positioning first, then enablement, then launch. That three phase shape is what I now run as PMM in a box . I was part of the team on the 0 to $10M hypergrowth journey that followed, and the lesson I wrote down in the PMM case study still holds. Product marketing pays off when sales repeats the story without help.
+
+Your hero line is the cheapest place to check whether that story exists at all.
+
+### What positioning actually is
+
+April Dunford's quickstart guide to positioning defines it as how your product leads at something a clearly defined group of customers cares deeply about. She breaks it into five components, and she wants you to work through them in this order.
+
+- Competitive alternatives. What customers would do if you did not exist, including doing nothing.
+
+- Differentiated capabilities. What you have that those alternatives lack.
+
+- Value. The outcome those capabilities make possible for the buyer.
+
+- Target customers. The segment that cares most about that value.
+
+- Market category. The context that makes your value obvious to that segment.
+
+The order matters. Dunford argues that starting from features gives you positioning that sounds great in the office and means little to a buyer.
+
+In her guide to advanced B2B positioning in Lenny's Newsletter , she pushes the point further. "The prospect's view of competitive alternatives is the only one that matters." She also notes that B2B vendors typically lose about half their opportunities to whatever the prospect already uses, and she has worked with companies where that share passes 80%.
+
+So your real rival is often a spreadsheet, a manual process or the incumbent tool. A headline that only fights the startup you meet at conferences ignores the alternative that beats you most often.
+
+Her best known example is Janna Systems, an enterprise CRM up against Siebel, a far bigger rival. An investment bank customer showed the team what its relationship modelling was really worth. Janna repositioned as CRM for investment banks and, by Dunford's account, grew from under $2M to close to $80M over the next 18 months before Siebel acquired it. Same product, different frame.
+
+### Positioning is not the headline
+
+Emily Kramer at MKT1 draws a clean line between the two. Her MKT1 guide to positioning treats positioning as the core answer to who it is for, what it is and how it differs. Messaging is how you apply that answer to each audience, channel and funnel stage. "Positioning is ultimately about comparison," she writes.
+
+In a positioning and messaging teardown with Anthony Pierri , the two pull apart the Pocus homepage. Their advice fits almost every B2B SaaS site I look at.
+
+- Lead with one primary audience and send other segments to their own pages.
+
+- Pick one land use case instead of listing everything the product does.
+
+- Compare against the old way of working, not the newest competitor.
+
+- Keep generic revenue promises out of the top third of the page, because every sales tool makes them.
+
+### The one line test
+
+Write your homepage hero as one sentence. Then score it against four questions that map straight onto Dunford's components.
+
+The one line positioning test with four questions and two checks
+
+- Who. Does it name a buyer specific enough that the wrong buyer feels left out?
+
+- Instead of what. Does a reader know what this replaces, even if you never name a rival?
+
+- So what. Is the benefit an outcome the buyer pays for, such as revenue, cost or risk, rather than a feature?
+
+- What kind of thing. Does the category set the right expectations for price and competitors?
+
+Then run two quick checks.
+
+- The swap check. Put your top competitor's name in place of yours. If the line is still true, it does not differentiate you.
+
+- The stranger check. Show the line for five seconds to someone who fits your ICP and has never seen your site. Ask them to say back who it is for and what it replaces. If they guess wrong, the line fails, however much the team loves it.
+
+A line that passes usually follows a plain shape. Category for a specific buyer that delivers an outcome, without the old way. It will not win a copywriting award. It will get understood, and on a homepage that is the whole job.
+
+### A repositioning you can study
+
+Userlist is a small SaaS company with an unusually open write up. Cofounder Jane Portman describes in how Userlist overhauled its positioning how the team used Dunford's method in 2019.
+
+Userlist had sat in email automation, which invited comparisons with Drip, ConvertKit and ActiveCampaign. The team listed the real alternatives, including manual follow up with new customers and building a tool in house. They picked small SaaS teams as the target and moved into customer messaging, aiming to win a smaller pond inside a category Intercom dominates.
+
+The new headline became "Send the Right Message at the Right Time." The product itself did not change. Portman reports that prospects understood the product faster, though the post shares no hard numbers. I trust that more than a neat chart.
+
+Notice what moved. The alternatives came first, the segment narrowed, and the category followed. The headline was the last thing written.
+
+### How I run it on technical products
+
+Security, cloud and AI products fail this test more than most, because the team knows the technology too well. The hero ends up as a list of acronyms that only an insider can decode.
+
+That is why the first 30 days of PMM in a box are research, not copy. Ten to fifteen customer and prospect interviews, a teardown of the top three rivals, then a positioning framework. The homepage message rewrite comes after, because the line is only as good as the interviews behind it. If you want to see where your wider GTM stands first, the GTM health check asks, among other things, whether every rep can explain your positioning the same way in under a minute.
+
+### What to do this week
+
+- Paste your current hero line into a doc and score it on the four questions.
+
+- Run the swap check against your two closest competitors.
+
+- Show the line to three ICP buyers for five seconds each and write down what they say back.
+
+- Ask five reps what a customer would do if you did not exist. If the answers differ, fix the positioning before the copy.
+
+- Rewrite the line using the plain shape above, then test it again.
+
+If you want a second pair of eyes, request the free audit on PMM in a box and I will record the three changes I would make first.
+
+Subscribe to Pipeline Notes at https://syedhadi.substack.com for more practical GTM teardowns like this one.
+
+Get the next Pipeline Notes issue One GTM play you can run this week, with the numbers behind it. Free, every Tuesday.
+Subscribe on Substack Schedule meeting
+
+Keep reading
+
+### Related Insights
+
+GTM Fractional PMM in India: When It Works and How to Hire One Application security How I’d Evaluate an ASPM Platform If My Real Goal Was Cutting False Positives AI security How I Evaluate an AI SOC Tool for Regulated Environments Without Falling for the Demo
+
+“Syed is a top flight professional. Combining immense native intellect, great inter-personal skills, a positive “can do” attitude and immense commitment, Syed delivers incredible results.” Nat Natraj · Cofounder and Chief Client Advocate, AccuKnox
+
+“Syed has a very pleasant demeanor and is extremely diligent. He is a delight to work with and someone you want on your team.” Ron Victor · Entrepreneur, managed Syed at AccuKnox
+
+“If you are looking for someone who gets straight to the point and actually gets things done, Syed is your man.” Vineel Kurumella · Director of GTM and Strategic Partnerships, AccuKnox
+
+1 /3 All recommendations →
+
+Featured and Trusted by
+
+---
+
+## Partner Programs That Actually Ship Pipeline
+
+URL: https://syedcreates.com/partner-programs-that-ship-pipeline
+Summary: Why most SaaS partner programs stall at the logo wall, what Jay McBain and Crossbeam data show, and the cadence that turns partners into pipeline.
+
+Syed Hadi Dec 1, 2026 · GTM · Pipeline Notes
+
+Most partner programs do not fail loudly. They fail with a full logo wall, one enablement webinar and a CRM where nobody can say which partner touched which deal. Signing partners is easy. Getting them to bring pipeline is the actual job.
+
+### The ecosystem is bigger than your sales team
+
+Start with the size of the prize. In its 2025 IT spending forecast , Canalys projected worldwide IT spending to grow 8.3% to $5.44 trillion, with partner delivered IT making up 70% of the total addressable market. That share has slipped from 73% in 2023, but it is still most of the market.
+
+Delivery is only half the story. Jay McBain, chief analyst at Canalys and formerly at Forrester, frames partners as influence across the whole buying journey. In PartnerStack's partner playbook on scaling through ecosystem , he says you need at least three to four trusted voices around every buyer. "You can't win deals with zero influence." The same playbook cites Canalys research that the average buyer goes through 28 moments before choosing a vendor, and many of them involve partners, marketplaces or influencers.
+
+One more McBain point changes how you design a program. He counts 3.2 roles per partner. The same firm might refer a deal, resell it and run services around it. So build around the moments in the buyer journey, not around rigid partner types on a slide.
+
+Now the honest counterweight. Lenny Rachitsky's guide to scaling your B2B growth engine calls partnerships "huge if successful, massive time suck if not." He does not rank them among the three channels that drive most growth for top B2B companies.
+
+Both views are true. Partners influence a huge share of deals. A program only turns that influence into pipeline when you design for it on purpose.
+
+### Why most programs stall
+
+I see the same pattern again and again, and I wrote it up in how to build a SaaS partner program . A company signs 30 partners and puts the logos on a partner page. Six months later, two partners have registered a deal. Leadership decides partners do not work for them.
+
+The partners are rarely the problem. The program design is.
+
+I lived a version of this at AccuKnox. Enterprise security deals in India, MENA, Southeast Asia and other regions often run through distributors and resellers, and direct sales alone could not cover those markets. Signing partners was easy. Getting them to bring pipeline was not.
+
+Today the team runs partner programs in AI security and cloud security that cover $35B of annual TAM, with alliances across 7 regions and 40+ partner organisations. The partner revenue case study sums up the lesson in one line. Partners bring pipeline when you bring them named accounts and run a steady review cadence.
+
+### Five habits of programs that ship pipeline
+
+From logo wall to pipeline engine in five steps
+
+- Answer the money question first. Can you explain in two sentences how a partner makes money with your product? Margin, referral fee, services attach or account protection. If not, recruiting harder will not save you.
+
+- Recruit fewer, better partners. Ten active partners beat 50 signed ones. Screen before outreach. Do they sell to your buyer in your region today? Do they have technical staff who can run a proof of concept? Will a named person own your product inside their company?
+
+- Bring named accounts to the first meeting. Overlap their customer list with your ICP and walk in with five named accounts. That meeting moves faster than any partner deck.
+
+- Enable them to sell without you. A one page pitch, a demo they can run alone, battlecards for the rivals they meet most and a clear deal registration process.
+
+- Run a cadence you can trace. A short weekly pipeline call with top partners, a monthly business review with each active partner, and a quarterly cut of the inactive ones. If a deal is not in the shared tracker, it does not exist.
+
+### What account mapping did for LeanData
+
+Habit three sounds simple. The best public example I know of doing it at scale is LeanData's story on Crossbeam .
+
+LeanData's partner team used to map accounts in spreadsheets that went stale fast. After moving to automated overlap data, they put it where reps already work.
+
+- Account executives got Salesforce dashboards that ranked top prospects by partner overlap, reviewed in pipeline meetings and in biweekly calls with the partner team.
+
+- SDRs checked partner overlaps on each account and enrolled contacts in partner specific email sequences with joint value messaging.
+
+- Customer success got alerts when a consulting partner's customer showed a red health score.
+
+Crossbeam reports that partner influenced revenue at LeanData grew from 3% to 80% in a year, partner sourced revenue rose 15% year over year, and partner influenced deals carried 24% higher annual contract values.
+
+Treat that as one vendor published customer story, not a benchmark. The lesson still travels. Overlap data drove pipeline because it lived inside the weekly sales rhythm, not inside a quarterly partner deck.
+
+### Measure pipeline, not partners
+
+Pick a small set of numbers and review them every month.
+
+- Active partners, meaning partners with at least one open deal
+
+- Partner sourced pipeline and partner influenced pipeline
+
+- Win rate and deal size on partner deals compared with direct deals
+
+- Time from partner signup to first registered deal
+
+Logo count is not on the list. It never belonged there.
+
+Protect the partner's deals too. Partners invest time only when they trust you will not go around them. A simple deal registration form, a fixed protection window and fast written conflict resolution earn that trust. One badly handled channel conflict can undo months of work.
+
+If you want the full 90 day version of this, with partner ICP, account mapping, a partner kit and an MBR template, that is what Partner Revenue in a box covers.
+
+### What to do this week
+
+- Take the free partner program readiness score and note your three lowest answers.
+
+- Write the two sentence answer to how a partner makes money with you.
+
+- Pick your top three partners and map five named accounts for each.
+
+- Tag every partner sourced or influenced deal in your CRM, starting with open ones.
+
+- Book a 30 minute weekly pipeline call with your most active partner.
+
+- Cut or pause one partner with no open deals, and move that time to a producer.
+
+Subscribe to Pipeline Notes at https://syedhadi.substack.com for more practical GTM playbooks like this one.
+
+Get the next Pipeline Notes issue One GTM play you can run this week, with the numbers behind it. Free, every Tuesday.
+Subscribe on Substack Schedule meeting
+
+Keep reading
+
+### Related Insights
+
+GTM Fractional PMM in India: When It Works and How to Hire One Application security How I’d Evaluate an ASPM Platform If My Real Goal Was Cutting False Positives AI security How I Evaluate an AI SOC Tool for Regulated Environments Without Falling for the Demo
+
+“Syed is a top flight professional. Combining immense native intellect, great inter-personal skills, a positive “can do” attitude and immense commitment, Syed delivers incredible results.” Nat Natraj · Cofounder and Chief Client Advocate, AccuKnox
+
+“Syed has a very pleasant demeanor and is extremely diligent. He is a delight to work with and someone you want on your team.” Ron Victor · Entrepreneur, managed Syed at AccuKnox
+
+“If you are looking for someone who gets straight to the point and actually gets things done, Syed is your man.” Vineel Kurumella · Director of GTM and Strategic Partnerships, AccuKnox
+
+1 /3 All recommendations →
+
+Featured and Trusted by
 
 ---
 
@@ -8944,6 +10091,132 @@ A common rule is to save at least 20% of take home pay and raise it with every h
 It removes inflation so a future number can be compared with prices today. ₹2 crore in 25 years buys much less than ₹2 crore today.
 
 Related tools PMM salary benchmarks FIRE calculator SIP returns
+
+“Syed is a top flight professional. Combining immense native intellect, great inter-personal skills, a positive “can do” attitude and immense commitment, Syed delivers incredible results.” Nat Natraj · Cofounder and Chief Client Advocate, AccuKnox
+
+“Syed has a very pleasant demeanor and is extremely diligent. He is a delight to work with and someone you want on your team.” Ron Victor · Entrepreneur, managed Syed at AccuKnox
+
+“If you are looking for someone who gets straight to the point and actually gets things done, Syed is your man.” Vineel Kurumella · Director of GTM and Strategic Partnerships, AccuKnox
+
+1 /3 All recommendations →
+
+Featured and Trusted by
+
+---
+
+## Your Salary in 2046 and What to Do About It Now
+
+URL: https://syedcreates.com/salary-in-2046
+Summary: Where your salary lands in 2046 with 9% raises, job switches and 5% inflation. A worked Indian example, in rupees and today's money, plus what to do now.
+
+Syed Hadi Dec 17, 2026 · Money Notes · Pipeline Notes
+
+Twenty years from now, your salary will have a number on it that looks wild today. Some of that growth is real, and a big chunk of it is just inflation wearing a nice shirt. The decisions that split those two apart happen in the next few years, not in 2046.
+
+I built the salary growth calculator from the spreadsheet I have used since my first job. Here is the math behind it, and what it says you should do now.
+
+### What raises in India actually look like
+
+Start with the data, not with hope.
+
+- Aon's 2026 to 27 survey , covering more than 1,200 organisations across 45 industries, found an actual average increase of 9% in 2026 and projects 9.1% for 2027. Attrition rose to 18% in 2026.
+
+- The spread by sector is wide. Aon puts NBFCs at a projected 10.1% for 2027, while technology consulting and services sits at 6.6%.
+
+- The Deloitte India Talent Outlook 2026 also expects an average increment of 9.1% in 2026, against 9.0% in 2025. It found 14% of employees were promoted in 2025, while only 7% got the top performance rating.
+
+So a 9% average raise is a fair planning number. But averages hide people. Your sector, your rating and whether you move decide where you land.
+
+### Raises compound, switches jump
+
+A yearly raise multiplies last year's salary. That is compounding, and it is slow and steady. A job switch is a step change. It lifts your base once, and every raise after that compounds on the bigger base.
+
+Here is the part most people miss. Timing matters for what you earn along the way. In my illustrative model below, a single 30% switch in year 3 and the same switch in year 15 land on the same 2046 salary. But the early switch earns you about ₹60 lakh more in total over 20 years, because every year in between pays at the higher base.
+
+The lesson is simple. If a switch is coming, earlier usually beats later.
+
+### Inflation takes a quiet cut
+
+A raise only counts if it beats prices. The RBI projected CPI inflation for 2026 27 at 5.0% in its August 2026 policy statement , then raised it to 5.2% in October .
+
+Do the math on a 9% raise with 5.2% inflation. Your ₹12 lakh becomes ₹13.08 lakh, but in today's money that is about ₹12.43 lakh. Your real raise is roughly 3.6%, not 9%.
+
+A 6% raise in a 5.2% inflation year is almost flat. A 4% raise is a pay cut you did not sign up for.
+
+Three salary paths to 2046, in rupees and in today's money
+
+### A worked example with illustrative numbers
+
+These numbers are illustrative. They are not a forecast for you, and they assume RBI's 5.2% projection holds for 20 years, which it will not exactly do.
+
+Start at ₹12 lakh a year in 2026 and look at 2046.
+
+- Slow path, 7% a year. Salary in 2046 is about ₹46 lakh. In today's money, about ₹17 lakh.
+
+- Average path, 9% a year. About ₹67 lakh, or about ₹24 lakh in today's money.
+
+- Average raises plus three 30% switches, in years 3, 7 and 12. About ₹1.14 crore, or about ₹41 lakh in today's money.
+
+The gap between path 1 and path 3 is not luck. It is a few deliberate moves, made early, and then left alone to compound.
+
+Notice what happens to the "crore" too. Path 3 crosses ₹1 crore on paper, but it buys what about ₹41 lakh buys today. That is the number to plan rent, school fees and retirement around.
+
+### What the calculator does
+
+The salary growth calculator runs six rules.
+
+- Your in hand salary compounds by your expected increment every year
+
+- Needs and wants grow at their own rates, so rent can rise faster than groceries and EMIs stay flat
+
+- Whatever is left, the surplus, gets invested
+
+- The PPF share of that surplus equals your age by default, and the rest goes to equity
+
+- Each year's money compounds from that year to the age you check
+
+- The final corpus is divided by inflation so you also see it in today's money
+
+One tip. The calculator's PPF default is 8%, from the original spreadsheet. The current PPF rate is 7.1% for October to December 2026, so change that box before you trust the result. Run it at a 6% raise and at 14% too, and plan around the lower line.
+
+### Where to find the bigger raise
+
+Expenses have a floor, salary does not have a ceiling. That makes earning more the biggest lever you have.
+
+- Benchmark yourself. If you work in product marketing, check the India PMM salary benchmarks for 2026 , built from more than 3,300 public salaries on AmbitionBox and PayScale.
+
+- Look at the market every year, even when you are happy. The growth and PMM job board is updated weekly.
+
+- Ask for the promotion conversation early. Deloitte's data shows promotions run at roughly twice the share of top rated performers, so a top rating is not the only way up.
+
+### Protect the raise from lifestyle creep
+
+A bigger salary tends to pull spending up with it. In the calculator, if your surplus percentage keeps falling year after year, that is the warning sign. Step up your SIP with every raise so your lifestyle does not eat the whole hike, and use the FIRE calculator to see when that surplus makes work optional.
+
+This post is education, not financial advice. I am not a SEBI registered investment adviser, so speak to one before you act on any projection.
+
+### What to do this week
+
+- Enter your real in hand salary and spends in the salary growth calculator
+
+- Change the PPF rate to 7.1% and run it at a 6% and a 14% raise
+
+- Compare your last raise with 5.2% inflation and work out your real raise
+
+- Check your pay against a public benchmark for your role and city
+
+- Raise your SIP by at least the percentage of your next hike
+
+If this was useful, subscribe to Pipeline Notes at https://syedhadi.substack.com for the next Money Note.
+
+Get the next Pipeline Notes issue One GTM play you can run this week, with the numbers behind it. Free, every Tuesday.
+Subscribe on Substack Schedule meeting
+
+Keep reading
+
+### Related Insights
+
+GTM Fractional PMM in India: When It Works and How to Hire One Application security How I’d Evaluate an ASPM Platform If My Real Goal Was Cutting False Positives AI security How I Evaluate an AI SOC Tool for Regulated Environments Without Falling for the Demo
 
 “Syed is a top flight professional. Combining immense native intellect, great inter-personal skills, a positive “can do” attitude and immense commitment, Syed delivers incredible results.” Nat Natraj · Cofounder and Chief Client Advocate, AccuKnox
 
