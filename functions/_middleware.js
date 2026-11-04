@@ -50,7 +50,9 @@ export async function onRequest(ctx) {
     let text = await res.text();
     if (path === '/sitemap.xml') {
       for (const s of future) text = text.replace(new RegExp('\\s*<url><loc>https://syedcreates\\.com/' + s + '</loc>.*?</url>', 'g'), '');
-    } else if (path === '/llms.txt' || path === '/llms-full.txt') {
+    } else if (path === '/llms-full.txt') {
+      text = text.split('\n---\n').filter((sec) => !future.some((s) => sec.includes('URL: https://syedcreates.com/' + s + '\n') || sec.trimEnd().endsWith('URL: https://syedcreates.com/' + s))).join('\n---\n');
+    } else if (path === '/llms.txt') {
       text = text.split('\n').filter((l) => !future.some((s) => l.includes('syedcreates.com/' + s + ')'))).join('\n');
     } else if (path === '/assets/search-index.json') {
       const data = JSON.parse(text);
