@@ -2737,3 +2737,12 @@ html.srch-lock,html.srch-lock body{overflow:hidden}
 @keyframes btTw{0%,100%{opacity:0;transform:scale(.4) rotate(0)}45%{opacity:1;transform:scale(1) rotate(45deg)}70%{opacity:0;transform:scale(.6) rotate(90deg)}}
 :root[data-theme="dark"] .brand-t{background-image:linear-gradient(100deg,#fff 0%,#fff 40%,#a78bfa 48%,#f0abfc 52%,#fff 60%,#fff 100%)}
 @media (prefers-reduced-motion:reduce){.brand-t{animation:none;color:var(--ink);background:none}.bt-stars{display:none}}
+
+/* 2026-11-04 Nav hover fix: the broad .dd-menu.mm a:hover{background:none} was stripping the gradient CTA and the dark cards, leaving white text on a pale background */
+.dd-menu.mm a.gb-cta:hover,.dd-menu.mm a.gb-cta:focus-visible{background:linear-gradient(100deg,#4a2fe0,#7c3aed 55%,#a3338f);color:#fff}
+.dd-menu.mm a.gb-cta:hover b,.dd-menu.mm a.gb-cta:hover i,.dd-menu.mm a.gb-cta:hover svg{color:#fff;stroke:#fff}
+.dd-menu.mm a.mw-card:hover,.dd-menu.mm a.mw-card:focus-visible{background:linear-gradient(160deg,#241b52,#4523a8);color:#fff}
+.dd-menu.mm a.mw-card:hover h4,.dd-menu.mm a.mw-card:hover .h4,.dd-menu.mm a.mw-card:hover p,.dd-menu.mm a.mw-card:hover .k{color:#fff}
+.dd-menu.mm .mw-item,.dd-menu.mm .mw-item *{transition:background .18s,box-shadow .18s,transform .18s}
+.dd-menu.mm a.mw-photo .mw-ph-t,.dd-menu.mm a.mw-photo .mw-ph-t b,.dd-menu.mm a.mw-photo .mw-ph-t em,.dd-menu.mm a.mw-photo:hover .mw-ph-t b,.dd-menu.mm a.mw-photo:hover .mw-ph-t em{color:#fff}
+.dd-menu.mm a.mw-photo .mw-ph-t b{text-shadow:0 1px 12px rgba(10,6,30,.55)}
