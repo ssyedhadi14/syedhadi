@@ -25,7 +25,7 @@ Engagements come in three sizes. Small projects run 30 days (phase one of the ro
 - [How to install Claude skills](https://syedcreates.com/skill-pack#install): upload the zip in Claude settings, or copy the folder to ~/.claude/skills for Claude Code.
 
 ## Proof of work
-- [Case studies](https://syedcreates.com/case-studies): AI search visibility, 240% traffic growth, $500K to $1M+ ARR, systems, community and partner programs at a security startup.
+- [Case studies](https://syedcreates.com/case-studies): AI search visibility, 240% traffic growth, 0 to $10M hypergrowth, systems, community and partner programs at a security startup.
 - [GTM engine](https://syedcreates.com/gtm-engine): how an AI native GTM engine put AccuKnox ahead of Sysdig in AI visibility, grew website sessions 240% in 90 days and ranked for CNAPP vendors.
 - [GTM systems, apps and AI agents](https://syedcreates.com/systems): vibe coded apps, Slack agents and self driving dashboards built by the AccuKnox marketing team.
 - [Recognition](https://syedcreates.com/recognition): AccuKnox campaigns, 12 live moments in a quarter and analyst recognition from Gartner, Frost and Sullivan, KuppingerCole, Omdia and GigaOm.
@@ -33,7 +33,7 @@ Engagements come in three sizes. Small projects run 30 days (phase one of the ro
 
 ## Case studies by service
 - [GTM case study](https://syedcreates.com/gtm-case-study): an inbound GTM engine that grew sessions 240% in 90 days and supports $2M in influenced pipeline a year.
-- [PMM case study](https://syedcreates.com/pmm-case-study): founding product marketing work that helped double ARR from $500K to $1M+.
+- [PMM case study](https://syedcreates.com/pmm-case-study): founding product marketing work on a 0 to $10M hypergrowth journey.
 - [AEO/SEO case study](https://syedcreates.com/aeo-seo-case-study): 27.72% AI visibility, 12K of 42K tracked AI answers and the #1 Google answer slot for CNAPP vendors.
 - [Content case study](https://syedcreates.com/content-case-study): a 23 type content matrix and 12 live moments in one quarter.
 - [Partner revenue case study](https://syedcreates.com/partner-revenue-case-study): partner programs with distributors, MSSPs and resellers across India, MENA, APAC, Japan, Europe, Africa and the US.

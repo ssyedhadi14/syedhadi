@@ -11,7 +11,7 @@ WORK = [
      "/img/li/four-years-accuknox.jpg", "Syed at the AccuKnox booth in front of the Zero Trust Security screen",
      "Make a technical product easy to buy.", ["Positioning sales uses", "Personas mapped to objections", "Launches that land"],
      "People do not buy what you do, they buy why you do it.", "Simon Sinek",
-     "/img/li/future-of-gtm-2026-event.jpg", "A product story the whole company tells the same way", "ARR grew from $500K to $1M+ with the growth team.", "See the GTM engine"),
+     "/img/li/future-of-gtm-2026-event.jpg", "A product story the whole company tells the same way", "Part of a 0 to $10M hypergrowth journey.", "See the GTM engine"),
     ("partner", "Channel Partnerships", "Partners who sell, not sign", "/recognition",
      "/img/li/india-devsec-show-2025.jpg", "Receiving recognition on stage at India DevSec Show 2025",
      "Partners who bring pipeline, not logos.", ["Programs live in 8 regions", "Enablement partners use", "Deal registration that works"],

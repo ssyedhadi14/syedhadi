@@ -35,7 +35,7 @@ WORK = [
      ["Security startups", "Founders", "Sales teams"], ["Figma", "Claude", "Lovable", "WordPress"],
      "A product story the whole company tells the same way",
      "First product marketer at AccuKnox, from the founding team to leading growth.",
-     "ARR grew from $500K to $1M+ with the growth team", "See the GTM engine", "gtm-engine.html"),
+     "Part of a 0 to $10M hypergrowth journey", "See the GTM engine", "gtm-engine.html"),
     ("partner", "partner", "Channel Partnerships", "Partners who sell, not sign",
      "A partner agreement is the start, not the win. I run programs that turn distributors, MSSPs and resellers into joint pipeline.",
      ["Partner programs with tiers, deal reg and enablement", "Account mapping with each partner's sellers",

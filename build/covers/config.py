@@ -24,7 +24,7 @@ COVERS = {
     # Case studies and proof
     "case-studies": ("Real numbers. Real", "wins", "Case studies", "trophy"),
     "gtm-case-study": ("From quiet site to pipeline", "machine", "GTM case study", "chart"),
-    "pmm-case-study": ("Half a million to a million", "plus", "PMM case study", "trophy"),
+    "pmm-case-study": ("From zero to ten", "million", "PMM case study", "trophy"),
     "aeo-seo-case-study": ("27.72% of AI answers. Not", "luck", "AEO/SEO case study", "search"),
     "content-case-study": ("Content that showed up and", "shipped", "Content case study", "megaphone"),
     "partner-revenue-case-study": ("One program. Many", "markets", "Partner case study", "puzzle"),

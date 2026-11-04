@@ -58,8 +58,8 @@ rep("<p>Seven years across SaaS, open source and community, six of them building
     "<p>Seven years across SaaS, <a href=\"/events\">open source and community</a>, six of them building AccuKnox. Pick a role to open it, or read the <a href=\"/about\">full story on the about page</a>.</p>", label="exp links")
 rep("<p>Every capability below carries a line from work that already shipped.</p>",
     "<p>Every capability below carries a line from work that already shipped. Each one is also a <a href=\"/gtm-pmm-in-a-box\">90 day box</a> you can hire.</p>", label="work head link")
-rep("First product marketer at AccuKnox, part of the team that grew ARR from $500K to $1M+.</div>",
-    "First product marketer at AccuKnox, part of the team that grew ARR from $500K to $1M+. <a href=\"/pmm-case-study\">Read the PMM case study &rarr;</a></div>", label="svc1")
+rep("First product marketer at AccuKnox, part of the team on the 0 to $10M hypergrowth journey.</div>",
+    "First product marketer at AccuKnox, part of the team on the 0 to $10M hypergrowth journey. <a href=\"/pmm-case-study\">Read the PMM case study &rarr;</a></div>", label="svc1")
 rep("GTM for new product lines that drove a sharp rise in inbound leads.</div>",
     "GTM for new product lines that drove a sharp rise in inbound leads. <a href=\"/gtm-case-study\">Read the GTM case study &rarr;</a></div>", label="svc3")
 rep("$2M influenced pipeline on $100K of annual marketing spend.</div>",

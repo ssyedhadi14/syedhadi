@@ -22,7 +22,7 @@ COPY = {
     "partner-revenue-in-a-box": ("Partners that bring deals, not", "drama.", "Signed is nice. Selling is", "better"),
     "case-studies": ("Receipts, not", "promises.", "Real numbers. Real", "wins"),
     "gtm-case-study": ("240% more traffic in 90", "days.", "From quiet site to pipeline", "machine"),
-    "pmm-case-study": ("We doubled ARR. Here's", "how.", "Half a million to a million", "plus"),
+    "pmm-case-study": ("Zero to $10M. Here's", "how.", "From zero to ten", "million"),
     "aeo-seo-case-study": ("From invisible to AI's", "favourite.", "27.72% of AI answers. Not", "luck"),
     "content-case-study": ("12 live moments. One wild", "quarter.", "Content that showed up and", "shipped"),
     "partner-revenue-case-study": ("Partners across the map. Pipeline on", "repeat.", "One program. Many", "markets"),
