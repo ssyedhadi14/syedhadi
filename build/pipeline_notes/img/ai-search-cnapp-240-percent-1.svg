@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" font-family="Plus Jakarta Sans, Inter, sans-serif">
+<rect width="1200" height="675" fill="#ffffff"/>
+<defs><marker id="ar" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#1c1640"/></marker></defs>
+<text x="600" y="70" text-anchor="middle" font-size="40" font-weight="800" fill="#1c1640">From invisible to the answer</text>
+<text x="600" y="108" text-anchor="middle" font-size="24" fill="#5b3df5">The three phase AI search play behind a CNAPP vendor</text>
+<rect x="60" y="140" width="330" height="300" rx="22" fill="#f6f3ff" stroke="#5b3df5" stroke-width="3"/>
+<rect x="60" y="140" width="330" height="64" rx="22" fill="#5b3df5"/>
+<rect x="60" y="180" width="330" height="24" fill="#5b3df5"/>
+<text x="225.0" y="182" text-anchor="middle" font-size="26" font-weight="800" fill="#ffffff">Phase 1</text>
+<text x="225.0" y="250" text-anchor="middle" font-size="28" font-weight="800" fill="#1c1640">Audit and baseline</text>
+<circle cx="94" cy="302" r="7" fill="#5b3df5"/>
+<text x="112" y="310" font-size="23" fill="#1c1640">Technical SEO fixes</text>
+<circle cx="94" cy="346" r="7" fill="#5b3df5"/>
+<text x="112" y="354" font-size="23" fill="#1c1640">AI answer baseline</text>
+<circle cx="94" cy="390" r="7" fill="#5b3df5"/>
+<text x="112" y="398" font-size="23" fill="#1c1640">Competitor gap list</text>
+<line x1="396" y1="290" x2="428" y2="290" stroke="#1c1640" stroke-width="4" marker-end="url(#ar)"/>
+<rect x="435" y="140" width="330" height="300" rx="22" fill="#f6f3ff" stroke="#7c5cff" stroke-width="3"/>
+<rect x="435" y="140" width="330" height="64" rx="22" fill="#7c5cff"/>
+<rect x="435" y="180" width="330" height="24" fill="#7c5cff"/>
+<text x="600.0" y="182" text-anchor="middle" font-size="26" font-weight="800" fill="#ffffff">Phase 2</text>
+<text x="600.0" y="250" text-anchor="middle" font-size="28" font-weight="800" fill="#1c1640">Build to be quoted</text>
+<circle cx="469" cy="302" r="7" fill="#7c5cff"/>
+<text x="487" y="310" font-size="23" fill="#1c1640">23 type content matrix</text>
+<circle cx="469" cy="346" r="7" fill="#7c5cff"/>
+<text x="487" y="354" font-size="23" fill="#1c1640">Answer under the H1</text>
+<circle cx="469" cy="390" r="7" fill="#7c5cff"/>
+<text x="487" y="398" font-size="23" fill="#1c1640">Question led H2s</text>
+<line x1="771" y1="290" x2="803" y2="290" stroke="#1c1640" stroke-width="4" marker-end="url(#ar)"/>
+<rect x="810" y="140" width="330" height="300" rx="22" fill="#f6f3ff" stroke="#b43ea0" stroke-width="3"/>
+<rect x="810" y="140" width="330" height="64" rx="22" fill="#b43ea0"/>
+<rect x="810" y="180" width="330" height="24" fill="#b43ea0"/>
+<text x="975.0" y="182" text-anchor="middle" font-size="26" font-weight="800" fill="#ffffff">Phase 3</text>
+<text x="975.0" y="250" text-anchor="middle" font-size="28" font-weight="800" fill="#1c1640">Measure, compound</text>
+<circle cx="844" cy="302" r="7" fill="#b43ea0"/>
+<text x="862" y="310" font-size="23" fill="#1c1640">Weekly answer share</text>
+<circle cx="844" cy="346" r="7" fill="#b43ea0"/>
+<text x="862" y="354" font-size="23" fill="#1c1640">Refresh lost answers</text>
+<circle cx="844" cy="390" r="7" fill="#b43ea0"/>
+<text x="862" y="398" font-size="23" fill="#1c1640">Wins into sales decks</text>
+<rect x="60" y="480" width="1080" height="150" rx="22" fill="#1c1640"/>
+<text x="195" y="550" text-anchor="middle" font-size="40" font-weight="800" fill="#ffd84d">27.72%</text>
+<text x="195" y="592" text-anchor="middle" font-size="22" fill="#ffffff">AI visibility</text>
+<text x="465" y="550" text-anchor="middle" font-size="40" font-weight="800" fill="#ffd84d">12K of 42K</text>
+<text x="465" y="592" text-anchor="middle" font-size="22" fill="#ffffff">answers mention us</text>
+<text x="735" y="550" text-anchor="middle" font-size="40" font-weight="800" fill="#ffd84d">#1</text>
+<text x="735" y="592" text-anchor="middle" font-size="22" fill="#ffffff">Google slot, CNAPP</text>
+<text x="1005" y="550" text-anchor="middle" font-size="40" font-weight="800" fill="#ffd84d">+240%</text>
+<text x="1005" y="592" text-anchor="middle" font-size="22" fill="#ffffff">sessions in 90 days</text>
+</svg>

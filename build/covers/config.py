@@ -5,6 +5,16 @@
 # Owner: Syed Hadi
 
 COVERS = {
+    "0-to-10m-10-lessons": ("Ten lessons from a hypergrowth", "year", "Year end issue", "trophy"),
+    "gtm-lessons-from-leaders-2026": ("5 ideas I am stealing for", "2027", "GTM reading list", "sparkles"),
+    "salary-in-2046": ("Raises compound. Switches", "jump", "Salary growth India", "chart"),
+    "23-content-types-5-that-sold": ("Make fewer things that", "sell", "Content that sells", "doc"),
+    "2m-pipeline-100k-budget": ("Spend less, track", "everything", "Pipeline math", "funnel"),
+    "partner-programs-that-ship-pipeline": ("Logos are not", "pipeline", "Partner revenue", "puzzle"),
+    "one-line-positioning-test": ("Can a stranger say what you", "do", "Positioning test", "megaphone"),
+    "fire-math-epf-ppf-nps": ("Retire early, but first do the", "math", "FIRE in India", "coins"),
+    "ai-search-cnapp-240-percent": ("From invisible to the", "answer", "AI Search Playbook", "search"),
+    "gtm-plays-behind-0-to-10m": ("0 to $10M, one play at a", "time", "GTM Playbook", "rocket"),
     # Home and about
     "index": ("Make a technical product easy to", "buy", "Syed Hadi, PMM and partnerships", "idcard"),
     "about": ("The human behind the", "pipeline", "About me", "idcard"),

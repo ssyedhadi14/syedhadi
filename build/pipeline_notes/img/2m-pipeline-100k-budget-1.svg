@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" font-family="Plus Jakarta Sans, Inter, sans-serif">
+  <rect width="1200" height="675" fill="#f6f3ff"/>
+  <text x="600" y="70" text-anchor="middle" font-size="40" font-weight="800" fill="#1c1640">Pipeline math in five lines</text>
+  <text x="600" y="112" text-anchor="middle" font-size="24" fill="#5b3df5">Made up numbers, real method</text>
+  <g font-size="24">
+    <rect x="40" y="160" width="208" height="230" rx="20" fill="#ffffff" stroke="#5b3df5" stroke-width="3"/>
+    <text x="144" y="205" text-anchor="middle" font-size="22" font-weight="800" fill="#5b3df5">01</text>
+    <text x="144" y="245" text-anchor="middle" font-weight="700" fill="#1c1640">Revenue</text>
+    <text x="144" y="275" text-anchor="middle" font-weight="700" fill="#1c1640">target</text>
+    <text x="144" y="345" text-anchor="middle" font-size="34" font-weight="800" fill="#b43ea0">$600K</text>
+
+    <rect x="268" y="160" width="208" height="230" rx="20" fill="#ffffff" stroke="#5b3df5" stroke-width="3"/>
+    <text x="372" y="205" text-anchor="middle" font-size="22" font-weight="800" fill="#5b3df5">02</text>
+    <text x="372" y="245" text-anchor="middle" font-weight="700" fill="#1c1640">Divide by</text>
+    <text x="372" y="275" text-anchor="middle" font-weight="700" fill="#1c1640">win rate</text>
+    <text x="372" y="345" text-anchor="middle" font-size="34" font-weight="800" fill="#b43ea0">20%</text>
+
+    <rect x="496" y="160" width="208" height="230" rx="20" fill="#ffffff" stroke="#5b3df5" stroke-width="3"/>
+    <text x="600" y="205" text-anchor="middle" font-size="22" font-weight="800" fill="#5b3df5">03</text>
+    <text x="600" y="245" text-anchor="middle" font-weight="700" fill="#1c1640">Pipeline</text>
+    <text x="600" y="275" text-anchor="middle" font-weight="700" fill="#1c1640">needed</text>
+    <text x="600" y="345" text-anchor="middle" font-size="34" font-weight="800" fill="#b43ea0">$3M</text>
+
+    <rect x="724" y="160" width="208" height="230" rx="20" fill="#ffffff" stroke="#5b3df5" stroke-width="3"/>
+    <text x="828" y="205" text-anchor="middle" font-size="22" font-weight="800" fill="#5b3df5">04</text>
+    <text x="828" y="245" text-anchor="middle" font-weight="700" fill="#1c1640">Marketing</text>
+    <text x="828" y="275" text-anchor="middle" font-weight="700" fill="#1c1640">share 35%</text>
+    <text x="828" y="345" text-anchor="middle" font-size="30" font-weight="800" fill="#b43ea0">35 opps</text>
+
+    <rect x="952" y="160" width="208" height="230" rx="20" fill="#5b3df5"/>
+    <text x="1056" y="205" text-anchor="middle" font-size="22" font-weight="800" fill="#ffd84d">05</text>
+    <text x="1056" y="245" text-anchor="middle" font-weight="700" fill="#ffffff">x $700 per</text>
+    <text x="1056" y="275" text-anchor="middle" font-weight="700" fill="#ffffff">opportunity</text>
+    <text x="1056" y="345" text-anchor="middle" font-size="30" font-weight="800" fill="#ffd84d">$24.5K</text>
+  </g>
+  <g fill="#7c5cff">
+    <polygon points="250,263 266,275 250,287"/>
+    <polygon points="478,263 494,275 478,287"/>
+    <polygon points="706,263 722,275 706,287"/>
+    <polygon points="934,263 950,275 934,287"/>
+  </g>
+  <rect x="40" y="430" width="1120" height="200" rx="24" fill="#1c1640"/>
+  <text x="600" y="490" text-anchor="middle" font-size="28" font-weight="700" fill="#ffffff">The real version at AccuKnox</text>
+  <text x="330" y="570" text-anchor="middle" font-size="48" font-weight="800" fill="#ffd84d">$100K a year</text>
+  <text x="600" y="568" text-anchor="middle" font-size="40" font-weight="800" fill="#7c5cff">20 to 1</text>
+  <text x="870" y="570" text-anchor="middle" font-size="48" font-weight="800" fill="#ffd84d">$2M pipeline</text>
+  <text x="600" y="610" text-anchor="middle" font-size="22" fill="#ffffff">Influenced pipeline a year on a $25K a quarter budget</text>
+</svg>

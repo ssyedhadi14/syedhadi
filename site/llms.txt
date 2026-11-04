@@ -54,6 +54,19 @@ Engagements come in three sizes. Small projects run 30 days (phase one of the ro
 - [Partner Program Readiness Score](https://syedcreates.com/partner-readiness-score): 10 question score for whether a SaaS partner program is ready to bring pipeline.
 - [GTM Health Check](https://syedcreates.com/gtm-health-check): 10 question go to market health score for B2B SaaS and security startups.
 
+
+## Pipeline Notes
+- [The 6 GTM Plays Behind a 0 to $10M Security Startup](https://syedcreates.com/gtm-plays-behind-0-to-10m): Six GTM plays behind the AccuKnox 0 to $10M run, from positioning and community to AI search and partners, each tied to real numbers you can check.
+- [How AI Search Put a CNAPP Vendor in the Answer](https://syedcreates.com/ai-search-cnapp-240-percent): How AccuKnox reached 27.72% AI visibility and the top Google answer for CNAPP vendors, plus the engine that grew sessions 240% in 90 days.
+- [FIRE Math for Indian Salaried Employees, EPF to NPS](https://syedcreates.com/fire-math-epf-ppf-nps): The FIRE math Indian salaried employees skip. How EPF, PPF and NPS change your FIRE number, why 25x needs an inflation check, and a worked example.
+- [The One Line Positioning Test Most Homepages Fail](https://syedcreates.com/one-line-positioning-test): A one line test for your homepage hero, built on April Dunford's positioning framework and MKT1 messaging advice, with a real repositioning example.
+- [Partner Programs That Actually Ship Pipeline](https://syedcreates.com/partner-programs-that-ship-pipeline): Why most SaaS partner programs stall at the logo wall, what Jay McBain and Crossbeam data show, and the cadence that turns partners into pipeline.
+- [How to Build $2M of Pipeline on a $100K Marketing Budget](https://syedcreates.com/2m-pipeline-100k-budget): The pipeline math behind $2M of influenced pipeline a year on a $100K budget, plus what Kyle Poyar's 2026 data and Atlassian teach about lean B2B demand.
+- [23 B2B Content Types and the 5 I Would Keep](https://syedcreates.com/23-content-types-5-that-sold): We ran a 23 type content matrix and 12 live moments in one quarter. Here are the 5 formats I would keep with a small team, and why each earns its place.
+- [Your Salary in 2046 and What to Do About It Now](https://syedcreates.com/salary-in-2046): Where your salary lands in 2046 with 9% raises, job switches and 5% inflation. A worked Indian example, in rupees and today's money, plus what to do now.
+- [5 GTM Leaders Who Changed How I Work in 2026](https://syedcreates.com/gtm-lessons-from-leaders-2026): Five ideas from April Dunford, Kyle Poyar, Emily Kramer, Ethan Smith and Elena Verna, and how I would apply each one at a security startup.
+- [0 to $10M, 10 GTM Lessons From 2026](https://syedcreates.com/0-to-10m-10-lessons): Ten year end GTM lessons from a 0 to $10M hypergrowth run at a cloud security startup, each tied to real work, numbers and outside research.
+
 ## Insights
 - [Insights](https://syedcreates.com/insights): buyer guides on CNAPP, ASPM, AI-SPM and AI agent security, plus GTM and partner program playbooks.
 - [Fractional PMM in India: When It Works and How to Hire One](https://syedcreates.com/fractional-pmm-india)
@@ -84,7 +97,7 @@ Engagements come in three sizes. Small projects run 30 days (phase one of the ro
 - [About](https://syedcreates.com/about): services, GTM journey since 2021 and how Syed builds strategy with AI.
 - [Brand kit](https://syedcreates.com/brand): official logo files (SVG and PNG), fonts (Plus Jakarta Sans, Instrument Serif, Inter, JetBrains Mono), colour palette, approved headshot, short and medium bios, and a PDF brand kit for event organisers and press.
 - [Adventure](https://syedcreates.com/adventure): skydiving over Dubai, the Bengaluru to Ooty road trip, the walk from Najaf to Karbala and travel essays.
-- [Newsletter, Pipeline Notes](https://syedhadi.substack.com): one GTM play that moved pipeline, the numbers behind it and the template, every other Tuesday.
+- [Newsletter, Pipeline Notes](https://syedhadi.substack.com): one GTM play that moved pipeline, the numbers behind it and the template, every Tuesday.
 
 ## Calculator menu
 All calculators sit under the Calculator item in the site navigation: Salary Growth Calculator, Loan EMI and Prepay Planner, BMI and Healthy Habits, Car Mileage and Running Cost, FIRE Calculator India, Mutual Fund Returns, PMM Salary Calculator, Qums Calculator, plus the SEO and AEO Score, AI Visibility Checker, GTM Health Check and Partner Readiness Score.

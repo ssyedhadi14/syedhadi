@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" font-family="Plus Jakarta Sans, Inter, sans-serif">
+  <rect width="1200" height="675" fill="#f6f3ff"/>
+  <text x="60" y="74" font-size="40" font-weight="800" fill="#1c1640">₹12 lakh in 2026. Where is it in 2046?</text>
+  <text x="60" y="112" font-size="23" fill="#5b3df5">Illustrative, yearly pay, inflation assumed at 5.2% a year</text>
+
+  <!-- legend -->
+  <rect x="760" y="134" width="28" height="28" rx="6" fill="#5b3df5"/>
+  <text x="798" y="157" font-size="22" fill="#1c1640">On paper</text>
+  <rect x="930" y="134" width="28" height="28" rx="6" fill="#ffd84d"/>
+  <text x="968" y="157" font-size="22" fill="#1c1640">Today's money</text>
+
+  <!-- baseline -->
+  <line x1="60" y1="560" x2="1140" y2="560" stroke="#1c1640" stroke-width="3"/>
+
+  <!-- scale: 1.14 Cr = 360px, so 1 L = 3.158px -->
+  <!-- Path 1: 46 L / 17 L -->
+  <rect x="120" y="415" width="120" height="145" rx="8" fill="#5b3df5"/>
+  <text x="180" y="402" font-size="26" font-weight="800" fill="#1c1640" text-anchor="middle">₹46 L</text>
+  <rect x="250" y="506" width="120" height="54" rx="8" fill="#ffd84d"/>
+  <text x="310" y="493" font-size="26" font-weight="800" fill="#1c1640" text-anchor="middle">₹17 L</text>
+  <text x="245" y="598" font-size="24" font-weight="700" fill="#1c1640" text-anchor="middle">7% raises</text>
+  <text x="245" y="630" font-size="22" fill="#5b3df5" text-anchor="middle">slow path</text>
+
+  <!-- Path 2: 67 L / 24 L -->
+  <rect x="480" y="348" width="120" height="212" rx="8" fill="#5b3df5"/>
+  <text x="540" y="335" font-size="26" font-weight="800" fill="#1c1640" text-anchor="middle">₹67 L</text>
+  <rect x="610" y="484" width="120" height="76" rx="8" fill="#ffd84d"/>
+  <text x="670" y="471" font-size="26" font-weight="800" fill="#1c1640" text-anchor="middle">₹24 L</text>
+  <text x="605" y="598" font-size="24" font-weight="700" fill="#1c1640" text-anchor="middle">9% raises</text>
+  <text x="605" y="630" font-size="22" fill="#5b3df5" text-anchor="middle">survey average</text>
+
+  <!-- Path 3: 114 L / 41 L -->
+  <rect x="840" y="200" width="120" height="360" rx="8" fill="#5b3df5"/>
+  <text x="900" y="190" font-size="26" font-weight="800" fill="#1c1640" text-anchor="middle">₹1.14 Cr</text>
+  <rect x="970" y="431" width="120" height="129" rx="8" fill="#ffd84d"/>
+  <text x="1030" y="418" font-size="26" font-weight="800" fill="#1c1640" text-anchor="middle">₹41 L</text>
+  <text x="965" y="598" font-size="24" font-weight="700" fill="#1c1640" text-anchor="middle">9% plus 3 switches</text>
+  <text x="965" y="630" font-size="22" fill="#5b3df5" text-anchor="middle">30% jumps in years 3, 7, 12</text>
+</svg>

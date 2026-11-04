@@ -2746,3 +2746,9 @@ html.srch-lock,html.srch-lock body{overflow:hidden}
 .dd-menu.mm .mw-item,.dd-menu.mm .mw-item *{transition:background .18s,box-shadow .18s,transform .18s}
 .dd-menu.mm a.mw-photo .mw-ph-t,.dd-menu.mm a.mw-photo .mw-ph-t b,.dd-menu.mm a.mw-photo .mw-ph-t em,.dd-menu.mm a.mw-photo:hover .mw-ph-t b,.dd-menu.mm a.mw-photo:hover .mw-ph-t em{color:#fff}
 .dd-menu.mm a.mw-photo .mw-ph-t b{text-shadow:0 1px 12px rgba(10,6,30,.55)}
+
+/* 2026-11-04 Pipeline Notes posts */
+.pt-body .pn-fig{margin:28px 0;border-radius:16px;overflow:hidden;border:1px solid var(--line,#e7e3f5);background:#f6f3ff}
+.pt-body .pn-fig img{display:block;width:100%;height:auto}
+.pt-body .pn-fig figcaption{font-size:13.5px;color:var(--ink-2);padding:10px 16px;background:var(--bg,#fff)}
+.pt-body blockquote{border-left:3px solid var(--accent);padding:4px 0 4px 18px;margin:22px 0;color:var(--ink-2)}

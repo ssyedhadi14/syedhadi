@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" font-family="Plus Jakarta Sans, Inter, sans-serif">
+  <rect width="1200" height="675" fill="#f6f3ff"/>
+  <text x="600" y="68" text-anchor="middle" font-size="40" font-weight="800" fill="#1c1640">23 content types, 5 worth keeping</text>
+  <rect x="40" y="110" width="340" height="250" rx="22" fill="#ffffff" stroke="#7c5cff" stroke-width="3"/>
+  <text x="210" y="185" text-anchor="middle" font-size="72" font-weight="800" fill="#7c5cff">13</text>
+  <text x="210" y="235" text-anchor="middle" font-size="26" font-weight="700" fill="#1c1640">drive traffic</text>
+  <text x="210" y="280" text-anchor="middle" font-size="22" fill="#1c1640">lists, FAQs, checklists,</text>
+  <text x="210" y="312" text-anchor="middle" font-size="22" fill="#1c1640">definitions, guides</text>
+  <rect x="40" y="385" width="340" height="250" rx="22" fill="#ffffff" stroke="#b43ea0" stroke-width="3"/>
+  <text x="210" y="460" text-anchor="middle" font-size="72" font-weight="800" fill="#b43ea0">10</text>
+  <text x="210" y="510" text-anchor="middle" font-size="26" font-weight="700" fill="#1c1640">drive AI visibility</text>
+  <text x="210" y="545" text-anchor="middle" font-size="26" font-weight="700" fill="#1c1640">and conversions</text>
+  <text x="210" y="590" text-anchor="middle" font-size="22" fill="#1c1640">comparisons, free tools</text>
+  <polygon points="400,210 520,330 400,330" fill="#7c5cff" opacity="0.35"/>
+  <polygon points="400,535 520,400 400,400" fill="#b43ea0" opacity="0.35"/>
+  <rect x="520" y="300" width="40" height="130" fill="#5b3df5"/>
+  <polygon points="560,340 600,365 560,390" fill="#5b3df5"/>
+  <rect x="620" y="110" width="540" height="430" rx="26" fill="#5b3df5"/>
+  <text x="890" y="165" text-anchor="middle" font-size="30" font-weight="800" fill="#ffd84d">The 5 I would keep</text>
+  <g font-size="28" font-weight="700" fill="#ffffff">
+    <text x="680" y="230">1  Pillar pages</text>
+    <text x="680" y="290">2  How to guides</text>
+    <text x="680" y="350">3  Comparisons</text>
+    <text x="680" y="410">4  Free tools</text>
+    <text x="680" y="470">5  Case studies</text>
+  </g>
+  <rect x="620" y="560" width="540" height="75" rx="20" fill="#ffd84d"/>
+  <text x="890" y="607" text-anchor="middle" font-size="26" font-weight="800" fill="#1c1640">One calendar feeds all five</text>
+</svg>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" font-family="Plus Jakarta Sans, Inter, sans-serif">
+<rect width="1200" height="675" fill="#f6f3ff"/>
+<text x="600" y="72" text-anchor="middle" font-size="40" font-weight="800" fill="#1c1640">Six GTM plays behind 0 to $10M</text>
+<text x="600" y="112" text-anchor="middle" font-size="24" fill="#5b3df5">Each play reports into one number, influenced pipeline</text>
+<rect x="60" y="150" width="340" height="210" rx="22" fill="#ffffff" stroke="#5b3df5" stroke-width="3"/>
+<circle cx="108" cy="200" r="28" fill="#5b3df5"/>
+<text x="108" y="209" text-anchor="middle" font-size="24" font-weight="800" fill="#ffffff">01</text>
+<text x="152" y="210" font-size="30" font-weight="800" fill="#1c1640">Positioning</text>
+<text x="88" y="268" font-size="23" fill="#1c1640">Story before pipeline</text>
+<rect x="84" y="290" width="292" height="48" rx="24" fill="#ffd84d"/>
+<text x="230.0" y="322" text-anchor="middle" font-size="24" font-weight="800" fill="#1c1640">1 story, every team</text>
+<rect x="430" y="150" width="340" height="210" rx="22" fill="#ffffff" stroke="#7c5cff" stroke-width="3"/>
+<circle cx="478" cy="200" r="28" fill="#7c5cff"/>
+<text x="478" y="209" text-anchor="middle" font-size="24" font-weight="800" fill="#ffffff">02</text>
+<text x="522" y="210" font-size="30" font-weight="800" fill="#1c1640">Community</text>
+<text x="458" y="268" font-size="23" fill="#1c1640">KubeArmor and CNCF</text>
+<rect x="454" y="290" width="292" height="48" rx="24" fill="#ffd84d"/>
+<text x="600.0" y="322" text-anchor="middle" font-size="24" font-weight="800" fill="#1c1640">1.4K+ GitHub stars</text>
+<rect x="800" y="150" width="340" height="210" rx="22" fill="#ffffff" stroke="#b43ea0" stroke-width="3"/>
+<circle cx="848" cy="200" r="28" fill="#b43ea0"/>
+<text x="848" y="209" text-anchor="middle" font-size="24" font-weight="800" fill="#ffffff">03</text>
+<text x="892" y="210" font-size="30" font-weight="800" fill="#1c1640">Inbound engine</text>
+<text x="828" y="268" font-size="23" fill="#1c1640">Tracking, content, scale</text>
+<rect x="824" y="290" width="292" height="48" rx="24" fill="#ffd84d"/>
+<text x="970.0" y="322" text-anchor="middle" font-size="24" font-weight="800" fill="#1c1640">+240% sessions</text>
+<rect x="60" y="400" width="340" height="210" rx="22" fill="#ffffff" stroke="#5b3df5" stroke-width="3"/>
+<circle cx="108" cy="450" r="28" fill="#5b3df5"/>
+<text x="108" y="459" text-anchor="middle" font-size="24" font-weight="800" fill="#ffffff">04</text>
+<text x="152" y="460" font-size="30" font-weight="800" fill="#1c1640">AI search</text>
+<text x="88" y="518" font-size="23" fill="#1c1640">Be the cited answer</text>
+<rect x="84" y="540" width="292" height="48" rx="24" fill="#ffd84d"/>
+<text x="230.0" y="572" text-anchor="middle" font-size="24" font-weight="800" fill="#1c1640">27.72% AI visibility</text>
+<rect x="430" y="400" width="340" height="210" rx="22" fill="#ffffff" stroke="#7c5cff" stroke-width="3"/>
+<circle cx="478" cy="450" r="28" fill="#7c5cff"/>
+<text x="478" y="459" text-anchor="middle" font-size="24" font-weight="800" fill="#ffffff">05</text>
+<text x="522" y="460" font-size="30" font-weight="800" fill="#1c1640">Partners</text>
+<text x="458" y="518" font-size="23" fill="#1c1640">Joint pipeline reviews</text>
+<rect x="454" y="540" width="292" height="48" rx="24" fill="#ffd84d"/>
+<text x="600.0" y="572" text-anchor="middle" font-size="24" font-weight="800" fill="#1c1640">$35B TAM covered</text>
+<rect x="800" y="400" width="340" height="210" rx="22" fill="#ffffff" stroke="#b43ea0" stroke-width="3"/>
+<circle cx="848" cy="450" r="28" fill="#b43ea0"/>
+<text x="848" y="459" text-anchor="middle" font-size="24" font-weight="800" fill="#ffffff">06</text>
+<text x="892" y="460" font-size="30" font-weight="800" fill="#1c1640">Enablement</text>
+<text x="828" y="518" font-size="23" fill="#1c1640">Training and systems</text>
+<rect x="824" y="540" width="292" height="48" rx="24" fill="#ffd84d"/>
+<text x="970.0" y="572" text-anchor="middle" font-size="24" font-weight="800" fill="#1c1640">Quotes in minutes</text>
+<text x="600" y="652" text-anchor="middle" font-size="22" fill="#1c1640">Story first, demand second, partners third</text>
+</svg>

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" font-family="Plus Jakarta Sans, Inter, sans-serif">
+  <rect width="1200" height="675" fill="#f6f3ff"/>
+  <text x="60" y="78" font-size="40" font-weight="800" fill="#1c1640">Count every bucket before you chase the SIP</text>
+  <text x="60" y="118" font-size="24" fill="#5b3df5">The four buckets most FIRE plans forget, plus your SIP</text>
+
+  <!-- Buckets -->
+  <g font-size="26" font-weight="700">
+    <rect x="60" y="160" width="400" height="80" rx="18" fill="#5b3df5"/>
+    <text x="90" y="210" fill="#ffffff">EPF</text>
+    <text x="430" y="210" fill="#ffffff" text-anchor="end" font-weight="500" font-size="23">8.25% for 2025 26</text>
+
+    <rect x="60" y="256" width="400" height="80" rx="18" fill="#7c5cff"/>
+    <text x="90" y="306" fill="#ffffff">PPF</text>
+    <text x="430" y="306" fill="#ffffff" text-anchor="end" font-weight="500" font-size="23">7.1%, max 1.5 L a year</text>
+
+    <rect x="60" y="352" width="400" height="80" rx="18" fill="#b43ea0"/>
+    <text x="90" y="402" fill="#ffffff">NPS</text>
+    <text x="430" y="402" fill="#ffffff" text-anchor="end" font-weight="500" font-size="23">80% lump sum at exit</text>
+
+    <rect x="60" y="448" width="400" height="80" rx="18" fill="#ffd84d"/>
+    <text x="90" y="498" fill="#1c1640">Gold, FDs, cash</text>
+    <text x="430" y="498" fill="#1c1640" text-anchor="end" font-weight="500" font-size="23">counts</text>
+
+    <rect x="60" y="544" width="400" height="80" rx="18" fill="#ffffff" stroke="#1c1640" stroke-width="3"/>
+    <text x="90" y="594" fill="#1c1640">Mutual funds and stocks</text>
+  </g>
+
+  <!-- Arrows -->
+  <g stroke="#1c1640" stroke-width="4" fill="none">
+    <path d="M470 200 C 560 200, 560 392, 640 392"/>
+    <path d="M470 296 C 560 296, 560 392, 640 392"/>
+    <path d="M470 392 L 640 392"/>
+    <path d="M470 488 C 560 488, 560 392, 640 392"/>
+    <path d="M470 584 C 560 584, 560 392, 640 392"/>
+  </g>
+  <polygon points="640,378 664,392 640,406" fill="#1c1640"/>
+
+  <!-- Corpus -->
+  <rect x="672" y="300" width="230" height="184" rx="22" fill="#1c1640"/>
+  <text x="787" y="370" font-size="30" font-weight="800" fill="#ffffff" text-anchor="middle">Your</text>
+  <text x="787" y="410" font-size="30" font-weight="800" fill="#ffffff" text-anchor="middle">corpus</text>
+  <text x="787" y="448" font-size="22" fill="#ffd84d" text-anchor="middle">at retirement</text>
+
+  <!-- vs -->
+  <text x="945" y="404" font-size="30" font-weight="800" fill="#b43ea0" text-anchor="middle">vs</text>
+
+  <!-- FIRE number -->
+  <rect x="985" y="250" width="185" height="284" rx="22" fill="#ffffff" stroke="#5b3df5" stroke-width="4"/>
+  <text x="1077" y="306" font-size="26" font-weight="800" fill="#5b3df5" text-anchor="middle">FIRE</text>
+  <text x="1077" y="338" font-size="26" font-weight="800" fill="#5b3df5" text-anchor="middle">number</text>
+  <text x="1077" y="390" font-size="22" fill="#1c1640" text-anchor="middle">future</text>
+  <text x="1077" y="418" font-size="22" fill="#1c1640" text-anchor="middle">yearly spend</text>
+  <text x="1077" y="470" font-size="34" font-weight="800" fill="#b43ea0" text-anchor="middle">x 25</text>
+  <text x="1077" y="504" font-size="22" fill="#1c1640" text-anchor="middle">to 33</text>
+
+  <text x="1170" y="640" font-size="22" fill="#5b3df5" text-anchor="end">syedcreates.com/fire-calculator</text>
+</svg>
