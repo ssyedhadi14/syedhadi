@@ -2670,7 +2670,7 @@ html.srch-lock,html.srch-lock body{overflow:hidden}
 /* 2026-11-03 FIRE calculator asset buckets */
 .fr-assets{grid-template-columns:repeat(2,1fr)}
 .fr-mix{margin:18px 0;border:1px solid var(--line);border-radius:14px;padding:14px 16px;background:var(--card)}
-.fr-mix h4{margin:0 0 8px;font-size:15px}
+.fr-mix h3,.fr-mix h4{margin:0 0 8px;font-size:15px}
 .fr-mix table{width:100%;border-collapse:collapse;font-size:13.5px}
 .fr-mix th,.fr-mix td{text-align:left;padding:6px 4px;border-bottom:1px solid var(--line)}
 .fr-mix th{font:500 11px "JetBrains Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
@@ -2776,3 +2776,6 @@ img,video,iframe{max-width:100%}
 @media (max-width:640px){.portrait .chip.c2,.chip.c2{top:auto;bottom:0;right:3%}.portrait .chip.c3,.chip.c3{bottom:0;left:3%}.portrait .chip.c1,.chip.c1{top:0;left:3%}}
 @media (max-width:860px){.nl2-stack{height:auto;margin:0 0 16px}.nl2-issue.i2,.nl2-issue.i3{display:none}
   .nl2-issue.i1{position:relative;left:auto;right:auto;top:auto;height:auto;margin:0 10px;box-shadow:0 14px 34px rgba(0,0,0,.3)}}
+
+/* QA 2026-11-06: 24px minimum tap area for recommender LinkedIn icons, no visual change */
+.rec-li{position:relative}.rec-li::after{content:"";position:absolute;inset:-4px}
