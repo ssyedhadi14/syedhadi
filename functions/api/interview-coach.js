@@ -7,10 +7,15 @@
 //          its built-in offline coach instead, so the tool never breaks.
 // Owner: Syed Hadi
 // Env (all optional):
-//   INTERVIEW_COACH_MODEL     Workers AI model id. Default @cf/meta/llama-3.1-8b-instruct
+//   INTERVIEW_COACH_MODEL     Workers AI model id to try first. Falls back through MODELS below.
 //   INTERVIEW_COACH_PER_IP    Requests per visitor per hour. Default 40.
 
-const DEFAULT_MODEL = '@cf/meta/llama-3.1-8b-instruct';
+const MODELS = [
+  '@cf/meta/llama-3.3-70b-instruct-fp8-fast',
+  '@cf/meta/llama-3.1-8b-instruct-fast',
+  '@cf/meta/llama-3.1-8b-instruct',
+  '@cf/mistralai/mistral-small-3.1-24b-instruct',
+];
 const hits = new Map();
 
 const ROLE = {
@@ -93,17 +98,25 @@ export async function onRequest(context) {
   }
 
   const system = `${BASE}\nTarget role: ${ROLE[role]}${level ? `, ${level} level` : ''}, Bengaluru.\nTask: ${MODES[mode]}`;
-  const model = env.INTERVIEW_COACH_MODEL || DEFAULT_MODEL;
-  try {
-    const out = await env.AI.run(model, {
-      messages: [{ role: 'system', content: system }, ...history],
-      max_tokens: mode === 'cover' ? 700 : 600,
-      temperature: 0.6,
-    });
-    const reply = noDashes(out && (out.response || (out.result && out.result.response)));
-    if (!reply) return json(200, { ok: false, fallback: true, reason: 'empty' });
-    return json(200, { ok: true, reply, model });
-  } catch (e) {
-    return json(200, { ok: false, fallback: true, reason: 'model_error' });
+  // Try the configured model first, then current Workers AI chat models, so a deprecated id never breaks the coach.
+  const models = [...new Set([env.INTERVIEW_COACH_MODEL, ...MODELS].filter(Boolean))];
+  const errors = [];
+  for (const model of models) {
+    try {
+      const out = await env.AI.run(model, {
+        messages: [{ role: 'system', content: system }, ...history],
+        max_tokens: mode === 'cover' ? 700 : 600,
+        temperature: 0.6,
+      });
+      let raw = out && (out.response ?? (out.result && out.result.response));
+      if (raw && typeof raw !== 'string') raw = JSON.stringify(raw);
+      if (!raw && out && out.choices && out.choices[0]) raw = out.choices[0].message && out.choices[0].message.content;
+      const reply = noDashes(raw);
+      if (reply) return json(200, { ok: true, reply, model });
+      errors.push(`${model}: empty`);
+    } catch (e) {
+      errors.push(`${model}: ${String((e && e.message) || e).slice(0, 140)}`);
+    }
   }
+  return json(200, { ok: false, fallback: true, reason: 'model_error', detail: errors.slice(0, 4) });
 }
