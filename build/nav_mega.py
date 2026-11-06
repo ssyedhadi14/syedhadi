@@ -154,7 +154,7 @@ def mega_nav(RESUME, DECK, CALENDLY, LINKEDIN):
         <div class="mm-simple">{port_simple}</div>
       </div>
       <div class="dd mega" data-group="tools">
-        <button class="dd-btn" aria-haspopup="true" aria-expanded="false" data-group="tools">Tools {chev}</button>
+        <button class="dd-btn" aria-haspopup="true" aria-expanded="false" data-group="tools">Interview Prep {chev}</button>
         <div class="dd-menu mm mm-port"><div class="pf-grid">{tools_cards}</div><div class="pf-links">{tool_links}</div></div>
         <div class="mm-simple"><a href="tools.html">Tool Directory</a><a href="{DECK}" target="_blank" rel="noopener">Workproof Deck</a></div>
       </div>

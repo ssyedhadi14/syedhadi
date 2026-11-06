@@ -93,6 +93,7 @@ Engagements come in three sizes. Small projects run 30 days (phase one of the ro
 - [Posts](https://syedcreates.com/posts): LinkedIn posts, articles, events and videos on AI security, CNAPP, GTM and community.
 - [India PMM Salary 2026](https://syedcreates.com/pmm-salary-2026): product marketing salaries in India by title, experience and city, a free calculator and a PDF guide.
 - [GTM tool directory](https://syedcreates.com/tools): 30 tools behind a B2B security startup's GTM, including Claude, Apollo, Factors.ai, Sales Navigator, Lovable, Brevo and Figma.
+- [Interview prep, Bengaluru](https://syedcreates.com/interview-prep): free interview prep for PMM, partnerships and sales roles in Bengaluru. AI mock interview coach, 30 questions with what interviewers test and how to answer, short videos, and a resume and cover letter builder with PDF export.
 - [Job board](https://syedcreates.com/jobs): live product marketing, growth and product manager jobs from company career pages, with filters for role, location and seniority.
 - [About](https://syedcreates.com/about): services, GTM journey since 2021 and how Syed builds strategy with AI.
 - [Brand kit](https://syedcreates.com/brand): official logo files (SVG and PNG), fonts (Plus Jakarta Sans, Instrument Serif, Inter, JetBrains Mono), colour palette, approved headshot, short and medium bios, and a PDF brand kit for event organisers and press.

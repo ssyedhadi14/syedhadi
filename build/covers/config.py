@@ -53,6 +53,7 @@ COVERS = {
     "posts": ("Posts that started the", "chat", "Posts", "camera"),
     "tools": ("Tools I'd pick", "again", "Tool directory", "gears"),
     "jobs": ("Dream jobs, one", "click", "Jobs board", "briefcase"),
+    "interview-prep": ("Walk in ready. Walk out", "hired", "Interview prep, Bengaluru", "clipboard"),
     "skill-pack": ("Eight skills. Zero", "busywork", "Claude Skill Pack", "sparkles"),
     # Security articles
     "30-day-shadow-ai-discovery-sprint": ("Find it in 30", "days", "AI security", "search"),

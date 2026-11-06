@@ -12,3 +12,7 @@ compatibility_flags = ["nodejs_compat"]
 [[kv_namespaces]]
 binding = "CR_KV"
 id = "deba0bdde3a34bc0975a8688eb20230f"
+
+# Workers AI for the interview prep chatbot (/api/interview-coach). No key needed, uses the account's Workers AI allowance.
+[ai]
+binding = "AI"

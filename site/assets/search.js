@@ -1,7 +1,7 @@
 /* syedcreates.com global search. Index: /assets/search-index.json */
 (function(){
   'use strict';
-  var VER='20261103b', IDX=null, loading=null, ov, inp, res, items=[], sel=0, lastFocus=null, timer;
+  var VER='20261106a', IDX=null, loading=null, ov, inp, res, items=[], sel=0, lastFocus=null, timer;
   var isMac=/Mac|iPhone|iPad/.test(navigator.platform||navigator.userAgent);
   var SYN={emi:['loan','home loan','car loan','prepayment'],loan:['emi'],khums:['qums','khumus','khoms'],qums:['khums'],khumus:['khums'],
     mileage:['fuel','petrol','car','kmpl'],fuel:['mileage','petrol'],petrol:['fuel','mileage'],sip:['mutual fund','returns'],mf:['mutual fund'],
