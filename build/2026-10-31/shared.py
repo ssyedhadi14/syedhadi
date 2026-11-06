@@ -299,7 +299,7 @@ REDIRECTS_HEAD = '''# syedcreates.com redirects. Netlify processes these top to 
 /medium            https://ssyedhadi.medium.com/                                                                       302
 /substack          https://syedhadi.substack.com/                                                                      302
 /newsletter        https://syedhadi.substack.com/                                                                      302
-/whatsapp          https://wa.me/918015466708                                                                          302
+/whatsapp          /schedule-meeting                                                                                   301
 
 # One URL per page: send the .html version to the clean URL (canonical)
 '''
