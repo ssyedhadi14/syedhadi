@@ -284,67 +284,152 @@
   }
 
   /* -------------------------------------------------------- resume builder */
-  var RS_KEY = 'sh_ip_resume_v1', CL_KEY = 'sh_ip_cover_v1';
+  // Output follows a classic one column Indian tech resume: blue name, contact block with a portfolio QR code,
+  // Education, Professional Experience (roles grouped by company), optional Volunteering, Additional Information.
+  var RS_KEY = 'sh_ip_resume_v2', CL_KEY = 'sh_ip_cover_v1';
   var IDEAS = window.IP_IDEAS || {};
   var SAMPLE = window.IP_SAMPLE || {};
-  var rs = null;
+  var DEFAULTS = window.IP_DEFAULTS || {};
+  var rs = null, lastBulletBox = null;
 
-  function blankResume() {
-    return { name: '', title: '', city: 'Bengaluru', phone: '', email: '', link: '', summary: '', skills: '', edu: '', certs: '',
-      exp: [{ role: '', co: '', dates: '', bullets: '' }] };
+  function blankRole() { return { title: '', dates: '', bullets: '', tools: '' }; }
+  function blankJob() { return { company: '', city: '', roles: [blankRole()] }; }
+  function blankResume(role) {
+    var d = DEFAULTS[role || 'pmm'] || {};
+    return { role: role || 'pmm', name: '', city: 'Bengaluru, IN', phone: '', email: '', linkedin: '', portfolio: '', highlight: '', yoe: '', env: 'fast-paced B2B SaaS companies',
+      edu: [{ school: '', degree: '', city: '', years: '' }], jobs: [blankJob()],
+      vol: { org: '', city: '', title: '', dates: '', bullets: '' },
+      s1l: d.s1l || 'Core Skills', s1: d.s1 || '', s2l: d.s2l || 'Digital Skills', s2: d.s2 || '', tools: d.tools || '', certs: '', hobbies: '' };
+  }
+  function migrate(o) {
+    if (!o || !o.jobs) return null;
+    var b = blankResume(o.role); Object.keys(b).forEach(function (k) { if (o[k] == null) o[k] = b[k]; });
+    return o;
   }
 
-  function bindField(el) {
-    el.addEventListener('input', function () { var k = el.getAttribute('data-k'); rs[k] = el.value; renderResume(); });
+  function lines(s) { return String(s || '').split(/\n/).map(function (l) { return l.replace(/^\s*[-*•●]\s*/, '').trim(); }).filter(Boolean); }
+  function bulletHtml(l) {
+    var m = l.match(/^([A-Z][A-Za-z0-9&/ +.]{1,32}):\s+(.+)$/);
+    return m ? '<b>' + esc(m[1]) + ':</b> ' + esc(m[2]) : esc(l);
+  }
+  function url(u) { u = String(u || '').trim(); if (!u) return ''; return /^https?:\/\//i.test(u) ? u : 'https://' + u.replace(/^\/+/, ''); }
+  function link(href, text) { return href ? '<a href="' + esc(href) + '">' + esc(text) + '</a>' : ''; }
+  function qrSvg(text) {
+    if (!text || !window.SHQR) return '';
+    try {
+      var q = window.SHQR(text), n = q.size, p = '';
+      for (var r = 0; r < n; r++) for (var c = 0; c < n; c++) if (q.dark(r, c)) p += 'M' + c + ' ' + r + 'h1v1h-1z';
+      return '<svg class="cv-qr" viewBox="-1 -1 ' + (n + 2) + ' ' + (n + 2) + '" shape-rendering="crispEdges" aria-label="QR code to portfolio"><rect x="-1" y="-1" width="' + (n + 2) + '" height="' + (n + 2) + '" fill="#fff"/><path d="' + p + '" fill="#000"/></svg>';
+    } catch (e) { return ''; }
+  }
+  function row(l, r, cls) { return '<div class="cv-row ' + (cls || '') + '"><span>' + l + '</span><span>' + r + '</span></div>'; }
+
+  function resumeHtml() {
+    var h = '<div class="cv">';
+    var port = url(rs.portfolio), li = url(rs.linkedin);
+    h += '<div class="cv-top"><div class="cv-id"><h3 class="cv-name">' + (esc(rs.name) || 'Your Name') + '</h3>';
+    var c1 = [li ? link(li, 'LinkedIn') : '', rs.email ? link('mailto:' + rs.email, rs.email) : ''].filter(Boolean).join(' | ');
+    var c2 = [esc(rs.phone), esc(rs.city)].filter(Boolean).join(' | ');
+    if (c1) h += '<p>' + c1 + '</p>';
+    if (c2) h += '<p><b>' + c2 + '</b></p>';
+    if (rs.highlight) h += '<p>' + esc(rs.highlight) + '</p>';
+    if (rs.yoe) h += '<p>Overall ' + esc(String(rs.yoe).replace(/\+?\s*$/, '')) + '+ YoE in ' + esc(rs.env || 'B2B SaaS') + '</p>';
+    h += '</div>';
+    if (port) h += '<div class="cv-port">' + link(port, 'Portfolio Website') + qrSvg(port) + '</div>';
+    h += '</div>';
+
+    var edu = rs.edu.filter(function (e) { return e.school || e.degree; });
+    if (edu.length) {
+      h += '<h4 class="cv-h">Education</h4>' + edu.map(function (e) {
+        return '<div class="cv-blk">' + row('<b>' + esc(e.school) + '</b>', '<b>' + esc(e.city) + '</b>') +
+          row(esc(e.degree), e.years ? '<b><span class="cv-sc">Graduated</span> ' + esc(e.years) + '</b>' : '') + '</div>';
+      }).join('');
+    }
+    var jobs = rs.jobs.filter(function (j) { return j.company || j.roles.some(function (r) { return r.title || r.bullets; }); });
+    if (jobs.length) {
+      h += '<h4 class="cv-h">Professional Experience</h4>' + jobs.map(function (j) {
+        return '<div class="cv-blk">' + row('<b>' + esc(j.company) + '</b>', '<b>' + esc(j.city) + '</b>', 'cv-co') +
+          j.roles.filter(function (r) { return r.title || r.bullets || r.tools; }).map(function (r, i) {
+            var b = lines(r.bullets).map(function (l) { return '<li>' + bulletHtml(l) + '</li>'; });
+            if (r.tools) b.push('<li><b>Tools Involved:</b> ' + esc(r.tools) + '</li>');
+            return '<div class="cv-role' + (i ? ' next' : '') + '">' + row('<b><i>' + esc(r.title) + '</i></b>', '<b><i>' + esc(r.dates) + '</i></b>') + (b.length ? '<ul>' + b.join('') + '</ul>' : '') + '</div>';
+          }).join('') + '</div>';
+      }).join('');
+    }
+    var v = rs.vol;
+    if (v && (v.org || v.bullets)) {
+      h += '<h4 class="cv-h">Volunteering</h4><div class="cv-blk">' + row('<b>' + esc(v.org) + '</b>', '<b>' + esc(v.city) + '</b>', 'cv-co') +
+        row('<i>' + esc(v.title) + '</i>', '<i>' + esc(v.dates) + '</i>') + (lines(v.bullets).length ? '<ul>' + lines(v.bullets).map(function (l) { return '<li>' + bulletHtml(l) + '</li>'; }).join('') + '</ul>' : '') + '</div>';
+    }
+    var add = [];
+    if (rs.s1) add.push('<li><b>' + esc(rs.s1l || 'Skills') + ':</b> ' + esc(rs.s1) + '</li>');
+    if (rs.s2) add.push('<li><b>' + esc(rs.s2l || 'Skills') + ':</b> ' + esc(rs.s2) + '</li>');
+    if (rs.tools) add.push('<li><b>Tools:</b> ' + esc(rs.tools) + '</li>');
+    var certs = lines(rs.certs);
+    if (certs.length) add.push('<li><b>Online Courses and Certificates:</b><ol>' + certs.map(function (c) {
+      var m = c.split(/\s*[|,]\s*(?=[A-Za-z]{3,9}\.?\s+\d{4}$|\d{4}$)/);
+      return '<li>' + row(esc(m[0]), m[1] ? '<i>' + esc(m[1]) + '</i>' : '') + '</li>';
+    }).join('') + '</ol></li>');
+    if (rs.hobbies) add.push('<li><b>Hobbies:</b> ' + esc(rs.hobbies) + '</li>');
+    if (add.length) h += '<h4 class="cv-h">Additional Information</h4><ul class="cv-add">' + add.join('') + '</ul>';
+    return h + '</div>';
+  }
+
+  function renderResume() { var p = $('rsPreview'); if (!p) return; p.innerHTML = resumeHtml(); checkBullets(); }
+
+  function jobForm(j, ji) {
+    return '<fieldset class="rs-job"><legend>Company ' + (ji + 1) + '</legend>' +
+      '<div class="rs-row"><label>Company<input data-j="' + ji + '" data-f="company" value="' + esc(j.company) + '" placeholder="AccuKnox India Pvt. Ltd."></label>' +
+      '<label>Location<input data-j="' + ji + '" data-f="city" value="' + esc(j.city) + '" placeholder="Bangalore, IN"></label></div>' +
+      j.roles.map(function (r, ri) {
+        return '<div class="rs-roleform"><div class="rs-row"><label>Role ' + (ri + 1) + ' title<input data-j="' + ji + '" data-r="' + ri + '" data-f="title" value="' + esc(r.title) + '" placeholder="Product Marketing Manager"></label>' +
+          '<label>Dates<input data-j="' + ji + '" data-r="' + ri + '" data-f="dates" value="' + esc(r.dates) + '" placeholder="April 2024 to Present"></label></div>' +
+          '<label>Achievements, one per line. Start with "Label:" to bold it<textarea data-j="' + ji + '" data-r="' + ri + '" data-f="bullets" rows="4" placeholder="Marketing: Drive 2 Cr influenced pipeline on a 40 L yearly budget">' + esc(r.bullets) + '</textarea></label>' +
+          '<label>Tools involved, optional<input data-j="' + ji + '" data-r="' + ri + '" data-f="tools" value="' + esc(r.tools) + '" placeholder="Salesforce, HubSpot, Figma, Apollo"></label>' +
+          '<div class="rs-jobact">' + (j.roles.length > 1 ? '<button type="button" class="rs-delrole" data-j="' + ji + '" data-r="' + ri + '">Remove role</button>' : '') +
+          '<button type="button" class="rs-ai" data-j="' + ji + '" data-r="' + ri + '">Tighten bullets</button></div></div>';
+      }).join('') +
+      '<div class="rs-jobact"><button type="button" class="rs-addrole" data-j="' + ji + '">+ Another role at this company</button>' +
+      (rs.jobs.length > 1 ? '<button type="button" class="rs-deljob" data-j="' + ji + '">Remove company</button>' : '') + '</div></fieldset>';
   }
 
   function renderExpForm() {
     var box = $('rsExp'); if (!box) return;
-    box.innerHTML = rs.exp.map(function (x, i) {
-      return '<fieldset class="rs-job"><legend>Role ' + (i + 1) + '</legend>' +
-        '<div class="rs-row"><label>Job title<input data-e="role" data-i="' + i + '" value="' + esc(x.role) + '" placeholder="Senior Product Marketing Manager"></label>' +
-        '<label>Company<input data-e="co" data-i="' + i + '" value="' + esc(x.co) + '" placeholder="Company name"></label></div>' +
-        '<label>Dates<input data-e="dates" data-i="' + i + '" value="' + esc(x.dates) + '" placeholder="Jan 2023 to Present"></label>' +
-        '<label>Achievements, one per line<textarea data-e="bullets" data-i="' + i + '" rows="5" placeholder="Launched X, adding 1.2 Cr pipeline in two quarters">' + esc(x.bullets) + '</textarea></label>' +
-        '<div class="rs-jobact">' + (rs.exp.length > 1 ? '<button type="button" class="rs-del" data-i="' + i + '">Remove role</button>' : '') +
-        '<button type="button" class="rs-ai" data-i="' + i + '">Tighten bullets</button></div></fieldset>';
+    box.innerHTML = rs.jobs.map(jobForm).join('');
+    box.querySelectorAll('[data-f]').forEach(function (el) {
+      el.addEventListener('input', function () {
+        var j = rs.jobs[+el.getAttribute('data-j')], r = el.getAttribute('data-r');
+        (r == null ? j : j.roles[+r])[el.getAttribute('data-f')] = el.value; renderResume();
+      });
+      if (el.getAttribute('data-f') === 'bullets') el.addEventListener('focus', function () { lastBulletBox = el; });
+    });
+    box.querySelectorAll('.rs-addrole').forEach(function (b) { b.addEventListener('click', function () { rs.jobs[+b.getAttribute('data-j')].roles.push(blankRole()); renderExpForm(); renderResume(); }); });
+    box.querySelectorAll('.rs-delrole').forEach(function (b) { b.addEventListener('click', function () { rs.jobs[+b.getAttribute('data-j')].roles.splice(+b.getAttribute('data-r'), 1); renderExpForm(); renderResume(); }); });
+    box.querySelectorAll('.rs-deljob').forEach(function (b) { b.addEventListener('click', function () { rs.jobs.splice(+b.getAttribute('data-j'), 1); renderExpForm(); renderResume(); }); });
+    box.querySelectorAll('.rs-ai').forEach(function (b) { b.addEventListener('click', function () { tighten(+b.getAttribute('data-j'), +b.getAttribute('data-r'), b); }); });
+  }
+
+  function renderEduForm() {
+    var box = $('rsEdu'); if (!box) return;
+    box.innerHTML = rs.edu.map(function (e, i) {
+      return '<div class="rs-edu"><div class="rs-row"><label>Institution<input data-e="' + i + '" data-f="school" value="' + esc(e.school) + '" placeholder="BITS Pilani"></label>' +
+        '<label>Degree<input data-e="' + i + '" data-f="degree" value="' + esc(e.degree) + '" placeholder="MBA, AI and Digital Business"></label></div>' +
+        '<div class="rs-row"><label>Location<input data-e="' + i + '" data-f="city" value="' + esc(e.city) + '" placeholder="Bangalore, IN"></label>' +
+        '<label>Years<input data-e="' + i + '" data-f="years" value="' + esc(e.years) + '" placeholder="2024 - 2026"></label></div>' +
+        (rs.edu.length > 1 ? '<div class="rs-jobact"><button type="button" class="rs-deledu" data-e="' + i + '">Remove</button></div>' : '') + '</div>';
     }).join('');
     box.querySelectorAll('[data-e]').forEach(function (el) {
-      el.addEventListener('input', function () { rs.exp[+el.getAttribute('data-i')][el.getAttribute('data-e')] = el.value; renderResume(); });
-      el.addEventListener('focus', function () { lastBulletBox = el.getAttribute('data-e') === 'bullets' ? el : lastBulletBox; });
+      if (el.tagName === 'BUTTON') el.addEventListener('click', function () { rs.edu.splice(+el.getAttribute('data-e'), 1); renderEduForm(); renderResume(); });
+      else el.addEventListener('input', function () { rs.edu[+el.getAttribute('data-e')][el.getAttribute('data-f')] = el.value; renderResume(); });
     });
-    box.querySelectorAll('.rs-del').forEach(function (b) { b.addEventListener('click', function () { rs.exp.splice(+b.getAttribute('data-i'), 1); renderExpForm(); renderResume(); }); });
-    box.querySelectorAll('.rs-ai').forEach(function (b) { b.addEventListener('click', function () { tighten(+b.getAttribute('data-i'), b); }); });
-  }
-  var lastBulletBox = null;
-
-  function bulletsOf(s) { return String(s || '').split(/\n/).map(function (l) { return l.replace(/^\s*[-*•]\s*/, '').trim(); }).filter(Boolean); }
-
-  function renderResume() {
-    var p = $('rsPreview'); if (!p) return;
-    var contact = [rs.city, rs.phone, rs.email, rs.link].filter(Boolean).map(esc).join(' &middot; ');
-    var h = '<div class="rp-head"><h3>' + (esc(rs.name) || 'Your Name') + '</h3>' + (rs.title ? '<p class="rp-t">' + esc(rs.title) + '</p>' : '') + (contact ? '<p class="rp-c">' + contact + '</p>' : '') + '</div>';
-    if (rs.summary) h += '<div class="rp-sec"><h4>Summary</h4><p>' + esc(rs.summary) + '</p></div>';
-    var jobs = rs.exp.filter(function (x) { return x.role || x.co || x.bullets; });
-    if (jobs.length) {
-      h += '<div class="rp-sec"><h4>Experience</h4>' + jobs.map(function (x) {
-        var b = bulletsOf(x.bullets);
-        return '<div class="rp-job"><div class="rp-jh"><b>' + esc(x.role || 'Role') + (x.co ? ', ' + esc(x.co) : '') + '</b><span>' + esc(x.dates) + '</span></div>' +
-          (b.length ? '<ul>' + b.map(function (l) { return '<li>' + esc(l) + '</li>'; }).join('') + '</ul>' : '') + '</div>';
-      }).join('') + '</div>';
-    }
-    if (rs.skills) h += '<div class="rp-sec"><h4>Skills</h4><p>' + esc(rs.skills) + '</p></div>';
-    if (rs.edu) h += '<div class="rp-sec"><h4>Education</h4>' + bulletsOf(rs.edu).map(function (l) { return '<p>' + esc(l) + '</p>'; }).join('') + '</div>';
-    if (rs.certs) h += '<div class="rp-sec"><h4>Certifications</h4><p>' + esc(rs.certs) + '</p></div>';
-    p.innerHTML = h;
-    checkBullets();
   }
 
   var WEAK = /^(responsible for|worked on|helped|involved in|assisted|participated|handled|tasked with|duties)/i;
+  function allBullets() { var a = []; rs.jobs.forEach(function (j) { j.roles.forEach(function (r) { lines(r.bullets).forEach(function (b) { a.push(b.replace(/^[A-Z][A-Za-z0-9&/ +.]{1,32}:\s+/, '')); }); }); }); return a; }
   function checkBullets() {
     var box = $('rsCheck'); if (!box) return;
-    var all = []; rs.exp.forEach(function (x) { bulletsOf(x.bullets).forEach(function (b) { all.push(b); }); });
-    if (!all.length) { box.innerHTML = '<p>Add achievements and I will check each bullet for a strong verb and a number.</p>'; return; }
+    var all = allBullets();
+    if (!all.length) { box.innerHTML = '<p>Add achievements and each bullet is checked for a strong verb and a number.</p>'; return; }
     var issues = 0, rows = all.map(function (b) {
       var f = [];
       if (WEAK.test(b)) f.push('weak opening, start with a verb like Launched, Built, Grew, Closed');
@@ -357,25 +442,24 @@
     box.innerHTML = '<p><b>' + (all.length - issues) + ' of ' + all.length + '</b> bullets look strong.</p><ul>' + rows.join('') + '</ul>';
   }
 
-  function tighten(i, btn) {
-    var x = rs.exp[i]; var b = bulletsOf(x.bullets);
+  function tighten(ji, ri, btn) {
+    var j = rs.jobs[ji], x = j.roles[ri], b = lines(x.bullets);
     if (!b.length) return;
     var old = btn.textContent; btn.textContent = 'Working...'; btn.disabled = true;
-    callAI('bullets', [{ role: 'user', content: 'Role: ' + (x.role || '') + ' at ' + (x.co || '') + '\nBullets:\n' + b.map(function (l) { return '- ' + l; }).join('\n') }])
+    callAI('bullets', [{ role: 'user', content: 'Role: ' + (x.title || '') + ' at ' + (j.company || '') + '\nKeep any "Label:" prefix.\nBullets:\n' + b.map(function (l) { return '- ' + l; }).join('\n') }])
       .then(function (reply) {
         btn.textContent = old; btn.disabled = false;
         var out;
-        if (reply) out = bulletsOf(reply.replace(/^[^-*•\n].*:\s*$/gm, ''));
-        else out = b.map(function (l) {
-          var t = l.replace(WEAK, '').replace(/^\s*(the|a)\s+/i, '').trim();
-          t = t.charAt(0).toUpperCase() + t.slice(1);
-          if (WEAK.test(l)) t = 'Led ' + t.charAt(0).toLowerCase() + t.slice(1);
+        if (reply) out = lines(reply.split('\n').filter(function (l) { return /^\s*[-*•]/.test(l); }).join('\n'));
+        if (!out || !out.length) out = b.map(function (l) {
+          var m = l.match(/^([A-Z][A-Za-z0-9&/ +.]{1,32}:\s+)(.*)$/), pre = m ? m[1] : '', t = m ? m[2] : l;
+          var weak = WEAK.test(t); t = t.replace(WEAK, '').replace(/^\s*(the|a)\s+/i, '').trim();
+          t = weak ? 'Led ' + t : t.charAt(0).toUpperCase() + t.slice(1);
           if (!/\d/.test(t)) t += ', [add the result as a number]';
-          return t;
+          return pre + t;
         });
-        if (!out.length) return;
         x.bullets = out.join('\n');
-        var ta = document.querySelector('#rsExp textarea[data-i="' + i + '"]'); if (ta) ta.value = x.bullets;
+        var ta = document.querySelector('#rsExp textarea[data-j="' + ji + '"][data-r="' + ri + '"]'); if (ta) ta.value = x.bullets;
         renderResume();
         toast(reply ? 'Bullets tightened. Check every fact and number.' : 'Offline rewrite done. Replace each [placeholder] with your real number.');
         track('resume_tighten', { label: reply ? 'ai' : 'offline' });
@@ -389,52 +473,69 @@
     box.querySelectorAll('.rs-idea').forEach(function (b) {
       b.addEventListener('click', function () {
         var t = list[+b.getAttribute('data-i')];
-        var ta = lastBulletBox || document.querySelector('#rsExp textarea[data-e="bullets"]');
-        if (!ta) return;
-        var i = +ta.getAttribute('data-i');
-        rs.exp[i].bullets = (rs.exp[i].bullets ? rs.exp[i].bullets.replace(/\s+$/, '') + '\n' : '') + t;
-        ta.value = rs.exp[i].bullets; renderResume();
+        var ta = lastBulletBox || document.querySelector('#rsExp textarea[data-f="bullets"]'); if (!ta) return;
+        var r = rs.jobs[+ta.getAttribute('data-j')].roles[+ta.getAttribute('data-r')];
+        r.bullets = (r.bullets ? r.bullets.replace(/\s+$/, '') + '\n' : '') + t; ta.value = r.bullets; renderResume();
         toast('Added. Replace the [brackets] with your real numbers.');
       });
     });
   }
 
   function resumeText() {
-    var L = [];
-    L.push(rs.name || 'Your Name'); if (rs.title) L.push(rs.title);
-    L.push([rs.city, rs.phone, rs.email, rs.link].filter(Boolean).join(' | '));
-    if (rs.summary) L.push('', 'SUMMARY', rs.summary);
-    var jobs = rs.exp.filter(function (x) { return x.role || x.co || x.bullets; });
-    if (jobs.length) { L.push('', 'EXPERIENCE'); jobs.forEach(function (x) { L.push((x.role || '') + (x.co ? ', ' + x.co : '') + (x.dates ? ' (' + x.dates + ')' : '')); bulletsOf(x.bullets).forEach(function (b) { L.push('- ' + b); }); L.push(''); }); }
-    if (rs.skills) L.push('SKILLS', rs.skills, '');
-    if (rs.edu) L.push('EDUCATION', rs.edu, '');
-    if (rs.certs) L.push('CERTIFICATIONS', rs.certs);
+    var L = [rs.name || 'Your Name'];
+    L.push([rs.linkedin, rs.email, rs.portfolio].filter(Boolean).join(' | '));
+    L.push([rs.phone, rs.city].filter(Boolean).join(' | '));
+    if (rs.highlight) L.push(rs.highlight);
+    if (rs.yoe) L.push('Overall ' + rs.yoe + '+ YoE in ' + rs.env);
+    var edu = rs.edu.filter(function (e) { return e.school; });
+    if (edu.length) { L.push('', 'EDUCATION'); edu.forEach(function (e) { L.push(e.school + (e.city ? ', ' + e.city : ''), e.degree + (e.years ? ' (' + e.years + ')' : '')); }); }
+    L.push('', 'PROFESSIONAL EXPERIENCE');
+    rs.jobs.forEach(function (j) {
+      if (!j.company) return; L.push('', j.company + (j.city ? ', ' + j.city : ''));
+      j.roles.forEach(function (r) { if (r.title) L.push(r.title + (r.dates ? ' (' + r.dates + ')' : '')); lines(r.bullets).forEach(function (b) { L.push('- ' + b); }); if (r.tools) L.push('- Tools Involved: ' + r.tools); });
+    });
+    if (rs.vol && rs.vol.org) { L.push('', 'VOLUNTEERING', rs.vol.org + (rs.vol.city ? ', ' + rs.vol.city : ''), rs.vol.title + (rs.vol.dates ? ' (' + rs.vol.dates + ')' : '')); lines(rs.vol.bullets).forEach(function (b) { L.push('- ' + b); }); }
+    L.push('', 'ADDITIONAL INFORMATION');
+    if (rs.s1) L.push('- ' + rs.s1l + ': ' + rs.s1); if (rs.s2) L.push('- ' + rs.s2l + ': ' + rs.s2); if (rs.tools) L.push('- Tools: ' + rs.tools);
+    if (rs.certs) { L.push('- Online Courses and Certificates:'); lines(rs.certs).forEach(function (c, i) { L.push('  ' + (i + 1) + '. ' + c); }); }
+    if (rs.hobbies) L.push('- Hobbies: ' + rs.hobbies);
     return L.join('\n').replace(/\n{3,}/g, '\n\n').trim();
   }
 
   function fillForm() {
     document.querySelectorAll('#rsForm [data-k]').forEach(function (el) { el.value = rs[el.getAttribute('data-k')] || ''; });
-    renderExpForm(); renderResume();
+    document.querySelectorAll('#rsForm [data-v]').forEach(function (el) { el.value = (rs.vol || {})[el.getAttribute('data-v')] || ''; });
+    renderEduForm(); renderExpForm(); renderResume();
   }
 
   function initResume() {
     if (!$('rsForm')) return;
-    rs = store.get(RS_KEY) || blankResume();
-    if (!rs.exp || !rs.exp.length) rs.exp = [{ role: '', co: '', dates: '', bullets: '' }];
-    document.querySelectorAll('#rsForm [data-k]').forEach(bindField);
-    fillForm();
-    $('rsAdd').addEventListener('click', function () { rs.exp.push({ role: '', co: '', dates: '', bullets: '' }); renderExpForm(); renderResume(); });
+    rs = migrate(store.get(RS_KEY)) || blankResume('pmm');
+    document.querySelectorAll('#rsForm [data-k]').forEach(function (el) {
+      el.addEventListener('input', function () { rs[el.getAttribute('data-k')] = el.value; renderResume(); });
+    });
+    document.querySelectorAll('#rsForm [data-v]').forEach(function (el) {
+      el.addEventListener('input', function () { rs.vol[el.getAttribute('data-v')] = el.value; renderResume(); });
+    });
     var roleSel = $('rsRole');
-    roleSel.addEventListener('change', function () { renderIdeas(roleSel.value); });
+    roleSel.value = rs.role || 'pmm';
+    roleSel.addEventListener('change', function () {
+      var d = DEFAULTS[roleSel.value] || {}, prev = DEFAULTS[rs.role] || {};
+      ['s1l', 's1', 's2l', 's2', 'tools'].forEach(function (k) { if (!rs[k] || rs[k] === prev[k]) rs[k] = d[k] || ''; });
+      rs.role = roleSel.value; fillForm(); renderIdeas(roleSel.value);
+    });
     renderIdeas(roleSel.value);
+    fillForm();
+    $('rsAddEdu').addEventListener('click', function () { rs.edu.push({ school: '', degree: '', city: '', years: '' }); renderEduForm(); });
+    $('rsAdd').addEventListener('click', function () { rs.jobs.push(blankJob()); renderExpForm(); renderResume(); });
     $('rsSample').addEventListener('click', function () {
       var s = SAMPLE[roleSel.value]; if (!s) return;
-      rs = JSON.parse(JSON.stringify(s)); fillForm(); toast('Sample loaded. Replace it with your own details.');
+      rs = migrate(JSON.parse(JSON.stringify(s))); rs.role = roleSel.value; fillForm(); toast('Sample loaded. Replace it with your own details.');
     });
     $('rsSave').addEventListener('click', function () { toast(store.set(RS_KEY, rs) ? 'Saved in this browser only.' : 'Could not save in this browser.'); });
-    $('rsClear').addEventListener('click', function () { if (!confirmClear()) return; rs = blankResume(); store.del(RS_KEY); fillForm(); });
+    $('rsClear').addEventListener('click', function () { if (!confirmClear()) return; rs = blankResume(roleSel.value); store.del(RS_KEY); fillForm(); });
     $('rsCopy').addEventListener('click', function () { copy(resumeText(), 'Resume copied as plain text.'); });
-    $('rsPdf').addEventListener('click', function () { printDoc($('rsPreview').innerHTML, 'ip-print-resume', (rs.name || 'Resume') + ' Resume'); track('resume_pdf'); });
+    $('rsPdf').addEventListener('click', function () { printDoc(resumeHtml(), 'ip-print-resume', (rs.name || 'Resume').replace(/\s+/g, '_') + '_Resume'); track('resume_pdf'); });
   }
 
   /* ---------------------------------------------------- cover letter */
@@ -487,7 +588,8 @@
     $('clCopy').addEventListener('click', function () { copy(ta.value, 'Cover letter copied.'); });
     $('clPdf').addEventListener('click', function () {
       var html = ta.value.split(/\n{2,}/).map(function (p) { return '<p>' + esc(p).replace(/\n/g, '<br>') + '</p>'; }).join('');
-      printDoc('<div class="cl-doc">' + html + '</div>', 'ip-print-cover', (cl.name || 'Cover') + ' Cover Letter'); track('cover_pdf');
+      var hd = '<div class="cv"><div class="cv-top"><div class="cv-id"><h3 class="cv-name">' + (esc(cl.name) || 'Your Name') + '</h3><p>' + [cl.email, cl.phone].filter(Boolean).map(esc).join(' | ') + '</p></div></div><div class="cl-doc">' + html + '</div></div>';
+      printDoc(hd, 'ip-print-cover', (cl.name || 'Cover').replace(/\s+/g, '_') + '_Cover_Letter'); track('cover_pdf');
     });
     renderCover();
   }

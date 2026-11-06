@@ -184,45 +184,72 @@ IDEAS = {
     ],
 }
 
-def _sample(name, title, summary, skills, jobs, edu):
-    return {"name": name, "title": title, "city": "Bengaluru", "phone": "+91 98XXX XXXXX", "email": "you@email.com",
-            "link": "linkedin.com/in/yourname", "summary": summary, "skills": skills, "edu": edu, "certs": "",
-            "exp": [{"role": r, "co": c, "dates": d, "bullets": "\n".join(b)} for r, c, d, b in jobs]}
+DEFAULTS = {
+    "pmm": {"s1l": "Product Marketing Skills", "s1": "Go-to-Market Strategy, Positioning and Messaging, Competitive Analysis, Product Launches, Sales Enablement, Market Research, Pricing and Packaging, Customer Journey Mapping",
+            "s2l": "Digital Marketing Skills", "s2": "SEO, AEO, SEM, Marketing Automation, Content Marketing, Demand Generation, Web Analytics",
+            "tools": "HubSpot, Salesforce, Google Analytics, Figma, Canva, Notion, ChatGPT, Claude"},
+    "partnerships": {"s1l": "Partnerships Skills", "s1": "Partner Program Design, Channel and Reseller Management, Alliances, Co-Selling, Deal Registration, Joint Business Planning, Partner Enablement, Negotiation",
+                     "s2l": "Business Skills", "s2": "Account Mapping, Pipeline Management, Forecasting, Stakeholder Management, Contract Negotiation",
+                     "tools": "Salesforce, PRM, Crossbeam, AWS Marketplace, Azure Marketplace, HubSpot, Apollo"},
+    "sales": {"s1l": "Sales Skills", "s1": "Prospecting, Discovery, MEDDICC, Solution Selling, Negotiation, Account Planning, Forecasting, Objection Handling",
+              "s2l": "Business Skills", "s2": "Pipeline Management, Stakeholder Mapping, Territory Planning, CRM Hygiene, Presentations",
+              "tools": "Salesforce, LinkedIn Sales Navigator, Apollo, Outreach, Gong, ZoomInfo"},
+}
+
+
+def _sample(role, highlight, yoe, edu, jobs, vol, certs, hobbies):
+    d = DEFAULTS[role]
+    return {"role": role, "name": "Your Name", "city": "Bengaluru, IN", "phone": "+91-98XXXXXXXX", "email": "you@email.com",
+            "linkedin": "linkedin.com/in/yourname", "portfolio": "syedcreates.com", "highlight": highlight, "yoe": yoe,
+            "env": "fast-paced B2B SaaS startups",
+            "edu": [{"school": a, "degree": b, "city": c, "years": y} for a, b, c, y in edu],
+            "jobs": [{"company": co, "city": ci, "roles": [{"title": t, "dates": dt, "bullets": "\n".join(bl), "tools": tl} for t, dt, bl, tl in roles]} for co, ci, roles in jobs],
+            "vol": vol, "s1l": d["s1l"], "s1": d["s1"], "s2l": d["s2l"], "s2": d["s2"], "tools": d["tools"],
+            "certs": "\n".join(certs), "hobbies": hobbies}
+
+
+_VOL = {"org": "AIESEC", "city": "Chennai, IN", "title": "Project Volunteer", "dates": "Nov 2019 to Apr 2020",
+        "bullets": "Managed the experience of 20+ global volunteers on exchange\nRan partner meetings with teams from 10+ countries"}
 
 SAMPLE = {
-    "pmm": _sample("Your Name", "Senior Product Marketing Manager, B2B SaaS",
-                   "Product marketer with 6 years in B2B SaaS. I turn technical products into stories that buyers repeat and sellers win with, across launches, positioning, competitive and enablement.",
-                   "Positioning and messaging, launches, competitive intelligence, sales enablement, pricing and packaging, customer research, HubSpot, Salesforce, Gong",
-                   [("Senior Product Marketing Manager", "Example SaaS Co", "Apr 2023 to Present",
-                     ["Launched the analytics module across 3 segments, adding 4.2 Cr pipeline in 2 quarters",
-                      "Rebuilt the mid-market pitch with 4 top sellers, lifting win rate from 19% to 27%",
-                      "Built 6 competitive battlecards used in 70% of late stage deals"]),
-                    ("Product Marketing Manager", "Earlier Startup", "Jun 2020 to Mar 2023",
-                     ["Ran 40 customer interviews to redefine the ICP, focusing outbound on 300 accounts",
-                      "Led packaging for a new Pro tier, raising average deal size by 22%"])],
-                   "MBA, Marketing, Example Business School, 2020\nB.Tech, Example Engineering College, 2016"),
-    "partnerships": _sample("Your Name", "Partnerships and Alliances Manager, SaaS",
-                            "Partnerships manager with 5 years building channel and alliance motions in India and APAC. I measure partners by pipeline they ship, not logos signed.",
-                            "Partner program design, channel and reseller management, AWS and Azure marketplaces, co-sell, negotiation, partner enablement, Salesforce PRM",
-                            [("Partnerships Manager", "Example SaaS Co", "Jan 2022 to Present",
-                              ["Built the partner program from zero to 24 active partners in 14 months",
-                               "Sourced 6.5 Cr partner pipeline and closed 18 deals through SIs and MSSPs",
-                               "Closed 9 AWS Marketplace private offers, shortening procurement by 3 weeks"]),
-                             ("Business Development Executive", "Earlier Company", "Jul 2019 to Dec 2021",
-                              ["Signed 12 reseller agreements across South India and the Middle East",
-                               "Ran quarterly joint business plans with the top 5 partners"])],
-                            "MBA, Example Business School, 2019"),
-    "sales": _sample("Your Name", "Enterprise Account Executive, B2B SaaS",
-                     "Account executive with 5 years selling B2B SaaS to mid-market and enterprise buyers in India. Consistent quota achiever who runs disciplined discovery and multi-threaded deals.",
-                     "Enterprise sales, MEDDICC, discovery, negotiation, forecasting, Salesforce, LinkedIn Sales Navigator, Outreach",
-                     [("Account Executive", "Example SaaS Co", "Feb 2023 to Present",
-                       ["Closed 3.1 Cr ARR at 118% of quota in FY25, ranked 2 of 14 reps",
-                        "Won 11 new enterprise logos with an average deal size of 28 L",
-                        "Cut sales cycle from 110 to 78 days by multi-threading into finance and IT"]),
-                      ("Sales Development Representative", "Earlier Startup", "Jul 2020 to Jan 2023",
-                       ["Booked 22 meetings a month, converting 35% to qualified pipeline",
-                        "Promoted to AE in 18 months, first in the team"])],
-                     "BBA, Example College, 2020"),
+    "pmm": _sample("pmm", "Pragmatic Institute PMC III and HubSpot Inbound Marketing certified", "6",
+                   [("Example Business School", "MBA, Marketing", "Bangalore, IN", "2022 - 2024"), ("Example Engineering College", "BE, Computer Science", "Chennai, IN", "2014 - 2018")],
+                   [("Example SaaS Co.", "Bangalore, IN", [
+                       ("Senior Product Marketing Manager", "Apr 2024 to Present",
+                        ["Pipeline: Drive 4.2 Cr influenced pipeline a year on a 60 L marketing budget",
+                         "Positioning: Rebuilt the mid-market pitch with 4 top sellers, lifting win rate from 19% to 27%",
+                         "Enablement: Built 6 battlecards used in 70% of late stage deals",
+                         "Leadership: Lead a team of 4 across content, design and web"], "HubSpot, Salesforce, Gong, Figma, WordPress"),
+                       ("Product Marketing Manager", "Jun 2021 to Mar 2024",
+                        ["Launched 3 modules across 2 regions with product, sales and customer success",
+                         "Ran 40 customer interviews to redefine the ICP, focusing outbound on 300 accounts"], "HubSpot, Google Analytics, Canva")]),
+                    ("Earlier Startup", "Chennai, IN", [
+                        ("Marketing Associate", "Jul 2018 to May 2021",
+                         ["Grew organic traffic from 8K to 45K monthly visits in 18 months", "Wrote 60+ blogs and 12 case studies used in sales cycles"], "")])],
+                   _VOL, ["Pragmatic Institute PMC III | Mar 2024", "HubSpot Inbound Marketing | Aug 2022", "Google Analytics Certification | May 2021"],
+                   "Writing, Meetups, Reading, Cycling"),
+    "partnerships": _sample("partnerships", "AWS Partner Accreditation (Business) and Certified Channel Partner Manager", "5",
+                            [("Example Business School", "MBA, Strategy", "Bangalore, IN", "2018 - 2020")],
+                            [("Example SaaS Co.", "Bangalore, IN", [
+                                ("Partnerships Manager", "Jan 2023 to Present",
+                                 ["Program: Built the partner program from zero to 24 active partners in 14 months",
+                                  "Pipeline: Sourced 6.5 Cr partner pipeline and closed 18 deals through SIs and MSSPs",
+                                  "Marketplace: Closed 9 AWS Marketplace private offers, cutting procurement by 3 weeks"], "Salesforce, Crossbeam, AWS Marketplace, HubSpot"),
+                                ("Business Development Executive", "Jul 2020 to Dec 2022",
+                                 ["Signed 12 reseller agreements across South India and the Middle East", "Ran quarterly joint business plans with the top 5 partners"], "Salesforce, Apollo")])],
+                            {"org": "", "city": "", "title": "", "dates": "", "bullets": ""},
+                            ["AWS Partner Accreditation, Business | Feb 2024", "Certified Channel Partner Manager | Sep 2023"], "Travel, Chess, Running"),
+    "sales": _sample("sales", "MEDDICC certified, President's Club FY25", "5",
+                     [("Example College", "BBA", "Bangalore, IN", "2017 - 2020")],
+                     [("Example SaaS Co.", "Bangalore, IN", [
+                         ("Enterprise Account Executive", "Feb 2023 to Present",
+                          ["Quota: Closed 3.1 Cr ARR at 118% of quota in FY25, ranked 2 of 14 reps",
+                           "New logos: Won 11 enterprise logos with an average deal size of 28 L",
+                           "Cycle: Cut sales cycle from 110 to 78 days by multi-threading into finance and IT"], "Salesforce, Gong, LinkedIn Sales Navigator"),
+                         ("Sales Development Representative", "Jul 2020 to Jan 2023",
+                          ["Booked 22 meetings a month, converting 35% to qualified pipeline", "Promoted to AE in 18 months, first in the team"], "Apollo, Outreach")])],
+                     {"org": "", "city": "", "title": "", "dates": "", "bullets": ""},
+                     ["MEDDICC Certification | Jan 2024", "Sandler Foundations | Jun 2021"], "Cricket, Podcasts, Gym"),
 }
 
 # Short videos. Real YouTube Shorts found via search, plus longer explainers the site already features.
@@ -323,6 +350,10 @@ def schema():
 
 
 CSS = r"""
+@font-face{font-family:"SH Carlito";font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/carlito/carlito-regular.woff) format("woff")}
+@font-face{font-family:"SH Carlito";font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/carlito/carlito-bold.woff) format("woff")}
+@font-face{font-family:"SH Carlito";font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/carlito/carlito-italic.woff) format("woff")}
+@font-face{font-family:"SH Carlito";font-style:italic;font-weight:700;font-display:swap;src:url(/assets/fonts/carlito/carlito-bolditalic.woff) format("woff")}
 .ip-jump{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
 .ip-jump a{font-size:14px;font-weight:600;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
 .ip-jump a:hover{border-color:var(--accent);color:var(--accent)}
@@ -411,18 +442,35 @@ CSS = r"""
 .rs-acts{display:flex;flex-wrap:wrap;gap:8px}
 .rs-acts .btn{padding:11px 16px;font-size:14px}
 .rs-side{position:sticky;top:96px;display:flex;flex-direction:column;gap:14px}
-.rs-paper{background:#fff;color:#16141f;border:1px solid var(--line);border-radius:10px;padding:34px 36px;box-shadow:var(--shadow);font:400 13.5px/1.5 Inter,Arial,sans-serif;min-height:520px;max-height:780px;overflow:auto}
-.rs-paper .rp-head{border-bottom:2px solid #16141f;padding-bottom:10px;margin-bottom:12px}
-.rs-paper h3{font:700 24px/1.15 "Plus Jakarta Sans",Arial,sans-serif;letter-spacing:-.01em}
-.rs-paper .rp-t{font-weight:600;margin-top:3px}
-.rs-paper .rp-c{color:#4a4658;font-size:12.5px;margin-top:3px}
-.rs-paper h4{font:700 11.5px Inter,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#4a4658;margin:14px 0 6px}
-.rs-paper .rp-sec p{margin:2px 0}
-.rp-job{margin-bottom:10px}
-.rp-jh{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
-.rp-jh span{color:#4a4658;font-size:12.5px}
-.rs-paper ul{padding-left:17px;margin-top:4px}
-.rs-paper li{margin:2px 0}
+.rs-paper{background:#fff;color:#000;border:1px solid var(--line);border-radius:10px;padding:30px 32px;box-shadow:var(--shadow);min-height:520px;max-height:820px;overflow:auto}
+.cv{-webkit-print-color-adjust:exact;print-color-adjust:exact;font-family:"SH Carlito",Calibri,Carlito,Arial,sans-serif;font-size:12.5px;line-height:1.38;color:#000}
+.cv a{color:#1155cc;text-decoration:underline}
+.cv p{margin:0}
+.cv-top{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
+.cv-name{font:700 25px/1.15 "SH Carlito",Calibri,Carlito,Arial,sans-serif;color:#1f56a3;margin:0 0 4px;letter-spacing:0}
+.cv-port{display:flex;flex-direction:column;align-items:center;gap:4px;flex-shrink:0;font-size:1em}
+.cv-qr{width:72px;height:72px;display:block}
+.cv-h{font:700 14px "SH Carlito",Calibri,Carlito,Arial,sans-serif;text-transform:uppercase;letter-spacing:0;color:#000;border-bottom:1.3px solid #000;padding-bottom:2px;margin:16px 0 8px}
+.cv-row{display:flex;justify-content:space-between;gap:12px}
+.cv-row>span:last-child{text-align:right;white-space:nowrap}
+.cv-sc{font-variant:small-caps;font-size:.92em}
+.cv-blk{margin-bottom:9px}
+.cv-co{margin-top:2px}
+.cv-role.next{margin-top:8px}
+.cv ul{padding-left:22px;margin:2px 0 0;list-style:disc}
+.cv li{margin:1px 0}
+.cv ol{padding-left:22px;margin:2px 0 0}
+.cv ol li .cv-row>span:first-child{white-space:normal}
+.cl-doc p{margin:0 0 10px}
+.cv .cl-doc{margin-top:14px}
+.rs-step{display:flex;align-items:center;gap:8px;font-family:"Plus Jakarta Sans";font-size:15px;font-weight:700;margin:6px 0 0}
+.rs-step span{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px}
+.rs-roleform{display:flex;flex-direction:column;gap:10px;padding-top:8px;border-top:1px dashed var(--line)}
+.rs-edu{display:flex;flex-direction:column;gap:8px;padding-bottom:6px}
+.rs-more{border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.rs-more summary{cursor:pointer;font-weight:700;font-size:14px}
+.rs-more summary em{font-style:normal;font-weight:500;color:var(--ink-3);font-size:12.5px;margin-left:6px}
+.rs-more[open]{display:flex;flex-direction:column;gap:10px}
 .rs-check{border:1px solid var(--line);background:var(--card);border-radius:14px;padding:14px 16px;font-size:13.5px;color:var(--ink-2)}
 .rs-check ul{list-style:none;margin-top:8px;display:flex;flex-direction:column;gap:6px}
 .rs-check li{display:flex;flex-direction:column;gap:2px;padding-left:12px;border-left:3px solid #22c55e}
@@ -448,15 +496,14 @@ CSS = r"""
  .ip-msg{max-width:94%}.ip-qa{padding-left:18px}.rs-paper{padding:22px 18px}.cl-out{padding:20px 18px}.ip-log{max-height:460px}}
 @media print{
  html.ip-printing body>*:not(#ipPrint){display:none!important}
- html.ip-printing #ipPrint{display:block!important;color:#000;background:#fff;font:400 11pt/1.45 Arial,Helvetica,sans-serif}
- html.ip-printing #ipPrint .rp-head{border-bottom:1.5pt solid #000;padding-bottom:6pt;margin-bottom:8pt}
- html.ip-printing #ipPrint h3{font:700 20pt/1.1 Arial,Helvetica,sans-serif}
- html.ip-printing #ipPrint h4{font:700 9.5pt Arial,Helvetica,sans-serif;letter-spacing:.12em;text-transform:uppercase;margin:10pt 0 4pt}
- html.ip-printing #ipPrint .rp-jh{display:flex;justify-content:space-between}
- html.ip-printing #ipPrint ul{padding-left:14pt}
- html.ip-printing #ipPrint .rp-job{break-inside:avoid;margin-bottom:6pt}
- html.ip-printing #ipPrint .cl-doc p{margin:0 0 9pt}
- @page{size:A4;margin:14mm}
+ html.ip-printing #ipPrint{display:block!important;background:#fff}
+ html.ip-printing #ipPrint .cv{font-size:10.5pt;line-height:1.35}
+ html.ip-printing #ipPrint .cv-name{font-size:21pt}
+ html.ip-printing #ipPrint .cv-h{font-size:12pt}
+ html.ip-printing #ipPrint .cv-qr{width:20mm;height:20mm}
+ html.ip-printing #ipPrint .cv-blk,html.ip-printing #ipPrint .cv-role{break-inside:avoid}
+ html.ip-printing #ipPrint a{color:#1155cc}
+ @page{size:A4;margin:12mm 15mm}
 }
 """
 
@@ -489,8 +536,9 @@ def build():
                   '<div class="wrap next-page"><a href=\'/jobs\'><small>PREVIOUS</small><b>&larr; Job Board</b></a>'
                   '<a class=\'right\' href=\'/pmm-salary-2026\'><small>NEXT</small><b>PMM Salary 2026 &rarr;</b></a></div>', tail, count=1, flags=re.S)
     data_js = ("<script>window.IP_BANK=" + json.dumps(BANK, ensure_ascii=False) + ";window.IP_IDEAS=" + json.dumps(IDEAS, ensure_ascii=False)
-               + ";window.IP_SAMPLE=" + json.dumps(SAMPLE, ensure_ascii=False) + ";</script>\n"
-               '<script src="/assets/interview-prep.js?v=20261106b" defer></script>\n')
+               + ";window.IP_SAMPLE=" + json.dumps(SAMPLE, ensure_ascii=False) + ";window.IP_DEFAULTS=" + json.dumps(DEFAULTS, ensure_ascii=False) + ";</script>\n"
+               '<script src="/assets/qrcode.js?v=20261106a" defer></script>\n'
+               '<script src="/assets/interview-prep.js?v=20261106c" defer></script>\n')
     tail = tail.replace("</body>", '<div id="ipPrint" aria-hidden="true"></div><div class="ip-toast" id="ipToast" role="status" aria-live="polite"></div>\n' + data_js + "</body>")
 
     loop = "".join(f'<div class="ip-step reveal"><small>ROUND {i + 1:02d}</small><h3>{E(n)}</h3><em>{E(d)}</em><p>{E(p)}</p></div>' for i, (n, d, p) in enumerate(LOOP))
@@ -580,16 +628,32 @@ def build():
         <form class="rs-form" id="rsForm" onsubmit="return false">
           <div class="rs-row"><label>Target role<select id="rsRole"><option value="pmm">Product Marketing</option><option value="partnerships">Partnerships</option><option value="sales">Sales</option></select></label>
             <label>Start from<button type="button" class="rs-mini" id="rsSample">Load a sample resume</button></label></div>
-          <div class="rs-row"><label>Full name<input data-k="name" autocomplete="name" placeholder="Your Name"></label><label>Headline<input data-k="title" placeholder="Senior Product Marketing Manager, B2B SaaS"></label></div>
-          <div class="rs-row"><label>City<input data-k="city" placeholder="Bengaluru"></label><label>Phone<input data-k="phone" autocomplete="tel" placeholder="+91"></label></div>
-          <div class="rs-row"><label>Email<input data-k="email" type="email" autocomplete="email" placeholder="you@email.com"></label><label>LinkedIn or portfolio<input data-k="link" placeholder="linkedin.com/in/yourname"></label></div>
-          <label>Summary, two or three lines<textarea data-k="summary" rows="3" placeholder="Who you are, the results you drive, and what you want next."></textarea></label>
+          <h3 class="rs-step"><span>1</span>About you</h3>
+          <div class="rs-row"><label>Full name<input data-k="name" autocomplete="name" placeholder="Your Name"></label><label>City<input data-k="city" placeholder="Bengaluru, IN"></label></div>
+          <div class="rs-row"><label>Phone<input data-k="phone" autocomplete="tel" placeholder="+91-98XXXXXXXX"></label><label>Email<input data-k="email" type="email" autocomplete="email" placeholder="you@email.com"></label></div>
+          <div class="rs-row"><label>LinkedIn URL<input data-k="linkedin" placeholder="linkedin.com/in/yourname"></label><label>Portfolio URL, adds a QR code<input data-k="portfolio" placeholder="yourname.com"></label></div>
+          <label>Headline, certifications or one standout line<input data-k="highlight" placeholder="Certified Scrum Master and Certified Scrum Product Owner"></label>
+          <div class="rs-row"><label>Years of experience<input data-k="yoe" inputmode="numeric" placeholder="6"></label><label>Where<input data-k="env" placeholder="fast-paced B2B SaaS startups"></label></div>
+          <h3 class="rs-step"><span>2</span>Education</h3>
+          <div id="rsEdu"></div>
+          <button type="button" class="rs-mini" id="rsAddEdu">+ Add education</button>
+          <h3 class="rs-step"><span>3</span>Experience</h3>
           <div id="rsExp"></div>
-          <button type="button" class="rs-mini" id="rsAdd">+ Add another role</button>
+          <button type="button" class="rs-mini" id="rsAdd">+ Add another company</button>
           <div><b style="font-size:13px">Bullet ideas for your role</b> <span style="font-size:12.5px;color:var(--ink-3)">Click to add to the role you last edited</span><div class="rs-ideas" id="rsIdeas" style="margin-top:8px"></div></div>
-          <label>Skills, comma separated<textarea data-k="skills" rows="2" placeholder="Positioning, launches, competitive intelligence, Salesforce"></textarea></label>
-          <label>Education, one per line<textarea data-k="edu" rows="2" placeholder="MBA, Marketing, College, 2020"></textarea></label>
-          <label>Certifications, optional<input data-k="certs" placeholder="PMA Certified, AWS Partner Accreditation"></label>
+          <details class="rs-more"><summary>4. Skills, tools and certificates <em>prefilled for your role</em></summary>
+            <div class="rs-row"><label>Skills label<input data-k="s1l"></label><label>Second skills label<input data-k="s2l"></label></div>
+            <label>Skills<textarea data-k="s1" rows="2"></textarea></label>
+            <label>Second skills group<textarea data-k="s2" rows="2"></textarea></label>
+            <label>Tools<input data-k="tools"></label>
+            <label>Courses and certificates, one per line as Name | Mon YYYY<textarea data-k="certs" rows="3" placeholder="Certified Scrum Product Owner | Oct 2022"></textarea></label>
+            <label>Hobbies, optional<input data-k="hobbies" placeholder="Writing, Meetups, Reading, Cycling"></label>
+          </details>
+          <details class="rs-more"><summary>5. Volunteering <em>optional</em></summary>
+            <div class="rs-row"><label>Organisation<input data-v="org" placeholder="AIESEC"></label><label>Location<input data-v="city" placeholder="Chennai, IN"></label></div>
+            <div class="rs-row"><label>Role<input data-v="title" placeholder="Project Volunteer"></label><label>Dates<input data-v="dates" placeholder="Nov 2019 to Apr 2020"></label></div>
+            <label>What you did, one per line<textarea data-v="bullets" rows="3"></textarea></label>
+          </details>
         </form>
         <div class="rs-side">
           <div class="rs-acts"><button type="button" class="btn btn-primary" id="rsPdf">Download PDF</button><button type="button" class="btn btn-ghost" id="rsCopy">Copy text</button><button type="button" class="btn btn-ghost" id="rsSave">Save draft</button><button type="button" class="btn btn-ghost" id="rsClear">Clear</button></div>
