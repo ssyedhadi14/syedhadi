@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" font-family="Plus Jakarta Sans, Inter, sans-serif">
+  <rect width="1200" height="675" fill="#ffffff"/>
+  <text x="600" y="70" text-anchor="middle" font-size="40" font-weight="800" fill="#1c1640">The five step competitor and pricing scan</text>
+  <text x="600" y="112" text-anchor="middle" font-size="24" fill="#5b3df5">From the buyer's real shortlist to a battlecard sellers open on calls</text>
+
+  <g>
+    <rect x="40" y="170" width="200" height="300" rx="20" fill="#f6f3ff" stroke="#5b3df5" stroke-width="4"/>
+    <circle cx="140" cy="220" r="30" fill="#5b3df5"/>
+    <text x="140" y="230" text-anchor="middle" font-size="28" font-weight="800" fill="#ffffff">1</text>
+    <text x="140" y="300" text-anchor="middle" font-size="25" font-weight="800" fill="#1c1640">Pick real</text>
+    <text x="140" y="333" text-anchor="middle" font-size="25" font-weight="800" fill="#1c1640">alternatives</text>
+    <text x="140" y="390" text-anchor="middle" font-size="22" fill="#5b3df5">Status quo</text>
+    <text x="140" y="420" text-anchor="middle" font-size="22" fill="#5b3df5">counts</text>
+  </g>
+  <g>
+    <rect x="270" y="170" width="200" height="300" rx="20" fill="#f6f3ff" stroke="#7c5cff" stroke-width="4"/>
+    <circle cx="370" cy="220" r="30" fill="#7c5cff"/>
+    <text x="370" y="230" text-anchor="middle" font-size="28" font-weight="800" fill="#ffffff">2</text>
+    <text x="370" y="300" text-anchor="middle" font-size="25" font-weight="800" fill="#1c1640">Comparison</text>
+    <text x="370" y="333" text-anchor="middle" font-size="25" font-weight="800" fill="#1c1640">grid</text>
+    <text x="370" y="390" text-anchor="middle" font-size="22" fill="#7c5cff">Buyer criteria,</text>
+    <text x="370" y="420" text-anchor="middle" font-size="22" fill="#7c5cff">a source per cell</text>
+  </g>
+  <g>
+    <rect x="500" y="170" width="200" height="300" rx="20" fill="#f6f3ff" stroke="#b43ea0" stroke-width="4"/>
+    <circle cx="600" cy="220" r="30" fill="#b43ea0"/>
+    <text x="600" y="230" text-anchor="middle" font-size="28" font-weight="800" fill="#ffffff">3</text>
+    <text x="600" y="300" text-anchor="middle" font-size="25" font-weight="800" fill="#1c1640">Pricing page</text>
+    <text x="600" y="333" text-anchor="middle" font-size="25" font-weight="800" fill="#1c1640">teardown</text>
+    <text x="600" y="390" text-anchor="middle" font-size="22" fill="#b43ea0">Model, metric,</text>
+    <text x="600" y="420" text-anchor="middle" font-size="22" fill="#b43ea0">gates, trial</text>
+  </g>
+  <g>
+    <rect x="730" y="170" width="200" height="300" rx="20" fill="#f6f3ff" stroke="#1c1640" stroke-width="4"/>
+    <circle cx="830" cy="220" r="30" fill="#1c1640"/>
+    <text x="830" y="230" text-anchor="middle" font-size="28" font-weight="800" fill="#ffffff">4</text>
+    <text x="830" y="300" text-anchor="middle" font-size="25" font-weight="800" fill="#1c1640">Mine reviews</text>
+    <text x="830" y="333" text-anchor="middle" font-size="25" font-weight="800" fill="#1c1640">and win loss</text>
+    <text x="830" y="390" text-anchor="middle" font-size="22" fill="#1c1640">Three and four</text>
+    <text x="830" y="420" text-anchor="middle" font-size="22" fill="#1c1640">star reviews</text>
+  </g>
+  <g>
+    <rect x="960" y="170" width="200" height="300" rx="20" fill="#5b3df5"/>
+    <circle cx="1060" cy="220" r="30" fill="#ffd84d"/>
+    <text x="1060" y="230" text-anchor="middle" font-size="28" font-weight="800" fill="#1c1640">5</text>
+    <text x="1060" y="300" text-anchor="middle" font-size="25" font-weight="800" fill="#ffffff">Battlecard</text>
+    <text x="1060" y="333" text-anchor="middle" font-size="25" font-weight="800" fill="#ffffff">per rival</text>
+    <text x="1060" y="390" text-anchor="middle" font-size="22" fill="#ffd84d">One page,</text>
+    <text x="1060" y="420" text-anchor="middle" font-size="22" fill="#ffd84d">dated, owned</text>
+  </g>
+
+  <g fill="#5b3df5">
+    <polygon points="244,310 264,320 244,330"/>
+    <polygon points="474,310 494,320 474,330"/>
+    <polygon points="704,310 724,320 704,330"/>
+    <polygon points="934,310 954,320 934,330"/>
+  </g>
+
+  <rect x="40" y="520" width="1120" height="110" rx="20" fill="#ffd84d"/>
+  <text x="600" y="565" text-anchor="middle" font-size="27" font-weight="800" fill="#1c1640">Rule for every step</text>
+  <text x="600" y="605" text-anchor="middle" font-size="24" fill="#1c1640">No source, no claim. Never trash a rival. Refresh every quarter.</text>
+</svg>

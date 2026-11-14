@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" font-family="Plus Jakarta Sans, Inter, sans-serif">
+  <rect width="1200" height="675" fill="#f6f3ff"/>
+  <text x="600" y="64" text-anchor="middle" font-size="36" font-weight="800" fill="#1c1640">Attribution that ties every channel to pipeline</text>
+  <text x="600" y="102" text-anchor="middle" font-size="22" fill="#5b3df5">Three inputs, two ledgers, one dashboard, one weekly review</text>
+
+  <!-- Inputs -->
+  <text x="160" y="160" text-anchor="middle" font-size="22" font-weight="700" fill="#1c1640">INPUTS</text>
+  <rect x="40" y="180" width="240" height="96" rx="16" fill="#ffffff" stroke="#7c5cff" stroke-width="3"/>
+  <text x="160" y="222" text-anchor="middle" font-size="24" font-weight="700" fill="#1c1640">UTM rules</text>
+  <text x="160" y="254" text-anchor="middle" font-size="22" fill="#1c1640">every link</text>
+  <rect x="40" y="300" width="240" height="96" rx="16" fill="#ffffff" stroke="#7c5cff" stroke-width="3"/>
+  <text x="160" y="342" text-anchor="middle" font-size="24" font-weight="700" fill="#1c1640">CRM fields</text>
+  <text x="160" y="374" text-anchor="middle" font-size="22" fill="#1c1640">required, from a list</text>
+  <rect x="40" y="420" width="240" height="96" rx="16" fill="#ffffff" stroke="#b43ea0" stroke-width="3"/>
+  <text x="160" y="462" text-anchor="middle" font-size="24" font-weight="700" fill="#1c1640">Self reported</text>
+  <text x="160" y="494" text-anchor="middle" font-size="22" fill="#1c1640">buyer says how</text>
+
+  <!-- arrows to ledgers -->
+  <path d="M290 228 L380 268" stroke="#1c1640" stroke-width="3" fill="none" marker-end="url(#a)"/>
+  <path d="M290 348 L380 348" stroke="#1c1640" stroke-width="3" fill="none" marker-end="url(#a)"/>
+  <path d="M290 468 L380 428" stroke="#1c1640" stroke-width="3" fill="none" marker-end="url(#a)"/>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#1c1640"/>
+    </marker>
+  </defs>
+
+  <!-- Ledgers -->
+  <text x="510" y="160" text-anchor="middle" font-size="22" font-weight="700" fill="#1c1640">TWO LEDGERS</text>
+  <rect x="390" y="200" width="240" height="130" rx="16" fill="#5b3df5"/>
+  <text x="510" y="250" text-anchor="middle" font-size="28" font-weight="800" fill="#ffffff">Sourced</text>
+  <text x="510" y="284" text-anchor="middle" font-size="22" fill="#ffffff">one source per deal</text>
+  <text x="510" y="312" text-anchor="middle" font-size="22" fill="#ffd84d">adds to 100%</text>
+  <rect x="390" y="366" width="240" height="130" rx="16" fill="#b43ea0"/>
+  <text x="510" y="416" text-anchor="middle" font-size="28" font-weight="800" fill="#ffffff">Influenced</text>
+  <text x="510" y="450" text-anchor="middle" font-size="22" fill="#ffffff">every touch counts</text>
+  <text x="510" y="478" text-anchor="middle" font-size="22" fill="#ffd84d">adds past 100%</text>
+
+  <path d="M640 348 L700 348" stroke="#1c1640" stroke-width="3" fill="none" marker-end="url(#a)"/>
+
+  <!-- Dashboard -->
+  <text x="900" y="160" text-anchor="middle" font-size="22" font-weight="700" fill="#1c1640">FIVE CHART DASHBOARD</text>
+  <rect x="710" y="180" width="450" height="336" rx="16" fill="#ffffff" stroke="#5b3df5" stroke-width="3"/>
+  <circle cx="748" cy="222" r="16" fill="#ffd84d"/><text x="748" y="230" text-anchor="middle" font-size="22" font-weight="800" fill="#1c1640">1</text>
+  <text x="776" y="230" font-size="22" fill="#1c1640">Sourced pipeline by channel</text>
+  <circle cx="748" cy="284" r="16" fill="#ffd84d"/><text x="748" y="292" text-anchor="middle" font-size="22" font-weight="800" fill="#1c1640">2</text>
+  <text x="776" y="292" font-size="22" fill="#1c1640">Influenced pipeline by channel</text>
+  <circle cx="748" cy="346" r="16" fill="#ffd84d"/><text x="748" y="354" text-anchor="middle" font-size="22" font-weight="800" fill="#1c1640">3</text>
+  <text x="776" y="354" font-size="22" fill="#1c1640">Software vs self reported</text>
+  <circle cx="748" cy="408" r="16" fill="#ffd84d"/><text x="748" y="416" text-anchor="middle" font-size="22" font-weight="800" fill="#1c1640">4</text>
+  <text x="776" y="416" font-size="22" fill="#1c1640">Cost per opportunity</text>
+  <circle cx="748" cy="470" r="16" fill="#ffd84d"/><text x="748" y="478" text-anchor="middle" font-size="22" font-weight="800" fill="#1c1640">5</text>
+  <text x="776" y="478" font-size="22" fill="#1c1640">Pipeline pacing vs target</text>
+
+  <!-- weekly review bar -->
+  <path d="M935 526 L935 566" stroke="#1c1640" stroke-width="3" fill="none" marker-end="url(#a)"/>
+  <rect x="40" y="576" width="1120" height="70" rx="35" fill="#1c1640"/>
+  <text x="600" y="620" text-anchor="middle" font-size="26" font-weight="700" fill="#ffffff">Weekly review with sales, <tspan fill="#ffd84d">keep, test or cut</tspan> every channel</text>
+</svg>

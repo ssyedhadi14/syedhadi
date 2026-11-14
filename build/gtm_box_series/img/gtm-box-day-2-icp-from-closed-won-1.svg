@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" font-family="Plus Jakarta Sans, Inter, sans-serif">
+  <rect width="1200" height="675" fill="#f6f3ff"/>
+  <text x="600" y="72" text-anchor="middle" font-size="40" font-weight="800" fill="#1c1640">From deal data to ICP in five steps</text>
+  <text x="600" y="112" text-anchor="middle" font-size="24" fill="#5b3df5">Your ICP is a finding, not a decision</text>
+  <defs>
+    <marker id="a" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" refX="14" refY="9" orient="auto"><path d="M0,0 L18,9 L0,18 z" fill="#1c1640"/></marker>
+  </defs>
+  <g font-size="22" text-anchor="middle">
+    <rect x="40" y="180" width="200" height="250" rx="20" fill="#5b3df5"/>
+    <text x="140" y="235" font-size="30" font-weight="800" fill="#ffd84d">1</text>
+    <text x="140" y="285" font-weight="800" fill="#ffffff">Pull deals</text>
+    <text x="140" y="330" fill="#ffffff">Won and lost,</text>
+    <text x="140" y="360" fill="#ffffff">12 to 24</text>
+    <text x="140" y="390" fill="#ffffff">months</text>
+
+    <rect x="270" y="180" width="200" height="250" rx="20" fill="#7c5cff"/>
+    <text x="370" y="235" font-size="30" font-weight="800" fill="#ffd84d">2</text>
+    <text x="370" y="285" font-weight="800" fill="#ffffff">Add trigger</text>
+    <text x="370" y="330" fill="#ffffff">Why each</text>
+    <text x="370" y="360" fill="#ffffff">deal started</text>
+
+    <rect x="500" y="180" width="200" height="250" rx="20" fill="#5b3df5"/>
+    <text x="600" y="235" font-size="30" font-weight="800" fill="#ffd84d">3</text>
+    <text x="600" y="285" font-weight="800" fill="#ffffff">Find patterns</text>
+    <text x="600" y="330" fill="#ffffff">Win rate, ACV,</text>
+    <text x="600" y="360" fill="#ffffff">cycle, discount,</text>
+    <text x="600" y="390" fill="#ffffff">renewal</text>
+
+    <rect x="730" y="180" width="200" height="250" rx="20" fill="#7c5cff"/>
+    <text x="830" y="235" font-size="30" font-weight="800" fill="#ffd84d">4</text>
+    <text x="830" y="285" font-weight="800" fill="#ffffff">Score</text>
+    <text x="830" y="330" fill="#ffffff">Weighted</text>
+    <text x="830" y="360" fill="#ffffff">1 to 5 per</text>
+    <text x="830" y="390" fill="#ffffff">segment</text>
+
+    <rect x="960" y="180" width="200" height="250" rx="20" fill="#b43ea0"/>
+    <text x="1060" y="235" font-size="30" font-weight="800" fill="#ffd84d">5</text>
+    <text x="1060" y="285" font-weight="800" fill="#ffffff">Write it</text>
+    <text x="1060" y="330" fill="#ffffff">ICP and</text>
+    <text x="1060" y="360" fill="#ffffff">persona sheet</text>
+  </g>
+  <g stroke="#1c1640" stroke-width="4" marker-end="url(#a)">
+    <line x1="242" y1="305" x2="262" y2="305"/>
+    <line x1="472" y1="305" x2="492" y2="305"/>
+    <line x1="702" y1="305" x2="722" y2="305"/>
+    <line x1="932" y1="305" x2="952" y2="305"/>
+  </g>
+  <rect x="140" y="480" width="430" height="130" rx="20" fill="#ffffff" stroke="#5b3df5" stroke-width="4"/>
+  <text x="355" y="530" text-anchor="middle" font-size="26" font-weight="800" fill="#5b3df5">Top segments</text>
+  <text x="355" y="572" text-anchor="middle" font-size="22" fill="#1c1640">become your ICP</text>
+  <rect x="630" y="480" width="430" height="130" rx="20" fill="#ffd84d" stroke="#1c1640" stroke-width="4"/>
+  <text x="845" y="530" text-anchor="middle" font-size="26" font-weight="800" fill="#1c1640">Bottom segments</text>
+  <text x="845" y="572" text-anchor="middle" font-size="22" fill="#1c1640">become your disqualifiers</text>
+</svg>

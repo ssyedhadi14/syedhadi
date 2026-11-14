@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+<rect width="1200" height="675" fill="#ffffff"/>
+<text x="600" y="70" text-anchor="middle" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="40" font-weight="800" fill="#1c1640">The six week launch calendar</text>
+<text x="600" y="112" text-anchor="middle" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="24" font-weight="600" fill="#5b3df5">Four weeks to build the moment, two weeks to turn it into pipeline</text>
+<line x1="95" y1="330" x2="1105" y2="330" stroke="#1c1640" stroke-width="6" stroke-linecap="round"/>
+<circle cx="95.0" cy="330" r="26" fill="#7c5cff" stroke="#ffffff" stroke-width="4"/>
+<text x="95.0" y="250" text-anchor="middle" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="24" font-weight="800" fill="#7c5cff">T minus 4</text>
+<text x="95.0" y="200" text-anchor="middle" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="22" font-weight="600" fill="#1c1640">Lock the</text>
+<text x="95.0" y="226" text-anchor="middle" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="22" font-weight="600" fill="#1c1640">story</text>
+<circle cx="263.33333333333337" cy="330" r="26" fill="#7c5cff" stroke="#ffffff" stroke-width="4"/>
+<text x="263.33333333333337" y="420" text-anchor="middle" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="24" font-weight="800" fill="#7c5cff">T minus 3</text>
+<text x="263.33333333333337" y="455" text-anchor="middle" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="22" font-weight="600" fill="#1c1640">Open</text>
+<text x="263.33333333333337" y="481" text-anchor="middle" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="22" font-weight="600" fill="#1c1640">registration</text>
+<circle cx="431.6666666666667" cy="330" r="26" fill="#7c5cff" stroke="#ffffff" stroke-width="4"/>
+<text x="431.6666666666667" y="250" text-anchor="middle" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="24" font-weight="800" fill="#7c5cff">T minus 2</text>
+<text x="431.6666666666667" y="200" text-anchor="middle" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="22" font-weight="600" fill="#1c1640">Fill the</text>
+<text x="431.6666666666667" y="226" text-anchor="middle" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="22" font-weight="600" fill="#1c1640">room</text>
+<circle cx="600.0" cy="330" r="26" fill="#7c5cff" stroke="#ffffff" stroke-width="4"/>
+<text x="600.0" y="420" text-anchor="middle" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="24" font-weight="800" fill="#7c5cff">T minus 1</text>
+<text x="600.0" y="455" text-anchor="middle" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="22" font-weight="600" fill="#1c1640">Rehearse</text>
+<text x="600.0" y="481" text-anchor="middle" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="22" font-weight="600" fill="#1c1640">and draft</text>
+<circle cx="768.3333333333334" cy="330" r="40" fill="#b43ea0" stroke="#ffffff" stroke-width="4"/>
+<text x="768.3333333333334" y="340" text-anchor="middle" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="28" font-weight="800" fill="#ffffff">T</text>
+<text x="768.3333333333334" y="250" text-anchor="middle" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="24" font-weight="800" fill="#b43ea0">T</text>
+<text x="768.3333333333334" y="200" text-anchor="middle" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="22" font-weight="600" fill="#1c1640">Launch</text>
+<text x="768.3333333333334" y="226" text-anchor="middle" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="22" font-weight="600" fill="#1c1640">moment</text>
+<circle cx="936.6666666666667" cy="330" r="26" fill="#5b3df5" stroke="#ffffff" stroke-width="4"/>
+<text x="936.6666666666667" y="420" text-anchor="middle" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="24" font-weight="800" fill="#5b3df5">T plus 1</text>
+<text x="936.6666666666667" y="455" text-anchor="middle" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="22" font-weight="600" fill="#1c1640">Follow up</text>
+<text x="936.6666666666667" y="481" text-anchor="middle" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="22" font-weight="600" fill="#1c1640">in 48 hours</text>
+<circle cx="1105.0" cy="330" r="26" fill="#5b3df5" stroke="#ffffff" stroke-width="4"/>
+<text x="1105.0" y="250" text-anchor="middle" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="24" font-weight="800" fill="#5b3df5">T plus 2</text>
+<text x="1105.0" y="200" text-anchor="middle" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="22" font-weight="600" fill="#1c1640">Repurpose</text>
+<text x="1105.0" y="226" text-anchor="middle" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="22" font-weight="600" fill="#1c1640">and report</text>
+<rect x="65" y="530" width="663.3333333333334" height="60" rx="30" fill="#f6f3ff" stroke="#7c5cff" stroke-width="3"/>
+<text x="411.6666666666667" y="569" text-anchor="middle" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="24" font-weight="800" fill="#5b3df5">Build the moment</text>
+<rect x="748.3333333333334" y="530" width="386.66666666666663" height="60" rx="30" fill="#ffd84d"/>
+<text x="941.6666666666667" y="569" text-anchor="middle" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="24" font-weight="800" fill="#1c1640">Turn it into pipeline</text>
+<text x="600" y="640" text-anchor="middle" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="22" font-weight="700" fill="#b43ea0">One webinar, ten assets, every lead touched within 48 hours</text>
+</svg>

@@ -5,6 +5,16 @@
 # Owner: Syed Hadi
 
 COVERS = {
+    "gtm-box-day-10-run-and-scale": ("The engine runs on", "rhythm", "Operating rhythm", "rocket"),
+    "gtm-box-day-9-attribution-pipeline-dashboard": ("Every channel, one", "scoreboard", "Attribution", "chart"),
+    "gtm-box-day-8-launch-plan": ("One webinar, ten assets, zero", "ghosting", "Launch plan build", "calendar"),
+    "gtm-box-day-7-partner-program": ("Tier partners on pipeline, not", "vibes", "Partner program build", "puzzle"),
+    "gtm-box-day-6-outbound-motion": ("Six touches, one good", "reason", "Outbound motion", "megaphone"),
+    "gtm-box-day-5-one-page-gtm-plan": ("Fit your whole GTM on one", "page", "One page plan", "doc"),
+    "gtm-box-day-4-competitor-pricing-scan": ("Know the alternatives before the buyer", "does", "Day 4 competitor scan", "scales"),
+    "gtm-box-day-3-pipeline-winloss-channel-audit": ("One afternoon. Three numbers. Zero", "excuses", "Day 3 audit", "clipboard"),
+    "gtm-box-day-2-icp-from-closed-won": ("Stop guessing who buys. Ask your", "CRM", "GTM in a Box, Day 2", "idcard"),
+    "gtm-box-day-1-where-growth-stalls": ("Where growth stalls and the 10 day", "fix", "GTM in a Box, Day 1", "mountain"),
     "0-to-10m-10-lessons": ("Ten lessons from a hypergrowth", "year", "Year end issue", "trophy"),
     "gtm-lessons-from-leaders-2026": ("5 ideas I am stealing for", "2027", "GTM reading list", "sparkles"),
     "salary-in-2046": ("Raises compound. Switches", "jump", "Salary growth India", "chart"),

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" font-family="Plus Jakarta Sans, Inter, sans-serif">
+  <rect width="1200" height="675" fill="#f6f3ff"/>
+  <text x="600" y="70" text-anchor="middle" font-size="40" font-weight="800" fill="#1c1640">One afternoon audit, four lenses, three numbers</text>
+  <text x="600" y="112" text-anchor="middle" font-size="24" fill="#5b3df5">Do the lenses in order. Each one cleans the data for the next.</text>
+
+  <g>
+    <rect x="40" y="160" width="260" height="200" rx="20" fill="#5b3df5"/>
+    <text x="170" y="210" text-anchor="middle" font-size="26" font-weight="800" fill="#ffd84d">LENS 1</text>
+    <text x="170" y="252" text-anchor="middle" font-size="26" font-weight="700" fill="#ffffff">Pipeline by</text>
+    <text x="170" y="286" text-anchor="middle" font-size="26" font-weight="700" fill="#ffffff">stage and age</text>
+    <text x="170" y="332" text-anchor="middle" font-size="22" fill="#ffffff">60 min</text>
+  </g>
+  <g>
+    <rect x="330" y="160" width="260" height="200" rx="20" fill="#7c5cff"/>
+    <text x="460" y="210" text-anchor="middle" font-size="26" font-weight="800" fill="#ffd84d">LENS 2</text>
+    <text x="460" y="252" text-anchor="middle" font-size="26" font-weight="700" fill="#ffffff">Conversion</text>
+    <text x="460" y="286" text-anchor="middle" font-size="26" font-weight="700" fill="#ffffff">by stage</text>
+    <text x="460" y="332" text-anchor="middle" font-size="22" fill="#ffffff">45 min</text>
+  </g>
+  <g>
+    <rect x="620" y="160" width="260" height="200" rx="20" fill="#b43ea0"/>
+    <text x="750" y="210" text-anchor="middle" font-size="26" font-weight="800" fill="#ffd84d">LENS 3</text>
+    <text x="750" y="252" text-anchor="middle" font-size="26" font-weight="700" fill="#ffffff">Win loss calls</text>
+    <text x="750" y="286" text-anchor="middle" font-size="26" font-weight="700" fill="#ffffff">and reason codes</text>
+    <text x="750" y="332" text-anchor="middle" font-size="22" fill="#ffffff">90 min plus calls</text>
+  </g>
+  <g>
+    <rect x="910" y="160" width="250" height="200" rx="20" fill="#1c1640"/>
+    <text x="1035" y="210" text-anchor="middle" font-size="26" font-weight="800" fill="#ffd84d">LENS 4</text>
+    <text x="1035" y="252" text-anchor="middle" font-size="26" font-weight="700" fill="#ffffff">Channel cost</text>
+    <text x="1035" y="286" text-anchor="middle" font-size="26" font-weight="700" fill="#ffffff">and pipeline</text>
+    <text x="1035" y="332" text-anchor="middle" font-size="22" fill="#ffffff">45 min</text>
+  </g>
+
+  <g fill="none" stroke="#5b3df5" stroke-width="5" stroke-linecap="round">
+    <path d="M170 370 L170 420 L600 420"/>
+    <path d="M460 370 L460 420"/>
+    <path d="M750 370 L750 420"/>
+    <path d="M1035 370 L1035 420 L600 420"/>
+    <path d="M600 420 L600 455"/>
+  </g>
+  <polygon points="586,452 614,452 600,472" fill="#5b3df5"/>
+
+  <g>
+    <rect x="40" y="490" width="360" height="140" rx="20" fill="#ffffff" stroke="#5b3df5" stroke-width="4"/>
+    <text x="220" y="545" text-anchor="middle" font-size="30" font-weight="800" fill="#1c1640">Real coverage</text>
+    <text x="220" y="590" text-anchor="middle" font-size="22" fill="#5b3df5">Clean pipeline vs target</text>
+  </g>
+  <g>
+    <rect x="420" y="490" width="360" height="140" rx="20" fill="#ffd84d"/>
+    <text x="600" y="545" text-anchor="middle" font-size="30" font-weight="800" fill="#1c1640">Qualified win rate</text>
+    <text x="600" y="590" text-anchor="middle" font-size="22" fill="#1c1640">Won vs reached qualified</text>
+  </g>
+  <g>
+    <rect x="800" y="490" width="360" height="140" rx="20" fill="#ffffff" stroke="#b43ea0" stroke-width="4"/>
+    <text x="980" y="545" text-anchor="middle" font-size="30" font-weight="800" fill="#1c1640">Cost per opp</text>
+    <text x="980" y="590" text-anchor="middle" font-size="22" fill="#b43ea0">By channel, people time in</text>
+  </g>
+</svg>
