@@ -2779,3 +2779,7 @@ img,video,iframe{max-width:100%}
 
 /* QA 2026-11-06: 24px minimum tap area for recommender LinkedIn icons, no visual change */
 .rec-li{position:relative}.rec-li::after{content:"";position:absolute;inset:-4px}
+
+/* 2026-11-16 Homepage hero tagline replaces the name */
+.hero h1.hero-tag{white-space:normal;font-size:clamp(42px,5.8vw,84px);line-height:1.02;letter-spacing:-.03em;color:var(--ink)}
+.hero h1.hero-tag .tg1{padding-right:.06em}
