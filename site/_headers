@@ -30,3 +30,8 @@
 
 /llms-full.txt
   Content-Type: text/plain; charset=utf-8
+
+/x-9dd8cf85030e195ebfa95c46/*
+  Access-Control-Allow-Origin: https://medium.com
+  X-Robots-Tag: noindex
+  Cache-Control: no-store
