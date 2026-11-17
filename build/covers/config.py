@@ -63,6 +63,7 @@ COVERS = {
     "posts": ("Posts that started the", "chat", "Posts", "camera"),
     "tools": ("Tools I'd pick", "again", "Tool directory", "gears"),
     "jobs": ("Dream jobs, one", "click", "Jobs board", "briefcase"),
+    "ai-job-search": ("Your job search, run by an", "agent", "Open source, built on Claude Code", "rocket"),
     "interview-prep": ("Walk in ready. Walk out", "hired", "Interview prep, Bengaluru", "clipboard"),
     "skill-pack": ("Eight skills. Zero", "busywork", "Claude Skill Pack", "sparkles"),
     # Security articles
