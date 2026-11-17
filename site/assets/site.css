@@ -1,4 +1,4 @@
-:root{
+@font-face{font-family:"Inter";font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/web/inter-latin-400-normal.woff2) format("woff2")}@font-face{font-family:"Inter";font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/web/inter-latin-500-normal.woff2) format("woff2")}@font-face{font-family:"Inter";font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/web/inter-latin-600-normal.woff2) format("woff2")}@font-face{font-family:"Inter";font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/web/inter-latin-700-normal.woff2) format("woff2")}@font-face{font-family:"JetBrains Mono";font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/web/jetbrains-mono-latin-500-normal.woff2) format("woff2")}:root{
   --bg:#ffffff; --bg-soft:#f7f6fb; --ink:#0d0b1a; --ink-2:#4a4760; --ink-3:#7c7992;
   --line:#e8e6f0; --card:#ffffff; --accent:#5b3df5; --accent-2:#7c5cff; --accent-soft:#efebff;
   --grid:rgba(91,61,245,.06); --shadow:0 10px 40px rgba(30,20,80,.08);
@@ -2799,3 +2799,8 @@ img,video,iframe{max-width:100%}
 .gb-where{color:var(--ink-2)}.gb-where a{color:var(--accent)}
 @media (max-width:760px){.gb-sizes{grid-template-columns:minmax(0,1fr)}}
 .gb-where+.bx-ctas{margin-top:18px}
+/* perf 2026-11-17: hero entrance slides without fading from 0, so it paints at once */
+@keyframes riseT{from{transform:translateY(14px)}to{transform:none}}
+@keyframes fadeinS{from{opacity:.35}to{opacity:1}}
+.hero .pill,.hero h1,.hero .lede,.hero-cta,.hero .stats,.hero .socials,.page-hero .crumbs,.page-hero h1,.page-hero p,.hero-cv{animation-name:riseT}
+.portrait{animation-name:fadeinS}
