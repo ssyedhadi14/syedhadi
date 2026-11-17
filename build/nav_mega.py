@@ -141,7 +141,7 @@ def mega_nav(RESUME, DECK, CALENDLY, LINKEDIN):
 
     return f'''<nav>
   <div class="wrap nav-in">
-    <a href="/" class="brand"><img src="/img/avatar.jpg" alt="Syed Hadi" width="40" height="40"><span class="brand-t">Syed Hadi<span class="bt-stars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span></span></a>
+    <a href="/" class="brand"><svg class="brand-mark" viewBox="0 0 48 48" width="40" height="40" aria-hidden="true" focusable="false"><defs><linearGradient id="shLogoG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c5cff"/><stop offset="1" stop-color="#4527e0"/></linearGradient></defs><rect width="48" height="48" rx="14" fill="url(#shLogoG)"/><path d="M14 34h12.5a5.5 5.5 0 0 0 0-11h-5a5.5 5.5 0 0 1 0-11H31" fill="none" stroke="#fff" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M28.5 7.5L33.5 12l-5 4.5" fill="none" stroke="#fff" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M37 30.5l1.1 2.9 2.9 1.1-2.9 1.1-1.1 2.9-1.1-2.9-2.9-1.1 2.9-1.1z" fill="#d8ccff"/></svg><span class="brand-t">Syed Hadi<span class="bt-stars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span></span></a>
     <div class="nav-links" id="navLinks">
       <div class="dd mega" data-group="work">
         <button class="dd-btn" aria-haspopup="true" aria-expanded="false" data-group="work">Work {chev}</button>

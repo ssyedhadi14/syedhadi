@@ -2804,3 +2804,7 @@ img,video,iframe{max-width:100%}
 @keyframes fadeinS{from{opacity:.35}to{opacity:1}}
 .hero .pill,.hero h1,.hero .lede,.hero-cta,.hero .stats,.hero .socials,.page-hero .crumbs,.page-hero h1,.page-hero p,.hero-cv{animation-name:riseT}
 .portrait{animation-name:fadeinS}
+/* brand logo 2026-11-17 */
+.brand .brand-mark{width:38px;height:38px;flex:none;display:block;filter:drop-shadow(0 4px 10px rgba(91,61,245,.28));transition:transform .3s var(--ease)}
+.brand:hover .brand-mark{transform:rotate(-6deg) scale(1.06)}
+.brand .brand-t{letter-spacing:0}

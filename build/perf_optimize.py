@@ -216,7 +216,7 @@ def calendly():
         print("calendly: homepage embed now loads near the viewport")
 
 
-CSS_VERSION = "20261117c"
+CSS_VERSION = "20261117d"
 CSS_TAIL = """
 /* perf 2026-11-17: hero entrance slides without fading from 0, so it paints at once */
 @keyframes riseT{from{transform:translateY(14px)}to{transform:none}}
