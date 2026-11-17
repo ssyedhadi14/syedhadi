@@ -2783,3 +2783,19 @@ img,video,iframe{max-width:100%}
 /* 2026-11-16 Homepage hero tagline replaces the name */
 .hero h1.hero-tag{white-space:normal;font-size:clamp(42px,5.8vw,84px);line-height:1.02;letter-spacing:-.03em;color:var(--ink)}
 .hero h1.hero-tag .tg1{padding-right:.06em}
+
+/* 2026-11-17 Lead CTA box and Growth in a Box sizes */
+.svc-cta{display:grid;grid-template-columns:minmax(0,1.6fr) auto;gap:28px;align-items:center;padding:30px 34px;border-radius:22px;
+  background:linear-gradient(135deg,rgba(91,61,245,.08),rgba(180,62,160,.08));border:1px solid rgba(91,61,245,.22)}
+.svc-cta h2{font-size:clamp(26px,3vw,36px);margin:6px 0 10px}
+.svc-cta p{margin:0 0 6px;color:var(--ink-2)}.svc-cta p b{color:var(--ink)}
+.svc-cta-more{font-size:14px}.svc-cta-more a{color:var(--accent)}
+.svc-cta-btns{display:flex;flex-direction:column;gap:10px;min-width:210px}.svc-cta-btns .btn{justify-content:center}
+@media (max-width:760px){.svc-cta{grid-template-columns:minmax(0,1fr);padding:24px 20px}.svc-cta-btns{min-width:0}}
+.gb-sizes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:8px 0 18px}
+.gb-size{padding:22px;border-radius:18px;border:1px solid var(--line,#e7e3f5);background:var(--card,#fff)}
+.gb-size b{display:block;font-family:"Plus Jakarta Sans",Inter,sans-serif;font-size:20px}.gb-size span{color:var(--accent);font-weight:700;font-size:14px}
+.gb-size p{margin:10px 0 0;color:var(--ink-2);font-size:15px}
+.gb-where{color:var(--ink-2)}.gb-where a{color:var(--accent)}
+@media (max-width:760px){.gb-sizes{grid-template-columns:minmax(0,1fr)}}
+.gb-where+.bx-ctas{margin-top:18px}
