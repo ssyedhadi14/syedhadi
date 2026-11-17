@@ -30,3 +30,8 @@
 
 /llms-full.txt
   Content-Type: text/plain; charset=utf-8
+
+/x-74ecab83a2027457dd56a795/*
+  Access-Control-Allow-Origin: https://syedhadi.substack.com
+  X-Robots-Tag: noindex
+  Cache-Control: no-store

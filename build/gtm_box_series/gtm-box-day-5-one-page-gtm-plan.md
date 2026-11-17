@@ -1,5 +1,5 @@
 ---
-{"slug": "gtm-box-day-5-one-page-gtm-plan", "date": "2026-11-19", "section": "GTM in a Box", "day": 5, "series": "GTM in a Box", "free_preview": true, "title": "The One Page GTM Plan Template With Owners and Targets", "description": "Fit target, segments, motions, channels, budget, owners, weekly metrics and risks on one page, then get sales, marketing and partners to sign it.", "h1": "One page, eight boxes, three", "h1_accent": "signatures", "cover_text": "Fit your whole GTM on one", "cover_accent": "page", "cover_tag": "One page plan", "substack_title": "The one page GTM plan, with owners and targets", "substack_subtitle": "Day 5 of GTM in a Box. Eight boxes, one name per row, a number every team checks on Monday, and the meeting that gets it signed.", "tags": ["GTM plan", "go to market", "B2B SaaS", "sales and marketing alignment", "GTM in a Box"], "sources": [{"title": "MKT1 Guide to Annual Marketing Planning, Emily Kramer, MKT1 Newsletter", "url": "https://newsletter.mkt1.co/p/annual-marketing-planning"}]}
+{"slug": "gtm-box-day-5-one-page-gtm-plan", "date": "2026-11-21", "section": "GTM in a Box", "day": 5, "series": "GTM in a Box", "free_preview": false, "title": "The One Page GTM Plan Template With Owners and Targets", "description": "Fit target, segments, motions, channels, budget, owners, weekly metrics and risks on one page, then get sales, marketing and partners to sign it.", "h1": "One page, eight boxes, three", "h1_accent": "signatures", "cover_text": "Fit your whole GTM on one", "cover_accent": "page", "cover_tag": "One page plan", "substack_title": "The one page GTM plan, with owners and targets", "substack_subtitle": "Day 5 of GTM in a Box. Eight boxes, one name per row, a number every team checks on Monday, and the meeting that gets it signed.", "tags": ["GTM plan", "go to market", "B2B SaaS", "sales and marketing alignment", "GTM in a Box"], "sources": [{"title": "MKT1 Guide to Annual Marketing Planning, Emily Kramer, MKT1 Newsletter", "url": "https://newsletter.mkt1.co/p/annual-marketing-planning"}]}
 ---
 Most GTM plans die inside a 40 slide deck that nobody opens after kickoff. The plan that actually runs a quarter fits on one page, names one person per line and carries a number every team can check on Monday. Today you build that page, and you get three teams to sign it.
 
@@ -25,8 +25,6 @@ Emily Kramer makes a sharp point in the [MKT1 guide to annual marketing planning
 The last piece is the one most teams skip. Signatures. A plan that sales, marketing and partners never agreed to in the same room becomes three private plans by week three. Sales chases its own list. Marketing reports its own number. Partners register deals nobody else knew about. The signing meeting is cheap insurance against all of that.
 
 The rest of this issue gives you the method for each box, the fill in the blanks template, a worked example and the exact meeting that gets the page signed.
-
-<!-- PAYWALL -->
 
 ## Fill the boxes in this order
 

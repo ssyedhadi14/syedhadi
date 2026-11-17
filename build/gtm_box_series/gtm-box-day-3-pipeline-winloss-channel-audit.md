@@ -1,5 +1,5 @@
 ---
-{"slug": "gtm-box-day-3-pipeline-winloss-channel-audit", "date": "2026-11-17", "day": 3, "series": "GTM in a Box", "free_preview": true, "section": "GTM in a Box", "title": "Pipeline, Win Loss and Channel Audit in One Afternoon", "description": "Audit your pipeline by stage and age, code win loss reasons and price every channel in one afternoon. Day 3 of GTM in a Box, with a copy ready audit sheet.", "h1": "Your pipeline is lying to", "h1_accent": "you", "cover_text": "One afternoon. Three numbers. Zero", "cover_accent": "excuses", "cover_tag": "Day 3 audit", "substack_title": "Audit your pipeline, win loss and channels in one afternoon", "substack_subtitle": "Day 3 of GTM in a Box. Four lenses, one sheet and the three numbers that decide where next quarter's money goes.", "tags": ["GTM in a Box", "pipeline audit", "win loss analysis", "channel attribution", "B2B SaaS", "RevOps"], "sources": [{"title": "Clozd, 5 lies your CRM is telling you about your buyers", "url": "https://clozd.com/blog/5-lies-your-crm-is-telling-you-about-your-buyers"}, {"title": "Clozd, Why interviews beat surveys for win loss analysis", "url": "https://www.clozd.com/blog/win-loss-analysis-why-interviews"}]}
+{"slug": "gtm-box-day-3-pipeline-winloss-channel-audit", "date": "2026-11-19", "day": 3, "series": "GTM in a Box", "free_preview": false, "section": "GTM in a Box", "title": "Pipeline, Win Loss and Channel Audit in One Afternoon", "description": "Audit your pipeline by stage and age, code win loss reasons and price every channel in one afternoon. Day 3 of GTM in a Box, with a copy ready audit sheet.", "h1": "Your pipeline is lying to", "h1_accent": "you", "cover_text": "One afternoon. Three numbers. Zero", "cover_accent": "excuses", "cover_tag": "Day 3 audit", "substack_title": "Audit your pipeline, win loss and channels in one afternoon", "substack_subtitle": "Day 3 of GTM in a Box. Four lenses, one sheet and the three numbers that decide where next quarter's money goes.", "tags": ["GTM in a Box", "pipeline audit", "win loss analysis", "channel attribution", "B2B SaaS", "RevOps"], "sources": [{"title": "Clozd, 5 lies your CRM is telling you about your buyers", "url": "https://clozd.com/blog/5-lies-your-crm-is-telling-you-about-your-buyers"}, {"title": "Clozd, Why interviews beat surveys for win loss analysis", "url": "https://www.clozd.com/blog/win-loss-analysis-why-interviews"}]}
 ---
 
 Your CRM says you have four times coverage. Your gut says the quarter is in trouble. One of them is wrong, and after today you will know which one.
@@ -22,8 +22,6 @@ The win loss lens is the one teams skip, and it is the one that hurts most. Cloz
 You do not need a RevOps team for this. You need a CRM export, your spend for the last two quarters, five buyer calls and one afternoon. At the end you get three numbers, and those three numbers decide everything you build in the next 60 days.
 
 Not sure where you stand? Take the two minute [GTM health check](https://syedcreates.com/gtm-health-check) first. Questions three, seven and ten cover exactly what this audit fixes.
-
-<!-- PAYWALL -->
 
 ## The four lens method
 

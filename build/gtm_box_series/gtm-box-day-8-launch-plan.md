@@ -1,5 +1,5 @@
 ---
-{"slug": "gtm-box-day-8-launch-plan", "date": "2026-11-22", "section": "GTM in a Box", "day": 8, "series": "GTM in a Box", "free_preview": true, "title": "A B2B Launch Plan for Webinars, Events and Content", "description": "Day 8 of GTM in a Box. Pick the launch moment, run a six week calendar, follow up on events within 48 hours and turn one webinar into ten assets.", "h1": "Launch day is one day. The pipeline needs", "h1_accent": "six weeks", "cover_text": "One webinar, ten assets, zero", "cover_accent": "ghosting", "cover_tag": "Launch plan build", "substack_title": "A launch plan for webinars, events and content", "substack_subtitle": "Day 8 of GTM in a Box. The T minus 4 to T plus 2 calendar, a webinar run sheet and the 48 hour follow up rule.", "tags": ["product launch", "webinars", "event marketing", "content repurposing", "B2B SaaS", "go to market"], "sources": [{"title": "Dear Marketers, how has the product launch playbook changed, MKT1, Emily Kramer", "url": "https://newsletter.mkt1.co/p/product-launches-episode-11"}, {"title": "ON24 2025 Digital Engagement Benchmarks Report, Business Wire", "url": "https://www.businesswire.com/news/home/20250311690144/en"}]}
+{"slug": "gtm-box-day-8-launch-plan", "date": "2026-11-24", "section": "GTM in a Box", "day": 8, "series": "GTM in a Box", "free_preview": false, "title": "A B2B Launch Plan for Webinars, Events and Content", "description": "Day 8 of GTM in a Box. Pick the launch moment, run a six week calendar, follow up on events within 48 hours and turn one webinar into ten assets.", "h1": "Launch day is one day. The pipeline needs", "h1_accent": "six weeks", "cover_text": "One webinar, ten assets, zero", "cover_accent": "ghosting", "cover_tag": "Launch plan build", "substack_title": "A launch plan for webinars, events and content", "substack_subtitle": "Day 8 of GTM in a Box. The T minus 4 to T plus 2 calendar, a webinar run sheet and the 48 hour follow up rule.", "tags": ["product launch", "webinars", "event marketing", "content repurposing", "B2B SaaS", "go to market"], "sources": [{"title": "Dear Marketers, how has the product launch playbook changed, MKT1, Emily Kramer", "url": "https://newsletter.mkt1.co/p/product-launches-episode-11"}, {"title": "ON24 2025 Digital Engagement Benchmarks Report, Business Wire", "url": "https://www.businesswire.com/news/home/20250311690144/en"}]}
 ---
 Most launches get four weeks of panic and one day of attention. Then the team moves on, the webinar recording sits in a folder, and the leads from the booth wait a week for an email that reads like a receipt.
 
@@ -15,9 +15,7 @@ That matches what I saw at AccuKnox. In one quarter our lean team ran 12 live mo
 
 The other half of the case is attention after the live moment. [ON24's 2025 benchmarks](https://www.businesswire.com/news/home/20250311690144/en) found that 45% of attendees chose to watch webinars on demand, and that teams using automated nurture sequences saw 69% higher on demand attendance. Almost half your audience shows up after the event. If your plan ends at the live session, you planned for half the room.
 
-The paid section is the full build. Five steps, a launch calendar you can copy, a minute by minute webinar run sheet, a worked example and the mistakes that waste a good launch.
-
-<!-- PAYWALL -->
+Below is the full build. Five steps, a launch calendar you can copy, a minute by minute webinar run sheet, a worked example and the mistakes that waste a good launch.
 
 ## The five step build
 

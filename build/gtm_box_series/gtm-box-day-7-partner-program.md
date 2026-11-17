@@ -1,5 +1,5 @@
 ---
-{"slug": "gtm-box-day-7-partner-program", "date": "2026-11-21", "section": "GTM in a Box", "day": 7, "series": "GTM in a Box", "free_preview": true, "title": "Build a B2B Partner Program That Sources Real Deals", "description": "Day 7 of GTM in a Box. Partner types, tiers, deal registration rules, account mapping and the monthly review that make partners source pipeline.", "h1": "Your partners should bring deals, not just", "h1_accent": "logos", "cover_text": "Tier partners on pipeline, not", "cover_accent": "vibes", "cover_tag": "Partner program build", "substack_title": "A partner program that sources deals, not logos", "substack_subtitle": "Day 7 of GTM in a Box. Tiers, deal registration rules and an account mapping sheet you can copy today.", "tags": ["partner program", "channel partnerships", "deal registration", "account mapping", "B2B SaaS", "go to market"], "sources": [{"title": "HubSpot Solutions Partner Program tiers and benefits 2026", "url": "https://www.hubspot.com/solutions-partners-tiers-and-benefits-2026"}, {"title": "How long should a deal registration protection period be for SaaS, ZINFI", "url": "https://www.zinfi.com/blog/how-long-deal-registration-protection-period-saas/"}]}
+{"slug": "gtm-box-day-7-partner-program", "date": "2026-11-23", "section": "GTM in a Box", "day": 7, "series": "GTM in a Box", "free_preview": false, "title": "Build a B2B Partner Program That Sources Real Deals", "description": "Day 7 of GTM in a Box. Partner types, tiers, deal registration rules, account mapping and the monthly review that make partners source pipeline.", "h1": "Your partners should bring deals, not just", "h1_accent": "logos", "cover_text": "Tier partners on pipeline, not", "cover_accent": "vibes", "cover_tag": "Partner program build", "substack_title": "A partner program that sources deals, not logos", "substack_subtitle": "Day 7 of GTM in a Box. Tiers, deal registration rules and an account mapping sheet you can copy today.", "tags": ["partner program", "channel partnerships", "deal registration", "account mapping", "B2B SaaS", "go to market"], "sources": [{"title": "HubSpot Solutions Partner Program tiers and benefits 2026", "url": "https://www.hubspot.com/solutions-partners-tiers-and-benefits-2026"}, {"title": "How long should a deal registration protection period be for SaaS, ZINFI", "url": "https://www.zinfi.com/blog/how-long-deal-registration-protection-period-saas/"}]}
 ---
 Signing a partner takes one call and a PDF. Getting that partner to bring you a deal takes a program. Most startups do the first part forty times and never build the second.
 
@@ -26,8 +26,6 @@ Big programs already work this way. HubSpot restructured its [Solutions Partner 
 You do not need points or five tiers. You need the same principle at startup size. Rank partners by the pipeline they source and the customers they keep, and make every benefit flow from that rank.
 
 The rest of this issue is the build. Six steps, a copy ready template with all three sheets, a worked example with numbers, and the mistakes that kill partner programs in their first quarter.
-
-<!-- PAYWALL -->
 
 ## The six step build
 

@@ -1,5 +1,5 @@
 ---
-{"slug": "gtm-box-day-6-outbound-motion", "date": "2026-11-20", "section": "GTM in a Box", "day": 6, "series": "GTM in a Box", "free_preview": true, "title": "Build an Outbound Motion That Books Meetings", "description": "Build a list from your ICP, write to real triggers, run a 6 touch multichannel sequence, handle objections and track the daily numbers that book meetings.", "h1": "Outbound that books meetings, not", "h1_accent": "unsubscribes", "cover_text": "Six touches, one good", "cover_accent": "reason", "cover_tag": "Outbound motion", "substack_title": "Build an outbound motion that books meetings", "substack_subtitle": "Day 6 of GTM in a Box. The list, the triggers, a 6 touch sequence, a call talk track and the daily numbers that turn outbound into a calendar.", "tags": ["outbound", "sales sequence", "cold calling", "B2B SaaS", "GTM in a Box"], "sources": [{"title": "An outbound playbook for 2025, Fivos Aresti, Growth Unhinged", "url": "https://www.growthunhinged.com/p/an-outbound-playbook-for-2025"}, {"title": "The best and worst cold call openers, backed by data from 300M calls, Armand Farrokh, Gong", "url": "https://www.gong.io/resources/labs/the-best-and-worst-cold-call-openers-backed-by-data-from-300m-calls/"}]}
+{"slug": "gtm-box-day-6-outbound-motion", "date": "2026-11-22", "section": "GTM in a Box", "day": 6, "series": "GTM in a Box", "free_preview": false, "title": "Build an Outbound Motion That Books Meetings", "description": "Build a list from your ICP, write to real triggers, run a 6 touch multichannel sequence, handle objections and track the daily numbers that book meetings.", "h1": "Outbound that books meetings, not", "h1_accent": "unsubscribes", "cover_text": "Six touches, one good", "cover_accent": "reason", "cover_tag": "Outbound motion", "substack_title": "Build an outbound motion that books meetings", "substack_subtitle": "Day 6 of GTM in a Box. The list, the triggers, a 6 touch sequence, a call talk track and the daily numbers that turn outbound into a calendar.", "tags": ["outbound", "sales sequence", "cold calling", "B2B SaaS", "GTM in a Box"], "sources": [{"title": "An outbound playbook for 2025, Fivos Aresti, Growth Unhinged", "url": "https://www.growthunhinged.com/p/an-outbound-playbook-for-2025"}, {"title": "The best and worst cold call openers, backed by data from 300M calls, Armand Farrokh, Gong", "url": "https://www.gong.io/resources/labs/the-best-and-worst-cold-call-openers-backed-by-data-from-300m-calls/"}]}
 ---
 Cold outreach is not dead. Lazy outreach is. An outbound motion that books meetings starts with a reason to write today, not a bigger list and a louder template.
 
@@ -22,8 +22,6 @@ So the motion has five parts.
 5. A daily cadence with numbers you check every evening.
 
 Phase two of [GTM in a box](https://syedcreates.com/gtm-in-a-box) builds exactly this: lists, sequences and talk tracks, handed to your team to run. The rest of this issue gives you each part, the sequence template and the call script.
-
-<!-- PAYWALL -->
 
 ## Build the list from your ICP
 
