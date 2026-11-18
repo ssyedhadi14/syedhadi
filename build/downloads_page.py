@@ -14,9 +14,9 @@ ROOT = Path(__file__).resolve().parent.parent
 SITE = ROOT / "site"
 SLUG = "downloads"
 URL = f"https://syedcreates.com/{SLUG}"
-TITLE = "Free Downloads: GTM, Career and Finance PDFs | Syed Hadi"
-DESC = ("Free PDF guides and one pagers from Syed Hadi: the India PMM salary guide, the AI job "
-        "search setup guide, the Qums one pager and the brand kit.")
+TITLE = "Free Career and Interview PDFs to Download | Syed Hadi"
+DESC = ("Free PDF guides from Syed Hadi: 30 interview questions with answers, the interview and offer "
+        "playbook, the India PMM salary guide and the AI job search setup guide.")
 ALT = "Free guides and one pagers"
 
 # gate: None for direct download, or a dict with the localStorage key the source page uses
@@ -28,12 +28,12 @@ ITEMS = [
     {"file": "ai-job-search-setup-guide", "title": "AI Job Search Setup Guide",
      "desc": "Set up the open source AI job search agent on Claude Code: prerequisites, private copy, every slash command.",
      "cat": "career", "label": "Career", "pages": 1, "page": "/ai-job-search", "page_label": "Full guide", "gate": None},
-    {"file": "qums-calculator-one-pager", "title": "Qums Explained on One Page",
-     "desc": "The three steps, a worked example in rupees and the key rulings, in a page you can print or share.",
-     "cat": "finance", "label": "Finance", "pages": 1, "page": "/qums", "page_label": "Qums calculator", "gate": None},
-    {"file": "syed-hadi-brand-kit", "title": "Syed Hadi Brand Kit",
-     "desc": "Logo usage, type, colours, an approved headshot and a bio you can paste, for talks, podcasts and press.",
-     "cat": "brand", "label": "Brand", "pages": 4, "page": "/brand", "page_label": "Brand page", "gate": None},
+    {"file": "interview-questions-and-answers", "title": "30 Interview Questions, Answered",
+     "desc": "Ten questions each for product marketing, partnerships and sales roles, what each one tests and how to answer it.",
+     "cat": "interview", "label": "Interview", "pages": 7, "page": "/interview-prep#questions", "page_label": "Practise with the AI coach", "gate": None},
+    {"file": "interview-loop-and-offer-playbook", "title": "Interview Loop and Offer Playbook",
+     "desc": "The six rounds of a B2B SaaS interview loop and six things to check before you sign an offer in Bengaluru.",
+     "cat": "interview", "label": "Interview", "pages": 3, "page": "/interview-prep", "page_label": "Interview prep hub", "gate": None},
 ]
 
 FAQ = [
@@ -242,7 +242,7 @@ XLINK = ('<section class="bx-sec" data-k="dl-xlink" style="padding-top:0"><div c
 
 
 def xlinks():
-    for name in ("pmm-salary-2026.html", "qums.html", "brand.html", "ai-job-search.html"):
+    for name in ("pmm-salary-2026.html", "interview-prep.html", "ai-job-search.html"):
         f = SITE / name
         h = f.read_text(encoding="utf-8")
         if 'data-k="dl-xlink"' in h:
@@ -262,7 +262,7 @@ def sitemap_llms():
         sm.write_text(s, encoding="utf-8")
     lt = SITE / "llms.txt"
     t = lt.read_text(encoding="utf-8")
-    line = f"- [Downloads]({URL}): free PDFs, including the India PMM salary guide 2026, the AI job search setup guide, the Qums one pager and the brand kit"
+    line = f"- [Downloads]({URL}): free PDFs, including 30 interview questions with answers, the interview and offer playbook, the India PMM salary guide 2026 and the AI job search setup guide"
     if URL + ")" not in t:
         lt.write_text(t.rstrip("\n") + "\n" + line + "\n", encoding="utf-8")
     print("sitemap and llms.txt updated")

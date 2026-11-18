@@ -14,8 +14,8 @@ const TMP = '/tmp/dlcov';
 const ITEMS = [
   { file: 'india-pmm-salary-guide-2026', title: 'India PMM pay,', accent: 'decoded', tag: '2026 guide, 8 pages', badge: 'Free with email', tint: '#5b3df5' },
   { file: 'ai-job-search-setup-guide', title: 'Set up your AI job', accent: 'agent', tag: 'Setup guide, 1 page', badge: 'Free PDF', tint: '#1040C5' },
-  { file: 'qums-calculator-one-pager', title: 'Qums explained on', accent: 'one page', tag: 'Free one pager', badge: 'Free PDF', tint: '#7c3aed' },
-  { file: 'syed-hadi-brand-kit', title: 'Feature me the', accent: 'right way', tag: 'Brand kit, 4 pages', badge: 'Free PDF', tint: '#4c1d95' },
+  { file: 'interview-questions-and-answers', title: '30 questions', accent: 'answered', tag: 'PMM, partnerships, sales', badge: 'Free PDF', tint: '#7c3aed' },
+  { file: 'interview-loop-and-offer-playbook', title: 'First call to', accent: 'signed offer', tag: 'Interview playbook, 3 pages', badge: 'Free PDF', tint: '#4c1d95' },
 ];
 
 const HTML = (it, p1, p2) => `<!doctype html><html><head><meta charset="utf-8"><style>
