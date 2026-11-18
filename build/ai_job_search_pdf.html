@@ -1,104 +1,147 @@
 <!DOCTYPE html>
-<!-- Created by: Claude Cowork | Date: 2026-11-18 | Purpose: one page setup guide PDF for /ai-job-search | Owner: Syed Hadi
+<!-- Created by: Claude Cowork | Date: 2026-11-18 (v2, AccuKnox high fidelity theme) | Purpose: one page setup guide PDF for /ai-job-search | Owner: Syed Hadi
      Render: node build/ai_job_search_pdf.js  (writes site/downloads/ai-job-search-setup-guide.pdf) -->
-<html><head><meta charset="utf-8">
+<html lang="en"><head><meta charset="utf-8"><title>Set up AI Job Search on Claude Code</title>
 <style>
-@font-face{font-family:PJ;font-weight:800;src:url(../site/assets/fonts/web/plus-jakarta-sans-latin-800-normal.woff2)}
-@font-face{font-family:PJ;font-weight:700;src:url(../site/assets/fonts/web/plus-jakarta-sans-latin-700-normal.woff2)}
-@font-face{font-family:IN;font-weight:400;src:url(../site/assets/fonts/web/inter-latin-400-normal.woff2)}
-@font-face{font-family:IN;font-weight:600;src:url(../site/assets/fonts/web/inter-latin-600-normal.woff2)}
-@font-face{font-family:JB;font-weight:500;src:url(../site/assets/fonts/web/jetbrains-mono-latin-500-normal.woff2)}
+@font-face{font-family:Inter;font-weight:200;src:url(fonts-pdf/inter-latin-200-normal.woff2)}
+@font-face{font-family:Inter;font-weight:300;src:url(fonts-pdf/inter-latin-300-normal.woff2)}
+@font-face{font-family:Inter;font-weight:400;src:url(fonts-pdf/inter-latin-400-normal.woff2)}
+@font-face{font-family:Inter;font-weight:500;src:url(fonts-pdf/inter-latin-500-normal.woff2)}
+@font-face{font-family:Inter;font-weight:600;src:url(fonts-pdf/inter-latin-600-normal.woff2)}
+@font-face{font-family:Inter;font-weight:700;src:url(fonts-pdf/inter-latin-700-normal.woff2)}
+:root{--blue:#1040C5;--sky:#4F9CF9;--navy:#000025;--red:#D63637;--ink:#263238;--ink2:#37474F;--ink3:#607D8B;--rule:#CFD8DC;--grad:linear-gradient(90deg,#FF4646 0%,#1040C5 100%);--hl:#BDCEFF}
 @page{size:A4;margin:0}
 *{margin:0;padding:0;box-sizing:border-box}
-body{width:210mm;height:297mm;font:400 9.2pt/1.45 IN,sans-serif;color:#1d1a2e;background:#fff;overflow:hidden}
-.top{background:linear-gradient(120deg,#2a1a7a,#5b3df5 70%,#8b5cf6);color:#fff;padding:10mm 14mm 7mm}
-.kick{font:500 7.5pt JB,monospace;letter-spacing:2px;opacity:.85}
-h1{font:800 22pt/1.1 PJ,sans-serif;margin-top:3mm}
-.sub{margin-top:2.5mm;font-size:9.5pt;opacity:.92;max-width:150mm}
-.meta{display:flex;gap:5mm;margin-top:4mm;font:600 8pt IN}
-.meta span{background:rgba(255,255,255,.16);border-radius:20px;padding:1.2mm 3.2mm}
-main{padding:6mm 14mm 0;display:grid;grid-template-columns:1fr 1fr;gap:4.2mm 7mm}
-h2{font:800 11pt PJ,sans-serif;color:#2a1a7a;margin-bottom:2mm;display:flex;align-items:center;gap:2.5mm}
-h2 b{display:inline-grid;place-items:center;width:6mm;height:6mm;border-radius:2mm;background:#5b3df5;color:#fff;font:700 8.5pt PJ}
+html,body{font-family:Inter,sans-serif;color:var(--ink2);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:210mm;height:297mm;position:relative;overflow:hidden;background:#F8FAFF}
+.top{position:relative;background:var(--navy);color:#fff;padding:8mm 17mm 5.5mm;overflow:hidden}
+.pill{display:inline-flex;align-items:center;gap:2.6mm;padding:1.8mm 4mm 1.8mm 3.2mm;border:.35mm solid rgba(79,156,249,.55);border-radius:20mm;font-size:9.5pt;font-weight:500}
+.pill i{color:var(--sky);font-style:normal}
+h1{margin-top:4.6mm;font-size:30pt;line-height:1.04;font-weight:600;letter-spacing:-.035em}
+.ul{background:var(--grad) left bottom/100% .085em no-repeat;padding-bottom:.02em}
+.deck{margin-top:3mm;font-size:10.5pt;line-height:1.4;color:rgba(255,255,255,.72);max-width:124mm}
+.stats{display:flex;gap:8mm;margin-top:3.6mm}
+.stats div{display:flex;align-items:baseline;gap:2mm}
+.stats b{font-size:22pt;font-weight:200;letter-spacing:-.045em;line-height:1;color:#fff}
+.stats span{font-size:8.3pt;line-height:1.25;color:rgba(255,255,255,.62)}
+.art{position:absolute;right:2mm;top:6mm;width:50mm;height:50mm}
+.body{padding:4.4mm 17mm 0;display:grid;grid-template-columns:1fr 1fr;gap:2.8mm 4.5mm}
+.card{background:#fff;border:.3mm solid var(--rule);border-radius:3mm;padding:3.6mm 4.4mm 3.4mm;position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;left:0;right:0;top:0;height:1mm;background:var(--grad)}
 .full{grid-column:1/-1}
-pre{background:#0d0b1a;color:#e9e4ff;border-radius:2.5mm;padding:3mm 3.5mm;font:500 7.6pt/1.6 JB,monospace;white-space:pre-wrap}
-pre i{color:#9a92c8;font-style:normal}
-ul{list-style:none;display:grid;gap:1.4mm}
-li{padding-left:4mm;position:relative}
-li::before{content:"";position:absolute;left:0;top:1.9mm;width:1.6mm;height:1.6mm;border-radius:.5mm;background:#5b3df5}
-code{font:500 8pt JB,monospace;background:#efeaff;color:#3b23b8;padding:0 1mm;border-radius:1mm}
-.box{border:1px solid #e2dcf7;border-radius:3mm;padding:3.5mm 4mm}
-.warn{background:#fff7e6;border-color:#f5d48a}
-table{width:100%;border-collapse:collapse;font-size:8.6pt}
-td{padding:1.3mm 0;border-bottom:1px solid #eee9fb;vertical-align:top}
-td:first-child{width:25mm;font:500 8pt JB,monospace;color:#3b23b8}
+.head{display:flex;align-items:baseline;gap:2.4mm;margin-bottom:1.6mm}
+.ghost{font-size:18pt;font-weight:200;letter-spacing:-.04em;color:var(--sky);line-height:.9}
+h2{font-size:11.5pt;font-weight:600;letter-spacing:-.015em;color:var(--ink)}
+.hl{background:linear-gradient(transparent 12%,var(--hl) 12%,var(--hl) 92%,transparent 92%);padding:0 .08em}
+p,li,td{font-size:8.1pt;line-height:1.4}
 p+p{margin-top:1.5mm}
-.foot{position:absolute;bottom:0;left:0;right:0;padding:4mm 14mm;border-top:1px solid #e2dcf7;display:flex;justify-content:space-between;font-size:7.6pt;color:#6b6585}
-.foot b{color:#2a1a7a}
+b{color:var(--ink);font-weight:600}
+code{font-family:"DejaVu Sans Mono",Menlo,monospace;font-size:6.9pt;color:var(--blue);background:#EEF3FF;border-radius:.8mm;padding:0 .9mm}
+pre{background:var(--navy);color:#E6ECFF;border-radius:2mm;padding:2.2mm 3mm;font:6.8pt/1.55 "DejaVu Sans Mono",Menlo,monospace;white-space:pre-wrap;margin:1.4mm 0}
+pre i{color:#7F95D6;font-style:normal}
+table{width:100%;border-collapse:collapse}
+td{padding:.85mm 0;border-top:.25mm solid #E3E9F2;vertical-align:top}
+tr:first-child td{border-top:0}
+td.k{width:24mm;font-family:"DejaVu Sans Mono",Menlo,monospace;font-size:7pt;font-weight:600;color:var(--blue);padding-top:1.05mm}
+ul{list-style:none;display:grid;gap:1.1mm}
+li{padding-left:4.2mm;position:relative}
+li::before{content:"";position:absolute;left:0;top:1.6mm;width:2.2mm;height:.6mm;background:var(--grad);border-radius:.3mm}
+.warn{background:#FEF7F7;border-color:#F3D2D2}
+.warn ul{grid-template-columns:1fr 1fr;column-gap:6mm}
+.row2 .cols{display:grid;grid-template-columns:1.05fr 1fr;gap:5mm;align-items:center}
+.row2 pre{margin:0}
+.warn::before{background:var(--red)}
+.warn .ghost{color:#EE9C9C}
+.foot{position:absolute;left:17mm;right:17mm;bottom:5mm;display:flex;justify-content:space-between;align-items:center;font-size:7.4pt;color:var(--ink3);border-top:.25mm solid var(--rule);padding-top:2.4mm}
+.foot b{color:var(--blue);font-weight:600}
 </style></head><body>
-<div class="top">
-  <div class="kick">SETUP GUIDE &middot; 1 PAGE &middot; NOVEMBER 2026</div>
-  <h1>Set up AI Job Search on Claude Code</h1>
-  <p class="sub">The open source framework that finds roles, scores fit, tailors your CV and cover letter, and preps every interview round. From zero to your first tailored application in about 30 minutes.</p>
-  <div class="meta"><span>Free, MIT license</span><span>Runs on your machine</span><span>Needs a Claude plan or API credits</span></div>
-</div>
-<main>
-  <section>
-    <h2><b>1</b>Install the prerequisites</h2>
-    <table>
-      <tr><td>Claude Code</td><td>The CLI, signed in with a Claude Pro, Max or Team plan, or API credits</td></tr>
-      <tr><td>Python 3.10+</td><td>Runs the helper tools in the repo</td></tr>
-      <tr><td>Bun</td><td>Runs any job board CLIs you add</td></tr>
-      <tr><td>LaTeX</td><td>TeX Live, MacTeX or MiKTeX. Needs <code>lualatex</code> (CV) and <code>xelatex</code> (cover letter)</td></tr>
-      <tr><td>gh</td><td>GitHub CLI, signed in, to make your private copy</td></tr>
-    </table>
-  </section>
-  <section>
-    <h2><b>2</b>Make a private copy</h2>
+<section class="page">
+  <div class="top">
+    <svg class="art" viewBox="0 0 100 100" fill="none">
+      <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF4646"/><stop offset="1" stop-color="#1040C5"/></linearGradient></defs>
+      <g stroke="url(#g)" stroke-width=".45" opacity=".9">
+        <rect x="30" y="16" width="38" height="50" rx="3"/>
+        <path d="M37 27h24M37 33h18M37 39h22M37 45h14"/>
+        <rect x="40" y="30" width="38" height="50" rx="3" opacity=".55"/>
+      </g>
+      <g stroke="#4F9CF9" stroke-width=".35" stroke-dasharray="1.2 1.6" opacity=".7">
+        <path d="M6 88 C28 70 44 92 64 74 S90 58 98 40"/>
+        <circle cx="59" cy="55" r="22"/>
+      </g>
+      <path d="M50 58l6 6 12-14" stroke="url(#g)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="6" cy="88" r="1.3" fill="#FF4646"/><circle cx="98" cy="40" r="1.3" fill="#1040C5"/><circle cx="30" cy="16" r="1" fill="#4F9CF9"/>
+    </svg>
+    <div class="pill"><i>&#9679;</i>Setup guide&nbsp;&nbsp;<i>&middot;</i>&nbsp;&nbsp;Open source on Claude Code</div>
+    <h1>Set up AI Job Search<br>on Claude <span class="ul">Code</span></h1>
+    <p class="deck">Find roles, score fit, tailor your CV and cover letter, and prep every interview round, from a private copy on your own machine.</p>
+    <div class="stats">
+      <div><b>5</b><span>tools to<br>install</span></div>
+      <div><b>6</b><span>slash<br>commands</span></div>
+      <div><b>1</b><span>private<br>repo</span></div>
+      <div><b>MIT</b><span>free and<br>open source</span></div>
+    </div>
+  </div>
+
+  <div class="body">
+    <div class="card">
+      <div class="head"><span class="ghost">01</span><h2>Install the prerequisites</h2></div>
+      <table>
+        <tr><td class="k">Claude Code</td><td>Signed in with a Claude Pro, Max or Team plan, or API credits</td></tr>
+        <tr><td class="k">Python 3.10+</td><td>Runs the helper tools in the repo</td></tr>
+        <tr><td class="k">Bun</td><td>Runs any job board CLIs you add</td></tr>
+        <tr><td class="k">LaTeX</td><td>TeX Live, MacTeX or MiKTeX with <code>lualatex</code> and <code>xelatex</code></td></tr>
+        <tr><td class="k">gh</td><td>GitHub CLI, signed in</td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <div class="head"><span class="ghost">02</span><h2>Make a <span class="hl">private</span> copy</h2></div>
 <pre>gh repo clone ai-job-search-dev/ai-job-search
 cd ai-job-search
 git remote rename origin upstream
 gh repo create ai-job-search --private \
   --source=. --remote=origin --push</pre>
-    <p style="margin-top:2mm">Do not fork for your own search. A fork of a public repo is always public, and setup writes your details into tracked files.</p>
-  </section>
-  <section>
-    <h2><b>3</b>Build your profile</h2>
-<pre>claude          <i># opens Claude Code in the repo</i>
-/setup          <i># inside Claude Code</i></pre>
-    <p style="margin-top:2mm">Put your CV PDF, LinkedIn export and past applications in <code>documents/</code> first, paste a single CV in chat, or let it interview you. Re-run any time you add material.</p>
-  </section>
-  <section>
-    <h2><b>4</b>Add job boards (optional)</h2>
-    <p>With no board installed, <code>/scrape</code> uses web search. To add one, copy its folder from <b>community-portals</b> into <code>.agents/skills/</code>, review the code, then run:</p>
-<pre style="margin-top:2mm">python3 tools/install_portal_clis.py</pre>
-    <p style="margin-top:2mm">No board for your market? <code>/add-portal</code> builds one from its URL.</p>
-  </section>
-  <section class="full">
-    <h2><b>5</b>Run the workflow</h2>
-    <table>
-      <tr><td>/scrape</td><td>Searches your boards for roles that match your profile and removes duplicates</td></tr>
-      <tr><td>/rank</td><td>Scores every new posting against your profile and returns a shortlist with honest gaps</td></tr>
-      <tr><td>/apply &lt;url&gt;</td><td>Checks fit, drafts the CV and cover letter, gets a second agent's review, then compiles and checks the PDFs. Paste the job text instead of a URL if the page is behind a login</td></tr>
-      <tr><td>/interview</td><td>Builds a prep pack for the next round, maps likely questions to your STAR stories, runs a mock</td></tr>
-      <tr><td>/outcome</td><td>Logs the result, archives what you sent, drafts follow ups for applications that went quiet</td></tr>
-    </table>
-  </section>
-  <section class="box">
-    <h2><b>6</b>Check it works</h2>
-<pre>cd cv &amp;&amp; lualatex -interaction=nonstopmode \
-  main_example.tex &amp;&amp; cd ..</pre>
-    <p style="margin-top:2mm">A PDF means LaTeX is ready. On TinyTeX or BasicTeX, first install: <code>moderncv fontawesome5 fontawesome6 academicons needspace titlesec textpos xltxtra xunicode realscripts</code> with <code>tlmgr install</code>.</p>
-  </section>
-  <section class="box warn">
-    <h2><b>!</b>Use it well</h2>
-    <ul>
-      <li>Feed it detail. Projects, tools and measurable results per role make the applications specific.</li>
-      <li>Read every CV and letter before you send it. You stay the one who applies.</li>
-      <li>It never invents experience. Gaps stay visible, so prep for them in interviews.</li>
-      <li>Treat postings from unfamiliar boards with care. The integrity gate flags hidden instructions.</li>
-    </ul>
-  </section>
-</main>
-<div class="foot"><span>Project: <b>github.com/ai-job-search-dev/ai-job-search</b> &middot; independent, not affiliated with Anthropic</span><span>Guide by <b>syedcreates.com/ai-job-search</b></span></div>
+      <p>Never fork for your own search. A fork of a public repo is always public, and setup writes your details into tracked files.</p>
+    </div>
+
+    <div class="card">
+      <div class="head"><span class="ghost">03</span><h2>Build your profile</h2></div>
+<pre>claude     <i># opens Claude Code in the repo</i>
+/setup     <i># run inside Claude Code</i></pre>
+      <p>Drop your CV PDF, LinkedIn export and past applications into <code>documents/</code>, paste one CV in chat, or let it interview you. Rerun any time you add material.</p>
+      <p style="margin-top:2mm"><b>Check LaTeX is ready</b>, a PDF means yes:</p>
+<pre>cd cv &amp;&amp; lualatex main_example.tex</pre>
+    </div>
+
+    <div class="card">
+      <div class="head"><span class="ghost">04</span><h2>Add job boards (optional)</h2></div>
+      <p>Without a board, <code>/scrape</code> uses web search. To add one, copy its folder from <b>community-portals</b> into <code>.agents/skills/</code>, review the code, then run:</p>
+<pre>python3 tools/install_portal_clis.py</pre>
+      <p>No board for your market? <code>/add-portal</code> builds one from its URL.</p>
+    </div>
+
+    <div class="card full">
+      <div class="head"><span class="ghost">05</span><h2>Run the <span class="hl">workflow</span></h2></div>
+      <table>
+        <tr><td class="k">/scrape</td><td>Searches your boards for roles that match your profile and removes duplicates</td></tr>
+        <tr><td class="k">/rank</td><td>Scores every new posting against your profile and returns a shortlist with honest gaps</td></tr>
+        <tr><td class="k">/apply &lt;url&gt;</td><td>Checks fit, drafts the CV and cover letter, gets a second agent's review, then compiles and checks the PDFs. Paste the job text if the page sits behind a login</td></tr>
+        <tr><td class="k">/interview</td><td>Builds a prep pack for the next round, maps likely questions to your STAR stories and runs a mock</td></tr>
+        <tr><td class="k">/outcome</td><td>Logs the result, archives what you sent and drafts follow ups for applications that went quiet</td></tr>
+      </table>
+    </div>
+
+    <div class="card warn full">
+      <div class="head"><span class="ghost">!</span><h2>Use it well</h2></div>
+      <ul>
+        <li>Feed it detail. Projects, tools and measurable results per role make every application specific.</li>
+        <li>Read each CV and letter before you send it. You stay the one who applies.</li>
+        <li>It never invents experience. Gaps stay visible, so prepare for them.</li>
+        <li>Postings are untrusted input. The integrity gate flags hidden instructions.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="foot"><span>Project <b>github.com/ai-job-search-dev/ai-job-search</b>&nbsp;&nbsp;&middot;&nbsp;&nbsp;Independent, not affiliated with Anthropic</span><span>Guide by <b>syedcreates.com/ai-job-search</b></span></div>
+</section>
 </body></html>
