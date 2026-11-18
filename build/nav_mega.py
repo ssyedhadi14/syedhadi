@@ -141,7 +141,7 @@ def mega_nav(RESUME, DECK, CALENDLY, LINKEDIN):
 
     return f'''<nav>
   <div class="wrap nav-in">
-    <a href="/" class="brand"><img src="/img/avatar.jpg" alt="Syed Hadi" width="40" height="40">Syed Hadi</a>
+    <a href="/" class="brand" aria-label="Syed Hadi"><img src="/img/avatar.jpg" alt="" width="40" height="40"><img class="sig" src="/img/syed-signature.png" alt="Syed Hadi" width="104" height="40"></a>
     <div class="nav-links" id="navLinks">
       <div class="dd mega" data-group="work">
         <button class="dd-btn" aria-haspopup="true" aria-expanded="false" data-group="work">Work {chev}</button>

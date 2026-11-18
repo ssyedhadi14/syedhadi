@@ -2506,3 +2506,12 @@ tr.on td.neg,.mf-t tr.on td.neg{color:#c81e1e}
 .fgrid{grid-template-columns:1.3fr repeat(5,1fr) .9fr;gap:24px}
 @media (max-width:1240px){.fgrid{grid-template-columns:repeat(3,1fr)}.fgrid .fbrand{grid-column:1/-1}.fgrid .fphoto{display:none}}
 @media (max-width:800px){.fgrid{grid-template-columns:1fr 1fr}}
+
+/* 2026-11-18: signature replaces the plain text name in nav and footer; "Ready to Grow" CTA hidden sitewide for now (delete the .cta rule to bring it back) */
+.brand .sig{height:40px;width:auto;display:block;transition:transform .3s var(--ease)}
+.fb-id .sig{height:52px;width:auto;display:block}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .brand .sig,:root:not([data-theme="light"]) .fb-id .sig{filter:invert(1)}}
+:root[data-theme="dark"] .brand .sig,:root[data-theme="dark"] .fb-id .sig{filter:invert(1)}
+@media (max-width:560px){.brand .sig{height:34px}}
+.brand .sig,.fb-id .sig{border-radius:0;box-shadow:none;object-fit:contain;background:none;transform:none!important}
+section.cta{display:none!important}

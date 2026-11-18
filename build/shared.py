@@ -4,7 +4,7 @@
 # Owner: Syed Hadi
 
 SITE = "https://syedcreates.com"
-VER = "20261103a"
+VER = "20261118a"
 
 def uns(pid, w=480, h=270, q=80):
     return f"https://images.unsplash.com/photo-{pid}?auto=format&fit=crop&q={q}&w={w}&h={h}"
@@ -79,6 +79,15 @@ def calc_menu():
 
 
 CSS_ADD = r'''
+/* 2026-11-18: signature replaces the plain text name in nav and footer; "Ready to Grow" CTA hidden sitewide for now (delete the .cta rule to bring it back) */
+.brand .sig{height:40px;width:auto;display:block;transition:transform .3s var(--ease)}
+.fb-id .sig{height:52px;width:auto;display:block}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .brand .sig,:root:not([data-theme="light"]) .fb-id .sig{filter:invert(1)}}
+:root[data-theme="dark"] .brand .sig,:root[data-theme="dark"] .fb-id .sig{filter:invert(1)}
+@media (max-width:560px){.brand .sig{height:34px}}
+.brand .sig,.fb-id .sig{border-radius:0;box-shadow:none;object-fit:contain;background:none;transform:none!important}
+section.cta{display:none!important}
+
 /* ===== 2026-11-02 typography: Plus Jakarta Sans (display), Instrument Serif (accent), Inter (body), JetBrains Mono (labels) ===== */
 @font-face{font-family:"Plus Jakarta Sans";font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/web/plus-jakarta-sans-latin-500-normal.woff2) format("woff2")}
 @font-face{font-family:"Plus Jakarta Sans";font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/web/plus-jakarta-sans-latin-600-normal.woff2) format("woff2")}
