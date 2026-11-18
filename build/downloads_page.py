@@ -68,7 +68,7 @@ def card(it):
         action = f'<a class="btn btn-primary dl-btn" href="{pdf}" download data-track="download_{f}">Download PDF</a>'
     return (f'<article class="dl-card reveal" data-cat="{it["cat"]}">'
             f'<a class="dl-cover" href="{it["page"]}" aria-label="{esc(it["title"])}">'
-            f'<img src="/img/downloads/{f}.webp" alt="Cover of {esc(it["title"])}" width="720" height="1017" loading="lazy" decoding="async">{badge}</a>'
+            f'<img src="/img/downloads/{f}-cover.webp" srcset="/img/downloads/{f}-cover-800.webp 800w, /img/downloads/{f}-cover.webp 1200w" sizes="(max-width: 560px) 100vw, 560px" alt="Cover of {esc(it["title"])}" width="1200" height="750" loading="lazy" decoding="async"></a>'
             f'<div class="dl-body"><small>{it["label"]}</small><h3>{it["title"]}</h3><p>{it["desc"]}</p>'
             f'<span class="dl-meta">{meta}</span>{action}'
             f'<a class="dl-more" href="{it["page"]}">{it["page_label"]} &rarr;</a></div></article>')
@@ -85,12 +85,12 @@ def main_html():
 .dl-chips{{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:26px}}
 .dl-chip{{font:600 14px Inter,sans-serif;padding:9px 16px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink-2);cursor:pointer}}
 .dl-chip.on{{background:var(--accent);border-color:var(--accent);color:#fff}}
-.dl-grid{{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;align-items:start}}
+.dl-grid{{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:stretch}}
 .dl-card{{border:1px solid var(--line);border-radius:20px;background:var(--card);overflow:hidden;display:flex;flex-direction:column}}
 .dl-card[hidden]{{display:none}}
-.dl-cover{{position:relative;display:block;background:var(--bg-soft);padding:18px 18px 0;border-bottom:1px solid var(--line)}}
-.dl-cover img{{display:block;width:100%;height:auto;aspect-ratio:720/1017;object-fit:cover;object-position:top;border-radius:8px 8px 0 0;box-shadow:0 10px 30px rgba(20,16,41,.14);transition:transform .25s}}
-.dl-card:hover .dl-cover img{{transform:translateY(-4px)}}
+.dl-cover{{position:relative;display:block;overflow:hidden;border-bottom:1px solid var(--line)}}
+.dl-cover img{{display:block;width:100%;height:auto;aspect-ratio:1200/750;object-fit:cover;transition:transform .35s ease}}
+.dl-card:hover .dl-cover img{{transform:scale(1.04)}}
 .dl-badge{{position:absolute;top:12px;right:12px;font:700 12px Inter,sans-serif;padding:5px 10px;border-radius:999px;background:#16a34a;color:#fff}}
 .dl-badge.gated{{background:#ffd43b;color:#1b1145}}
 .dl-body{{padding:18px 18px 20px;display:flex;flex-direction:column;gap:8px;flex:1}}
@@ -110,7 +110,6 @@ def main_html():
 .dl-btn[hidden]{{display:none!important}}
 .dl-msg{{margin:0;font-size:12.5px;min-height:0;color:var(--ink-2)}}
 .dl-faq{{max-width:820px;margin:0 auto;display:grid;gap:10px}}
-@media(max-width:1100px){{.dl-grid{{grid-template-columns:repeat(2,minmax(0,1fr))}}}}
 @media(max-width:560px){{.dl-grid{{grid-template-columns:1fr}}}}
 </style>
 
