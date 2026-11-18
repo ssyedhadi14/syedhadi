@@ -31,3 +31,4 @@
 /photo.jpg         /img/syed-hadi-2026.jpg                                                                             301
 
 # One URL per page: send the .html version to the clean URL (canonical)
+/downloads/ /downloads 301

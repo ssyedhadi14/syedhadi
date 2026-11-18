@@ -120,3 +120,4 @@ All calculators sit under the Calculator item in the site navigation: Salary Gro
 
 ## Full text
 - [llms-full.txt](https://syedcreates.com/llms-full.txt): every public page of the site as plain text, for AI assistants.
+- [Downloads](https://syedcreates.com/downloads): free PDFs, including the India PMM salary guide 2026, the AI job search setup guide, the Qums one pager and the brand kit

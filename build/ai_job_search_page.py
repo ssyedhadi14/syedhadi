@@ -365,3 +365,5 @@ def sitemap_llms():
 
 if __name__ == "__main__":
     build_page(); nav(); promos(); sitemap_llms()
+    import subprocess, sys
+    subprocess.run([sys.executable, str(ROOT / "build" / "downloads_page.py")], check=True)
