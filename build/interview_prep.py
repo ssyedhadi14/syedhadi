@@ -538,7 +538,7 @@ def build():
     data_js = ("<script>window.IP_BANK=" + json.dumps(BANK, ensure_ascii=False) + ";window.IP_IDEAS=" + json.dumps(IDEAS, ensure_ascii=False)
                + ";window.IP_SAMPLE=" + json.dumps(SAMPLE, ensure_ascii=False) + ";window.IP_DEFAULTS=" + json.dumps(DEFAULTS, ensure_ascii=False) + ";</script>\n"
                '<script src="/assets/qrcode.js?v=20261106a" defer></script>\n'
-               '<script src="/assets/interview-prep.js?v=20261106c" defer></script>\n')
+               '<script src="/assets/interview-prep.js?v=20261118a" defer></script><script src="/assets/linkedin-import.js?v=20261118a" defer></script>\n')
     tail = tail.replace("</body>", '<div id="ipPrint" aria-hidden="true"></div><div class="ip-toast" id="ipToast" role="status" aria-live="polite"></div>\n' + data_js + "</body>")
 
     loop = "".join(f'<div class="ip-step reveal"><small>ROUND {i + 1:02d}</small><h3>{E(n)}</h3><em>{E(d)}</em><p>{E(p)}</p></div>' for i, (n, d, p) in enumerate(LOOP))
@@ -624,6 +624,27 @@ def build():
     </div>
 
     <div role="tabpanel" id="tabResume" aria-labelledby="tb-res">
+      <div class="li-card reveal" id="liImport" data-k="li-import">
+        <div class="li-copy"><span class="li-tag">New &middot; about 30 seconds</span>
+          <h3>Start from your LinkedIn profile</h3>
+          <p>Paste your profile URL, save it as a PDF from LinkedIn, drop it here, and the builder fills itself. Your PDF is read in this browser and never uploaded.</p></div>
+        <div class="li-steps">
+          <div class="li-s"><span class="li-n">1</span><div class="li-field"><label class="sr" for="liUrl">Your LinkedIn profile URL</label><input id="liUrl" type="url" inputmode="url" placeholder="linkedin.com/in/yourname" autocomplete="url"><button type="button" class="btn btn-primary" id="liOpen">Open my profile</button></div></div>
+          <p class="li-hint">On your profile click <b>More</b> (or <b>Resources</b>), then <b>Save to PDF</b>.</p>
+          <div class="li-s"><span class="li-n">2</span><label class="li-drop" id="liDrop" tabindex="0" role="button" aria-label="Upload your LinkedIn profile PDF"><input id="liFile" type="file" accept="application/pdf,.pdf" hidden>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M12 18v-6M9 15l3-3 3 3"/></svg>
+            <span><b>Drop your LinkedIn PDF</b> or click to choose it</span></label></div>
+          <p class="li-msg" id="liMsg" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+      <div class="li-loader" id="liLoader" hidden role="dialog" aria-modal="true" aria-label="Building your resume">
+        <div class="li-box">
+          <div class="li-orb" aria-hidden="true"><span></span><span></span><span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M8 13h8M8 17h5"/></svg></div>
+          <h4>Building your resume</h4>
+          <div class="li-prog"><i id="liBar"></i></div><div class="li-pct" id="liPct">0%</div>
+          <ol class="li-list"><li class="li-step">Reading your PDF</li><li class="li-step">Finding your roles and dates</li><li class="li-step">Writing bullet points</li><li class="li-step">Building your resume</li></ol>
+        </div>
+      </div>
       <div class="rs-wrap">
         <form class="rs-form" id="rsForm" onsubmit="return false">
           <div class="rs-row"><label>Target role<select id="rsRole"><option value="pmm">Product Marketing</option><option value="partnerships">Partnerships</option><option value="sales">Sales</option></select></label>

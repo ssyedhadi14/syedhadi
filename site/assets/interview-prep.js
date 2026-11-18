@@ -532,6 +532,15 @@
       var s = SAMPLE[roleSel.value]; if (!s) return;
       rs = migrate(JSON.parse(JSON.stringify(s))); rs.role = roleSel.value; fillForm(); toast('Sample loaded. Replace it with your own details.');
     });
+    // LinkedIn PDF import (assets/linkedin-import.js) fills the builder through this hook
+    window.IP_RS_IMPORT = function (o) {
+      var b = blankResume(roleSel.value);
+      ['name', 'city', 'phone', 'email', 'linkedin', 'highlight', 'yoe', 's1', 'certs'].forEach(function (k) { if (o[k]) b[k] = o[k]; });
+      if (o.edu && o.edu.length) b.edu = o.edu;
+      if (o.jobs && o.jobs.length) b.jobs = o.jobs;
+      ['portfolio', 'phone'].forEach(function (k) { if (!b[k] && rs && rs[k]) b[k] = rs[k]; });
+      rs = migrate(b); rs.role = roleSel.value; fillForm();
+    };
     $('rsSave').addEventListener('click', function () { toast(store.set(RS_KEY, rs) ? 'Saved in this browser only.' : 'Could not save in this browser.'); });
     $('rsClear').addEventListener('click', function () { if (!confirmClear()) return; rs = blankResume(roleSel.value); store.del(RS_KEY); fillForm(); });
     $('rsCopy').addEventListener('click', function () { copy(resumeText(), 'Resume copied as plain text.'); });
