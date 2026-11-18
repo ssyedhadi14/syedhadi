@@ -79,7 +79,12 @@ def footer():
 </footer>'''
 
 
+CTA_PAUSED = True  # 2026-11-18: "Ready to Grow Something Together?" section removed sitewide for now; set False to bring it back
+
+
 def cta():
+    if CTA_PAUSED:
+        return ""
     return f'''<section class="cta" style="padding-top:20px">
   <div class="wrap">
     <div class="cta-box reveal">
