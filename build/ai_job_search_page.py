@@ -57,6 +57,32 @@ APPLY = [
     ("No fabrication", "Claims are verified against your profile. Keyword gaps you cannot back up are left visible, never stuffed."),
 ]
 
+PDF = "/downloads/ai-job-search-setup-guide.pdf"
+
+VIDEOS = [
+    ("HoVxjMNFYv4", "The Next New Thing", "He built an AI job search agent after getting laid off", "The creator, Mads Lorentzen, walks through the workflow he used on his own search."),
+    ("lLBWWL2YcjM", "Full Stack", "AI Job Search: one posting, two PDFs (full tutorial)", "A full run of this repo, from one job posting to a tailored CV and cover letter."),
+    ("JFiIeXk5bpo", "Ray Codes", "This local AI agent applies to jobs for you", "Setting up the same GitHub framework, including use outside Claude Code."),
+    ("YgCfPr7Gy6Y", "TechWealth Hub", "Career-Ops full setup, fresh clone to working pipeline", "A similar open source job search system on Claude Code, installed on screen."),
+    ("DO4-Pgq3IME", "Build Fast with AI", "Automate your job search with Claude Code and Firecrawl", "Build your own: Claude reads your resume, finds jobs and logs them to a sheet."),
+    ("V_OlWyt8g7I", "Mayank Joshi", "I automated my job search using AI, step by step", "Build your own Claude skill that searches job boards and tailors every resume."),
+]
+
+USE_CASES = [
+    ("Laid off geophysicist to AI engineer", "Mads Lorentzen built this framework when his role was cut in late 2025 and ran his search through it weekly. 69 tailored applications led to 20 first interviews and a signed contract. He started as an AI engineer in June 2026.",
+     "Project README", "https://github.com/ai-job-search-dev/ai-job-search#does-it-actually-work"),
+    ("Senior AI role, filtered not sprayed", "Santiago built Career-Ops, a similar system on Claude Code. He evaluated 740 listings, applied to only 68, got 12 interviews and 1 offer, a Head of Applied AI role. The system scores fit and never submits for you.",
+     "Career-Ops README", "https://github.com/santifer/career-ops"),
+    ("One career file, a resume per job", "Javiera Vasquez keeps her experience in one YAML file. Her Claude Code Job Tailor ranks each posting's requirements and picks the most relevant achievements for a tailored PDF in about a minute.",
+     "Claude Code Job Tailor", "https://github.com/javiera-vasquez/claude-code-job-tailor"),
+    ("Tailoring without burning out", "Christopher Penn shows a simple version: a folder of job descriptions, your CV and a base cover letter, and Claude tailors both for each role while you review.",
+     "Christopher S. Penn", "https://www.christopherspenn.com/2026/06/you-ask-i-answer-tailoring-resumes-without-burning-out/"),
+    ("A morning shortlist worth opening", "Pawel's job finder agent runs each morning and surfaces only roles worth opening. His main lesson: the finder is only as good as the profile it reads.",
+     "The AI Maker", "https://aimaker.substack.com/p/ai-job-finder-agent-claude-code"),
+    ("Jobs tracked in a spreadsheet", "A workshop build where Claude reads your resume, finds matching roles with Firecrawl, saves them to Excel and keeps checking for new ones.",
+     "Build Fast with AI", "https://www.youtube.com/watch?v=DO4-Pgq3IME"),
+]
+
 NEEDS = [
     ("Claude Code", "A Claude Pro, Max or Team plan, or Anthropic API credits."),
     ("Python 3.10+", "Runs the helper tools in the repo."),
@@ -76,6 +102,15 @@ def main_html():
     apply = "".join(f'<li><b>{t}.</b> {d}</li>' for t, d in APPLY)
     needs = "".join(f'<li><b>{t}</b><span>{d}</span></li>' for t, d in NEEDS)
     faq = "".join(f'<details class="sp-faq-item"><summary>{q}</summary><p>{a}</p></details>' for q, a in FAQ)
+    play = '<span class="yt-play" aria-hidden="true"><span><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></span>'
+    vids = "".join(
+        f'<article class="yt-card reveal"><div class="yt-frame" data-id="{v}" data-title="{esc(t)}" role="button" tabindex="0" aria-label="Play: {esc(t)} by {esc(c)}">'
+        f'<img src="https://i.ytimg.com/vi/{v}/hqdefault.jpg" alt="{esc(t)}, video thumbnail from {esc(c)}" width="480" height="360" loading="lazy" decoding="async">{play}</div>'
+        f'<div class="yt-body"><small>{esc(c)}</small><b>{esc(t)}</b><p class="ajs-vd">{esc(d)}</p></div></article>'
+        for v, c, t, d in VIDEOS)
+    cases = "".join(
+        f'<article class="ajs-case reveal"><h3>{t}</h3><p>{d}</p><a href="{u}" target="_blank" rel="noopener">Source: {src} &rarr;</a></article>'
+        for t, d, src, u in USE_CASES)
     return f'''<main id="main">
 <style>
 .ajs-proof{{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:8px}}
@@ -100,7 +135,16 @@ def main_html():
 .ajs-code{{background:#0d0b1a;color:#e9e4ff;border-radius:14px;padding:18px 20px;overflow-x:auto;font:13px/1.7 "JetBrains Mono",monospace;margin-top:14px}}
 .ajs-code i{{color:#8f88b8;font-style:normal}}
 .ajs-faq{{max-width:820px;margin:0 auto;display:grid;gap:10px}}
-@media(max-width:860px){{.ajs-proof{{grid-template-columns:repeat(2,1fr)}}.ajs-steps,.ajs-two{{grid-template-columns:1fr}}}}
+.ajs-cases{{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}}
+.ajs-case{{border:1px solid var(--line);border-radius:18px;padding:22px;background:var(--card);display:flex;flex-direction:column;gap:8px}}
+.ajs-case h3{{font-size:18px;font-weight:800;line-height:1.3}}
+.ajs-case p{{color:var(--ink-2);line-height:1.55;flex:1}}
+.ajs-case a{{font-size:13.5px;font-weight:600;color:var(--accent)}}
+.ajs-vd{{margin-top:6px;color:var(--ink-2);font-size:13.5px;line-height:1.5}}
+.ajs-pdf{{display:flex;align-items:center;gap:18px;border:1px solid var(--line);border-radius:20px;padding:20px 24px;background:linear-gradient(120deg,rgba(91,61,245,.08),rgba(139,92,246,.04));margin-top:24px}}
+.ajs-pdf svg{{width:40px;height:40px;flex:none;color:var(--accent)}}
+.ajs-pdf div{{flex:1}}.ajs-pdf b{{display:block;font:800 18px "Plus Jakarta Sans"}}.ajs-pdf span{{color:var(--ink-2);font-size:14px}}
+@media(max-width:860px){{.ajs-proof{{grid-template-columns:repeat(2,1fr)}}.ajs-steps,.ajs-two,.ajs-cases{{grid-template-columns:1fr}}.ajs-pdf{{flex-direction:column;align-items:flex-start}}}}
 </style>
 
 <section class="bx-sec" style="padding-top:30px">
@@ -117,11 +161,31 @@ def main_html():
   </div>
 </section>
 
+<section class="bx-sec" id="use-cases" style="padding-top:10px">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="eyebrow">Real use cases</span><h2 class="display" id="s-cases">How people run their search with <span class="t3">Claude</span></h2>
+      <p>Six real, public examples, from this framework to similar builds. Each links to its source.</p></div>
+    <div class="ajs-cases">{cases}</div>
+  </div>
+</section>
+
 <section class="bx-sec" id="how" style="padding-top:10px">
   <div class="wrap">
     <div class="sec-head reveal"><span class="eyebrow">How it works</span><h2 class="display" id="s-how">Six commands, from empty profile to <span class="t3">offer</span></h2>
       <p>You run it inside Claude Code on your own machine. Each step is a slash command you can run on its own.</p></div>
     <div class="sc-lanes ajs-steps">{steps}</div>
+    <div class="ajs-pdf reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M12 12v6M9 15l3 3 3-3"/></svg>
+      <div><b>Free one page setup guide (PDF)</b><span>Prerequisites, the private copy commands, every slash command and the LaTeX fix, on a single A4 page you can keep open while you install.</span></div>
+      <a class="btn btn-primary" href="{PDF}" download data-track="ajs_pdf_download">Download the PDF</a></div>
+  </div>
+</section>
+
+<section class="yt-sec" id="videos" aria-labelledby="s-videos" style="padding-top:10px">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="eyebrow">Watch it work</span><h2 class="display" id="s-videos">Six videos to set it up or build your <span class="t6">own</span></h2>
+    <p>Two walk through this exact repo, one shows a similar system, and three show how to build your own job search agent on Claude. Videos play here when you tap them.</p></div>
+    <div class="yt-grid">{vids}</div>
+    <p class="yt-note">Videos belong to their creators and open through YouTube's privacy enhanced player. Opinions in them are the creators' own.</p>
   </div>
 </section>
 
@@ -133,12 +197,15 @@ def main_html():
 <pre class="ajs-code"><i># private copy for your own search</i>
 gh repo clone ai-job-search-dev/ai-job-search
 cd ai-job-search
+git remote rename origin upstream
+gh repo create ai-job-search --private \
+  --source=. --remote=origin --push
 claude
 <i># then, inside Claude Code</i>
 /setup
 /scrape
 /apply &lt;job URL&gt;</pre>
-        <div class="bx-ctas"><a class="btn btn-primary" href="{REPO}" target="_blank" rel="noopener" data-track="ajs_repo_click">Open on GitHub &rarr;</a><a class="btn btn-ghost" href="{REPO}/blob/master/SETUP.md" target="_blank" rel="noopener">Full setup guide</a></div>
+        <div class="bx-ctas"><a class="btn btn-primary" href="{REPO}" target="_blank" rel="noopener" data-track="ajs_repo_click">Open on GitHub &rarr;</a><a class="btn btn-ghost" href="{PDF}" download data-track="ajs_pdf_download">1 page PDF guide</a></div>
       </div>
     </div>
   </div>
@@ -171,7 +238,7 @@ HERO = f'''<header class="page-hero ph-cv">
     <div class="crumbs"><a href="/">Home</a> / <a href="/interview-prep">Interview Prep</a> / AI Job Search</div>
     <h1 class="display">Let an AI agent run your job <span class="tg1">search.</span></h1>
     <p>A free, open source framework on Claude Code that finds roles, scores fit, tailors your CV and cover letter, and preps you for every interview round. Here is how it works and how to set it up.</p>
-    <div class="bx-ctas" style="justify-content:flex-start;margin-top:18px"><a class="btn btn-primary lg" href="{REPO}" target="_blank" rel="noopener" data-track="ajs_repo_click">Get it on GitHub &rarr;</a><a class="btn btn-ghost lg" href="#how">See how it works</a></div>
+    <div class="bx-ctas" style="justify-content:flex-start;margin-top:18px"><a class="btn btn-primary lg" href="{REPO}" target="_blank" rel="noopener" data-track="ajs_repo_click">Get it on GitHub &rarr;</a><a class="btn btn-ghost lg" href="{PDF}" download data-track="ajs_pdf_download">Download the setup PDF</a></div>
   </div>
     <figure class="hero-cv"><img src="/img/covers/{SLUG}.jpg" alt="{ALT}" width="1200" height="750" fetchpriority="high" decoding="async"></figure>
   </div>
@@ -238,6 +305,7 @@ def build_page():
     # drop scripts specific to the template page (quiz, filters) that follow </main>
     out = head + body[:nav_end] + "\n\n" + HERO + "\n" + main_html() + tail + page_scripts
     out = re.sub(r'<script>[^<]*sc-quiz[\s\S]*?</script>', "", out)
+    out = re.sub(r'<section class="yt-sec" id="learn"[\s\S]*?</section>\s*', "", out)
     (SITE / f"{SLUG}.html").write_text(out, encoding="utf-8")
     print("page written")
 

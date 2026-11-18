@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- Created by: Claude Cowork | Date: 2026-11-18 | Purpose: one page setup guide PDF for /ai-job-search | Owner: Syed Hadi
+     Render: node build/ai_job_search_pdf.js  (writes site/downloads/ai-job-search-setup-guide.pdf) -->
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:PJ;font-weight:800;src:url(../site/assets/fonts/web/plus-jakarta-sans-latin-800-normal.woff2)}
+@font-face{font-family:PJ;font-weight:700;src:url(../site/assets/fonts/web/plus-jakarta-sans-latin-700-normal.woff2)}
+@font-face{font-family:IN;font-weight:400;src:url(../site/assets/fonts/web/inter-latin-400-normal.woff2)}
+@font-face{font-family:IN;font-weight:600;src:url(../site/assets/fonts/web/inter-latin-600-normal.woff2)}
+@font-face{font-family:JB;font-weight:500;src:url(../site/assets/fonts/web/jetbrains-mono-latin-500-normal.woff2)}
+@page{size:A4;margin:0}
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:210mm;height:297mm;font:400 9.2pt/1.45 IN,sans-serif;color:#1d1a2e;background:#fff;overflow:hidden}
+.top{background:linear-gradient(120deg,#2a1a7a,#5b3df5 70%,#8b5cf6);color:#fff;padding:10mm 14mm 7mm}
+.kick{font:500 7.5pt JB,monospace;letter-spacing:2px;opacity:.85}
+h1{font:800 22pt/1.1 PJ,sans-serif;margin-top:3mm}
+.sub{margin-top:2.5mm;font-size:9.5pt;opacity:.92;max-width:150mm}
+.meta{display:flex;gap:5mm;margin-top:4mm;font:600 8pt IN}
+.meta span{background:rgba(255,255,255,.16);border-radius:20px;padding:1.2mm 3.2mm}
+main{padding:6mm 14mm 0;display:grid;grid-template-columns:1fr 1fr;gap:4.2mm 7mm}
+h2{font:800 11pt PJ,sans-serif;color:#2a1a7a;margin-bottom:2mm;display:flex;align-items:center;gap:2.5mm}
+h2 b{display:inline-grid;place-items:center;width:6mm;height:6mm;border-radius:2mm;background:#5b3df5;color:#fff;font:700 8.5pt PJ}
+.full{grid-column:1/-1}
+pre{background:#0d0b1a;color:#e9e4ff;border-radius:2.5mm;padding:3mm 3.5mm;font:500 7.6pt/1.6 JB,monospace;white-space:pre-wrap}
+pre i{color:#9a92c8;font-style:normal}
+ul{list-style:none;display:grid;gap:1.4mm}
+li{padding-left:4mm;position:relative}
+li::before{content:"";position:absolute;left:0;top:1.9mm;width:1.6mm;height:1.6mm;border-radius:.5mm;background:#5b3df5}
+code{font:500 8pt JB,monospace;background:#efeaff;color:#3b23b8;padding:0 1mm;border-radius:1mm}
+.box{border:1px solid #e2dcf7;border-radius:3mm;padding:3.5mm 4mm}
+.warn{background:#fff7e6;border-color:#f5d48a}
+table{width:100%;border-collapse:collapse;font-size:8.6pt}
+td{padding:1.3mm 0;border-bottom:1px solid #eee9fb;vertical-align:top}
+td:first-child{width:25mm;font:500 8pt JB,monospace;color:#3b23b8}
+p+p{margin-top:1.5mm}
+.foot{position:absolute;bottom:0;left:0;right:0;padding:4mm 14mm;border-top:1px solid #e2dcf7;display:flex;justify-content:space-between;font-size:7.6pt;color:#6b6585}
+.foot b{color:#2a1a7a}
+</style></head><body>
+<div class="top">
+  <div class="kick">SETUP GUIDE &middot; 1 PAGE &middot; NOVEMBER 2026</div>
+  <h1>Set up AI Job Search on Claude Code</h1>
+  <p class="sub">The open source framework that finds roles, scores fit, tailors your CV and cover letter, and preps every interview round. From zero to your first tailored application in about 30 minutes.</p>
+  <div class="meta"><span>Free, MIT license</span><span>Runs on your machine</span><span>Needs a Claude plan or API credits</span></div>
+</div>
+<main>
+  <section>
+    <h2><b>1</b>Install the prerequisites</h2>
+    <table>
+      <tr><td>Claude Code</td><td>The CLI, signed in with a Claude Pro, Max or Team plan, or API credits</td></tr>
+      <tr><td>Python 3.10+</td><td>Runs the helper tools in the repo</td></tr>
+      <tr><td>Bun</td><td>Runs any job board CLIs you add</td></tr>
+      <tr><td>LaTeX</td><td>TeX Live, MacTeX or MiKTeX. Needs <code>lualatex</code> (CV) and <code>xelatex</code> (cover letter)</td></tr>
+      <tr><td>gh</td><td>GitHub CLI, signed in, to make your private copy</td></tr>
+    </table>
+  </section>
+  <section>
+    <h2><b>2</b>Make a private copy</h2>
+<pre>gh repo clone ai-job-search-dev/ai-job-search
+cd ai-job-search
+git remote rename origin upstream
+gh repo create ai-job-search --private \
+  --source=. --remote=origin --push</pre>
+    <p style="margin-top:2mm">Do not fork for your own search. A fork of a public repo is always public, and setup writes your details into tracked files.</p>
+  </section>
+  <section>
+    <h2><b>3</b>Build your profile</h2>
+<pre>claude          <i># opens Claude Code in the repo</i>
+/setup          <i># inside Claude Code</i></pre>
+    <p style="margin-top:2mm">Put your CV PDF, LinkedIn export and past applications in <code>documents/</code> first, paste a single CV in chat, or let it interview you. Re-run any time you add material.</p>
+  </section>
+  <section>
+    <h2><b>4</b>Add job boards (optional)</h2>
+    <p>With no board installed, <code>/scrape</code> uses web search. To add one, copy its folder from <b>community-portals</b> into <code>.agents/skills/</code>, review the code, then run:</p>
+<pre style="margin-top:2mm">python3 tools/install_portal_clis.py</pre>
+    <p style="margin-top:2mm">No board for your market? <code>/add-portal</code> builds one from its URL.</p>
+  </section>
+  <section class="full">
+    <h2><b>5</b>Run the workflow</h2>
+    <table>
+      <tr><td>/scrape</td><td>Searches your boards for roles that match your profile and removes duplicates</td></tr>
+      <tr><td>/rank</td><td>Scores every new posting against your profile and returns a shortlist with honest gaps</td></tr>
+      <tr><td>/apply &lt;url&gt;</td><td>Checks fit, drafts the CV and cover letter, gets a second agent's review, then compiles and checks the PDFs. Paste the job text instead of a URL if the page is behind a login</td></tr>
+      <tr><td>/interview</td><td>Builds a prep pack for the next round, maps likely questions to your STAR stories, runs a mock</td></tr>
+      <tr><td>/outcome</td><td>Logs the result, archives what you sent, drafts follow ups for applications that went quiet</td></tr>
+    </table>
+  </section>
+  <section class="box">
+    <h2><b>6</b>Check it works</h2>
+<pre>cd cv &amp;&amp; lualatex -interaction=nonstopmode \
+  main_example.tex &amp;&amp; cd ..</pre>
+    <p style="margin-top:2mm">A PDF means LaTeX is ready. On TinyTeX or BasicTeX, first install: <code>moderncv fontawesome5 fontawesome6 academicons needspace titlesec textpos xltxtra xunicode realscripts</code> with <code>tlmgr install</code>.</p>
+  </section>
+  <section class="box warn">
+    <h2><b>!</b>Use it well</h2>
+    <ul>
+      <li>Feed it detail. Projects, tools and measurable results per role make the applications specific.</li>
+      <li>Read every CV and letter before you send it. You stay the one who applies.</li>
+      <li>It never invents experience. Gaps stay visible, so prep for them in interviews.</li>
+      <li>Treat postings from unfamiliar boards with care. The integrity gate flags hidden instructions.</li>
+    </ul>
+  </section>
+</main>
+<div class="foot"><span>Project: <b>github.com/ai-job-search-dev/ai-job-search</b> &middot; independent, not affiliated with Anthropic</span><span>Guide by <b>syedcreates.com/ai-job-search</b></span></div>
+</body></html>
