@@ -2873,3 +2873,39 @@ body.li-busy{overflow:hidden}
 .kx-card small{font:600 11px "JetBrains Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
 .kx-card b{font-size:16px;line-height:1.35;flex:1}
 .kx-card em{font-style:normal;font-weight:700;font-size:14px;color:var(--accent)}
+
+/* ===== Responsive pass (2026-11-26) ===== */
+/* Nav: keep search, theme, calendar and menu inside the viewport on small phones */
+.nav-right>*{flex:none}
+@media (max-width:400px){
+  .nav-in{gap:10px}
+  .nav-right{gap:6px}
+  .brand{gap:8px;font-size:15px}
+  .brand img{width:34px;height:34px}
+  .srch-btn,.menu-btn{width:36px;height:36px}
+  .nav-right .btn-primary{padding:8px 10px}
+}
+@media (max-width:360px){
+  .brand-t{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .theme-btn{width:58px;padding:0 5px}
+  :root[data-theme="dark"] .theme-btn .tt-knob{transform:translateX(26px)}
+}
+/* Horizontal scrollers: bleed exactly to the screen edge, never past it */
+@media (max-width:380px){
+  .timeline{margin-left:-14px;margin-right:-14px;padding-left:14px;padding-right:14px}
+  .timeline::before{left:14px}
+  .sp-tabs{margin-left:-14px;margin-right:-14px;padding:0 14px}
+}
+/* Legible minimum for labels and badges */
+.tool .tn .b,.badge,.badge-f,.hub-img small{font-size:11px}
+.nl2-issue em{font-size:11px}
+/* General safety nets */
+img,video,iframe,svg{max-width:100%}
+img,video{height:auto}
+table{max-width:100%}
+pre,code{overflow-wrap:anywhere}
+pre{overflow-x:auto;white-space:pre-wrap}
+main :is(p,li,h1,h2,h3,h4,td,th,a,b,small,span){overflow-wrap:break-word}
+iframe[src*="youtube"],iframe[src*="youtube-nocookie"]{aspect-ratio:16/9;height:auto;width:100%}
+/* Formula boxes wrap on phones instead of hiding text off to the side */
+@media (max-width:640px){.sg-f{font-size:13px}.sg-f div{white-space:normal;overflow-wrap:anywhere;padding-left:1.2em;text-indent:-1.2em}}
