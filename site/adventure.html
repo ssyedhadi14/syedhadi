@@ -95,6 +95,39 @@
 }
 .adv-grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .adv-vid .yt-body p{margin:4px 0 0;font-size:13.5px;color:var(--ink-2);line-height:1.5}
+.adv-globe-sec{position:relative;background:radial-gradient(90% 120% at 20% 50%,#1d1640 0%,#0d0b1a 60%);color:#fff;padding:72px 0 80px;overflow:hidden}
+.adv-globe{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.adv-globe-stage{position:relative}
+.adv-globe-cv{display:block;width:100%;max-width:620px;aspect-ratio:1;margin:0 auto;cursor:grab;touch-action:pan-y}
+.adv-globe-cv:active{cursor:grabbing}
+.adv-legend{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;font-size:12.5px;color:#c9bfff}
+.adv-legend li{display:flex;align-items:center;gap:7px}
+.adv-legend i{display:inline-block;width:10px;height:10px;border-radius:50%}
+.lg-home{background:#ff9933}.lg-been{background:#ff5d8f}.lg-wish{border:2px solid #5eead4;width:8px!important;height:8px!important}.lg-arc{width:18px!important;height:2px!important;border-radius:2px!important;background:linear-gradient(90deg,#ffc978,#ffd9a8)}
+.adv-globe-copy .eyebrow{color:#c9bfff}
+.adv-globe-copy h2{font-size:clamp(34px,4.2vw,60px);line-height:1;letter-spacing:-.035em;margin:12px 0 26px;color:#fff}
+.adv-globe-copy h2 .tg1{background-image:linear-gradient(100deg,#ffd9a8,#ff9f6e 60%,#ff5d8f)!important;-webkit-background-clip:text;background-clip:text;color:transparent!important;-webkit-text-fill-color:transparent;padding-right:.08em;display:inline-block;white-space:nowrap}
+.adv-gstats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.adv-gstats div{padding:18px 16px;border-radius:18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12)}
+.adv-gstats b{display:block;font:800 clamp(30px,3.2vw,44px)/1 "Plus Jakarta Sans",sans-serif;letter-spacing:-.03em;color:#fff}
+.adv-gstats div:last-child b{color:#5eead4}
+.adv-gstats small{display:block;margin-top:8px;font-size:12.5px;line-height:1.35;color:#c9bfff}
+.adv-progress{margin:18px 0 30px}
+.adv-progress-bar{height:8px;border-radius:99px;background:rgba(255,255,255,.1);overflow:hidden}
+.adv-progress-bar span{display:block;height:100%;width:var(--p);min-width:14px;border-radius:99px;background:linear-gradient(90deg,#ff9933,#ff5d8f);box-shadow:0 0 14px rgba(255,93,143,.7)}
+.adv-progress-l{display:flex;justify-content:space-between;margin-top:8px;font:500 11.5px "JetBrains Mono",monospace;letter-spacing:.06em;color:#a79fd0}
+.adv-wish-h{font-size:18px;margin:0 0 12px;color:#fff}
+.adv-wish-h span{font:italic 400 22px "Instrument Serif",Georgia,serif;color:#5eead4}
+.adv-wish{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.adv-wish li{display:grid;grid-template-columns:auto 1fr;column-gap:9px;align-items:center;padding:10px 12px;border-radius:14px;background:rgba(94,234,212,.06);border:1px solid rgba(94,234,212,.22);transition:transform .2s,background .2s}
+.adv-wish li:hover{transform:translateY(-2px);background:rgba(94,234,212,.12)}
+.gw-dot{grid-row:span 2;width:10px;height:10px;border-radius:50%;border:2px solid #5eead4;animation:gwPulse 2.4s ease-in-out infinite}
+.adv-wish li:nth-child(3n+2) .gw-dot{animation-delay:-.8s}.adv-wish li:nth-child(3n) .gw-dot{animation-delay:-1.6s}
+@keyframes gwPulse{0%,100%{box-shadow:0 0 0 0 rgba(94,234,212,.5)}50%{box-shadow:0 0 0 6px rgba(94,234,212,0)}}
+.adv-wish b{font-size:14px;color:#fff}
+.adv-wish small{font-size:11.5px;color:#a79fd0}
+@media (max-width:980px){.adv-globe{grid-template-columns:1fr;gap:28px}.adv-globe-cv{max-width:480px}}
+@media (max-width:640px){.adv-globe-sec{padding:48px 0 56px}.adv-gstats div{padding:14px 10px}.adv-gstats small{font-size:11.5px}.adv-wish{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.adv-wish li{padding:8px 9px;column-gap:7px}.adv-wish b{font-size:12.5px}.adv-wish small{font-size:10.5px}}
 .adv-photos{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
 .adv-photo{position:relative;border-radius:22px;overflow:hidden;background:var(--bg-soft);min-height:320px}
 .adv-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s var(--ease)}
@@ -172,6 +205,30 @@
     <div class="adv-stats"><div><b>6</b><small>Countries, 8 trips since 2019</small></div><div><b>13,000 ft</b><small>Freefall over the Palm</small></div><div><b>100 km</b><small>Najaf to Karbala on foot</small></div></div></div>
   </div>
 </header>
+
+<section class="adv-globe-sec" aria-labelledby="globe-t">
+  <div class="wrap adv-globe">
+    <div class="adv-globe-stage">
+      <canvas id="advGlobe" class="adv-globe-cv" role="img" aria-label="Spinning globe with pins on India, Egypt, Singapore, Iraq, Saudi Arabia, the UAE and Iran, with routes from Bengaluru, and wishlist rings across the Middle East" data-wish="[{&quot;n&quot;: &quot;Jordan&quot;, &quot;lon&quot;: 35.93, &quot;lat&quot;: 31.95}, {&quot;n&quot;: &quot;Palestine&quot;, &quot;lon&quot;: 35.23, &quot;lat&quot;: 31.78}, {&quot;n&quot;: &quot;Syria&quot;, &quot;lon&quot;: 36.29, &quot;lat&quot;: 33.51}, {&quot;n&quot;: &quot;Lebanon&quot;, &quot;lon&quot;: 35.5, &quot;lat&quot;: 33.89}, {&quot;n&quot;: &quot;Türkiye&quot;, &quot;lon&quot;: 28.98, &quot;lat&quot;: 41.01}, {&quot;n&quot;: &quot;Oman&quot;, &quot;lon&quot;: 58.41, &quot;lat&quot;: 23.59}, {&quot;n&quot;: &quot;Qatar&quot;, &quot;lon&quot;: 51.53, &quot;lat&quot;: 25.29}, {&quot;n&quot;: &quot;Kuwait&quot;, &quot;lon&quot;: 47.98, &quot;lat&quot;: 29.37}, {&quot;n&quot;: &quot;Bahrain&quot;, &quot;lon&quot;: 50.59, &quot;lat&quot;: 26.23}]"></canvas>
+      <ul class="adv-legend" aria-label="Map legend"><li><i class="lg-home"></i>Home</li><li><i class="lg-been"></i>Been there</li><li><i class="lg-wish"></i>Wishlist</li><li><i class="lg-arc"></i>Routes from Bengaluru</li></ul>
+    </div>
+    <div class="adv-globe-copy">
+      <span class="eyebrow">The map so far</span>
+      <h2 id="globe-t" class="display">7 countries down. <span class="tg1">188 to go.</span></h2>
+      <div class="adv-gstats">
+        <div><b data-count="7">7</b><small>Countries, home included</small></div>
+        <div><b data-count="8">8</b><small>Trips abroad since 2019</small></div>
+        <div><b data-count="188">188</b><small>Countries yet to visit</small></div>
+      </div>
+      <div class="adv-progress" role="img" aria-label="7 of 195 countries visited, about 3.6 percent">
+        <div class="adv-progress-bar"><span style="--p:3.6%"></span></div>
+        <div class="adv-progress-l"><span>3.6% of the world</span><span>7 / 195</span></div>
+      </div>
+      <h3 class="adv-wish-h">Next on the list: <span>the Middle East</span></h3>
+      <ul class="adv-wish"><li><span class="gw-dot" aria-hidden="true"></span><b>Jordan</b><small>Amman</small></li><li><span class="gw-dot" aria-hidden="true"></span><b>Palestine</b><small>Al-Quds</small></li><li><span class="gw-dot" aria-hidden="true"></span><b>Syria</b><small>Damascus</small></li><li><span class="gw-dot" aria-hidden="true"></span><b>Lebanon</b><small>Beirut</small></li><li><span class="gw-dot" aria-hidden="true"></span><b>Türkiye</b><small>Istanbul</small></li><li><span class="gw-dot" aria-hidden="true"></span><b>Oman</b><small>Muscat</small></li><li><span class="gw-dot" aria-hidden="true"></span><b>Qatar</b><small>Doha</small></li><li><span class="gw-dot" aria-hidden="true"></span><b>Kuwait</b><small>Kuwait City</small></li><li><span class="gw-dot" aria-hidden="true"></span><b>Bahrain</b><small>Manama</small></li></ul>
+    </div>
+  </div>
+</section>
 <main id="main">
 
 <section class="bx-sec" id="watch">
@@ -279,6 +336,7 @@
 })();
 </script>
 <script src="/assets/quotes.js?v=20261103q2" defer></script>
+<script src="/assets/globe.js?v=20261126a" defer></script>
 <script src="/assets/search.js?v=20261106b" defer></script>
 </body>
 </html>
