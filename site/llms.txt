@@ -109,6 +109,7 @@ All calculators sit under the Calculator item in the site navigation: Salary Gro
 - Book a call: https://syedcreates.com/schedule-meeting
 - Sitemap: https://syedcreates.com/sitemap.xml
 - LinkedIn: https://www.linkedin.com/in/syedhadii/
+- [Privacy policy and support](https://syedcreates.com/privacy): what the site collects, how the free tools handle data, and how to get support.
 
 ## Section hubs
 - [Growth in a box](https://syedcreates.com/growth-in-a-box): the six fixed scope engagements (GTM + PMM, GTM, PMM, AEO/SEO, content, partner revenue).
