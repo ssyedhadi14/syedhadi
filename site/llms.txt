@@ -99,6 +99,7 @@ Engagements come in three sizes. Small projects run 30 days (phase one of the ro
 - [About](https://syedcreates.com/about): services, GTM journey since 2021 and how Syed builds strategy with AI.
 - [Brand kit](https://syedcreates.com/brand): official logo files (SVG and PNG), fonts (Plus Jakarta Sans, Instrument Serif, Inter, JetBrains Mono), colour palette, approved headshot, short and medium bios, and a PDF brand kit for event organisers and press.
 - [Adventure](https://syedcreates.com/adventure): skydiving over Dubai, the Bengaluru to Ooty road trip, the walk from Najaf to Karbala and travel essays.
+- [In loving memory of Baba and Muma](https://syedcreates.com/parents): tribute to Syed's parents, Syed Mohamed Thaqi (1959 to 2020) and Tasneem Fathima (1968 to 2026), his father's book The Signs in the Holy Quran, and practical ways to honour your own parents.
 - [Newsletter, Pipeline Notes](https://syedhadi.substack.com): one GTM play that moved pipeline, the numbers behind it and the template, every Tuesday.
 
 ## Calculator menu
